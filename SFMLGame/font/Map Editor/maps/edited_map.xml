@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<map>
+    <tileset file="./maps/tilesets/tileset01.xml" />
+    <tiles>
+        <tile id="33" x="1851" y="584" layer="11" angle="0" scale_x="3" scale_y="3" red="255" green="255" blue="255" alpha="125" flip_x="0" flip_y="0" />
+        <tile id="34" x="3494" y="617" layer="11" angle="0" scale_x="2.54477" scale_y="2.54477" red="255" green="255" blue="255" alpha="175" flip_x="0" flip_y="0" />
+        <tile id="34" x="637" y="260" layer="10" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="180" flip_x="0" flip_y="0" />
+        <tile id="31" x="1395" y="515" layer="10" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="37" x="4787" y="457" layer="10" angle="0" scale_x="1.52004" scale_y="1.52004" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="41" x="2804" y="1034" layer="10" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="35" x="373" y="397" layer="9" angle="-339" scale_x="4" scale_y="4" red="249" green="250" blue="250" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="35" x="1045" y="278" layer="9" angle="-339" scale_x="3" scale_y="3" red="218" green="250" blue="234" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="14" x="597" y="387" layer="9" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="175" flip_x="0" flip_y="0" />
+        <tile id="13" x="213" y="430" layer="9" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="175" flip_x="0" flip_y="0" />
+        <tile id="14" x="1586" y="466" layer="9" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="180" flip_x="0" flip_y="0" />
+        <tile id="14" x="985" y="430" layer="9" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="175" flip_x="0" flip_y="0" />
+        <tile id="30" x="1277" y="534" layer="9" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="30" x="3802" y="812" layer="9" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="41" x="2182" y="845" layer="9" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="35" x="5606" y="612" layer="9" angle="-9" scale_x="4" scale_y="4" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="35" x="4431" y="306" layer="9" angle="-30" scale_x="4" scale_y="4" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="35" x="4970" y="523" layer="9" angle="-21" scale_x="4" scale_y="4" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="2" x="25" y="464" layer="4" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="24" x="580" y="706" layer="3" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="24" x="269" y="704" layer="3" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="25" x="416" y="703" layer="3" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="25" x="103" y="702" layer="3" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="0" x="879" y="534" layer="2" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="40" x="2319" y="792" layer="2" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="19" x="4581" y="989" layer="2" angle="0" scale_x="1.34969" scale_y="1.34969" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="19" x="7628" y="995" layer="2" angle="0" scale_x="1.42776" scale_y="1.42776" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="19" x="4957" y="992" layer="2" angle="0" scale_x="1.3503" scale_y="1.3503" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="19" x="5340" y="992" layer="2" angle="0" scale_x="1.38626" scale_y="1.38626" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="19" x="5721" y="995" layer="2" angle="0" scale_x="1.38608" scale_y="1.38608" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="19" x="6102" y="993" layer="2" angle="0" scale_x="1.43513" scale_y="1.43513" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="19" x="6485" y="992" layer="2" angle="0" scale_x="1.36303" scale_y="1.36303" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="19" x="6867" y="995" layer="2" angle="0" scale_x="1.39225" scale_y="1.39225" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="19" x="7249" y="995" layer="2" angle="0" scale_x="1.45693" scale_y="1.45693" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="18" x="1266" y="653" layer="1" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="19" x="1543" y="660" layer="1" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="18" x="1817" y="660" layer="1" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="32" x="1079" y="512" layer="1" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="17" x="1261" y="819" layer="1" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="17" x="1538" y="825" layer="1" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="17" x="1810" y="821" layer="1" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="2" x="1996" y="748" layer="1" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="40" x="2795" y="792" layer="1" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="40" x="3270" y="794" layer="1" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="40" x="3742" y="795" layer="1" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="27" x="3822" y="779" layer="1" angle="-220" scale_x="2.33242" scale_y="2.33242" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="28" x="4003" y="828" layer="1" angle="-18" scale_x="1.89697" scale_y="1.89697" red="255" green="255" blue="255" alpha="255" flip_x="1" flip_y="1" />
+        <tile id="28" x="4229" y="970" layer="1" angle="-46" scale_x="2" scale_y="2" red="255" green="255" blue="255" alpha="255" flip_x="1" flip_y="1" />
+        <tile id="31" x="4237" y="771" layer="1" angle="-18" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="28" x="4471" y="1218" layer="1" angle="-46" scale_x="2" scale_y="2" red="255" green="255" blue="255" alpha="255" flip_x="1" flip_y="1" />
+        <tile id="8" x="228" y="293" layer="0" angle="-359" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="26" x="521" y="318" layer="0" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="26" x="125" y="566" layer="0" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="26" x="361" y="564" layer="0" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="29" x="332" y="440" layer="0" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="23" x="603" y="566" layer="0" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="31" x="792" y="546" layer="0" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="20" x="493" y="272" layer="0" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="23" x="673" y="321" layer="0" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+        <tile id="32" x="6560" y="859" layer="0" angle="0" scale_x="1" scale_y="1" red="255" green="255" blue="255" alpha="255" flip_x="0" flip_y="0" />
+    </tiles>
+</map>

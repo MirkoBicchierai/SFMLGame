@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<tileset>  
+    <!-- tiles declaration -->  
+    <tiles>  
+	<tile id="0" image="gfx\set1\set1_00.png" />
+	<tile id="1" image="gfx\set1\set1_01.png" />
+	<tile id="2" image="gfx\set1\set1_02.png" />
+	<tile id="3" image="gfx\set1\set1_03.png" />
+	<tile id="4" image="gfx\set1\set1_04.png" />
+	<tile id="5" image="gfx\set1\set1_05.png" />
+	<tile id="6" image="gfx\set1\set1_06.png" />
+	<tile id="7" image="gfx\set1\set1_07.png" />
+	<tile id="8" image="gfx\set1\set1_08.png" />
+	<tile id="9" image="gfx\set1\set1_09.png" />
+	<tile id="10" image="gfx\set1\set1_10.png" />
+	<tile id="11" image="gfx\set1\set1_11.png" />
+	<tile id="12" image="gfx\set1\set1_12.png" />
+	<tile id="13" image="gfx\set1\set1_13.png" />
+	<tile id="14" image="gfx\set1\set1_14.png" />
+	<tile id="15" image="gfx\set1\set1_15.png" />
+	<tile id="16" image="gfx\set1\set1_16.png" />
+	<tile id="17" image="gfx\set1\set1_17.png" />
+	<tile id="18" image="gfx\set1\set1_18.png" />
+	<tile id="19" image="gfx\set1\set1_19.png" />
+	<tile id="20" image="gfx\set1\set1_20.png" />
+	<tile id="21" image="gfx\set1\set1_21.png" />
+	<tile id="22" image="gfx\set1\set1_22.png" />
+	<tile id="23" image="gfx\set1\set1_23.png" />
+	<tile id="24" image="gfx\set1\set1_24.png" />
+	<tile id="25" image="gfx\set1\set1_25.png" />
+	<tile id="26" image="gfx\set1\set1_26.png" />
+	<tile id="27" image="gfx\set1\set1_27.png" />
+	<tile id="28" image="gfx\set1\set1_28.png" />
+	<tile id="29" image="gfx\set1\set1_29.png" />
+	<tile id="30" image="gfx\set1\set1_30.png" />
+	<tile id="31" image="gfx\set1\set1_31.png" />
+	<tile id="32" image="gfx\set1\set1_32.png" />
+	<tile id="33" image="gfx\set1\set1_33.png" />
+	<tile id="34" image="gfx\set1\set1_34.png" />
+	<tile id="35" image="gfx\set1\set1_35.png" />
+	<tile id="36" image="gfx\set1\set1_36.png" />
+	<tile id="37" image="gfx\set1\set1_37.png" />
+	<tile id="38" image="gfx\set1\set1_38.png" />
+	<tile id="39" image="gfx\set1\set1_39.png" />
+	<tile id="40" image="gfx\set1\set1_40.png" />
+	<tile id="41" image="gfx\set1\set1_41.png" />
+    </tiles>  
+</tileset>  
