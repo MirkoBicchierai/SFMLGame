@@ -1,7 +1,7 @@
 #include "SFML/Graphics.hpp"
 #include "GameState.h"
 #include "Game.h"
-
+#include "MainCharacter.h"
 Game::Game(){
     window.create(sf::VideoMode(1088, 704), "The road of Knight", sf::Style::Titlebar | sf::Style::Close);
     sf::Vector2i centerWindow((sf::VideoMode::getDesktopMode().width / 2) - window.getSize().x / 2,(sf::VideoMode::getDesktopMode().height / 2) - window.getSize().y / 2);
@@ -34,30 +34,15 @@ GameState* Game::CurrentState(){
 }
 
 void Game::gameLoop(){
-    sf::Clock clock;
-
-    while (window.isOpen())
-    {
-        //control frame rate (you can ignore this stuff for now)
-        sf::Time elapsed = clock.restart();
-        float dt = elapsed.asSeconds();
-
-        //exception handling
+    MainCharacter mainCharacter(window);
+    while (window.isOpen()){
         if (CurrentState() == nullptr)
             continue;
 
-        //get user input for current game state
-        CurrentState()->handleInput();
-
-        //update anything neccessary
-        CurrentState()->update(dt);
-
-        //clear window
+        CurrentState()->handleInput(mainCharacter);
+        CurrentState()->update(mainCharacter);
         window.clear();
-
-        //draw anything in the current game state
-        CurrentState()->draw(dt);
-
+        CurrentState()->draw(mainCharacter);
         window.display();
     }
 }

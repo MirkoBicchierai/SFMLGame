@@ -8,9 +8,9 @@
 class ConcreteStateGame : public GameState{
 public:
 
-    virtual void draw(const float dt);
-    virtual void update(const float dt);
-    virtual void handleInput();
+     void draw(MainCharacter &mainCharacter) override ;
+     void update(MainCharacter &mainCharacter) override;
+     void handleInput(MainCharacter &mainCharacter) override;
 
      explicit ConcreteStateGame(Game* game);
 

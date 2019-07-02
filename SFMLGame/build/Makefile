@@ -203,6 +203,33 @@ ConcreteStateMenu.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.s
 .PHONY : ConcreteStateMenu.cpp.s
 
+ConcreteStateTutorial.obj: ConcreteStateTutorial.cpp.obj
+
+.PHONY : ConcreteStateTutorial.obj
+
+# target to build an object file
+ConcreteStateTutorial.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj
+.PHONY : ConcreteStateTutorial.cpp.obj
+
+ConcreteStateTutorial.i: ConcreteStateTutorial.cpp.i
+
+.PHONY : ConcreteStateTutorial.i
+
+# target to preprocess a source file
+ConcreteStateTutorial.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.i
+.PHONY : ConcreteStateTutorial.cpp.i
+
+ConcreteStateTutorial.s: ConcreteStateTutorial.cpp.s
+
+.PHONY : ConcreteStateTutorial.s
+
+# target to generate assembly for a file
+ConcreteStateTutorial.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.s
+.PHONY : ConcreteStateTutorial.cpp.s
+
 FireBall.obj: FireBall.cpp.obj
 
 .PHONY : FireBall.obj
@@ -437,6 +464,9 @@ help:
 	@echo ... ConcreteStateMenu.obj
 	@echo ... ConcreteStateMenu.i
 	@echo ... ConcreteStateMenu.s
+	@echo ... ConcreteStateTutorial.obj
+	@echo ... ConcreteStateTutorial.i
+	@echo ... ConcreteStateTutorial.s
 	@echo ... FireBall.obj
 	@echo ... FireBall.i
 	@echo ... FireBall.s

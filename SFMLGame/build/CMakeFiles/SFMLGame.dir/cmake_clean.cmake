@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SFMLGame.dir/GameState.cpp.obj"
   "CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj"
   "CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj"
+  "CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj"
   "SFMLGame.pdb"
   "SFMLGame.exe"
   "SFMLGame.exe.manifest"

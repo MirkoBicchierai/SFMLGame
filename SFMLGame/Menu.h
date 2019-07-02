@@ -8,13 +8,11 @@ class Menu {
 
 public:
 
-    Menu(float widht, float height);
+    Menu();
     void draw(sf::RenderWindow &window);
     void moveUp();
     void moveDown();
     int getSelectedItem();
-    bool play;
-    bool tutorial;
 
 private:
 

@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "SFML/Graphics.hpp"
+#include "MainCharacter.h"
 
 class GameState;
 
@@ -14,8 +15,12 @@ public:
     void popState();
     GameState* CurrentState();
     void gameLoop();
-    sf::RenderWindow window;
 
+    sf::RenderWindow window;
+    sf::Clock clockShield;
+    sf::Clock clockSword;
+    sf::Clock clockBow;
+    sf::Clock clockMagick;
 private:
     std::vector<GameState*> states;
 
