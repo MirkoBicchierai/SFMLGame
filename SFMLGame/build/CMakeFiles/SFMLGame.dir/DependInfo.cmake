@@ -4,13 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/Arrow.cpp" "C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Arrow.cpp.obj"
-  "C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/FireBall.cpp" "C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/FireBall.cpp.obj"
-  "C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/Heart.cpp" "C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Heart.cpp.obj"
-  "C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/MainCharacter.cpp" "C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj"
-  "C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/Menu.cpp" "C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Menu.cpp.obj"
-  "C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/TileMap.cpp" "C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/TileMap.cpp.obj"
-  "C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/main.cpp" "C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/main.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Arrow.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/FireBall.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Game.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/GameState.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Heart.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Heart.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Menu.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Menu.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/TileMap.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/main.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

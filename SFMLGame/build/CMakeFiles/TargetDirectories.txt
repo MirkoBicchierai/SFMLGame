@@ -1,3 +1,3 @@
-C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir
-C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/build/CMakeFiles/edit_cache.dir
-C:/Users/MIRKO/Desktop/GicoClionGIT/SFMLGame/build/CMakeFiles/rebuild_cache.dir
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/edit_cache.dir
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/rebuild_cache.dir

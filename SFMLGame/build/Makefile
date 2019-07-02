@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.1.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\MIRKO\Desktop\GicoClionGIT\SFMLGame
+CMAKE_SOURCE_DIR = C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\MIRKO\Desktop\GicoClionGIT\SFMLGame\build
+CMAKE_BINARY_DIR = C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\MIRKO\Desktop\GicoClionGIT\SFMLGame\build\CMakeFiles C:\Users\MIRKO\Desktop\GicoClionGIT\SFMLGame\build\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\MIRKO\Desktop\GicoClionGIT\SFMLGame\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -149,6 +149,60 @@ Arrow.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Arrow.cpp.s
 .PHONY : Arrow.cpp.s
 
+ConcreteStateGame.obj: ConcreteStateGame.cpp.obj
+
+.PHONY : ConcreteStateGame.obj
+
+# target to build an object file
+ConcreteStateGame.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj
+.PHONY : ConcreteStateGame.cpp.obj
+
+ConcreteStateGame.i: ConcreteStateGame.cpp.i
+
+.PHONY : ConcreteStateGame.i
+
+# target to preprocess a source file
+ConcreteStateGame.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.i
+.PHONY : ConcreteStateGame.cpp.i
+
+ConcreteStateGame.s: ConcreteStateGame.cpp.s
+
+.PHONY : ConcreteStateGame.s
+
+# target to generate assembly for a file
+ConcreteStateGame.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.s
+.PHONY : ConcreteStateGame.cpp.s
+
+ConcreteStateMenu.obj: ConcreteStateMenu.cpp.obj
+
+.PHONY : ConcreteStateMenu.obj
+
+# target to build an object file
+ConcreteStateMenu.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj
+.PHONY : ConcreteStateMenu.cpp.obj
+
+ConcreteStateMenu.i: ConcreteStateMenu.cpp.i
+
+.PHONY : ConcreteStateMenu.i
+
+# target to preprocess a source file
+ConcreteStateMenu.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.i
+.PHONY : ConcreteStateMenu.cpp.i
+
+ConcreteStateMenu.s: ConcreteStateMenu.cpp.s
+
+.PHONY : ConcreteStateMenu.s
+
+# target to generate assembly for a file
+ConcreteStateMenu.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.s
+.PHONY : ConcreteStateMenu.cpp.s
+
 FireBall.obj: FireBall.cpp.obj
 
 .PHONY : FireBall.obj
@@ -175,6 +229,60 @@ FireBall.s: FireBall.cpp.s
 FireBall.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/FireBall.cpp.s
 .PHONY : FireBall.cpp.s
+
+Game.obj: Game.cpp.obj
+
+.PHONY : Game.obj
+
+# target to build an object file
+Game.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Game.cpp.obj
+.PHONY : Game.cpp.obj
+
+Game.i: Game.cpp.i
+
+.PHONY : Game.i
+
+# target to preprocess a source file
+Game.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Game.cpp.i
+.PHONY : Game.cpp.i
+
+Game.s: Game.cpp.s
+
+.PHONY : Game.s
+
+# target to generate assembly for a file
+Game.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
+GameState.obj: GameState.cpp.obj
+
+.PHONY : GameState.obj
+
+# target to build an object file
+GameState.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/GameState.cpp.obj
+.PHONY : GameState.cpp.obj
+
+GameState.i: GameState.cpp.i
+
+.PHONY : GameState.i
+
+# target to preprocess a source file
+GameState.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/GameState.cpp.i
+.PHONY : GameState.cpp.i
+
+GameState.s: GameState.cpp.s
+
+.PHONY : GameState.s
+
+# target to generate assembly for a file
+GameState.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/GameState.cpp.s
+.PHONY : GameState.cpp.s
 
 Heart.obj: Heart.cpp.obj
 
@@ -323,9 +431,21 @@ help:
 	@echo ... Arrow.obj
 	@echo ... Arrow.i
 	@echo ... Arrow.s
+	@echo ... ConcreteStateGame.obj
+	@echo ... ConcreteStateGame.i
+	@echo ... ConcreteStateGame.s
+	@echo ... ConcreteStateMenu.obj
+	@echo ... ConcreteStateMenu.i
+	@echo ... ConcreteStateMenu.s
 	@echo ... FireBall.obj
 	@echo ... FireBall.i
 	@echo ... FireBall.s
+	@echo ... Game.obj
+	@echo ... Game.i
+	@echo ... Game.s
+	@echo ... GameState.obj
+	@echo ... GameState.i
+	@echo ... GameState.s
 	@echo ... Heart.obj
 	@echo ... Heart.i
 	@echo ... Heart.s
