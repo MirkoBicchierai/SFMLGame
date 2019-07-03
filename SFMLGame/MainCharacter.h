@@ -59,8 +59,6 @@ private:
     sf::IntRect bowRect;
     sf::IntRect swordRect;
     sf::IntRect magicRect;
-    sf::Texture pTexture;
-    sf::Sprite pSprite;
 
 };
 

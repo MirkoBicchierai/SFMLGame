@@ -3,7 +3,7 @@
 #include <iostream>
 
 MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
-    pTexture.loadFromFile("../img/Player/Normal_Player.png");
+    entityTexture.loadFromFile("../img/Player/Normal_Player.png");
     bowTexture.loadFromFile("../img/Player/Bow_Player.png");
     shieldTexture.loadFromFile("../img/Player/Shield_Player.png");
 
@@ -22,15 +22,15 @@ MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     bowRect.width = 64;
     bowRect.left = 0;
 
-    pSprite.setTexture(pTexture);
-    pSprite.setScale(sf::Vector2f(1, 1));
+    entitySprite.setTexture(entityTexture);
+    entitySprite.setScale(sf::Vector2f(1, 1));
     sourceRect.height = 64;
     sourceRect.width = 64;
     sourceRect.top = 64 * 8;
     sourceRect.left = 0;
-    pSprite.setTextureRect(sourceRect);
-    pSprite.setPosition(((window.getSize().x)/2.f)-32,((window.getSize().y)/2.f)-32);
-    camera.setCenter(pSprite.getPosition().x+32,pSprite.getPosition().y+32);
+    entitySprite.setTextureRect(sourceRect);
+    entitySprite.setPosition(((window.getSize().x)/2.f)-32,((window.getSize().y)/2.f)-32);
+    camera.setCenter(entitySprite.getPosition().x+32,entitySprite.getPosition().y+32);
     camera.setSize(1088.f, 704.f);
     timeSword=40;
     sword=0;
@@ -60,45 +60,45 @@ MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     arrowGUI.setArrowGUI(camera.getCenter().x + window.getSize().x / 2.f,camera.getCenter().y - (window.getSize().y / 2.f) + 40 + 38, 180.f);
 }
 void MainCharacter::reset(int pos) {
-    pSprite.setTexture(pTexture);
+    entitySprite.setTexture(entityTexture);
     sourceRect.height = 64;
     sourceRect.width = 64;
     sourceRect.top = pos;
     sourceRect.left = 0;
-    pSprite.setTextureRect(sourceRect);
+    entitySprite.setTextureRect(sourceRect);
 }
 void MainCharacter::setTextureBow() {
     if (sourceRect.top == 64 * 11) {
         bowRect.top = 64 * 19;
-        pSprite.setTextureRect(bowRect);
+        entitySprite.setTextureRect(bowRect);
     }
     if (sourceRect.top == 64 * 10) {
         bowRect.top = 64 * 18;
-        pSprite.setTextureRect(bowRect);
+        entitySprite.setTextureRect(bowRect);
     }
     if (sourceRect.top == 64 * 9) {
         bowRect.top = 64 * 17;
-        pSprite.setTextureRect(bowRect);
+        entitySprite.setTextureRect(bowRect);
     }
     if (sourceRect.top == 64 * 8) {
         bowRect.top = 64 * 16;
-        pSprite.setTextureRect(bowRect);
+        entitySprite.setTextureRect(bowRect);
     }
-    pSprite.setTexture(bowTexture);
-    pSprite.setTextureRect(bowRect);
+    entitySprite.setTexture(bowTexture);
+    entitySprite.setTextureRect(bowRect);
 }
 
 void MainCharacter::setNormalTexture() {
-    pSprite.setTexture(pTexture);
+    entitySprite.setTexture(entityTexture);
 }
 
 void MainCharacter::setTextureShield() {
-    pSprite.setTexture(shieldTexture);
+    entitySprite.setTexture(shieldTexture);
     shield = true;
 }
 
 void MainCharacter::drawPlayer(sf::RenderWindow &window,sf::Clock clockShield) {
-    window.draw(pSprite);
+    window.draw(entitySprite);
 
     //draw timer shield e texture GUI
     if(shield) {
@@ -135,19 +135,19 @@ int MainCharacter::swordAttack() {
 
     if (sourceRect.top == 64 * 11) {
         swordRect.top = 64 * 15;
-        pSprite.setTextureRect(swordRect);
+        entitySprite.setTextureRect(swordRect);
     }
     if (sourceRect.top == 64 * 10) {
         swordRect.top = 64 * 14;
-        pSprite.setTextureRect(swordRect);
+        entitySprite.setTextureRect(swordRect);
     }
     if (sourceRect.top == 64 * 9) {
         swordRect.top = 64 * 13;
-        pSprite.setTextureRect(swordRect);
+        entitySprite.setTextureRect(swordRect);
     }
     if (sourceRect.top == 64 * 8) {
         swordRect.top = 64 * 12;
-        pSprite.setTextureRect(swordRect);
+        entitySprite.setTextureRect(swordRect);
     }
     return swordRect.left;
 }
@@ -160,19 +160,19 @@ int MainCharacter::magicAttack() {
 
     if (sourceRect.top == 64 * 11) {
         magicRect.top = 64 * 3;
-        pSprite.setTextureRect(magicRect);
+        entitySprite.setTextureRect(magicRect);
     }
     if (sourceRect.top == 64 * 10) {
         magicRect.top = 64 * 2;
-        pSprite.setTextureRect(magicRect);
+        entitySprite.setTextureRect(magicRect);
     }
     if (sourceRect.top == 64 * 9) {
         magicRect.top = 64 * 1;
-        pSprite.setTextureRect(magicRect);
+        entitySprite.setTextureRect(magicRect);
     }
     if (sourceRect.top == 64 * 8) {
         magicRect.top = 64 * 0;
-        pSprite.setTextureRect(magicRect);
+        entitySprite.setTextureRect(magicRect);
     }
     return magicRect.left;
 }
@@ -185,19 +185,19 @@ int MainCharacter::bowAttack() {
 
     if (sourceRect.top == 64 * 11) {
         bowRect.top = 64 * 19;
-        pSprite.setTextureRect(bowRect);
+        entitySprite.setTextureRect(bowRect);
     }
     if (sourceRect.top == 64 * 10) {
         bowRect.top = 64 * 18;
-        pSprite.setTextureRect(bowRect);
+        entitySprite.setTextureRect(bowRect);
     }
     if (sourceRect.top == 64 * 9) {
         bowRect.top = 64 * 17;
-        pSprite.setTextureRect(bowRect);
+        entitySprite.setTextureRect(bowRect);
     }
     if (sourceRect.top == 64 * 8) {
         bowRect.top = 64 * 16;
-        pSprite.setTextureRect(bowRect);
+        entitySprite.setTextureRect(bowRect);
     }
     return bowRect.left;
 }
@@ -227,8 +227,8 @@ void MainCharacter::movePlayer(char direction, sf::RenderWindow &window) {
         x=moveSpeed;
         y=0;
     }
-    pSprite.setTextureRect(sourceRect);
-    pSprite.move(x,y);
+    entitySprite.setTextureRect(sourceRect);
+    entitySprite.move(x,y);
     moveGUI(x,y,window);
 }
 
@@ -242,6 +242,6 @@ void MainCharacter::moveGUI(float x, float y,sf::RenderWindow &window) {
 }
 
 sf::Sprite MainCharacter::getSprite() {
-    return pSprite;
+    return entitySprite;
 }
 
