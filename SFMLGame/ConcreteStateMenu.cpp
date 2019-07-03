@@ -1,6 +1,6 @@
-#include "ConcreteStateMenu.h"
 #include "SFML/Graphics.hpp"
 #include <iostream>
+#include "ConcreteStateMenu.h"
 #include "ConcreteStateMenu.h"
 #include"GameState.h"
 #include "ConcreteStateGame.h"
@@ -19,26 +19,21 @@ void ConcreteStateMenu::handleInput(MainCharacter &mainCharacter){
 
         if (event.type == sf::Event::Closed)
             game->window.close();
+
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
             menu.moveUp();
-        else {
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-                menu.moveDown();
-        }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+            menu.moveDown();
+
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
             if (menu.getSelectedItem() == 2)
                 game->window.close();
-            else {
-                if (menu.getSelectedItem() == 1)
-                    startTutorial(mainCharacter);
-                else {
-                    if (menu.getSelectedItem() == 0)
-                        startGame(mainCharacter);
-                }
-            }
+            if (menu.getSelectedItem() == 1)
+                startTutorial(mainCharacter);
+            if (menu.getSelectedItem() == 0)
+                startGame(mainCharacter);
         }
     }
-
 }
 
 void ConcreteStateMenu::update(MainCharacter &mainCharacter){

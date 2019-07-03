@@ -6,7 +6,7 @@
 class GameState{
 public:
     GameState()= default;
-    Game* game;
+    Game* game{};
     virtual void draw(MainCharacter &mainCharacter) = 0;
     virtual void update(MainCharacter &mainCharacter) = 0;
     virtual void handleInput(MainCharacter &mainCharacter) = 0;

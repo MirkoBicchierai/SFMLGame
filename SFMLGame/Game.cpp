@@ -15,17 +15,6 @@ void Game::pushState(GameState* state){
     states.push_back(state);
 }
 
-void Game::popState(){
-    states.back();
-    delete states.back();
-    states.pop_back();
-}
-
-Game::~Game(){
-    while (!states.empty())
-        popState();
-}
-
 GameState* Game::CurrentState(){
     if (states.empty())
         return nullptr;

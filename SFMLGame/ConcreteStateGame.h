@@ -15,7 +15,7 @@ public:
      explicit ConcreteStateGame(Game* game);
 
 private:
-    void PauseGame();
+    void backToMenu();
 };
 
 #endif

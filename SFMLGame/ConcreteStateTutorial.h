@@ -12,11 +12,10 @@ public:
     void draw(MainCharacter &mainCharacter) override ;
     void update(MainCharacter &mainCharacter) override;
     void handleInput(MainCharacter &mainCharacter) override;
-
     explicit ConcreteStateTutorial(Game* game);
 
 private:
-    void PauseGame();
+    void backToMenu();
 };
 
 

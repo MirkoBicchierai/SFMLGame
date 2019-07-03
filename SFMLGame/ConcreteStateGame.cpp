@@ -1,22 +1,20 @@
-#include "ConcreteStateGame.h"
-#include "ConcreteStateMenu.h"
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "ConcreteStateGame.h"
+#include "ConcreteStateMenu.h"
 #include "GameState.h"
 
-
-void ConcreteStateGame::draw(MainCharacter &mainCharacter)
-{
+void ConcreteStateGame::draw(MainCharacter &mainCharacter){
     mainCharacter.drawPlayer(game->window,game->clockShield);
 }
 
 void ConcreteStateGame::update(MainCharacter &mainCharacter){
-    //fine tempo scudo
+    //time shield end
     if (mainCharacter.shield && game->clockShield.getElapsedTime().asSeconds() >= mainCharacter.secShield) {
         mainCharacter.setNormalTexture();
         mainCharacter.shield = false;
     }
-    //animazione spada
+    //animation sword
     if (mainCharacter.sword == 1) {
         if (game->clockSword.getElapsedTime().asMilliseconds()>=mainCharacter.timeSword ) {
             if (mainCharacter.swordAttack() == 64 * 5) {
@@ -26,7 +24,7 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
             game->clockSword.restart();
         }
     }
-    //animazione bow
+    //animation bow
     if (mainCharacter.bow == 1) {
         if (game->clockBow.getElapsedTime().asMilliseconds() >= mainCharacter.timeBow ) {
             if (mainCharacter.bowAttack() == 64 * 12) {
@@ -41,7 +39,7 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
             game->clockBow.restart();
         }
     }
-    //animazione spell-cast
+    //animation spell-cast
     if (mainCharacter.magic == 1) {
         if ( game->clockMagick.getElapsedTime().asMilliseconds() >= mainCharacter.timeMagic ) {
             if (mainCharacter.magicAttack() == 64 * 6) {
@@ -53,7 +51,7 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
             game->clockMagick.restart();
         }
     }
-    //animazione fireball
+    //animation fireball
     if (mainCharacter.ball.animationBall && mainCharacter.ball.clock.getElapsedTime().asMilliseconds() >= 40.f) {
         if (mainCharacter.ball.animation() == 64 * 7) {
             mainCharacter.ball.animationBall = false;
@@ -61,7 +59,7 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
         }
         mainCharacter.ball.clock.restart();
     }
-    //animazione arrow
+    //animation arrow
     if (mainCharacter.arrowPlayer.animationArrow) {
         if (mainCharacter.arrowPlayer.ciclo < 8) {
             if (mainCharacter.arrowPlayer.clock.getElapsedTime().asMilliseconds() > 45.f) {
@@ -76,7 +74,7 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
         }
 
     }
-    //ripresa della freccia a terra
+    //take arrow by floor
     if (mainCharacter.getSprite().getGlobalBounds().intersects(mainCharacter.arrowPlayer.arrowSprite.getGlobalBounds()) &&
         mainCharacter.arrowPlayer.pick) {
         mainCharacter.arrowPlayer.pick = false;
@@ -85,15 +83,18 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
     }
 }
 
-void ConcreteStateGame::handleInput(MainCharacter &mainCharacter)
-{
-    sf::Event event;
+void ConcreteStateGame::handleInput(MainCharacter &mainCharacter){
+    sf::Event event{};
 
-    while (this->game->window.pollEvent(event))
-    {
+    while (this->game->window.pollEvent(event)){
+
         if (event.type == sf::Event::Closed)
             game->window.close();
-        //muovimento del player
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+            backToMenu();
+
+        //player movement
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
             mainCharacter.movePlayer('u',game->window);
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
@@ -103,12 +104,13 @@ void ConcreteStateGame::handleInput(MainCharacter &mainCharacter)
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
             mainCharacter.movePlayer('r',game->window);
         }
-        //attacco con spada del player
+
+        //sword attack plaYER
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q) && !mainCharacter.shield) {
             mainCharacter.sword = 1;
             game->clockSword.restart();
         } else {
-            //attacco con arco del player
+            //bow attack player
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) && mainCharacter.arrow > 0 &&
                 !mainCharacter.shield &&
                 !mainCharacter.aniArrow) {
@@ -118,14 +120,14 @@ void ConcreteStateGame::handleInput(MainCharacter &mainCharacter)
                 mainCharacter.arrowPlayer.clock.restart();
                 game->clockBow.restart();
             } else {
-                // attacco SPECIALE del player
+                // special attack player
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::R) && !mainCharacter.shield &&
                     !mainCharacter.spell) {
                     mainCharacter.magic = 1;
                     game->clockMagick.restart();
                     mainCharacter.spell = true;
                 } else {
-                    // attivazione scudo player
+                    // activate shield player
                     if (sf::Keyboard::isKeyPressed(sf::Keyboard::E) && !mainCharacter.spell) {
                         mainCharacter.setTextureShield();
                         game->clockShield.restart();
@@ -134,20 +136,14 @@ void ConcreteStateGame::handleInput(MainCharacter &mainCharacter)
             }
         }
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
-            game->pushState(new ConcreteStateMenu(game));
-        }
-
     }
 }
 
-ConcreteStateGame::ConcreteStateGame(Game* game)
-{
+ConcreteStateGame::ConcreteStateGame(Game* game){
     this->game = game;
 }
 
-void ConcreteStateGame::PauseGame()
-{
-
+void ConcreteStateGame::backToMenu(){
+    game->pushState(new ConcreteStateMenu(game));
 
 }

@@ -10,9 +10,7 @@ class GameState;
 class Game{
 public:
     Game();
-    ~Game();
     void pushState(GameState* state);
-    void popState();
     GameState* CurrentState();
     void gameLoop();
 
@@ -21,10 +19,9 @@ public:
     sf::Clock clockSword;
     sf::Clock clockBow;
     sf::Clock clockMagick;
+
 private:
     std::vector<GameState*> states;
-
-
 };
 
 #endif
