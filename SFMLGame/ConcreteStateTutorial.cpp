@@ -7,28 +7,31 @@
 #include <fstream>
 #include <regex>
 
-void ConcreteStateTutorial::loadFromFile(std::string path) {
+void ConcreteStateTutorial::loadFromFile(const std::string &path) {
     std::string s;
     std::ifstream infile(path);
     int c=0;
+    int r=0;
     while (std::getline(infile, s)){
         std::regex ws_re(",");
         std::vector<std::string> result{ std::sregex_token_iterator(s.begin(), s.end(), ws_re, -1), {}};
+        c=0;
         for (const auto & i : result) {
             std::stringstream geek(i);
             int x = 0;
             geek >> x;
             vec.push_back(x);
+            c++;
         }
-        c++;
+        r++;
     }
-    map.load("../map/tileset_map.png", sf::Vector2u(32, 32), vec, 34, c);
+    map.load("../map/tileset_map.png", sf::Vector2u(32, 32), vec, c, r);
 }
 
 void ConcreteStateTutorial::draw(MainCharacter &mainCharacter){
     if(!loadmap) {
-        loadFromFile("../map/tutorial/tutorial.txt");
         loadmap=true;
+        loadFromFile("../map/tutorial/tutorial.txt");
     }
     game->window.draw(map);
     mainCharacter.drawPlayer(game->window,game->clockShield);

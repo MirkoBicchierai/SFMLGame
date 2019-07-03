@@ -8,6 +8,7 @@ public:
     Heart();
     void drawHeart(sf::RenderWindow &window);
     void moveHeart(float x,float y);
+    void setCenter(sf::RenderWindow &window);
 private:
     sf::Texture hearthTexture;
     sf::Sprite hearthSprite1;

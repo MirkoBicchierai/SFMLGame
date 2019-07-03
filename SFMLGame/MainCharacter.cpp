@@ -245,3 +245,28 @@ sf::Sprite MainCharacter::getSprite() {
     return entitySprite;
 }
 
+void MainCharacter::resetPlayer(sf::RenderWindow &window) {
+    moveSpeed=6;
+    arrow = 1;
+
+    sourceRect.top = 64 * 8;
+    sourceRect.left = 0;
+    entitySprite.setTextureRect(sourceRect);
+    entitySprite.setPosition(((window.getSize().x)/2.f)-32,((window.getSize().y)/2.f)-32);
+    camera.setCenter(entitySprite.getPosition().x+32,entitySprite.getPosition().y+32);
+
+    sword=0;
+    magic=0;
+    bow=0;
+
+    aniArrow=false;
+    shield = false;
+    spell=false;
+
+    //GUI
+    textArrow.setPosition((camera.getCenter().x + window.getSize().x / 2.f) - 56,camera.getCenter().y - (window.getSize().y / 2.f) + 45);
+    textArrow.setString("x " + std::to_string(arrow));
+    arrowGUI.setArrowGUI(camera.getCenter().x + window.getSize().x / 2.f,camera.getCenter().y - (window.getSize().y / 2.f) + 40 + 38, 180.f);
+    hearth.setCenter(window);
+}
+

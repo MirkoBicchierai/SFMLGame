@@ -51,5 +51,8 @@ void ConcreteStateMenu::startGame(MainCharacter &mainCharacter){
 }
 
 void ConcreteStateMenu::startTutorial(MainCharacter &mainCharacter) {
+    mainCharacter.resetPlayer(game->window);
+    mainCharacter.camera.setCenter((mainCharacter.getSprite().getPosition().x) + 32,((mainCharacter.getSprite().getPosition().y)) + 32);
+    game->window.setView(mainCharacter.camera);
     game->pushState(new ConcreteStateTutorial(game));
 }

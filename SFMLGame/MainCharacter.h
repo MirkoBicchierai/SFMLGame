@@ -40,6 +40,7 @@ public:
     void setTextureShield();
     void setNormalTexture();
     void reset(int pos);
+    void resetPlayer(sf::RenderWindow &window);
     sf::Sprite getSprite();
 
 private:

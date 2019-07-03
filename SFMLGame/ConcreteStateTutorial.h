@@ -20,7 +20,7 @@ private:
     TileMap map{};
     std::vector <int> vec;
     void backToMenu();
-    void loadFromFile(std::string path);
+    void loadFromFile(const std::string &path);
 };
 
 

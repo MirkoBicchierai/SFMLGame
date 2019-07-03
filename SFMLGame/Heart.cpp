@@ -29,3 +29,9 @@ void Heart::moveHeart(float x,float y){
     hearthSprite2.move(x,y);
     hearthSprite3.move(x,y);
 }
+
+void Heart::setCenter(sf::RenderWindow &window) {
+    hearthSprite1.setPosition(window.getSize().x-35,5);
+    hearthSprite2.setPosition(window.getSize().x-35-32-5,5);
+    hearthSprite3.setPosition(window.getSize().x-35-(32*2)-(5*2),5);
+}
