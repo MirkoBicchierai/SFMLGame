@@ -2,7 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-MainCharacter::MainCharacter(sf::RenderWindow &window) {
+MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     pTexture.loadFromFile("../img/Player/Normal_Player.png");
     bowTexture.loadFromFile("../img/Player/Bow_Player.png");
     shieldTexture.loadFromFile("../img/Player/Shield_Player.png");
@@ -124,7 +124,8 @@ void MainCharacter::drawPlayer(sf::RenderWindow &window,sf::Clock clockShield) {
         arrowPlayer.drawArrow(window);
 }
 
-sf::IntRect MainCharacter::getsourceRect() { return sourceRect; }
+sf::IntRect MainCharacter::getsourceRect() {
+    return sourceRect; }
 
 int MainCharacter::swordAttack() {
     if (swordRect.left == 64 * 5)

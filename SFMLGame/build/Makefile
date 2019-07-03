@@ -149,6 +149,33 @@ Arrow.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Arrow.cpp.s
 .PHONY : Arrow.cpp.s
 
+BaseStatistic.obj: BaseStatistic.cpp.obj
+
+.PHONY : BaseStatistic.obj
+
+# target to build an object file
+BaseStatistic.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj
+.PHONY : BaseStatistic.cpp.obj
+
+BaseStatistic.i: BaseStatistic.cpp.i
+
+.PHONY : BaseStatistic.i
+
+# target to preprocess a source file
+BaseStatistic.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.i
+.PHONY : BaseStatistic.cpp.i
+
+BaseStatistic.s: BaseStatistic.cpp.s
+
+.PHONY : BaseStatistic.s
+
+# target to generate assembly for a file
+BaseStatistic.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.s
+.PHONY : BaseStatistic.cpp.s
+
 ConcreteStateGame.obj: ConcreteStateGame.cpp.obj
 
 .PHONY : ConcreteStateGame.obj
@@ -458,6 +485,9 @@ help:
 	@echo ... Arrow.obj
 	@echo ... Arrow.i
 	@echo ... Arrow.s
+	@echo ... BaseStatistic.obj
+	@echo ... BaseStatistic.i
+	@echo ... BaseStatistic.s
 	@echo ... ConcreteStateGame.obj
 	@echo ... ConcreteStateGame.i
 	@echo ... ConcreteStateGame.s

@@ -78,6 +78,9 @@ CMakeFiles/SFMLGame.dir/Arrow.cpp.obj
  ../SFML/include/SFML/Window/WindowStyle.hpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.cpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.h
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj
+ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.cpp
+ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj
  ../SFML/include/SFML/Config.hpp
  ../SFML/include/SFML/Graphics.hpp
@@ -154,6 +157,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj
  ../SFML/include/SFML/Window/WindowHandle.hpp
  ../SFML/include/SFML/Window/WindowStyle.hpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.h
+ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame.cpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
@@ -239,6 +243,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj
  ../SFML/include/SFML/Window/WindowHandle.hpp
  ../SFML/include/SFML/Window/WindowStyle.hpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.h
+ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.cpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
@@ -325,6 +330,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj
  ../SFML/include/SFML/Window/WindowHandle.hpp
  ../SFML/include/SFML/Window/WindowStyle.hpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.h
+ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateTutorial.cpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateTutorial.h
@@ -487,6 +493,7 @@ CMakeFiles/SFMLGame.dir/Game.cpp.obj
  ../SFML/include/SFML/Window/WindowHandle.hpp
  ../SFML/include/SFML/Window/WindowStyle.hpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.h
+ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.cpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.h
@@ -569,6 +576,7 @@ CMakeFiles/SFMLGame.dir/GameState.cpp.obj
  ../SFML/include/SFML/Window/WindowHandle.hpp
  ../SFML/include/SFML/Window/WindowStyle.hpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.h
+ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.cpp
@@ -728,6 +736,7 @@ CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj
  ../SFML/include/SFML/Window/WindowHandle.hpp
  ../SFML/include/SFML/Window/WindowStyle.hpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.h
+ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Heart.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.cpp
@@ -962,6 +971,7 @@ CMakeFiles/SFMLGame.dir/main.cpp.obj
  ../SFML/include/SFML/Window/WindowHandle.hpp
  ../SFML/include/SFML/Window/WindowStyle.hpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.h
+ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.h

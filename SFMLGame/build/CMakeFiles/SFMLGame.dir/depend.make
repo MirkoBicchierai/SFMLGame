@@ -78,6 +78,9 @@ CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../SFML/include/SFML/Window/WindowStyle.h
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../Arrow.cpp
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../Arrow.h
 
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../BaseStatistic.cpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../BaseStatistic.h
+
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Config.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Graphics.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Graphics/BlendMode.hpp
@@ -153,6 +156,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Window/W
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../Arrow.h
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../BaseStatistic.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../ConcreteStateGame.cpp
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../ConcreteStateGame.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../ConcreteStateMenu.h
@@ -238,6 +242,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Window/W
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../Arrow.h
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../BaseStatistic.h
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../ConcreteStateGame.h
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../ConcreteStateMenu.cpp
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../ConcreteStateMenu.h
@@ -324,6 +329,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Wind
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../Arrow.h
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../BaseStatistic.h
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../ConcreteStateMenu.h
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../ConcreteStateTutorial.cpp
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../ConcreteStateTutorial.h
@@ -486,6 +492,7 @@ CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Window/Window.hpp
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../Arrow.h
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../BaseStatistic.h
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../Game.cpp
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../Game.h
@@ -568,6 +575,7 @@ CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Window/Window.hp
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../Arrow.h
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../BaseStatistic.h
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../Game.h
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../GameState.cpp
@@ -727,6 +735,7 @@ CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Window/Windo
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../Arrow.h
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../BaseStatistic.h
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../Heart.h
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../MainCharacter.cpp
@@ -961,6 +970,7 @@ CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Window/Window.hpp
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../Arrow.h
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../BaseStatistic.h
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../ConcreteStateMenu.h
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../Game.h

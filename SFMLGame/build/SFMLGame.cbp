@@ -92,6 +92,12 @@
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.h">
 			<Option target="SFMLGame"/>
 		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.cpp">
+			<Option target="SFMLGame"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.h">
+			<Option target="SFMLGame"/>
+		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame.cpp">
 			<Option target="SFMLGame"/>
 		</Unit>

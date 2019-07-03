@@ -5,9 +5,10 @@
 #include "Arrow.h"
 #include "Heart.h"
 #include "FireBall.h"
+#include "BaseStatistic.h"
 #include <iostream>
 
-class MainCharacter {
+class MainCharacter: public BaseStatistic {
 
 public:
 
@@ -28,7 +29,6 @@ public:
     int magic;
     int bow;
     float secShield;
-    float moveSpeed;
     explicit MainCharacter(sf::RenderWindow &window);
     sf::IntRect getsourceRect();
     void drawPlayer(sf::RenderWindow &window,sf::Clock clockShield);
