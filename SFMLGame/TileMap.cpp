@@ -7,7 +7,7 @@ void TileMap:: draw(sf::RenderTarget& target, sf::RenderStates states) const{
     states.texture = &m_tileset;
     target.draw(m_vertices, states);
 }
-void TileMap::load(const std::string& tileset, sf::Vector2u tileSize, const int* tiles, unsigned int width, unsigned int height){
+void TileMap::load(const std::string& tileset, sf::Vector2u tileSize, std::vector<int> tiles, unsigned int width, unsigned int height){
     m_tileset.loadFromFile(tileset);
 
     // scala il vettore per addattarlo alle dimensioni passate
