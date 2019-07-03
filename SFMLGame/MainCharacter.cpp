@@ -264,7 +264,7 @@ bool MainCharacter::controlMove(std::vector<Tile> tile,char direction) {
                   //  if(sqrt((clone.getPosition().x-i.tl.getPosition().x)*(clone.getPosition().x-i.tl.getPosition().x) + (clone.getPosition().y-i.tl.getPosition().y)*(clone.getPosition().y-i.tl.getPosition().y)) <=5){
                         std::cout << i.type << std::endl;
                         check = false;
-                   // }
+                   //}
                 }
             }
 
