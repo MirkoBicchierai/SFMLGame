@@ -25,7 +25,7 @@ void ConcreteStateTutorial::loadFromFile(const std::string &path) {
         }
         r++;
     }
-    map.load("../map/tileset_map.png", sf::Vector2u(32, 32), vec, c, r);
+   map.load("../map/tileset_map.png", sf::Vector2u(32, 32), vec, c, r,game->window);
 }
 
 void ConcreteStateTutorial::draw(MainCharacter &mainCharacter){
@@ -33,7 +33,9 @@ void ConcreteStateTutorial::draw(MainCharacter &mainCharacter){
         loadmap=true;
         loadFromFile("../map/tutorial/tutorial.txt");
     }
-    game->window.draw(map);
+    for(auto i:map.tile){
+        i.drawTile(game->window);
+    }
     mainCharacter.drawPlayer(game->window,game->clockShield);
 }
 
@@ -126,13 +128,13 @@ void ConcreteStateTutorial::handleInput(MainCharacter &mainCharacter){
 
         //player movement
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            mainCharacter.movePlayer('u',game->window);
+            mainCharacter.movePlayer('u',game->window,map.tile);
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-            mainCharacter.movePlayer('d',game->window);
+            mainCharacter.movePlayer('d',game->window,map.tile);
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-            mainCharacter.movePlayer('l',game->window);
+            mainCharacter.movePlayer('l',game->window,map.tile);
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-            mainCharacter.movePlayer('r',game->window);
+            mainCharacter.movePlayer('r',game->window,map.tile);
         }
 
         //sword attack plaYER

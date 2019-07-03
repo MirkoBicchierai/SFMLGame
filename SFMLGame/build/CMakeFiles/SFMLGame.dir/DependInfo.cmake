@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Heart.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Heart.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Menu.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Menu.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Tile.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Tile.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/TileMap.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/main.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/main.cpp.obj"
   )

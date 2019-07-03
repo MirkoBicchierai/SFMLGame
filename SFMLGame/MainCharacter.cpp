@@ -1,7 +1,9 @@
+#include <utility>
+
 #include "MainCharacter.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
-
+#include <math.h>
 MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     entityTexture.loadFromFile("../img/Player/Normal_Player.png");
     bowTexture.loadFromFile("../img/Player/Bow_Player.png");
@@ -202,7 +204,7 @@ int MainCharacter::bowAttack() {
     return bowRect.left;
 }
 
-void MainCharacter::movePlayer(char direction, sf::RenderWindow &window) {
+void MainCharacter::movePlayer(char direction, sf::RenderWindow &window,std::vector<Tile>tile) {
     float x=0,y=0;
 
     if (sourceRect.left == 64 * 8)
@@ -227,9 +229,47 @@ void MainCharacter::movePlayer(char direction, sf::RenderWindow &window) {
         x=moveSpeed;
         y=0;
     }
+    if(!controlMove(std::move(tile),direction)){
+        x=0;
+        y=0;
+    }
     entitySprite.setTextureRect(sourceRect);
     entitySprite.move(x,y);
     moveGUI(x,y,window);
+}
+bool MainCharacter::controlMove(std::vector<Tile> tile,char direction) {
+
+    sf::Sprite clone(entitySprite);
+    float x=0,y=0;
+    if (direction == 'u') {
+        x=0;
+        y=-moveSpeed;
+    } else if (direction == 'd') {
+        x=0;
+        y=moveSpeed;
+    } else if (direction == 'l') {
+        x=-moveSpeed;
+        y=0;
+    } else if (direction == 'r') {
+        x=moveSpeed;
+        y=0;
+    }
+    clone.move(x,y);
+
+    bool check=true;
+    for(const auto& i:tile){
+
+            if (i.type == "wall") {
+                if (clone.getGlobalBounds().intersects(i.tl.getGlobalBounds())) {
+                  //  if(sqrt((clone.getPosition().x-i.tl.getPosition().x)*(clone.getPosition().x-i.tl.getPosition().x) + (clone.getPosition().y-i.tl.getPosition().y)*(clone.getPosition().y-i.tl.getPosition().y)) <=5){
+                        std::cout << i.type << std::endl;
+                        check = false;
+                   // }
+                }
+            }
+
+    }
+    return check;
 }
 
 void MainCharacter::moveGUI(float x, float y,sf::RenderWindow &window) {

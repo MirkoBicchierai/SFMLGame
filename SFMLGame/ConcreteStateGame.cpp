@@ -3,8 +3,39 @@
 #include "ConcreteStateGame.h"
 #include "ConcreteStateMenu.h"
 #include "GameState.h"
+#include <vector>
+#include <fstream>
+#include <regex>
+
+void ConcreteStateGame::loadFromFile(const std::string &path) {
+    std::string s;
+    std::ifstream infile(path);
+    int c=0;
+    int r=0;
+    while (std::getline(infile, s)){
+        std::regex ws_re(",");
+        std::vector<std::string> result{ std::sregex_token_iterator(s.begin(), s.end(), ws_re, -1), {}};
+        c=0;
+        for (const auto & i : result) {
+            std::stringstream geek(i);
+            int x = 0;
+            geek >> x;
+            vec.push_back(x);
+            c++;
+        }
+        r++;
+    }
+    map.load("../map/tileset_map.png", sf::Vector2u(32, 32), vec, c, r,game->window);
+}
 
 void ConcreteStateGame::draw(MainCharacter &mainCharacter){
+    if(!loadmap) {
+        loadmap=true;
+        loadFromFile("../map/tutorial/tutorial.txt");
+    }
+    for(auto i:map.tile){
+        i.drawTile(game->window);
+    }
     mainCharacter.drawPlayer(game->window,game->clockShield);
 }
 
@@ -96,13 +127,13 @@ void ConcreteStateGame::handleInput(MainCharacter &mainCharacter){
 
         //player movement
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            mainCharacter.movePlayer('u',game->window);
+            mainCharacter.movePlayer('u',game->window,map.tile);
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-            mainCharacter.movePlayer('d',game->window);
+            mainCharacter.movePlayer('d',game->window,map.tile);
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-            mainCharacter.movePlayer('l',game->window);
+            mainCharacter.movePlayer('l',game->window,map.tile);
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-            mainCharacter.movePlayer('r',game->window);
+            mainCharacter.movePlayer('r',game->window,map.tile);
         }
 
         //sword attack plaYER

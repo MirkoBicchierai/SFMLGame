@@ -419,6 +419,33 @@ Menu.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Menu.cpp.s
 .PHONY : Menu.cpp.s
 
+Tile.obj: Tile.cpp.obj
+
+.PHONY : Tile.obj
+
+# target to build an object file
+Tile.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Tile.cpp.obj
+.PHONY : Tile.cpp.obj
+
+Tile.i: Tile.cpp.i
+
+.PHONY : Tile.i
+
+# target to preprocess a source file
+Tile.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Tile.cpp.i
+.PHONY : Tile.cpp.i
+
+Tile.s: Tile.cpp.s
+
+.PHONY : Tile.s
+
+# target to generate assembly for a file
+Tile.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Tile.cpp.s
+.PHONY : Tile.cpp.s
+
 TileMap.obj: TileMap.cpp.obj
 
 .PHONY : TileMap.obj
@@ -515,6 +542,9 @@ help:
 	@echo ... Menu.obj
 	@echo ... Menu.i
 	@echo ... Menu.s
+	@echo ... Tile.obj
+	@echo ... Tile.i
+	@echo ... Tile.s
 	@echo ... TileMap.obj
 	@echo ... TileMap.i
 	@echo ... TileMap.s

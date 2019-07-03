@@ -2,19 +2,16 @@
 #define SFMLGAME_TILEMAP_H
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <vector>
+#include "Tile.h"
 
-class TileMap : public sf::Drawable, public sf::Transformable{
+class TileMap{
 
 public:
+    sf::Texture texture;
+    std::vector<Tile> tile;
+    void load(const std::string& tileset, sf::Vector2u tileSize,std::vector<int> tiles, unsigned int width, unsigned int height, sf::RenderWindow &window);
 
-    void load(const std::string& tileset, sf::Vector2u tileSize,std::vector<int> tiles, unsigned int width, unsigned int height);
-
-private:
-
-    virtual void draw(sf::RenderTarget& target, sf::RenderStates states)const;
-
-    sf::VertexArray m_vertices;
-    sf::Texture m_tileset;
 };
 
 

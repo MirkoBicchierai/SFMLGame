@@ -7,6 +7,8 @@
 #include "FireBall.h"
 #include "BaseStatistic.h"
 #include <iostream>
+#include "Tile.h"
+#include <vector>
 
 class MainCharacter: public BaseStatistic {
 
@@ -32,7 +34,7 @@ public:
     explicit MainCharacter(sf::RenderWindow &window);
     sf::IntRect getsourceRect();
     void drawPlayer(sf::RenderWindow &window,sf::Clock clockShield);
-    void movePlayer(char direction,sf::RenderWindow &window);
+    void movePlayer(char direction,sf::RenderWindow &window,std::vector<Tile>tile);
     int bowAttack();
     int swordAttack();
     int magicAttack();
@@ -43,8 +45,9 @@ public:
     void resetPlayer(sf::RenderWindow &window);
     sf::Sprite getSprite();
 
+    bool controlMove(std::vector<Tile> tile,char direction);
 private:
-    void moveGUI(float x,float y,sf::RenderWindow &window);
+
     sf::Font font;
     sf::Text textTimeShield;
 
@@ -60,6 +63,8 @@ private:
     sf::IntRect bowRect;
     sf::IntRect swordRect;
     sf::IntRect magicRect;
+
+    void moveGUI(float x, float y,sf::RenderWindow &window);
 
 };
 
