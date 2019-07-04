@@ -1,6 +1,7 @@
 #ifndef SFMLGAME_MENU_H
 #define SFMLGAME_MENU_H
-#define MAX_NUMBER_ITEMS 3
+#define MAX_NUMBER_ITEMS_MENU 3
+
 #include <SFML/Graphics.hpp>
 
 class Menu {
@@ -20,7 +21,7 @@ private:
     int sizeNotSelectedItem;
     sf::Font font;
     sf::Text title;
-    sf::Text menu[MAX_NUMBER_ITEMS];
+    sf::Text menu[MAX_NUMBER_ITEMS_MENU];
     sf::Texture texture;
     sf::Sprite titleSprite1;
     sf::Sprite titleSprite2;

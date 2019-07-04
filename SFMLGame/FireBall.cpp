@@ -3,7 +3,7 @@
 #include "config.cpp"
 
 FireBall::FireBall() {
-    ballTexture.loadFromFile("../img/Player_obj/FireBall.png");
+    ballTexture.loadFromFile(IMG_PLAYER_OBJ_ROOT"/FireBall.png");
     ballSprite.setTexture(ballTexture);
     ballRect.height = dimFireBall;
     ballRect.width = dimFireBall;

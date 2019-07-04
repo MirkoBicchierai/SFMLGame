@@ -1,8 +1,9 @@
 #include "Heart.h"
 #include <SFML/Graphics.hpp>
+#include "config.cpp"
 
 Heart::Heart() {
-    hearthTexture.loadFromFile("../img/GUI/Heart.png");
+    hearthTexture.loadFromFile(IMG_ROOT"/GUI/Heart.png");
 
     hearthSprite1.setTexture(hearthTexture);
     hearthSprite1.setScale(sf::Vector2f(1, 1));

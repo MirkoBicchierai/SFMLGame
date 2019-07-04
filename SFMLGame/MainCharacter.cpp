@@ -5,9 +5,9 @@
 #include "config.cpp"
 
 MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
-    entityTexture.loadFromFile("../img/Player/Normal_Player.png");
-    bowTexture.loadFromFile("../img/Player/Bow_Player.png");
-    shieldTexture.loadFromFile("../img/Player/Shield_Player.png");
+    entityTexture.loadFromFile(IMG_PLAYER_ROOT"/Normal_Player.png");
+    bowTexture.loadFromFile(IMG_PLAYER_ROOT"/Bow_Player.png");
+    shieldTexture.loadFromFile(IMG_PLAYER_ROOT"/Shield_Player.png");
 
     moveSpeed=6;
 
@@ -49,9 +49,9 @@ MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     spell=false;
 
     //GUI
-    textureGUIShield.loadFromFile("../img/GUI/Shield.png");
+    textureGUIShield.loadFromFile(IMG_ROOT"/GUI/Shield.png");
     shieldSprite.setTexture(textureGUIShield);
-    font.loadFromFile("../font/Handwritingg.ttf");
+    font.loadFromFile(FONT_ROOT"/Handwritingg.ttf");
     textTimeShield.setFont(font);
 
     textArrow.setFont(font);

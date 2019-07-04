@@ -1,3 +1,11 @@
+#define FONT_ROOT "../font"
+#define IMG_PLAYER_ROOT "../img/Player"
+#define IMG_ROOT "../img"
+#define TITLE "The Road Of Knight"
+#define IMG_PLAYER_OBJ_ROOT "../img/Player_obj"
+#define MAP_ROOT "../map"
+#define MAP_ROOT_TUTORIAL "../map/tutorial"
+#define MAP_ROOT_GAME "../map/game"
 enum sourceState{
     upNormal=64*8,
     leftNormal=0,
@@ -57,6 +65,6 @@ enum ArrowState{
     UpRotation=180
 };
 
-enum tileSetWall{
+enum tileSetCollision{
     topMin=16*8,
 };

@@ -584,6 +584,7 @@ CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../GameState.h
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../Heart.h
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../MainCharacter.h
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../Tile.h
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../config.cpp
 
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Config.hpp
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Graphics.hpp
@@ -745,6 +746,7 @@ CMakeFiles/SFMLGame.dir/Heart.cpp.obj: ../SFML/include/SFML/Window/WindowHandle.
 CMakeFiles/SFMLGame.dir/Heart.cpp.obj: ../SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/SFMLGame.dir/Heart.cpp.obj: ../Heart.cpp
 CMakeFiles/SFMLGame.dir/Heart.cpp.obj: ../Heart.h
+CMakeFiles/SFMLGame.dir/Heart.cpp.obj: ../config.cpp
 
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Config.hpp
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Graphics.hpp
@@ -905,6 +907,7 @@ CMakeFiles/SFMLGame.dir/Menu.cpp.obj: ../SFML/include/SFML/Window/WindowHandle.h
 CMakeFiles/SFMLGame.dir/Menu.cpp.obj: ../SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/SFMLGame.dir/Menu.cpp.obj: ../Menu.cpp
 CMakeFiles/SFMLGame.dir/Menu.cpp.obj: ../Menu.h
+CMakeFiles/SFMLGame.dir/Menu.cpp.obj: ../config.cpp
 
 CMakeFiles/SFMLGame.dir/Tile.cpp.obj: ../SFML/include/SFML/Config.hpp
 CMakeFiles/SFMLGame.dir/Tile.cpp.obj: ../SFML/include/SFML/Graphics.hpp
@@ -1060,6 +1063,7 @@ CMakeFiles/SFMLGame.dir/TileMap.cpp.obj: ../SFML/include/SFML/Window/WindowStyle
 CMakeFiles/SFMLGame.dir/TileMap.cpp.obj: ../Tile.h
 CMakeFiles/SFMLGame.dir/TileMap.cpp.obj: ../TileMap.cpp
 CMakeFiles/SFMLGame.dir/TileMap.cpp.obj: ../TileMap.h
+CMakeFiles/SFMLGame.dir/TileMap.cpp.obj: ../config.cpp
 
 CMakeFiles/SFMLGame.dir/config.cpp.obj: ../config.cpp
 

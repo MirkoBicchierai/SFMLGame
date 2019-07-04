@@ -6,7 +6,7 @@
 #include <fstream>
 #include <regex>
 
-void ConcreteStateTutorial::loadFromFileLayer1(const std::string &path) {
+void ConcreteStateTutorial::loadFromFile(const std::string &path) {
     std::string s;
     std::ifstream infile(path);
     int c=0;
@@ -24,13 +24,13 @@ void ConcreteStateTutorial::loadFromFileLayer1(const std::string &path) {
         }
         r++;
     }
-   map.load("../map/ttt.png", sf::Vector2u(16, 16), vec, c, r,game->window);
+   map.load(MAP_ROOT"/tile-set.png", sf::Vector2u(16, 16), vec, c, r,game->window);
 }
 
 void ConcreteStateTutorial::draw(MainCharacter &mainCharacter){
     if(!loadMap) {
         loadMap=true;
-        loadFromFileLayer1("../map/tutorial/tutorial.txt");
+        loadFromFile(MAP_ROOT_TUTORIAL"/tutorial.txt");
     }
     for(auto i:map.tile){
         i.drawTile(game->window);

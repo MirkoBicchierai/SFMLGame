@@ -1,13 +1,13 @@
 #include "SFML/Graphics.hpp"
 #include "GameState.h"
 #include "Game.h"
-
+#include "config.cpp"
 Game::Game(){
-    window.create(sf::VideoMode(1088, 704), "The road of Knight", sf::Style::Titlebar | sf::Style::Close);
+    window.create(sf::VideoMode(1088, 704), TITLE, sf::Style::Titlebar | sf::Style::Close);
     sf::Vector2i centerWindow((sf::VideoMode::getDesktopMode().width / 2) - window.getSize().x / 2,(sf::VideoMode::getDesktopMode().height / 2) - window.getSize().y / 2);
     window.setPosition(centerWindow);
     sf::Image icon;
-    icon.loadFromFile("../img/GUI/Sword.png");
+    icon.loadFromFile(IMG_ROOT"/GUI/Sword.png");
     window.setIcon(32,32,icon.getPixelsPtr());
     window.setFramerateLimit(60);
 }

@@ -3,7 +3,7 @@
 #include "config.cpp"
 
 Arrow::Arrow() {
-    arrowTexture.loadFromFile("../img/Player_obj/Arrow.png");
+    arrowTexture.loadFromFile(IMG_PLAYER_OBJ_ROOT"/Arrow.png");
     arrowSprite.setTexture(arrowTexture);
     arrowRect.height = dimArrow;
     arrowRect.width = dimArrow;

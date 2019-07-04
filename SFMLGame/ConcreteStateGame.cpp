@@ -26,13 +26,13 @@ void ConcreteStateGame::loadFromFile(const std::string &path) {
         }
         r++;
     }
-    map.load("../map/tileset.png", sf::Vector2u(16, 16), vec, c, r,game->window);
+    map.load(MAP_ROOT"/tile-set.png", sf::Vector2u(16, 16), vec, c, r,game->window);
 }
 
 void ConcreteStateGame::draw(MainCharacter &mainCharacter){
     if(!loadMap) {
         loadMap=true;
-        loadFromFile("../map/game/level1.txt");
+        loadFromFile(MAP_ROOT_GAME"/level1.txt");
     }
   for(auto i:map.tile){
         i.drawTile(game->window);
