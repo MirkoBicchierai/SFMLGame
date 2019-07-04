@@ -30,7 +30,7 @@ void ConcreteStateTutorial::loadFromFile(const std::string &path) {
 void ConcreteStateTutorial::draw(MainCharacter &mainCharacter){
     if(!loadMap) {
         loadMap=true;
-        loadFromFile(MAP_ROOT_TUTORIAL"/tutorial.txt");
+        loadFromFile(MAP_ROOT_TUTORIAL"/Tutorial.txt");
     }
     for(auto i:map.tile){
         i.drawTile(game->window);

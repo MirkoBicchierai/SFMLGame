@@ -239,7 +239,11 @@ void MainCharacter::movePlayer(char direction, sf::RenderWindow &window,std::vec
 }
 
 bool MainCharacter::controlMove(std::vector<Tile> &tile,char direction) {
-    sf::Sprite clone(entitySprite);
+
+    sf::RectangleShape rectangle;
+    rectangle.setSize(sf::Vector2f(32, 48));
+    rectangle.setOutlineThickness(5);
+    rectangle.setPosition(entitySprite.getPosition().x+16,entitySprite.getPosition().y+8);
 
     float x=0,y=0;
     if (direction == 'u') {
@@ -256,11 +260,11 @@ bool MainCharacter::controlMove(std::vector<Tile> &tile,char direction) {
         y=0;
     }
 
-    clone.move(x,y);
+    rectangle.move(x,y);
     bool check=true;
     for(const auto& i:tile){
         if (i.type == "wall") {
-            if (clone.getGlobalBounds().intersects(i.spriteCollision.getGlobalBounds()))
+            if (rectangle.getGlobalBounds().intersects(i.spriteCollision.getGlobalBounds()))
                  check = false;
         }
     }

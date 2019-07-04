@@ -6,6 +6,7 @@
 #define MAP_ROOT "../map"
 #define MAP_ROOT_TUTORIAL "../map/tutorial"
 #define MAP_ROOT_GAME "../map/game"
+
 enum sourceState{
     upNormal=64*8,
     leftNormal=0,
