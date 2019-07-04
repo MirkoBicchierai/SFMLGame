@@ -676,14 +676,6 @@ SFML/Config.hpp
 
 ../SFML/include/SFML/Window/WindowStyle.hpp
 
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.cpp
-SFML/Graphics.hpp
--
-Arrow.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.h
-config.cpp
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
-
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.h
 SFML/Graphics.hpp
 -
@@ -691,34 +683,6 @@ SFML/Graphics.hpp
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.h
 SFML/Graphics.hpp
 -
-
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame.cpp
-iostream
--
-SFML/Graphics.hpp
--
-ConcreteStateGame.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame.h
-ConcreteStateMenu.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
-GameState.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
-config.cpp
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
-vector
--
-fstream
--
-regex
--
-
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame.h
-SFML/Graphics.hpp
--
-GameState.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
-TileMap.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.h
 
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
 GameState.h
@@ -754,14 +718,6 @@ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
 TileMap.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.h
 
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.cpp
-SFML/Graphics.hpp
--
-FireBall.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.h
-config.cpp
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
-
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.h
 SFML/Graphics.hpp
 -
@@ -785,18 +741,6 @@ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Heart.h
 SFML/Graphics.hpp
 -
-
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.cpp
-SFML/Graphics.hpp
--
-iostream
--
-math.h
--
-MainCharacter.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
-config.cpp
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
 
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
 SFML/Graphics.hpp

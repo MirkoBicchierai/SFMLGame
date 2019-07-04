@@ -25,8 +25,9 @@ GameState* Game::CurrentState(){
 void Game::gameLoop(){
     MainCharacter mainCharacter(window);
     while (window.isOpen()){
+
         if (CurrentState() == nullptr)
-            continue;
+            break;
 
         CurrentState()->handleInput(mainCharacter);
         CurrentState()->update(mainCharacter);

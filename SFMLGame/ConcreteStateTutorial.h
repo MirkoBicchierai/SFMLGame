@@ -18,8 +18,10 @@ public:
 private:
     TileMap map{};
     std::vector <int> vec;
+    std::vector <int> vec2;
     void backToMenu();
-    void loadFromFile(const std::string &path);
+    void loadFromFileLayer1(const std::string &path);
+    void loadFromFileLayer2(const std::string &path);
 };
 
 

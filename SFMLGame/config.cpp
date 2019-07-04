@@ -56,3 +56,7 @@ enum ArrowState{
     LeftRotation=90,
     UpRotation=180
 };
+
+enum tileSetWall{
+    topMin=16*8,
+};

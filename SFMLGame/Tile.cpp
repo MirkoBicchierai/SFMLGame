@@ -6,23 +6,22 @@ Tile::Tile(int id, std::string ty) {
 }
 
 void Tile::setTile(int i, int j, sf::Texture &txt, sf::Vector2u tileSize) {
+
+    int tu = idTile % (txt.getSize().x / tileSize.x);
+    int tv = idTile / (txt.getSize().x / tileSize.x);
     spriteShow.setPosition(i*tileSize.x, j*tileSize.y);
-    sourceRect.top=tileSize.x*int(idTile/8);
-    sourceRect.left=tileSize.x*int(idTile%8);
+    sourceRect.top=tv * tileSize.y;
+    sourceRect.left=tu * tileSize.x;
+
     sourceRect.width=tileSize.x;
     sourceRect.height=tileSize.y;
     spriteShow.setTextureRect(sourceRect);
     spriteShow.setTexture(txt);
 
     spriteCollision.setPosition(i*tileSize.x, j*tileSize.y);
-    if(type=="wall") {
-        if (idTile == 43 || idTile == 44 || idTile == 45 || idTile == 37 || idTile == 29)
-            spriteCollision.setPosition(spriteShow.getPosition().x + tileSize.x,
-                                        spriteShow.getPosition().y + tileSize.y);
-    }
 
-    collisionRect.top=tileSize.x*int(idTile/8);
-    collisionRect.left=tileSize.x*int(idTile%8);
+    collisionRect.top=tv * tileSize.y;
+    collisionRect.left=tu * tileSize.x;
     collisionRect.width=6;
     collisionRect.height=6;
     spriteCollision.setTextureRect(collisionRect);
