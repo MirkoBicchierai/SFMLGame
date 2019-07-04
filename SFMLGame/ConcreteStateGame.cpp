@@ -33,9 +33,10 @@ void ConcreteStateGame::draw(MainCharacter &mainCharacter){
         loadmap=true;
         loadFromFile("../map/tutorial/tutorial.txt");
     }
-    for(auto i:map.tile){
+  for(auto i:map.tile){
         i.drawTile(game->window);
     }
+
     mainCharacter.drawPlayer(game->window,game->clockShield);
 }
 

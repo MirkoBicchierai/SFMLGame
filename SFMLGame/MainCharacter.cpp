@@ -238,8 +238,8 @@ void MainCharacter::movePlayer(char direction, sf::RenderWindow &window,std::vec
     moveGUI(x,y,window);
 }
 bool MainCharacter::controlMove(std::vector<Tile> tile,char direction) {
-
     sf::Sprite clone(entitySprite);
+
     float x=0,y=0;
     if (direction == 'u') {
         x=0;
@@ -254,20 +254,14 @@ bool MainCharacter::controlMove(std::vector<Tile> tile,char direction) {
         x=moveSpeed;
         y=0;
     }
-    clone.move(x,y);
 
+    clone.move(x,y);
     bool check=true;
     for(const auto& i:tile){
-
-            if (i.type == "wall") {
-                if (clone.getGlobalBounds().intersects(i.tl.getGlobalBounds())) {
-                  //  if(sqrt((clone.getPosition().x-i.tl.getPosition().x)*(clone.getPosition().x-i.tl.getPosition().x) + (clone.getPosition().y-i.tl.getPosition().y)*(clone.getPosition().y-i.tl.getPosition().y)) <=5){
-                        std::cout << i.type << std::endl;
-                        check = false;
-                   //}
-                }
-            }
-
+        if (i.type == "wall") {
+            if (clone.getGlobalBounds().intersects(i.spriteCollision.getGlobalBounds()))
+                 check = false;
+        }
     }
     return check;
 }
