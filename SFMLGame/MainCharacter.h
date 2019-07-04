@@ -45,7 +45,7 @@ public:
     void resetPlayer(sf::RenderWindow &window);
     sf::Sprite getSprite();
 
-    bool controlMove(std::vector<Tile> tile,char direction);
+    bool controlMove(std::vector<Tile> &tile,char direction);
 private:
 
     sf::Font font;

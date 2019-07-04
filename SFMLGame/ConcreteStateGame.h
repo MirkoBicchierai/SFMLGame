@@ -12,7 +12,7 @@ public:
      void draw(MainCharacter &mainCharacter) override ;
      void update(MainCharacter &mainCharacter) override;
      void handleInput(MainCharacter &mainCharacter) override;
-     bool loadmap=false;
+     bool loadMap=false;
      explicit ConcreteStateGame(Game* game);
 
 private:

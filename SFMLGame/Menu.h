@@ -31,4 +31,4 @@ private:
 
 };
 
-#endif //SFMLGAME_MENU_H
+#endif

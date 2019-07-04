@@ -29,8 +29,8 @@ void ConcreteStateTutorial::loadFromFile(const std::string &path) {
 }
 
 void ConcreteStateTutorial::draw(MainCharacter &mainCharacter){
-    if(!loadmap) {
-        loadmap=true;
+    if(!loadMap) {
+        loadMap=true;
         loadFromFile("../map/tutorial/tutorial.txt");
     }
     for(auto i:map.tile){

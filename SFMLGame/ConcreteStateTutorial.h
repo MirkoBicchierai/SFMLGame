@@ -10,7 +10,7 @@
 
 class ConcreteStateTutorial: public GameState {
 public:
-    bool loadmap=false;
+    bool loadMap=false;
     void draw(MainCharacter &mainCharacter) override ;
     void update(MainCharacter &mainCharacter) override;
     void handleInput(MainCharacter &mainCharacter) override;

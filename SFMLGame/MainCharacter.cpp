@@ -229,7 +229,7 @@ void MainCharacter::movePlayer(char direction, sf::RenderWindow &window,std::vec
         x=moveSpeed;
         y=0;
     }
-    if(!controlMove(std::move(tile),direction)){
+    if(!controlMove(tile,direction)){
         x=0;
         y=0;
     }
@@ -237,7 +237,7 @@ void MainCharacter::movePlayer(char direction, sf::RenderWindow &window,std::vec
     entitySprite.move(x,y);
     moveGUI(x,y,window);
 }
-bool MainCharacter::controlMove(std::vector<Tile> tile,char direction) {
+bool MainCharacter::controlMove(std::vector<Tile> &tile,char direction) {
     sf::Sprite clone(entitySprite);
 
     float x=0,y=0;
