@@ -1,7 +1,7 @@
 #ifndef SFMLGAME_HEART_H
 #define SFMLGAME_HEART_H
+
 #include <SFML/Graphics.hpp>
-#include <iostream>
 
 class Heart {
 public:

@@ -1,6 +1,5 @@
-#include "FireBall.h"
 #include <SFML/Graphics.hpp>
-#include <iostream>
+#include "FireBall.h"
 
 FireBall::FireBall() {
     ballTexture.loadFromFile("../img/Player_obj/FireBall.png");

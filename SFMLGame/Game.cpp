@@ -1,7 +1,7 @@
 #include "SFML/Graphics.hpp"
 #include "GameState.h"
 #include "Game.h"
-#include "MainCharacter.h"
+
 Game::Game(){
     window.create(sf::VideoMode(1088, 704), "The road of Knight", sf::Style::Titlebar | sf::Style::Close);
     sf::Vector2i centerWindow((sf::VideoMode::getDesktopMode().width / 2) - window.getSize().x / 2,(sf::VideoMode::getDesktopMode().height / 2) - window.getSize().y / 2);

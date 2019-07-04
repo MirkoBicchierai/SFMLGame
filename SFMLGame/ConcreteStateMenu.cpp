@@ -1,10 +1,7 @@
 #include "SFML/Graphics.hpp"
-#include <iostream>
-#include "ConcreteStateMenu.h"
 #include "ConcreteStateMenu.h"
 #include"GameState.h"
 #include "ConcreteStateGame.h"
-#include "Menu.h"
 #include "ConcreteStateTutorial.h"
 
 ConcreteStateMenu::ConcreteStateMenu(Game* game){

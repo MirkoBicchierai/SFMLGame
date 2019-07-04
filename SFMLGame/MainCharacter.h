@@ -31,6 +31,7 @@ public:
     int magic;
     int bow;
     float secShield;
+
     explicit MainCharacter(sf::RenderWindow &window);
     sf::IntRect getsourceRect();
     void drawPlayer(sf::RenderWindow &window,sf::Clock clockShield);
@@ -44,7 +45,6 @@ public:
     void reset(int pos);
     void resetPlayer(sf::RenderWindow &window);
     sf::Sprite getSprite();
-
     bool controlMove(std::vector<Tile> &tile,char direction);
 private:
 

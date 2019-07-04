@@ -1,9 +1,8 @@
-#include <utility>
-
-#include "MainCharacter.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <math.h>
+#include "MainCharacter.h"
+
 MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     entityTexture.loadFromFile("../img/Player/Normal_Player.png");
     bowTexture.loadFromFile("../img/Player/Bow_Player.png");

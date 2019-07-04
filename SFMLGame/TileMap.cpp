@@ -3,7 +3,6 @@
 #include <iostream>
 #include "Tile.h"
 void TileMap::load(const std::string& tileSet, sf::Vector2u tileSize, std::vector<int> tiles, unsigned int width, unsigned int height, sf::RenderWindow &window){
-
     texture.loadFromFile(tileSet);
     int n=0;
     for (unsigned int i = 0; i < width; ++i) {

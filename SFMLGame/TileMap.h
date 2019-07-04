@@ -8,9 +8,10 @@
 class TileMap{
 
 public:
-    sf::Texture texture;
     std::vector<Tile> tile;
     void load(const std::string& tileSet, sf::Vector2u tileSize,std::vector<int> tiles, unsigned int width, unsigned int height, sf::RenderWindow &window);
+private:
+    sf::Texture texture;
 
 };
 

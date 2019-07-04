@@ -1,10 +1,9 @@
 #ifndef SFMLGAME_CONCRETESTATETUTORIAL_H
 #define SFMLGAME_CONCRETESTATETUTORIAL_H
 
-#include "ConcreteStateMenu.h"
-#include <iostream>
 #include <vector>
 #include <SFML/Graphics.hpp>
+#include "ConcreteStateMenu.h"
 #include "GameState.h"
 #include "TileMap.h"
 

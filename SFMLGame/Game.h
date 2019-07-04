@@ -18,7 +18,7 @@ public:
     sf::Clock clockShield;
     sf::Clock clockSword;
     sf::Clock clockBow;
-    sf::Clock clockMagick;
+    sf::Clock clockSpell;
 
 private:
     std::vector<GameState*> states;

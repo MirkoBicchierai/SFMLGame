@@ -1,7 +1,6 @@
 #ifndef SFMLGAME_ARROW_H
 #define SFMLGAME_ARROW_H
 #include <SFML/Graphics.hpp>
-#include <iostream>
 
 class Arrow {
 public:
@@ -9,7 +8,7 @@ public:
     sf::Clock clock;
     bool pick;
     bool stay;
-    int ciclo;
+    int arrowFor;
     bool animationArrow;
     Arrow();
     void setArrowGUI(float X, float Y, float rotation);
@@ -24,4 +23,4 @@ private:
 };
 
 
-#endif //SFMLGAME_ARROW_H
+#endif

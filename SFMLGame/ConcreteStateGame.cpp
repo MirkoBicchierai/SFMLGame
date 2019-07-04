@@ -65,7 +65,7 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
                 mainCharacter.arrow = mainCharacter.arrow - 1;
                 mainCharacter.arrowPlayer.setRect(mainCharacter.getsourceRect(), mainCharacter.getSprite().getPosition().x,mainCharacter.getSprite().getPosition().y );
                 mainCharacter.arrowPlayer.animationArrow = true;
-                mainCharacter.arrowPlayer.ciclo = 0;
+                mainCharacter.arrowPlayer.arrowFor = 0;
                 mainCharacter.arrowPlayer.stay = true;
             }
             game->clockBow.restart();
@@ -73,14 +73,14 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
     }
     //animation spell-cast
     if (mainCharacter.magic == 1) {
-        if ( game->clockMagick.getElapsedTime().asMilliseconds() >= mainCharacter.timeMagic ) {
+        if ( game->clockSpell.getElapsedTime().asMilliseconds() >= mainCharacter.timeMagic ) {
             if (mainCharacter.magicAttack() == 64 * 6) {
                 mainCharacter.magic = 0;
                 mainCharacter.reset(mainCharacter.getsourceRect().top);
                 mainCharacter.ball.animationBall=true;
                 mainCharacter.ball.setRect(mainCharacter.getsourceRect(), mainCharacter.getSprite().getPosition().x,mainCharacter.getSprite().getPosition().y);
             }
-            game->clockMagick.restart();
+            game->clockSpell.restart();
         }
     }
     //animation fireball
@@ -93,11 +93,11 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
     }
     //animation arrow
     if (mainCharacter.arrowPlayer.animationArrow) {
-        if (mainCharacter.arrowPlayer.ciclo < 8) {
+        if (mainCharacter.arrowPlayer.arrowFor < 8) {
             if (mainCharacter.arrowPlayer.clock.getElapsedTime().asMilliseconds() > 45.f) {
                 mainCharacter.arrowPlayer.animation();
                 mainCharacter.arrowPlayer.clock.restart();
-                mainCharacter.arrowPlayer.ciclo++;
+                mainCharacter.arrowPlayer.arrowFor++;
             }
         } else {
             mainCharacter.arrowPlayer.pick = true;
@@ -156,7 +156,7 @@ void ConcreteStateGame::handleInput(MainCharacter &mainCharacter){
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::R) && !mainCharacter.shield &&
                     !mainCharacter.spell) {
                     mainCharacter.magic = 1;
-                    game->clockMagick.restart();
+                    game->clockSpell.restart();
                     mainCharacter.spell = true;
                 } else {
                     // activate shield player

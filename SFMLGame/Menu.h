@@ -1,8 +1,7 @@
 #ifndef SFMLGAME_MENU_H
 #define SFMLGAME_MENU_H
-
-#include <SFML/Graphics.hpp>
 #define MAX_NUMBER_ITEMS 3
+#include <SFML/Graphics.hpp>
 
 class Menu {
 

@@ -1,6 +1,5 @@
-#include "Arrow.h"
 #include <SFML/Graphics.hpp>
-#include <iostream>
+#include "Arrow.h"
 
 Arrow::Arrow() {
     arrowTexture.loadFromFile("../img/Player_obj/Arrow.png");
@@ -12,7 +11,7 @@ Arrow::Arrow() {
     moveSpeed=40;
     animationArrow=false;
     stay=false;
-    ciclo=0;
+    arrowFor=0;
     pick=false;
     colorSprite=arrowSprite.getColor();
 }

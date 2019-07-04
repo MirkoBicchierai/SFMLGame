@@ -1,6 +1,5 @@
 #include "Heart.h"
 #include <SFML/Graphics.hpp>
-#include <iostream>
 
 Heart::Heart() {
     hearthTexture.loadFromFile("../img/GUI/Heart.png");
