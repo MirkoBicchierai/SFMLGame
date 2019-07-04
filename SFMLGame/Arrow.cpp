@@ -1,12 +1,13 @@
 #include <SFML/Graphics.hpp>
 #include "Arrow.h"
+#include "config.cpp"
 
 Arrow::Arrow() {
     arrowTexture.loadFromFile("../img/Player_obj/Arrow.png");
     arrowSprite.setTexture(arrowTexture);
-    arrowRect.height = 32;
-    arrowRect.width = 32;
-    arrowRect.left = 0;
+    arrowRect.height = dimArrow;
+    arrowRect.width = dimArrow;
+    arrowRect.left = LeftNormalArrow;
     arrowSprite.setTextureRect(arrowRect);
     moveSpeed=40;
     animationArrow=false;
@@ -23,56 +24,57 @@ void Arrow::drawArrow(sf::RenderWindow &window) {
         arrowSprite.setColor(colorSprite);
     window.draw(arrowSprite);
 }
+
 void Arrow::setRect(sf::IntRect player,float x, float y) {
-    arrowSprite.setRotation(0.f);
-    if (player.top == 64 * 11) {
-        arrowSprite.setRotation(270.f);
+    arrowSprite.setRotation(baseRotation);
+    if (player.top == topMoveRight) {
+        arrowSprite.setRotation(RightRotation);
         y=y+48;
     }
-    if (player.top == 64 * 10) {
-        arrowSprite.setRotation(0.f);
+    if (player.top == topMoveDown) {
+        arrowSprite.setRotation(DownRotation);
         x=x+16;
     }
-    if (player.top == 64 * 9) {
-        arrowSprite.setRotation(90.f);
+    if (player.top == topMoveLeft) {
+        arrowSprite.setRotation(LeftRotation);
         y=y+16;
     }
-    if (player.top == 64 * 8) {
-        arrowSprite.setRotation(180.f);
+    if (player.top == topMoveUp) {
+        arrowSprite.setRotation(UpRotation);
         y=y+48;
         x=x+48;
     }
-    arrowRect.top=0;
-    arrowRect.left=0;
+    arrowRect.top=TopNormalArrow;
+    arrowRect.left=LeftNormalArrow;
     clock.restart();
     arrowSprite.setTextureRect(arrowRect);
     arrowSprite.setPosition(x,y);
 }
 
 void Arrow::animation() {
-    if (arrowSprite.getRotation() == 270.f) {
+    if (arrowSprite.getRotation() == RightRotation) {
         arrowSprite.move(moveSpeed,0);
     }
-    if (arrowSprite.getRotation() == 0.f) {
+    if (arrowSprite.getRotation() == DownRotation) {
         arrowSprite.move(0,moveSpeed);
     }
-    if (arrowSprite.getRotation() == 90.f) {
+    if (arrowSprite.getRotation() == LeftRotation) {
         arrowSprite.move(-moveSpeed,0);
     }
-    if (arrowSprite.getRotation() == 180.f) {
+    if (arrowSprite.getRotation() == UpRotation) {
         arrowSprite.move(0,-moveSpeed);
     }
 
-    if(arrowRect.left==32 && arrowRect.top==32) {
-        arrowRect.left = 0;
-        arrowRect.top = 0;
+    if(arrowRect.left==dimArrow && arrowRect.top==dimArrow) {
+        arrowRect.left = LeftNormalArrow;
+        arrowRect.top = TopNormalArrow;
     }else {
-        if((arrowRect.left==0 && arrowRect.top==32)||(arrowRect.left==0 && arrowRect.top==0))
-            arrowRect.left = 32;
+        if((arrowRect.left==0 && arrowRect.top==dimArrow)||(arrowRect.left==0 && arrowRect.top==0))
+            arrowRect.left = dimArrow;
         else{
-            if(arrowRect.left==32 && arrowRect.top==0) {
-                arrowRect.left = 0;
-                arrowRect.top = 32;
+            if(arrowRect.left==dimArrow && arrowRect.top==0) {
+                arrowRect.left = LeftNormalArrow;
+                arrowRect.top = dimArrow;
             }
         }
     }

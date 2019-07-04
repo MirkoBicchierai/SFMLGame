@@ -676,6 +676,14 @@ SFML/Config.hpp
 
 ../SFML/include/SFML/Window/WindowStyle.hpp
 
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.cpp
+SFML/Graphics.hpp
+-
+Arrow.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.h
+config.cpp
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
+
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.h
 SFML/Graphics.hpp
 -
@@ -695,6 +703,8 @@ ConcreteStateMenu.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
 GameState.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
+config.cpp
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
 vector
 -
 fstream
@@ -709,18 +719,6 @@ GameState.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
 TileMap.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.h
-
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.cpp
-SFML/Graphics.hpp
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/SFML/Graphics.hpp
-ConcreteStateMenu.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
-GameState.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
-ConcreteStateGame.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame.h
-ConcreteStateTutorial.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateTutorial.h
 
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
 GameState.h
@@ -737,6 +735,8 @@ ConcreteStateMenu.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
 GameState.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
+config.cpp
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
 fstream
 -
 regex
@@ -754,19 +754,19 @@ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
 TileMap.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.h
 
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.cpp
+SFML/Graphics.hpp
+-
+FireBall.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.h
+config.cpp
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
+
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.h
 SFML/Graphics.hpp
 -
 iostream
 -
-
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.cpp
-SFML/Graphics.hpp
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/SFML/Graphics.hpp
-GameState.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
-Game.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.h
 
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.h
 vector
@@ -775,10 +775,6 @@ SFML/Graphics.hpp
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/SFML/Graphics.hpp
 MainCharacter.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
-
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.cpp
-GameState.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
 
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
 Game.h
@@ -789,6 +785,18 @@ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Heart.h
 SFML/Graphics.hpp
 -
+
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.cpp
+SFML/Graphics.hpp
+-
+iostream
+-
+math.h
+-
+MainCharacter.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
+config.cpp
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
 
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
 SFML/Graphics.hpp
@@ -826,9 +834,5 @@ vector
 Tile.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Tile.h
 
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/main.cpp
-Game.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.h
-ConcreteStateMenu.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
 

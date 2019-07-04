@@ -1,12 +1,13 @@
 #include <SFML/Graphics.hpp>
 #include "FireBall.h"
+#include "config.cpp"
 
 FireBall::FireBall() {
     ballTexture.loadFromFile("../img/Player_obj/FireBall.png");
     ballSprite.setTexture(ballTexture);
-    ballRect.height = 64;
-    ballRect.width = 64;
-    ballRect.left = 0;
+    ballRect.height = dimFireBall;
+    ballRect.width = dimFireBall;
+    ballRect.left = NormalLeft;
     ballSprite.setTextureRect(ballRect);
     moveSpeed=20;
     animationBall=false;
@@ -15,40 +16,41 @@ FireBall::FireBall() {
 void FireBall::drawFireBall(sf::RenderWindow &window) {
     window.draw(ballSprite);
 }
+
 void FireBall::setRect(sf::IntRect player,float x, float y) {
-    if (player.top == 64 * 11) {
-        ballRect.top = 64 * 4;
+    if (player.top == topMoveRight) {
+        ballRect.top = RightFireBall;
     }
-    if (player.top == 64 * 10) {
-        ballRect.top = 64 * 6;
+    if (player.top == topMoveDown) {
+        ballRect.top = DownFireBall;
     }
-    if (player.top == 64 * 9) {
-        ballRect.top = 64 * 0;
+    if (player.top == topMoveLeft) {
+        ballRect.top = LeftFireBall;
     }
-    if (player.top == 64 * 8) {
-        ballRect.top = 64 * 2;
+    if (player.top == topMoveUp) {
+        ballRect.top = UpFireBall;
     }
-    ballRect.left=0;
+    ballRect.left=NormalLeft;
     clock.restart();
     ballSprite.setTextureRect(ballRect);
     ballSprite.setPosition(x,y);
 }
 
 int FireBall::animation() {
-    if (ballRect.top == 64 * 4) {
+    if (ballRect.top == RightFireBall) {
         ballSprite.move(moveSpeed,0);
     }
-    if (ballRect.top == 64 * 6) {
+    if (ballRect.top == DownFireBall) {
         ballSprite.move(0,moveSpeed);
     }
-    if (ballRect.top == 64 * 0) {
+    if (ballRect.top == LeftFireBall) {
         ballSprite.move(-moveSpeed,0);
     }
-    if (ballRect.top == 64 * 2) {
+    if (ballRect.top == UpFireBall) {
         ballSprite.move(0,-moveSpeed);
     }
 
-    ballRect.left=ballRect.left+64;
+    ballRect.left=ballRect.left+dim;
 
     return ballRect.left;
 }

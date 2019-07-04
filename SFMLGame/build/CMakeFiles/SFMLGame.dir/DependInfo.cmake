@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Menu.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Menu.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Tile.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Tile.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/TileMap.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/config.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/main.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

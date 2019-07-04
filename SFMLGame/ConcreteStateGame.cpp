@@ -3,6 +3,7 @@
 #include "ConcreteStateGame.h"
 #include "ConcreteStateMenu.h"
 #include "GameState.h"
+#include "config.cpp"
 #include <vector>
 #include <fstream>
 #include <regex>
@@ -49,7 +50,7 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
     //animation sword
     if (mainCharacter.sword == 1) {
         if (game->clockSword.getElapsedTime().asMilliseconds()>=mainCharacter.timeSword ) {
-            if (mainCharacter.swordAttack() == 64 * 5) {
+            if (mainCharacter.swordAttack() == finalSwordAttack) {
                 mainCharacter.sword = 0;
                 mainCharacter.reset(mainCharacter.getsourceRect().top);
             }
@@ -59,7 +60,7 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
     //animation bow
     if (mainCharacter.bow == 1) {
         if (game->clockBow.getElapsedTime().asMilliseconds() >= mainCharacter.timeBow ) {
-            if (mainCharacter.bowAttack() == 64 * 12) {
+            if (mainCharacter.bowAttack() == finalBowAttack) {
                 mainCharacter.bow = 0;
                 mainCharacter.reset(mainCharacter.getsourceRect().top);
                 mainCharacter.arrow = mainCharacter.arrow - 1;
@@ -74,7 +75,7 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
     //animation spell-cast
     if (mainCharacter.magic == 1) {
         if ( game->clockSpell.getElapsedTime().asMilliseconds() >= mainCharacter.timeMagic ) {
-            if (mainCharacter.magicAttack() == 64 * 6) {
+            if (mainCharacter.magicAttack() == finalMagicAttack) {
                 mainCharacter.magic = 0;
                 mainCharacter.reset(mainCharacter.getsourceRect().top);
                 mainCharacter.ball.animationBall=true;
@@ -85,7 +86,7 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
     }
     //animation fireball
     if (mainCharacter.ball.animationBall && mainCharacter.ball.clock.getElapsedTime().asMilliseconds() >= 40.f) {
-        if (mainCharacter.ball.animation() == 64 * 7) {
+        if (mainCharacter.ball.animation() == finalBallAnimation) {
             mainCharacter.ball.animationBall = false;
             mainCharacter.spell = false;
         }

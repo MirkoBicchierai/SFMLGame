@@ -2,6 +2,7 @@
 #include <iostream>
 #include <math.h>
 #include "MainCharacter.h"
+#include "config.cpp"
 
 MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     entityTexture.loadFromFile("../img/Player/Normal_Player.png");
@@ -10,29 +11,29 @@ MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
 
     moveSpeed=6;
 
-    swordRect.height = 64;
-    swordRect.width = 64;
-    swordRect.left = 0;
+    swordRect.height = dim;
+    swordRect.width = dim;
+    swordRect.left = leftNormalSword;
 
-    magicRect.height = 64;
-    magicRect.width = 64;
-    magicRect.left = 0;
+    magicRect.height = dim;
+    magicRect.width = dim;
+    magicRect.left = leftNormalMagic;
 
     arrow = 1;
-    bowRect.height = 64;
-    bowRect.width = 64;
-    bowRect.left = 0;
+    bowRect.height = dim;
+    bowRect.width = dim;
+    bowRect.left = leftNormalBow;
 
     entitySprite.setTexture(entityTexture);
     entitySprite.setScale(sf::Vector2f(1, 1));
-    sourceRect.height = 64;
-    sourceRect.width = 64;
-    sourceRect.top = 64 * 8;
-    sourceRect.left = 0;
+    sourceRect.height = dim;
+    sourceRect.width = dim;
+    sourceRect.top = upNormal;
+    sourceRect.left = leftNormal;
     entitySprite.setTextureRect(sourceRect);
     entitySprite.setPosition(((window.getSize().x)/2.f)-32,((window.getSize().y)/2.f)-32);
     camera.setCenter(entitySprite.getPosition().x+32,entitySprite.getPosition().y+32);
-    camera.setSize(1088.f, 704.f);
+    camera.setSize(window.getSize().x, window.getSize().y);
     timeSword=40;
     sword=0;
 
@@ -60,29 +61,29 @@ MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     textArrow.setString("x " + std::to_string(arrow));
     arrowGUI.setArrowGUI(camera.getCenter().x + window.getSize().x / 2.f,camera.getCenter().y - (window.getSize().y / 2.f) + 40 + 38, 180.f);
 }
+
 void MainCharacter::reset(int pos) {
     entitySprite.setTexture(entityTexture);
-    sourceRect.height = 64;
-    sourceRect.width = 64;
     sourceRect.top = pos;
-    sourceRect.left = 0;
+    sourceRect.left = leftNormal;
     entitySprite.setTextureRect(sourceRect);
 }
+
 void MainCharacter::setTextureBow() {
-    if (sourceRect.top == 64 * 11) {
-        bowRect.top = 64 * 19;
+    if (sourceRect.top == topMoveRight) {
+        bowRect.top = RightBow;
         entitySprite.setTextureRect(bowRect);
     }
-    if (sourceRect.top == 64 * 10) {
-        bowRect.top = 64 * 18;
+    if (sourceRect.top == topMoveDown) {
+        bowRect.top = DownBow;
         entitySprite.setTextureRect(bowRect);
     }
-    if (sourceRect.top == 64 * 9) {
-        bowRect.top = 64 * 17;
+    if (sourceRect.top == topMoveLeft) {
+        bowRect.top = LeftBow;
         entitySprite.setTextureRect(bowRect);
     }
-    if (sourceRect.top == 64 * 8) {
-        bowRect.top = 64 * 16;
+    if (sourceRect.top == topMoveUp) {
+        bowRect.top = UpBow;
         entitySprite.setTextureRect(bowRect);
     }
     entitySprite.setTexture(bowTexture);
@@ -129,75 +130,75 @@ sf::IntRect MainCharacter::getsourceRect() {
     return sourceRect; }
 
 int MainCharacter::swordAttack() {
-    if (swordRect.left == 64 * 5)
-        swordRect.left = 0;
+    if (swordRect.left == finalSwordAttack)
+        swordRect.left = leftNormalSword;
     else
-        swordRect.left += 64;
+        swordRect.left += dim;
 
-    if (sourceRect.top == 64 * 11) {
-        swordRect.top = 64 * 15;
+    if (sourceRect.top == topMoveRight) {
+        swordRect.top = RightSword;
         entitySprite.setTextureRect(swordRect);
     }
-    if (sourceRect.top == 64 * 10) {
-        swordRect.top = 64 * 14;
+    if (sourceRect.top == topMoveDown) {
+        swordRect.top = DownSword;
         entitySprite.setTextureRect(swordRect);
     }
-    if (sourceRect.top == 64 * 9) {
-        swordRect.top = 64 * 13;
+    if (sourceRect.top == topMoveLeft) {
+        swordRect.top = LeftSword;
         entitySprite.setTextureRect(swordRect);
     }
-    if (sourceRect.top == 64 * 8) {
-        swordRect.top = 64 * 12;
+    if (sourceRect.top == topMoveUp) {
+        swordRect.top = UpSword;
         entitySprite.setTextureRect(swordRect);
     }
     return swordRect.left;
 }
 
 int MainCharacter::magicAttack() {
-    if (magicRect.left == 64 * 6)
-        magicRect.left = 0;
+    if (magicRect.left == finalMagicAttack)
+        magicRect.left = leftNormalMagic;
     else
-        magicRect.left += 64;
+        magicRect.left += dim;
 
-    if (sourceRect.top == 64 * 11) {
-        magicRect.top = 64 * 3;
+    if (sourceRect.top == topMoveRight) {
+        magicRect.top = RightMagic;
         entitySprite.setTextureRect(magicRect);
     }
-    if (sourceRect.top == 64 * 10) {
-        magicRect.top = 64 * 2;
+    if (sourceRect.top == topMoveDown) {
+        magicRect.top = DownMagic;
         entitySprite.setTextureRect(magicRect);
     }
-    if (sourceRect.top == 64 * 9) {
-        magicRect.top = 64 * 1;
+    if (sourceRect.top == topMoveLeft) {
+        magicRect.top = LeftMagic;
         entitySprite.setTextureRect(magicRect);
     }
-    if (sourceRect.top == 64 * 8) {
-        magicRect.top = 64 * 0;
+    if (sourceRect.top == topMoveUp) {
+        magicRect.top = UpMagic;
         entitySprite.setTextureRect(magicRect);
     }
     return magicRect.left;
 }
 
 int MainCharacter::bowAttack() {
-    if (bowRect.left == 64 * 12)
-        bowRect.left = 0;
+    if (bowRect.left == finalBowAttack)
+        bowRect.left = leftNormalBow;
     else
-        bowRect.left += 64;
+        bowRect.left += dim;
 
-    if (sourceRect.top == 64 * 11) {
-        bowRect.top = 64 * 19;
+    if (sourceRect.top == topMoveRight) {
+        bowRect.top = RightBow;
         entitySprite.setTextureRect(bowRect);
     }
-    if (sourceRect.top == 64 * 10) {
-        bowRect.top = 64 * 18;
+    if (sourceRect.top == topMoveDown) {
+        bowRect.top = DownBow;
         entitySprite.setTextureRect(bowRect);
     }
-    if (sourceRect.top == 64 * 9) {
-        bowRect.top = 64 * 17;
+    if (sourceRect.top == topMoveLeft) {
+        bowRect.top = LeftBow;
         entitySprite.setTextureRect(bowRect);
     }
-    if (sourceRect.top == 64 * 8) {
-        bowRect.top = 64 * 16;
+    if (sourceRect.top == topMoveUp) {
+        bowRect.top = UpBow;
         entitySprite.setTextureRect(bowRect);
     }
     return bowRect.left;
@@ -206,25 +207,25 @@ int MainCharacter::bowAttack() {
 void MainCharacter::movePlayer(char direction, sf::RenderWindow &window,std::vector<Tile>tile) {
     float x=0,y=0;
 
-    if (sourceRect.left == 64 * 8)
-        sourceRect.left = 0;
+    if (sourceRect.left == moveFinal)
+        sourceRect.left = leftNormal;
     else
-        sourceRect.left += 64;
+        sourceRect.left += leftNormal+dim;
 
     if (direction == 'u') {
-        sourceRect.top = 64 * 8;
+        sourceRect.top = topMoveUp;
         x=0;
         y=-moveSpeed;
     } else if (direction == 'd') {
-        sourceRect.top = 64 * 10;
+        sourceRect.top = topMoveDown;
         x=0;
         y=moveSpeed;
     } else if (direction == 'l') {
-        sourceRect.top = 64 * 9;
+        sourceRect.top = topMoveLeft;
         x=-moveSpeed;
         y=0;
     } else if (direction == 'r') {
-        sourceRect.top = 64 * 11;
+        sourceRect.top = topMoveRight;
         x=moveSpeed;
         y=0;
     }
@@ -236,6 +237,7 @@ void MainCharacter::movePlayer(char direction, sf::RenderWindow &window,std::vec
     entitySprite.move(x,y);
     moveGUI(x,y,window);
 }
+
 bool MainCharacter::controlMove(std::vector<Tile> &tile,char direction) {
     sf::Sprite clone(entitySprite);
 
@@ -282,8 +284,8 @@ void MainCharacter::resetPlayer(sf::RenderWindow &window) {
     moveSpeed=6;
     arrow = 1;
 
-    sourceRect.top = 64 * 8;
-    sourceRect.left = 0;
+    sourceRect.top = upNormal;
+    sourceRect.left = leftNormal;
     entitySprite.setTextureRect(sourceRect);
     entitySprite.setPosition(((window.getSize().x)/2.f)-32,((window.getSize().y)/2.f)-32);
     camera.setCenter(entitySprite.getPosition().x+32,entitySprite.getPosition().y+32);

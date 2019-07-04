@@ -18,5 +18,5 @@ if(SFML_FOUND)
     message(STATUS "SFML_VERSION: ${SFML_VERSION}")
 endif()
 
-add_executable(SFMLGame main.cpp MainCharacter.cpp MainCharacter.h Heart.cpp Heart.h FireBall.cpp FireBall.h Arrow.cpp Arrow.h TileMap.cpp TileMap.h Menu.cpp Menu.h Game.cpp Game.h GameState.cpp GameState.h ConcreteStateMenu.cpp ConcreteStateMenu.h ConcreteStateGame.cpp ConcreteStateGame.h ConcreteStateTutorial.cpp ConcreteStateTutorial.h BaseStatistic.cpp BaseStatistic.h Tile.cpp Tile.h )
+add_executable(SFMLGame main.cpp MainCharacter.cpp MainCharacter.h Heart.cpp Heart.h FireBall.cpp FireBall.h Arrow.cpp Arrow.h TileMap.cpp TileMap.h Menu.cpp Menu.h Game.cpp Game.h GameState.cpp GameState.h ConcreteStateMenu.cpp ConcreteStateMenu.h ConcreteStateGame.cpp ConcreteStateGame.h ConcreteStateTutorial.cpp ConcreteStateTutorial.h BaseStatistic.cpp BaseStatistic.h Tile.cpp Tile.h config.cpp)
 target_link_libraries (SFMLGame sfml-graphics sfml-window sfml-system)

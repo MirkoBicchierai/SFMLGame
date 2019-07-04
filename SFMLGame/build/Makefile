@@ -473,6 +473,33 @@ TileMap.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/TileMap.cpp.s
 .PHONY : TileMap.cpp.s
 
+config.obj: config.cpp.obj
+
+.PHONY : config.obj
+
+# target to build an object file
+config.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/config.cpp.obj
+.PHONY : config.cpp.obj
+
+config.i: config.cpp.i
+
+.PHONY : config.i
+
+# target to preprocess a source file
+config.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/config.cpp.i
+.PHONY : config.cpp.i
+
+config.s: config.cpp.s
+
+.PHONY : config.s
+
+# target to generate assembly for a file
+config.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/config.cpp.s
+.PHONY : config.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -548,6 +575,9 @@ help:
 	@echo ... TileMap.obj
 	@echo ... TileMap.i
 	@echo ... TileMap.s
+	@echo ... config.obj
+	@echo ... config.i
+	@echo ... config.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
