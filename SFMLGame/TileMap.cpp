@@ -17,6 +17,8 @@ void TileMap::load(const std::string& tileSet, sf::Vector2u tileSize, std::vecto
 
             std::string type="obj";
 
+            if(top>=topMinWater && top<=topMaxWater)
+                type="water";
             if(top>=topMinWall && top<=topMaxWall)
                 type="wall";
             if(top==topFloor)

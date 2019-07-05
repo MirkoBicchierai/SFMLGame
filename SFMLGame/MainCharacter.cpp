@@ -263,7 +263,7 @@ bool MainCharacter::controlMove(std::vector<Tile> &tile,char direction) {
     rectangle.move(x,y);
     bool check=true;
     for(const auto& i:tile){
-        if (i.type == "wall" || i.type == "closed_door_silver" || i.type == "closed_door_gold" || i.type=="gate") {
+        if (i.type == "wall" || i.type == "closed_door_silver" || i.type == "closed_door_gold" || i.type=="gate" || i.type=="water" ) {
             if (rectangle.getGlobalBounds().intersects(i.spriteCollision.getGlobalBounds()))
                  check = false;
         }
