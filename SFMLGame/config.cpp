@@ -67,5 +67,6 @@ enum ArrowState{
 };
 
 enum tileSetCollision{
-    topMin=16*8,
+    topMin=64*1,
+    topMax=64*10,
 };

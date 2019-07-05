@@ -12,7 +12,7 @@ void TileMap::load(const std::string& tileSet, sf::Vector2u tileSize, std::vecto
             int tileNumber = tiles[i + j * width];
             int tv = tileNumber / (texture.getSize().x / tileSize.x);
             int top=tv * tileSize.y;
-            if(top>=topMin)
+            if(top>=topMin && top<=topMax)
                 tile.emplace_back(Tile(tileNumber,"wall"));
             else
                 tile.emplace_back(Tile(tileNumber,"floor"));

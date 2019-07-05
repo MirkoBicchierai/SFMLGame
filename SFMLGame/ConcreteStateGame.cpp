@@ -26,7 +26,7 @@ void ConcreteStateGame::loadFromFile(const std::string &path) {
         }
         r++;
     }
-    map.load(MAP_ROOT"/tile-set.png", sf::Vector2u(16, 16), vec, c, r,game->window);
+    map.load(MAP_ROOT"/tile-set.png", sf::Vector2u(64, 64), vec, c, r,game->window);
 }
 
 void ConcreteStateGame::draw(MainCharacter &mainCharacter){

@@ -42,6 +42,7 @@ void ConcreteStateMenu::draw(MainCharacter &mainCharacter){
 }
 
 void ConcreteStateMenu::startGame(MainCharacter &mainCharacter){
+    mainCharacter.resetPlayer(game->window);
     mainCharacter.camera.setCenter((mainCharacter.getSprite().getPosition().x) + 32,((mainCharacter.getSprite().getPosition().y)) + 32);
     game->window.setView(mainCharacter.camera);
     game->pushState(new ConcreteStateGame(game));

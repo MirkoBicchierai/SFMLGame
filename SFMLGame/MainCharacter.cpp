@@ -31,7 +31,7 @@ MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     sourceRect.top = upNormal;
     sourceRect.left = leftNormal;
     entitySprite.setTextureRect(sourceRect);
-    entitySprite.setPosition(((window.getSize().x)/2.f)-32,((window.getSize().y)/2.f)-32);
+    entitySprite.setPosition(((window.getSize().x)/2.f)+200,((window.getSize().y)/2.f)-32);
     camera.setCenter(entitySprite.getPosition().x+32,entitySprite.getPosition().y+32);
     camera.setSize(window.getSize().x, window.getSize().y);
     timeSword=40;
@@ -264,7 +264,7 @@ bool MainCharacter::controlMove(std::vector<Tile> &tile,char direction) {
     bool check=true;
     for(const auto& i:tile){
         if (i.type == "wall") {
-            if (rectangle.getGlobalBounds().intersects(i.spriteCollision.getGlobalBounds()))
+            if (rectangle.getGlobalBounds().intersects(i.spriteShow.getGlobalBounds()))
                  check = false;
         }
     }
