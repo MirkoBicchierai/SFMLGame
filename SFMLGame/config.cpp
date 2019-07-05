@@ -67,6 +67,46 @@ enum ArrowState{
 };
 
 enum tileSetCollision{
-    topMin=64*1,
-    topMax=64*10,
+    topMinWall=64*1,
+    topMaxWall=64*10,
+
+    topFloor=0,
+
+    topChestMin=64*18,
+    topChestMax=64*19,
+    leftChestMin=64*5,
+    topSingleChest=19*64,
+    leftSingleChest=64,
+
+    topLeverSingle=20*64,
+    leftLeverSingle=7*64,
+
+    topLever=21*64,
+    leftMinLever=3*64,
+    leftMaxLever=5*64,
+
+    topMinDoorClosed_gold=14*64,
+    topMaxDoorClosed_gold=15*64,
+    leftMinDoorClosed_gold=64*4,
+    leftMaxDoorClosed_gold=64*5,
+
+    topMinDoorClosed_silver=14*64,
+    topMaxDoorClosed_silver=15*64,
+    leftMinDoorClosed_silver=64*6,
+    leftMaxDoorClosed_silver=64*7,
+
+    topMinDoorOpened=12*64,
+    topMaxDoorOpened=13*64,
+    leftMinDoorOpened=64*6,
+    leftMaxDoorOpened=64*7,
+
+    topMinGate=64*16,
+    topMaxGate=64*17,
+    LeftGate=64*8,
+
+    goldKeyTop=22*64,
+    goldKeyLeft=8*64,
+    silverKeyLeft=6*64,
+    silverKeyTop=22*64,
+
 };
