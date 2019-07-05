@@ -241,7 +241,7 @@ void MainCharacter::movePlayer(char direction, sf::RenderWindow &window,std::vec
 bool MainCharacter::controlMove(std::vector<Tile> &tile,char direction) {
 
     sf::RectangleShape rectangle;
-    rectangle.setSize(sf::Vector2f(32, 8));
+    rectangle.setSize(sf::Vector2f(32, 16));
     rectangle.setOutlineThickness(5);
     rectangle.setPosition(entitySprite.getPosition().x+16,entitySprite.getPosition().y+40);
 

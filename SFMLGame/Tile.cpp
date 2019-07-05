@@ -18,14 +18,12 @@ void Tile::setTile(int i, int j, sf::Texture &txt, sf::Vector2u tileSize) {
     spriteShow.setTextureRect(sourceRect);
     spriteShow.setTexture(txt);
 
-
-
     collisionRect.top=tv * tileSize.y;
     collisionRect.left=tu * tileSize.x;
     if(type=="gate" || type=="closed_door_gold" || type=="closed_door_silver" ) {
         collisionRect.width = tileSize.x;
-        collisionRect.height = tileSize.y-16;
-        spriteCollision.setPosition(i*tileSize.x, j*tileSize.y+16);
+        collisionRect.height = tileSize.y-32;
+        spriteCollision.setPosition(i*tileSize.x, j*tileSize.y+32);
     }else{
         collisionRect.width = tileSize.x;
         collisionRect.height = tileSize.y;
