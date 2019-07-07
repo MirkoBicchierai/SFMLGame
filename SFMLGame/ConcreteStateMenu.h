@@ -1,6 +1,7 @@
 #ifndef SFMLGAME_CONCRETESTATEMENU_H
 #define SFMLGAME_CONCRETESTATEMENU_H
 
+#include <SFML/Audio.hpp>
 #include "GameState.h"
 #include "Menu.h"
 
@@ -11,6 +12,7 @@ public:
     void draw(MainCharacter &mainCharacter) override;
     void update(MainCharacter &mainCharacter) override;
     void handleInput(MainCharacter &mainCharacter) override;
+    void Init() override;
 
 private:
     Menu menu;

@@ -30,10 +30,7 @@ void ConcreteStateGame::loadFromFile(const std::string &path) {
 }
 
 void ConcreteStateGame::draw(MainCharacter &mainCharacter){
-    if(!loadMap) {
-        loadMap=true;
-        loadFromFile(MAP_ROOT_GAME"/level1.txt");
-    }
+
   for(auto i:map.tile){
         i.drawTile(game->window);
     }
@@ -61,6 +58,7 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
     if (mainCharacter.bow == 1) {
         if (game->clockBow.getElapsedTime().asMilliseconds() >= mainCharacter.timeBow ) {
             if (mainCharacter.bowAttack() == finalBowAttack) {
+                mainCharacter.soundArrow.play();
                 mainCharacter.bow = 0;
                 mainCharacter.reset(mainCharacter.getsourceRect().top);
                 mainCharacter.arrow = mainCharacter.arrow - 1;
@@ -76,6 +74,7 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
     if (mainCharacter.magic == 1) {
         if ( game->clockSpell.getElapsedTime().asMilliseconds() >= mainCharacter.timeMagic ) {
             if (mainCharacter.magicAttack() == finalMagicAttack) {
+                mainCharacter.soundFireBall.play();
                 mainCharacter.magic = 0;
                 mainCharacter.reset(mainCharacter.getsourceRect().top);
                 mainCharacter.ball.animationBall=true;
@@ -85,7 +84,7 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
         }
     }
     //animation fireball
-    if (mainCharacter.ball.animationBall && mainCharacter.ball.clock.getElapsedTime().asMilliseconds() >= 40.f) {
+    if (mainCharacter.ball.animationBall && mainCharacter.ball.clock.getElapsedTime().asMilliseconds() >= 55.f) {
         if (mainCharacter.ball.animation() == finalBallAnimation) {
             mainCharacter.ball.animationBall = false;
             mainCharacter.spell = false;
@@ -96,7 +95,7 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
     if (mainCharacter.arrowPlayer.animationArrow) {
         if (mainCharacter.arrowPlayer.arrowFor < 8) {
             if (mainCharacter.arrowPlayer.clock.getElapsedTime().asMilliseconds() > 45.f) {
-                mainCharacter.arrowPlayer.animation();
+                mainCharacter.arrowPlayer.animation(map.tile);
                 mainCharacter.arrowPlayer.clock.restart();
                 mainCharacter.arrowPlayer.arrowFor++;
             }
@@ -177,6 +176,12 @@ ConcreteStateGame::ConcreteStateGame(Game* game){
 }
 
 void ConcreteStateGame::backToMenu(){
+    game->init=false;
     game->pushState(new ConcreteStateMenu(game));
 
+}
+
+void ConcreteStateGame::Init() {
+    loadFromFile(MAP_ROOT_GAME"/level1.txt");
+    game->init=true;
 }

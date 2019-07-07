@@ -9,6 +9,15 @@ MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     bowTexture.loadFromFile(IMG_PLAYER_ROOT"/Bow_Player.png");
     shieldTexture.loadFromFile(IMG_PLAYER_ROOT"/Shield_Player.png");
 
+    bufferArrow.loadFromFile(AUDIO_ROOT"/Arrow.wav");
+    soundArrow.setBuffer(bufferArrow);
+    soundArrow.setVolume(3);
+
+    bufferFireBall.loadFromFile(AUDIO_ROOT"/FireBall.wav");
+    soundFireBall.setBuffer(bufferFireBall);
+    soundFireBall.setVolume(3);
+
+
     moveSpeed=6;
 
     swordRect.height = dim;

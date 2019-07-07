@@ -19,7 +19,7 @@ public:
     sf::Clock clockSword;
     sf::Clock clockBow;
     sf::Clock clockSpell;
-
+    bool init;
 private:
     std::vector<GameState*> states;
 };

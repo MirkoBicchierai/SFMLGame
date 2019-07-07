@@ -1,6 +1,6 @@
 #ifndef SFMLGAME_CONCRETESTATEGAME_H
 #define SFMLGAME_CONCRETESTATEGAME_H
-
+#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include "GameState.h"
 #include "TileMap.h"
@@ -10,7 +10,7 @@ public:
      void draw(MainCharacter &mainCharacter) override ;
      void update(MainCharacter &mainCharacter) override;
      void handleInput(MainCharacter &mainCharacter) override;
-     bool loadMap=false;
+     void Init() override;
      explicit ConcreteStateGame(Game* game);
 
 private:

@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "ConcreteStateTutorial.h"
 #include "ConcreteStateMenu.h"
 #include "GameState.h"
@@ -28,10 +29,7 @@ void ConcreteStateTutorial::loadFromFile(const std::string &path) {
 }
 
 void ConcreteStateTutorial::draw(MainCharacter &mainCharacter){
-    if(!loadMap) {
-        loadMap=true;
-        loadFromFile(MAP_ROOT_TUTORIAL"/Tutorial.txt");
-    }
+
     for(auto i:map.tile){
         i.drawTile(game->window);
     }
@@ -58,6 +56,7 @@ void ConcreteStateTutorial::update(MainCharacter &mainCharacter){
     if (mainCharacter.bow == 1) {
         if (game->clockBow.getElapsedTime().asMilliseconds() >= mainCharacter.timeBow ) {
             if (mainCharacter.bowAttack() == finalBowAttack) {
+                mainCharacter.soundArrow.play();
                 mainCharacter.bow = 0;
                 mainCharacter.reset(mainCharacter.getsourceRect().top);
                 mainCharacter.arrow = mainCharacter.arrow - 1;
@@ -73,6 +72,7 @@ void ConcreteStateTutorial::update(MainCharacter &mainCharacter){
     if (mainCharacter.magic == 1) {
         if ( game->clockSpell.getElapsedTime().asMilliseconds() >= mainCharacter.timeMagic ) {
             if (mainCharacter.magicAttack() == finalMagicAttack) {
+                mainCharacter.soundFireBall.play();
                 mainCharacter.magic = 0;
                 mainCharacter.reset(mainCharacter.getsourceRect().top);
                 mainCharacter.ball.animationBall=true;
@@ -82,18 +82,19 @@ void ConcreteStateTutorial::update(MainCharacter &mainCharacter){
         }
     }
     //animation fireball
-    if (mainCharacter.ball.animationBall && mainCharacter.ball.clock.getElapsedTime().asMilliseconds() >= 40.f) {
+    if (mainCharacter.ball.animationBall && mainCharacter.ball.clock.getElapsedTime().asMilliseconds() >= 55.f) {
         if (mainCharacter.ball.animation() == finalBallAnimation) {
             mainCharacter.ball.animationBall = false;
             mainCharacter.spell = false;
         }
         mainCharacter.ball.clock.restart();
     }
+
     //animation arrow
     if (mainCharacter.arrowPlayer.animationArrow) {
         if (mainCharacter.arrowPlayer.arrowFor < 8) {
             if (mainCharacter.arrowPlayer.clock.getElapsedTime().asMilliseconds() > 45.f) {
-                mainCharacter.arrowPlayer.animation();
+                mainCharacter.arrowPlayer.animation(map.tile);
                 mainCharacter.arrowPlayer.clock.restart();
                 mainCharacter.arrowPlayer.arrowFor++;
             }
@@ -176,7 +177,14 @@ ConcreteStateTutorial::ConcreteStateTutorial(Game* game){
 }
 
 void ConcreteStateTutorial::backToMenu(){
+    game->init=false;
     game->pushState(new ConcreteStateMenu(game));
+}
+
+void ConcreteStateTutorial::Init() {
+    loadFromFile(MAP_ROOT_TUTORIAL"/Tutorial.txt");
+    game->init=true;
+
 }
 
 

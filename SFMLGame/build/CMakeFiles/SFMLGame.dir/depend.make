@@ -77,6 +77,7 @@ CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../SFML/include/SFML/Window/WindowHandle.
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../Arrow.cpp
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../Arrow.h
+CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../Tile.h
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../config.cpp
 
 CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../SFML/include/SFML/Config.hpp
@@ -156,6 +157,23 @@ CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../SFML/include/SFML/Window/Windo
 CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../BaseStatistic.cpp
 CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../BaseStatistic.h
 
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/AlResource.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/Export.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/InputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/Listener.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/Music.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/OutputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/Sound.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/SoundBuffer.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/SoundBufferRecorder.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/SoundFileFactory.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/SoundFileFactory.inl
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/SoundFileReader.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/SoundFileWriter.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/SoundRecorder.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/SoundSource.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Audio/SoundStream.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Config.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Graphics.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../SFML/include/SFML/Graphics/BlendMode.hpp
@@ -245,6 +263,23 @@ CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../Tile.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../TileMap.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../config.cpp
 
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/AlResource.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/Export.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/InputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/Listener.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/Music.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/OutputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/Sound.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/SoundBuffer.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/SoundBufferRecorder.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/SoundFileFactory.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/SoundFileFactory.inl
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/SoundFileReader.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/SoundFileWriter.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/SoundRecorder.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/SoundSource.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Audio/SoundStream.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Config.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Graphics.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../SFML/include/SFML/Graphics/BlendMode.hpp
@@ -334,6 +369,23 @@ CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../Menu.h
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../Tile.h
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../TileMap.h
 
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/AlResource.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/Export.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/InputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/Listener.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/Music.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/OutputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/Sound.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/SoundBuffer.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/SoundBufferRecorder.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/SoundFileFactory.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/SoundFileFactory.inl
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/SoundFileReader.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/SoundFileWriter.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/SoundRecorder.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/SoundSource.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Audio/SoundStream.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Config.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Graphics.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../SFML/include/SFML/Graphics/BlendMode.hpp
@@ -501,6 +553,23 @@ CMakeFiles/SFMLGame.dir/FireBall.cpp.obj: ../FireBall.cpp
 CMakeFiles/SFMLGame.dir/FireBall.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/FireBall.cpp.obj: ../config.cpp
 
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio.hpp
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/AlResource.hpp
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/Export.hpp
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/InputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/Listener.hpp
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/Music.hpp
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/OutputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/Sound.hpp
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/SoundBuffer.hpp
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/SoundBufferRecorder.hpp
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/SoundFileFactory.hpp
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/SoundFileFactory.inl
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/SoundFileReader.hpp
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/SoundFileWriter.hpp
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/SoundRecorder.hpp
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/SoundSource.hpp
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Audio/SoundStream.hpp
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Config.hpp
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Graphics.hpp
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../SFML/include/SFML/Graphics/BlendMode.hpp
@@ -586,6 +655,23 @@ CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../MainCharacter.h
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../Tile.h
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../config.cpp
 
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio.hpp
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/AlResource.hpp
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/Export.hpp
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/InputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/Listener.hpp
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/Music.hpp
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/OutputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/Sound.hpp
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/SoundBuffer.hpp
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/SoundBufferRecorder.hpp
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/SoundFileFactory.hpp
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/SoundFileFactory.inl
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/SoundFileReader.hpp
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/SoundFileWriter.hpp
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/SoundRecorder.hpp
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/SoundSource.hpp
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Audio/SoundStream.hpp
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Config.hpp
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Graphics.hpp
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../SFML/include/SFML/Graphics/BlendMode.hpp
@@ -748,6 +834,23 @@ CMakeFiles/SFMLGame.dir/Heart.cpp.obj: ../Heart.cpp
 CMakeFiles/SFMLGame.dir/Heart.cpp.obj: ../Heart.h
 CMakeFiles/SFMLGame.dir/Heart.cpp.obj: ../config.cpp
 
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/AlResource.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/Export.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/InputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/Listener.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/Music.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/OutputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/Sound.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/SoundBuffer.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/SoundBufferRecorder.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/SoundFileFactory.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/SoundFileFactory.inl
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/SoundFileReader.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/SoundFileWriter.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/SoundRecorder.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/SoundSource.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Audio/SoundStream.hpp
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Config.hpp
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Graphics.hpp
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../SFML/include/SFML/Graphics/BlendMode.hpp
@@ -1067,6 +1170,23 @@ CMakeFiles/SFMLGame.dir/TileMap.cpp.obj: ../config.cpp
 
 CMakeFiles/SFMLGame.dir/config.cpp.obj: ../config.cpp
 
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio.hpp
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/AlResource.hpp
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/Export.hpp
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/InputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/Listener.hpp
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/Music.hpp
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/OutputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/Sound.hpp
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/SoundBuffer.hpp
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/SoundBufferRecorder.hpp
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/SoundFileFactory.hpp
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/SoundFileFactory.inl
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/SoundFileReader.hpp
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/SoundFileWriter.hpp
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/SoundRecorder.hpp
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/SoundSource.hpp
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio/SoundStream.hpp
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Config.hpp
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Graphics.hpp
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Graphics/BlendMode.hpp

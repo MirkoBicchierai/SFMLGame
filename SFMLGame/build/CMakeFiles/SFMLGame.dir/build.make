@@ -305,6 +305,7 @@ SFMLGame.exe: CMakeFiles/SFMLGame.dir/config.cpp.obj
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/build.make
 SFMLGame.exe: ../SFML/lib/libsfml-graphics-d.a
 SFMLGame.exe: ../SFML/lib/libsfml-window-d.a
+SFMLGame.exe: ../SFML/lib/libsfml-audio-d.a
 SFMLGame.exe: ../SFML/lib/libsfml-system-d.a
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/linklibs.rsp
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/objects1.rsp

@@ -3,6 +3,7 @@
 #include "Game.h"
 #include "config.cpp"
 Game::Game(){
+    init=false;
     window.create(sf::VideoMode(1088, 704), TITLE, sf::Style::Titlebar | sf::Style::Close);
     sf::Vector2i centerWindow((sf::VideoMode::getDesktopMode().width / 2) - window.getSize().x / 2,(sf::VideoMode::getDesktopMode().height / 2) - window.getSize().y / 2);
     window.setPosition(centerWindow);
@@ -24,8 +25,10 @@ GameState* Game::CurrentState(){
 
 void Game::gameLoop(){
     MainCharacter mainCharacter(window);
-    while (window.isOpen()){
 
+    while (window.isOpen()){
+        if(!init)
+           CurrentState()->Init();
         if (CurrentState() == nullptr)
             break;
 

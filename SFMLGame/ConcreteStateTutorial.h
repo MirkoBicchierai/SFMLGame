@@ -1,6 +1,7 @@
 #ifndef SFMLGAME_CONCRETESTATETUTORIAL_H
 #define SFMLGAME_CONCRETESTATETUTORIAL_H
 
+#include <SFML/Audio.hpp>
 #include <vector>
 #include <SFML/Graphics.hpp>
 #include "ConcreteStateMenu.h"
@@ -9,10 +10,10 @@
 
 class ConcreteStateTutorial: public GameState {
 public:
-    bool loadMap=false;
     void draw(MainCharacter &mainCharacter) override ;
     void update(MainCharacter &mainCharacter) override;
     void handleInput(MainCharacter &mainCharacter) override;
+    void Init() override;
     explicit ConcreteStateTutorial(Game* game);
 
 private:

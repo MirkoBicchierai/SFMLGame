@@ -34,6 +34,7 @@ void Arrow::setRect(sf::IntRect player,float x, float y) {
     if (player.top == topMoveDown) {
         arrowSprite.setRotation(DownRotation);
         x=x+16;
+        y=y+32;
     }
     if (player.top == topMoveLeft) {
         arrowSprite.setRotation(LeftRotation);
@@ -51,30 +52,41 @@ void Arrow::setRect(sf::IntRect player,float x, float y) {
     arrowSprite.setPosition(x,y);
 }
 
-void Arrow::animation() {
+void Arrow::animation(std::vector<Tile> &tile) {
+    float x=0,y=0;
     if (arrowSprite.getRotation() == RightRotation) {
-        arrowSprite.move(moveSpeed,0);
+        x=moveSpeed;
+        y=0;
     }
     if (arrowSprite.getRotation() == DownRotation) {
-        arrowSprite.move(0,moveSpeed);
+        x=0;
+        y=moveSpeed;
     }
     if (arrowSprite.getRotation() == LeftRotation) {
-        arrowSprite.move(-moveSpeed,0);
+        x=-moveSpeed;
+        y=0;
     }
     if (arrowSprite.getRotation() == UpRotation) {
-        arrowSprite.move(0,-moveSpeed);
+        x=0;
+        y=-moveSpeed;
     }
-
-    if(arrowRect.left==dimArrow && arrowRect.top==dimArrow) {
+    if(!controlMove(tile)) {
+        arrowFor=8;
         arrowRect.left = LeftNormalArrow;
         arrowRect.top = TopNormalArrow;
-    }else {
-        if((arrowRect.left==0 && arrowRect.top==dimArrow)||(arrowRect.left==0 && arrowRect.top==0))
-            arrowRect.left = dimArrow;
-        else{
-            if(arrowRect.left==dimArrow && arrowRect.top==0) {
-                arrowRect.left = LeftNormalArrow;
-                arrowRect.top = dimArrow;
+    }else{
+        arrowSprite.move(x,y);
+        if(arrowRect.left==dimArrow && arrowRect.top==dimArrow) {
+            arrowRect.left = LeftNormalArrow;
+            arrowRect.top = TopNormalArrow;
+        }else {
+            if((arrowRect.left==0 && arrowRect.top==dimArrow)||(arrowRect.left==0 && arrowRect.top==0))
+                arrowRect.left = dimArrow;
+            else{
+                if(arrowRect.left==dimArrow && arrowRect.top==0) {
+                    arrowRect.left = LeftNormalArrow;
+                    arrowRect.top = dimArrow;
+                }
             }
         }
     }
@@ -84,4 +96,16 @@ void Arrow::animation() {
 void Arrow::setArrowGUI(float X, float Y, float rotation){
     arrowSprite.setRotation(rotation);
     arrowSprite.setPosition(X,Y);
+}
+
+bool Arrow::controlMove(std::vector<Tile> &tile) {
+
+    bool check=true;
+    for(const auto& i:tile){
+        if (i.type == "wall" || i.type == "closed_door_silver" || i.type == "closed_door_gold" || i.type=="gate" || i.type=="water" ) {
+            if (arrowSprite.getGlobalBounds().intersects(i.spriteCollision.getGlobalBounds()))
+                check = false;
+        }
+    }
+    return check;
 }

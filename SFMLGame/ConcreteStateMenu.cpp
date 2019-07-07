@@ -42,6 +42,7 @@ void ConcreteStateMenu::draw(MainCharacter &mainCharacter){
 }
 
 void ConcreteStateMenu::startGame(MainCharacter &mainCharacter){
+    game->init=false;
     mainCharacter.resetPlayer(game->window);
     mainCharacter.camera.setCenter((mainCharacter.getSprite().getPosition().x) + 32,((mainCharacter.getSprite().getPosition().y)) + 32);
     game->window.setView(mainCharacter.camera);
@@ -49,8 +50,13 @@ void ConcreteStateMenu::startGame(MainCharacter &mainCharacter){
 }
 
 void ConcreteStateMenu::startTutorial(MainCharacter &mainCharacter) {
+    game->init=false;
     mainCharacter.resetPlayer(game->window);
     mainCharacter.camera.setCenter((mainCharacter.getSprite().getPosition().x) + 32,((mainCharacter.getSprite().getPosition().y)) + 32);
     game->window.setView(mainCharacter.camera);
     game->pushState(new ConcreteStateTutorial(game));
+}
+
+void ConcreteStateMenu::Init() {
+
 }

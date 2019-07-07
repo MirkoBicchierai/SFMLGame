@@ -2,6 +2,7 @@
 #define TEST2_MAINCHARACTER_H
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "Arrow.h"
 #include "Heart.h"
 #include "FireBall.h"
@@ -13,6 +14,9 @@
 class MainCharacter: public BaseStatistic {
 
 public:
+
+    sf::Sound soundArrow;
+    sf::Sound soundFireBall;
 
     FireBall ball;
     Arrow arrowPlayer;
@@ -47,7 +51,8 @@ public:
     sf::Sprite getSprite();
     bool controlMove(std::vector<Tile> &tile,char direction);
 private:
-
+    sf::SoundBuffer bufferArrow;
+    sf::SoundBuffer bufferFireBall;
     sf::Font font;
     sf::Text textTimeShield;
 
