@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj"
   "CMakeFiles/SFMLGame.dir/Tile.cpp.obj"
   "CMakeFiles/SFMLGame.dir/config.cpp.obj"
+  "CMakeFiles/SFMLGame.dir/Enemy.cpp.obj"
   "SFMLGame.pdb"
   "SFMLGame.exe"
   "SFMLGame.exe.manifest"

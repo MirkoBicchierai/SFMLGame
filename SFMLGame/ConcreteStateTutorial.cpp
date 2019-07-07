@@ -3,6 +3,7 @@
 #include "ConcreteStateTutorial.h"
 #include "ConcreteStateMenu.h"
 #include "GameState.h"
+#include "Enemy.h"
 #include "config.cpp"
 #include <fstream>
 #include <regex>
@@ -32,6 +33,9 @@ void ConcreteStateTutorial::draw(MainCharacter &mainCharacter){
 
     for(auto i:map.tile){
         i.drawTile(game->window);
+    }
+    for(auto i:enemyVec){
+        i->drawEnemy(game->window);
     }
     mainCharacter.drawPlayer(game->window,game->clockShield);
 }
@@ -182,6 +186,12 @@ void ConcreteStateTutorial::backToMenu(){
 }
 
 void ConcreteStateTutorial::Init() {
+    float x=0,y=0;
+    for (int i = 0; i < 2; ++i) {
+        x=rand()%128 + 800;
+        y=rand()%128 + 800;
+        enemyVec.push_back(new Enemy(x,y));
+    }
     loadFromFile(MAP_ROOT_TUTORIAL"/Tutorial.txt");
     game->init=true;
 

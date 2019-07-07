@@ -257,6 +257,33 @@ ConcreteStateTutorial.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.s
 .PHONY : ConcreteStateTutorial.cpp.s
 
+Enemy.obj: Enemy.cpp.obj
+
+.PHONY : Enemy.obj
+
+# target to build an object file
+Enemy.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Enemy.cpp.obj
+.PHONY : Enemy.cpp.obj
+
+Enemy.i: Enemy.cpp.i
+
+.PHONY : Enemy.i
+
+# target to preprocess a source file
+Enemy.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Enemy.cpp.i
+.PHONY : Enemy.cpp.i
+
+Enemy.s: Enemy.cpp.s
+
+.PHONY : Enemy.s
+
+# target to generate assembly for a file
+Enemy.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Enemy.cpp.s
+.PHONY : Enemy.cpp.s
+
 FireBall.obj: FireBall.cpp.obj
 
 .PHONY : FireBall.obj
@@ -551,6 +578,9 @@ help:
 	@echo ... ConcreteStateTutorial.obj
 	@echo ... ConcreteStateTutorial.i
 	@echo ... ConcreteStateTutorial.s
+	@echo ... Enemy.obj
+	@echo ... Enemy.i
+	@echo ... Enemy.s
 	@echo ... FireBall.obj
 	@echo ... FireBall.i
 	@echo ... FireBall.s

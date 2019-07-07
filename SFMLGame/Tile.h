@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 class Tile {
 public:
+    bool playerUp;
     sf::Sprite spriteShow;
     sf::Sprite spriteCollision;
     Tile(int id, std::string ty);

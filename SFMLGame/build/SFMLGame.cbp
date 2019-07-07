@@ -116,6 +116,12 @@
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateTutorial.h">
 			<Option target="SFMLGame"/>
 		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.cpp">
+			<Option target="SFMLGame"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.h">
+			<Option target="SFMLGame"/>
+		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.cpp">
 			<Option target="SFMLGame"/>
 		</Unit>
@@ -167,7 +173,13 @@
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp">
 			<Option target="SFMLGame"/>
 		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/fsa.h">
+			<Option target="SFMLGame"/>
+		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/main.cpp">
+			<Option target="SFMLGame"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/stlastar.h">
 			<Option target="SFMLGame"/>
 		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/CMakeLists.txt">

@@ -3,6 +3,7 @@
 Tile::Tile(int id, std::string ty) {
     idTile=id;
     type=std::move(ty);
+    playerUp=false;
 }
 
 void Tile::setTile(int i, int j, sf::Texture &txt, sf::Vector2u tileSize) {

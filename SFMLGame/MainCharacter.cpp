@@ -238,13 +238,12 @@ void MainCharacter::movePlayer(char direction, sf::RenderWindow &window,std::vec
         x=moveSpeed;
         y=0;
     }
-    if(!controlMove(tile,direction)){
-        x=0;
-        y=0;
-    }
     entitySprite.setTextureRect(sourceRect);
-    entitySprite.move(x,y);
-    moveGUI(x,y,window);
+    if(controlMove(tile,direction)){
+        entitySprite.move(x,y);
+        moveGUI(x,y,window);
+
+    }
 }
 
 bool MainCharacter::controlMove(std::vector<Tile> &tile,char direction) {
@@ -271,7 +270,10 @@ bool MainCharacter::controlMove(std::vector<Tile> &tile,char direction) {
 
     rectangle.move(x,y);
     bool check=true;
-    for(const auto& i:tile){
+    for(auto& i:tile){
+        i.playerUp=false;
+        if(i.type=="floor" && entitySprite.getGlobalBounds().intersects(i.spriteCollision.getGlobalBounds()))
+            i.playerUp=true;
         if (i.type == "wall" || i.type == "closed_door_silver" || i.type == "closed_door_gold" || i.type=="gate" || i.type=="water" ) {
             if (rectangle.getGlobalBounds().intersects(i.spriteCollision.getGlobalBounds()))
                  check = false;

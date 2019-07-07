@@ -7,6 +7,7 @@
 #include "ConcreteStateMenu.h"
 #include "GameState.h"
 #include "TileMap.h"
+#include "Enemy.h"
 
 class ConcreteStateTutorial: public GameState {
 public:
@@ -17,6 +18,7 @@ public:
     explicit ConcreteStateTutorial(Game* game);
 
 private:
+    std::vector <Enemy*> enemyVec;
     TileMap map{};
     std::vector <int> vec;
     void backToMenu();
