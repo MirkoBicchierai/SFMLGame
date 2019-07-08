@@ -1,9 +1,10 @@
 #include "Tile.h"
 
-Tile::Tile(int id, std::string ty) {
+Tile::Tile(int id, std::string ty,int i, int j) {
     idTile=id;
     type=std::move(ty);
-    playerUp=false;
+    this->i=i;
+    this->j=j;
 }
 
 void Tile::setTile(int i, int j, sf::Texture &txt, sf::Vector2u tileSize) {

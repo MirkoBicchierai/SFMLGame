@@ -116,6 +116,7 @@ void ConcreteStateTutorial::update(MainCharacter &mainCharacter){
         mainCharacter.arrowPlayer.stay = false;
         mainCharacter.arrow = 1;
     }
+
 }
 
 void ConcreteStateTutorial::handleInput(MainCharacter &mainCharacter){
@@ -140,7 +141,25 @@ void ConcreteStateTutorial::handleInput(MainCharacter &mainCharacter){
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
             mainCharacter.movePlayer('r',game->window,map.tile);
         }
-
+        Tile player;
+        Tile enemy;
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::O)) {
+            for(auto& i:enemyVec) {
+                for(auto& j:map.tile) {
+                    if(mainCharacter.getSprite().getGlobalBounds().intersects(j.spriteCollision.getGlobalBounds()) && j.type=="floor") {
+                        player=j;
+                        break;
+                    }
+                }
+                for(auto& k:map.tile) {
+                    if(i->entitySprite.getGlobalBounds().intersects(k.spriteCollision.getGlobalBounds()) && k.type=="floor") {
+                        enemy=k;
+                        break;
+                    }
+                }
+                i->aStarSearch(player,enemy,map.world_map,map.height,map.width);
+            }
+        }
         //sword attack plaYER
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q) && !mainCharacter.shield) {
             mainCharacter.sword = 1;
@@ -186,13 +205,13 @@ void ConcreteStateTutorial::backToMenu(){
 }
 
 void ConcreteStateTutorial::Init() {
+    loadFromFile(MAP_ROOT_TUTORIAL"/Tutorial.txt");
     float x=0,y=0;
     for (int i = 0; i < 2; ++i) {
         x=rand()%128 + 800;
         y=rand()%128 + 800;
         enemyVec.push_back(new Enemy(x,y));
     }
-    loadFromFile(MAP_ROOT_TUTORIAL"/Tutorial.txt");
     game->init=true;
 
 }

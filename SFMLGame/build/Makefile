@@ -419,6 +419,33 @@ MainCharacter.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/MainCharacter.cpp.s
 .PHONY : MainCharacter.cpp.s
 
+MapSearchNode.obj: MapSearchNode.cpp.obj
+
+.PHONY : MapSearchNode.obj
+
+# target to build an object file
+MapSearchNode.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/MapSearchNode.cpp.obj
+.PHONY : MapSearchNode.cpp.obj
+
+MapSearchNode.i: MapSearchNode.cpp.i
+
+.PHONY : MapSearchNode.i
+
+# target to preprocess a source file
+MapSearchNode.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/MapSearchNode.cpp.i
+.PHONY : MapSearchNode.cpp.i
+
+MapSearchNode.s: MapSearchNode.cpp.s
+
+.PHONY : MapSearchNode.s
+
+# target to generate assembly for a file
+MapSearchNode.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/MapSearchNode.cpp.s
+.PHONY : MapSearchNode.cpp.s
+
 Menu.obj: Menu.cpp.obj
 
 .PHONY : Menu.obj
@@ -596,6 +623,9 @@ help:
 	@echo ... MainCharacter.obj
 	@echo ... MainCharacter.i
 	@echo ... MainCharacter.s
+	@echo ... MapSearchNode.obj
+	@echo ... MapSearchNode.i
+	@echo ... MapSearchNode.s
 	@echo ... Menu.obj
 	@echo ... Menu.i
 	@echo ... Menu.s

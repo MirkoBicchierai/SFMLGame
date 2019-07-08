@@ -4,10 +4,11 @@
 #include <SFML/Graphics.hpp>
 class Tile {
 public:
-    bool playerUp;
+    int i,j;
     sf::Sprite spriteShow;
     sf::Sprite spriteCollision;
-    Tile(int id, std::string ty);
+    Tile()= default;
+    Tile(int id, std::string ty,int i, int j);
     std::string type;
     int idTile;
     void setTile(int i,int j, sf::Texture &txt, sf::Vector2u tileSize);
