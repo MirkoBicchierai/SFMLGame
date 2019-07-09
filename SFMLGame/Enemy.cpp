@@ -18,7 +18,7 @@ Enemy::Enemy(float x, float y) {
     AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+31);
 }
 
-void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter) {
+void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Tile> tile) {
     Tile player;
     Tile enemy;
     for(auto& j:map.tile) {
@@ -33,11 +33,11 @@ void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter) {
             break;
         }
     }
-    aStarSearch(player,enemy,map.world_map,map.width,map.height);
+    aStarSearch(player,enemy,map.world_map,map.width,map.height,tile);
 }
 
-void Enemy::aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int height) {
-
+void Enemy::aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int height,std::vector<Tile> tile) {
+    sf::Clock test;
     AStarSearch<MapSearchNode> aStarSearch;
     unsigned int SearchCount = 0;
     const unsigned int NumSearches = 1;
@@ -63,6 +63,14 @@ void Enemy::aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int 
         unsigned int SearchSteps = 0;
 
         do{
+            int i= aStarSearch.GetOpenListStart()->x;
+            int j= aStarSearch.GetOpenListStart()->y;
+            for (int k = 0; k < tile.size() ; ++k) {
+                if(i==tile[k].i && j==tile[k].j ){
+                    entitySprite.setPosition(tile[k].spriteShow.getPosition());
+                    break;
+                }
+            }
             SearchState = aStarSearch.SearchStep();
             SearchSteps++;
         }while( SearchState == AStarSearch<MapSearchNode>::SEARCH_STATE_SEARCHING );

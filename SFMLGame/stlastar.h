@@ -55,8 +55,7 @@ using namespace std;
 template <class T> class AStarState;
 
 // The AStar search class. UserState is the users state space type
-template <class UserState> class AStarSearch
-{
+template <class UserState> class AStarSearch{
 
 public: // data
 
