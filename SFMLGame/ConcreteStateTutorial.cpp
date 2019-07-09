@@ -141,23 +141,12 @@ void ConcreteStateTutorial::handleInput(MainCharacter &mainCharacter){
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
             mainCharacter.movePlayer('r',game->window,map.tile);
         }
-        Tile player;
-        Tile enemy;
+
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::O)) {
+            Tile player;
+            Tile enemy;
             for(auto& i:enemyVec) {
-                for(auto& j:map.tile) {
-                    if(mainCharacter.getSprite().getGlobalBounds().intersects(j.spriteCollision.getGlobalBounds()) && j.type=="floor") {
-                        player=j;
-                        break;
-                    }
-                }
-                for(auto& k:map.tile) {
-                    if(i->entitySprite.getGlobalBounds().intersects(k.spriteCollision.getGlobalBounds()) && k.type=="floor") {
-                        enemy=k;
-                        break;
-                    }
-                }
-                i->aStarSearch(player,enemy,map.world_map,map.width,map.height);
+                i->checkAStar(map,mainCharacter);
             }
         }
         //sword attack plaYER
@@ -190,9 +179,7 @@ void ConcreteStateTutorial::handleInput(MainCharacter &mainCharacter){
                 }
             }
         }
-
     }
-
 }
 
 ConcreteStateTutorial::ConcreteStateTutorial(Game* game){
@@ -203,7 +190,6 @@ void ConcreteStateTutorial::backToMenu(){
     game->init=false;
     game->pushState(new ConcreteStateMenu(game));
 }
-
 
 void ConcreteStateTutorial::Init() {
     loadFromFile(MAP_ROOT_TUTORIAL"/Tutorial.txt");

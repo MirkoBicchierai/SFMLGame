@@ -13,9 +13,30 @@ Enemy::Enemy(float x, float y) {
     sourceRect.height=64;
     entitySprite.setTextureRect(sourceRect);
     entitySprite.setPosition(x,y);
+    AStarColl.setFillColor(sf::Color::Red);
+    AStarColl.setSize(sf::Vector2f(1,1));
+    AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+31);
 }
 
-void Enemy::aStarSearch(Tile &tilePlayer,Tile &tileEnemy,const int *map,int width,int height) {
+void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter) {
+    Tile player;
+    Tile enemy;
+    for(auto& j:map.tile) {
+        if(mainCharacter.AStarColl.getGlobalBounds().intersects(j.spriteCollision.getGlobalBounds()) && j.type=="floor") {
+            player=j;
+            break;
+        }
+    }
+    for(auto& k:map.tile) {
+        if(AStarColl.getGlobalBounds().intersects(k.spriteCollision.getGlobalBounds()) && k.type=="floor") {
+            enemy=k;
+            break;
+        }
+    }
+    aStarSearch(player,enemy,map.world_map,map.width,map.height);
+}
+
+void Enemy::aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int height) {
 
     AStarSearch<MapSearchNode> aStarSearch;
     unsigned int SearchCount = 0;
@@ -32,21 +53,11 @@ void Enemy::aStarSearch(Tile &tilePlayer,Tile &tileEnemy,const int *map,int widt
         nodeEnd.x = tilePlayer.i;
         nodeEnd.y = tilePlayer.j;
 
-        nodeStart.MAP_HEIGHT=height;
-        nodeStart.MAP_WIDTH=width;
-        nodeEnd.MAP_HEIGHT=height;
-        nodeEnd.MAP_WIDTH=width;
-        // Set Start and goal states
+        //set the node
+        nodeStart.startNode(width,height,map);
+        nodeEnd.startNode(width,height,map);
 
-        nodeStart.world_map=new int[height*width];
-        nodeEnd.world_map=new int[height*width];
-        for (unsigned int i = 0; i < width; ++i) {
-            for (unsigned int j = 0; j < height; ++j) {
-                nodeStart.world_map[i + j * width] = map[i + j * width];
-                nodeEnd.world_map[i + j * width] = map[i + j * width];
-            }
-        }
-
+        //set algorithm A-star
         aStarSearch.SetStartAndGoalStates( nodeStart, nodeEnd );
         unsigned int SearchState;
         unsigned int SearchSteps = 0;

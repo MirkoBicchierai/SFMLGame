@@ -8,6 +8,7 @@ public:
     float moveSpeed;
     sf::Texture entityTexture;
     sf::Sprite entitySprite;
+    sf::RectangleShape AStarColl;
 private:
 };
 

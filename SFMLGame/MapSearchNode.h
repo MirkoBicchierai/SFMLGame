@@ -22,6 +22,8 @@ public:
     bool GetSuccessors( AStarSearch<MapSearchNode> *astarsearch, MapSearchNode *parent_node );
     float GetCost( MapSearchNode &successor );
     bool IsSameState( MapSearchNode &rhs );
+    void setNode(MapSearchNode &NewNode);
+    void startNode(int width,int height, const int *map);
     int GetMap( int x, int y );
     void PrintNodeInfo();
 };

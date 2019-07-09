@@ -69,6 +69,10 @@ MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     textArrow.setPosition((camera.getCenter().x + window.getSize().x / 2.f) - 56,camera.getCenter().y - (window.getSize().y / 2.f) + 45);
     textArrow.setString("x " + std::to_string(arrow));
     arrowGUI.setArrowGUI(camera.getCenter().x + window.getSize().x / 2.f,camera.getCenter().y - (window.getSize().y / 2.f) + 40 + 38, 180.f);
+
+    AStarColl.setFillColor(sf::Color::Red);
+    AStarColl.setSize(sf::Vector2f(1,1));
+    AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+31);
 }
 
 void MainCharacter::reset(int pos) {
@@ -110,7 +114,7 @@ void MainCharacter::setTextureShield() {
 
 void MainCharacter::drawPlayer(sf::RenderWindow &window,sf::Clock clockShield) {
     window.draw(entitySprite);
-
+    //window.draw(AStarColl);
     //draw timer shield e texture GUI
     if(shield) {
         shieldSprite.setPosition(-5 + camera.getCenter().x + window.getSize().x / 2.f - 32, camera.getCenter().y - (window.getSize().y / 2.f) + 40 + 40);
@@ -241,8 +245,8 @@ void MainCharacter::movePlayer(char direction, sf::RenderWindow &window,std::vec
     entitySprite.setTextureRect(sourceRect);
     if(controlMove(tile,direction)){
         entitySprite.move(x,y);
+        AStarColl.move(x,y);
         moveGUI(x,y,window);
-
     }
 }
 
@@ -300,6 +304,7 @@ void MainCharacter::resetPlayer(sf::RenderWindow &window) {
     sourceRect.left = leftNormal;
     entitySprite.setTextureRect(sourceRect);
     entitySprite.setPosition(((window.getSize().x)/2.f)-32,((window.getSize().y)/2.f)-32);
+    AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+31);
     camera.setCenter(entitySprite.getPosition().x+32,entitySprite.getPosition().y+32);
 
     sword=0;

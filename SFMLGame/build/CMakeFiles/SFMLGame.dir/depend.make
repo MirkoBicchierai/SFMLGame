@@ -1509,7 +1509,5 @@ CMakeFiles/SFMLGame.dir/main.cpp.obj: ../Heart.h
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../MainCharacter.h
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../Menu.h
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../Tile.h
-CMakeFiles/SFMLGame.dir/main.cpp.obj: ../fsa.h
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../main.cpp
-CMakeFiles/SFMLGame.dir/main.cpp.obj: ../stlastar.h
 
