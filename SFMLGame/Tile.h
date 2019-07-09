@@ -11,7 +11,7 @@ public:
     Tile(int id, std::string ty,int i, int j);
     std::string type;
     int idTile;
-    void setTile(int i,int j, sf::Texture &txt, sf::Vector2u tileSize);
+    void setTile(sf::Texture &txt, sf::Vector2u tileSize);
     void drawTile(sf::RenderWindow &window);
 
 private:

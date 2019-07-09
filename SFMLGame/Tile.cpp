@@ -7,7 +7,7 @@ Tile::Tile(int id, std::string ty,int i, int j) {
     this->j=j;
 }
 
-void Tile::setTile(int i, int j, sf::Texture &txt, sf::Vector2u tileSize) {
+void Tile::setTile(sf::Texture &txt, sf::Vector2u tileSize) {
 
     int tu = idTile % (txt.getSize().x / tileSize.x);
     int tv = idTile / (txt.getSize().x / tileSize.x);

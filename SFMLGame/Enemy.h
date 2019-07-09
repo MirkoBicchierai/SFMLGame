@@ -13,7 +13,7 @@ class Enemy : public BaseStatistic {
 public:
     Enemy(float x, float y);
     void drawEnemy(sf::RenderWindow &window);
-    void aStarSearch(Tile tilePlayer,Tile tileEnemy,int *map,int width,int height);
+    void aStarSearch(Tile &tilePlayer,Tile &tileEnemy,const int *map,int width,int height);
 private:
     sf::IntRect sourceRect;
 };

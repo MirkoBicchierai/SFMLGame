@@ -157,7 +157,7 @@ void ConcreteStateTutorial::handleInput(MainCharacter &mainCharacter){
                         break;
                     }
                 }
-                i->aStarSearch(player,enemy,map.world_map,map.height,map.width);
+                i->aStarSearch(player,enemy,map.world_map,map.width,map.height);
             }
         }
         //sword attack plaYER
@@ -203,6 +203,7 @@ void ConcreteStateTutorial::backToMenu(){
     game->init=false;
     game->pushState(new ConcreteStateMenu(game));
 }
+
 
 void ConcreteStateTutorial::Init() {
     loadFromFile(MAP_ROOT_TUTORIAL"/Tutorial.txt");

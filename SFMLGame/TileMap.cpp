@@ -3,10 +3,10 @@
 #include <iostream>
 #include "Tile.h"
 #include "config.cpp"
-void TileMap::load(const std::string& tileSet, sf::Vector2u tileSize, std::vector<int> tiles, unsigned int width, unsigned int height, sf::RenderWindow &window){
+void TileMap::load(const std::string& tileSet, sf::Vector2u tileSize, std::vector<int> tiles, unsigned int widthTmp, unsigned int heightTmp, sf::RenderWindow &window){
     texture.loadFromFile(tileSet);
-    this->width=width;
-    this->height=height;
+    width=widthTmp;
+    height=heightTmp;
     world_map=new int[width*height];
     int n=0;
     for (unsigned int i = 0; i < width; ++i) {
@@ -49,13 +49,8 @@ void TileMap::load(const std::string& tileSet, sf::Vector2u tileSize, std::vecto
 
             tile.emplace_back(Tile(tileNumber, type, i, j));
             n=tile.size();
-            tile[n-1].setTile(i, j, texture, tileSize);
+            tile[n-1].setTile(texture, tileSize);
 
-        }
-    }
-    for (unsigned int i = 0; i < width; ++i) {
-        for (unsigned int j = 0; j < height; ++j) {
-            std::cout << world_map[i + j * width] << ",";
         }
     }
 }

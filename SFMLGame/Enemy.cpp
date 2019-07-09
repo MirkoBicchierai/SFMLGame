@@ -4,7 +4,7 @@ void Enemy::drawEnemy(sf::RenderWindow &window) {
     window.draw(entitySprite);
 }
 
- Enemy::Enemy(float x, float y) {
+Enemy::Enemy(float x, float y) {
     entityTexture.loadFromFile("../img/npc/npc1.png");
     entitySprite.setTexture(entityTexture);
     sourceRect.left=0;
@@ -15,21 +15,11 @@ void Enemy::drawEnemy(sf::RenderWindow &window) {
     entitySprite.setPosition(x,y);
 }
 
-void Enemy::aStarSearch(Tile tilePlayer,Tile tileEnemy,int *map,int width,int height) {
-    AStarSearch<MapSearchNode> astarsearch;
+void Enemy::aStarSearch(Tile &tilePlayer,Tile &tileEnemy,const int *map,int width,int height) {
+
+    AStarSearch<MapSearchNode> aStarSearch;
     unsigned int SearchCount = 0;
-
     const unsigned int NumSearches = 1;
-    std::cout<<"PlayerX:" <<std::endl;
-    std::cout<<tilePlayer.i <<std::endl;
-
-    std::cout<<"PlayerY:" <<std::endl;
-    std::cout<<tilePlayer.j <<std::endl;
-
-    std::cout<<"EnemyX:" <<std::endl;
-    std::cout<<tileEnemy.i <<std::endl;
-    std::cout<<"EnemyY:" <<std::endl;
-    std::cout<<tileEnemy.j <<std::endl;
 
     while(SearchCount < NumSearches){
         // Create a start state
@@ -41,68 +31,60 @@ void Enemy::aStarSearch(Tile tilePlayer,Tile tileEnemy,int *map,int width,int he
         MapSearchNode nodeEnd;
         nodeEnd.x = tilePlayer.i;
         nodeEnd.y = tilePlayer.j;
+
+        nodeStart.MAP_HEIGHT=height;
+        nodeStart.MAP_WIDTH=width;
+        nodeEnd.MAP_HEIGHT=height;
+        nodeEnd.MAP_WIDTH=width;
         // Set Start and goal states
-     /*   for (unsigned int i = 0; i < width; ++i) {
+
+        nodeStart.world_map=new int[height*width];
+        nodeEnd.world_map=new int[height*width];
+        for (unsigned int i = 0; i < width; ++i) {
             for (unsigned int j = 0; j < height; ++j) {
                 nodeStart.world_map[i + j * width] = map[i + j * width];
                 nodeEnd.world_map[i + j * width] = map[i + j * width];
             }
         }
-        */
-        astarsearch.SetStartAndGoalStates( nodeStart, nodeEnd );
 
+        aStarSearch.SetStartAndGoalStates( nodeStart, nodeEnd );
         unsigned int SearchState;
         unsigned int SearchSteps = 0;
 
         do{
-            SearchState = astarsearch.SearchStep();
+            SearchState = aStarSearch.SearchStep();
             SearchSteps++;
+        }while( SearchState == AStarSearch<MapSearchNode>::SEARCH_STATE_SEARCHING );
 
-        }
-        while( SearchState == AStarSearch<MapSearchNode>::SEARCH_STATE_SEARCHING );
+        if( SearchState == AStarSearch<MapSearchNode>::SEARCH_STATE_SUCCEEDED ){
 
-        if( SearchState == AStarSearch<MapSearchNode>::SEARCH_STATE_SUCCEEDED )
-        {
             cout << "Search found goal state\n";
-
-            MapSearchNode *node = astarsearch.GetSolutionStart();
-
+            MapSearchNode *node = aStarSearch.GetSolutionStart();
             int steps = 0;
-
             node->PrintNodeInfo();
-            for( ;; )
-            {
-                node = astarsearch.GetSolutionNext();
-
-                if( !node )
-                {
+            for( ;; ){
+                node = aStarSearch.GetSolutionNext();
+                if( !node ){
                     break;
                 }
-
                 node->PrintNodeInfo();
                 steps ++;
 
-            };
-
+            }
             cout << "Solution steps " << steps << endl;
 
             // Once you're done with the solution you can free the nodes up
-            astarsearch.FreeSolutionNodes();
-
-
+            aStarSearch.FreeSolutionNodes();
         }
-        else if( SearchState == AStarSearch<MapSearchNode>::SEARCH_STATE_FAILED )
-        {
+        else if( SearchState == AStarSearch<MapSearchNode>::SEARCH_STATE_FAILED ){
             cout << "Search terminated. Did not find goal state\n";
 
         }
 
         // Display the number of loops the search went through
         cout << "SearchSteps : " << SearchSteps << "\n";
-
         SearchCount ++;
-
-        astarsearch.EnsureMemoryFreed();
+        aStarSearch.EnsureMemoryFreed();
 
     }
 }
