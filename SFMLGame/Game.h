@@ -19,6 +19,8 @@ public:
     sf::Clock clockSword;
     sf::Clock clockBow;
     sf::Clock clockSpell;
+    sf::Clock enemyAStar;
+    sf::Clock enemyAStarMove;
     bool init;
 private:
     std::vector<GameState*> states;

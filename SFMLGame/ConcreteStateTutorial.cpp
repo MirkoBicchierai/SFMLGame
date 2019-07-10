@@ -116,10 +116,19 @@ void ConcreteStateTutorial::update(MainCharacter &mainCharacter){
         mainCharacter.arrowPlayer.stay = false;
         mainCharacter.arrow = 1;
     }
-  Tile player;
-    Tile enemy;
-    for(auto& i:enemyVec) {
-        i->checkAStar(map,mainCharacter,map.tile);
+    //A-star Enemy
+    if(game->enemyAStar.getElapsedTime().asMilliseconds()>=500.f) {
+        for (auto &i:enemyVec) {
+            i->checkAStar(map, mainCharacter, map.tile);
+        }
+        game->enemyAStar.restart();
+    }
+
+    if(game->enemyAStarMove.getElapsedTime().asMilliseconds()>=15.f) {
+        for (auto &i:enemyVec) {
+            i->moveAStar(map.tile);
+        }
+        game->enemyAStarMove.restart();
     }
 }
 
@@ -146,14 +155,6 @@ void ConcreteStateTutorial::handleInput(MainCharacter &mainCharacter){
             mainCharacter.movePlayer('r',game->window,map.tile);
         }
 
-      /* if (sf::Keyboard::isKeyPressed(sf::Keyboard::O)) {
-            Tile player;
-            Tile enemy;
-            for(auto& i:enemyVec) {
-                i->checkAStar(map,mainCharacter,map.tile);
-            }
-        }
-*/
         //sword attack plaYER
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q) && !mainCharacter.shield) {
             mainCharacter.sword = 1;
@@ -199,9 +200,9 @@ void ConcreteStateTutorial::backToMenu(){
 void ConcreteStateTutorial::Init() {
     loadFromFile(MAP_ROOT_TUTORIAL"/Tutorial.txt");
     float x=0,y=0;
-    for (int i = 0; i < 2; ++i) {
-        x=rand()%400 + 1200;
-        y=rand()%400 + 1200;
+    for (int i = 0; i < 10; ++i) {
+        x=rand()%1200 + 1200;
+        y=rand()%1200 + 1200;
         enemyVec.push_back(new Enemy(x,y));
     }
     game->init=true;

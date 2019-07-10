@@ -860,28 +860,6 @@ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.h
 SFML/Graphics.hpp
 -
 
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame.h
-SFML/Audio.hpp
--
-SFML/Graphics.hpp
--
-GameState.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
-TileMap.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.h
-
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.cpp
-SFML/Graphics.hpp
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/SFML/Graphics.hpp
-ConcreteStateMenu.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
-GameState.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
-ConcreteStateGame.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame.h
-ConcreteStateTutorial.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateTutorial.h
-
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
 SFML/Audio.hpp
 -
@@ -925,12 +903,6 @@ TileMap.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.h
 Enemy.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.h
-
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.cpp
-Enemy.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.h
-config.cpp
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
 
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.h
 BaseStatistic.h

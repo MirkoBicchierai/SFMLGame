@@ -1,5 +1,6 @@
 #define FONT_ROOT "../font"
 #define IMG_PLAYER_ROOT "../img/Player"
+#define IMG_ENEMY_ROOT "../img/Enemy"
 #define IMG_ROOT "../img"
 #define TITLE "The Road Of Knight"
 #define IMG_PLAYER_OBJ_ROOT "../img/Player_obj"
@@ -17,6 +18,16 @@ enum sourceState{
     topMoveDown=64*10,
     topMoveLeft=64*9,
     topMoveRight=64*11,
+};
+
+enum enemyRect{
+    leftNormalEnemy=0,
+    dimEnemy=64,
+    moveFinalEnemy=64*8,
+    topMoveUpEnemy=64*8,
+    topMoveDownEnemy=64*10,
+    topMoveLeftEnemy=64*9,
+    topMoveRightEnemy=64*11,
 };
 
 enum swordState{
