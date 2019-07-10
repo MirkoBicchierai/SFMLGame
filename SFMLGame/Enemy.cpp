@@ -7,8 +7,8 @@ void Enemy::drawEnemy(sf::RenderWindow &window) {
 }
 
 Enemy::Enemy(float x, float y) {
-
-    entitySprite.setTexture(txt);
+    entityTexture.loadFromFile(IMG_ENEMY_ROOT"/normal.png");
+    entitySprite.setTexture(entityTexture);
     sourceRect.left=0;
     sourceRect.top=0;
     sourceRect.width=64;
@@ -104,7 +104,8 @@ void Enemy::aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int 
 
         if( SearchState == AStarSearch<MapSearchNode>::SEARCH_STATE_SUCCEEDED ){
 
-            MapSearchNode *node = aStarSearch.GetSolutionStart();
+            aStarSearch.GetSolutionStart();
+            MapSearchNode *node;
             //node->PrintNodeInfo();
             for( ;; ){
                 node = aStarSearch.GetSolutionNext();

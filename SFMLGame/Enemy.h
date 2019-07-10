@@ -17,7 +17,6 @@ typedef struct {
 class Enemy : public BaseStatistic {
 
 public:
-    static sf::Texture txt;
     Enemy(float x, float y);
     void drawEnemy(sf::RenderWindow &window);
     void checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Tile> &tile);
