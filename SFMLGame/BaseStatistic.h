@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 
-class BaseStatistic {
+class BaseStatistic { //dad class for Enemy and MainCharacter
 public:
     float moveSpeed;
     sf::Texture entityTexture;

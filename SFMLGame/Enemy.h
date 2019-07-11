@@ -20,10 +20,10 @@ public:
     Enemy(float x, float y);
     void drawEnemy(sf::RenderWindow &window);
     void checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Tile> &tile);
-    void moveAStar(std::vector<Tile> &tile);
+    void moveAStar(std::vector<Tile> &tile,MainCharacter &mainCharacter);
 private:
     void aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int height);
-    void moveEnemy(char direction);
+    void moveEnemy(char direction,MainCharacter &mainCharacter);
     std::vector<structList> path;
     sf::IntRect sourceRect;
 

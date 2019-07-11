@@ -24,6 +24,7 @@ Enemy::Enemy(float x, float y) {
 void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Tile> &tile) {
     Tile player;
     Tile enemy;
+    mainCharacter.AStarColl.setPosition(mainCharacter.entitySprite.getPosition().x+31,mainCharacter.entitySprite.getPosition().y+60);
     for(auto& j:map.tile) {
         if(mainCharacter.AStarColl.getGlobalBounds().intersects(j.spriteCollision.getGlobalBounds()) && (j.type=="floor" || j.type=="obj")) {
             player=j;
@@ -38,7 +39,7 @@ void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Ti
     }
     aStarSearch(player,enemy,map.world_map,map.width,map.height);
 }
-void Enemy::moveAStar(std::vector<Tile> &tile){
+void Enemy::moveAStar(std::vector<Tile> &tile,MainCharacter &mainCharacter){
     if(!path.empty()) {
         int i = path[path.size()-1].x;
         int j = path[path.size()-1].y;
@@ -52,13 +53,13 @@ void Enemy::moveAStar(std::vector<Tile> &tile){
         for (int k = 0; k < tile.size(); ++k) {
             if (i == tile[k].i && j == tile[k].j) {
                 if (tile[k].j>enemy.j) {
-                    moveEnemy('d');
+                    moveEnemy('d',mainCharacter);
                 } else if (tile[k].j<enemy.j) {
-                    moveEnemy('u');
+                    moveEnemy('u',mainCharacter);
                 } else if (tile[k].i>enemy.i) {
-                    moveEnemy('r');
+                    moveEnemy('r',mainCharacter);
                 } else if (tile[k].i<enemy.i) {
-                    moveEnemy('l');
+                    moveEnemy('l',mainCharacter);
                 }
                 break;
             }
@@ -141,7 +142,7 @@ void Enemy::aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int 
     }
 }
 
-void Enemy::moveEnemy(char direction) {
+void Enemy::moveEnemy(char direction,MainCharacter &mainCharacter) {
 
     if (sourceRect.left == moveFinalEnemy)
         sourceRect.left = leftNormalEnemy;
@@ -169,4 +170,9 @@ void Enemy::moveEnemy(char direction) {
         AStarColl.setPosition(entitySprite.getPosition().x,entitySprite.getPosition().y+31);
     }
     entitySprite.setTextureRect(sourceRect);
+
+    if(AStarColl.getGlobalBounds().intersects(mainCharacter.entitySprite.getGlobalBounds())){
+        mainCharacter.die=true;
+        mainCharacter.AnimationDie=true;
+    }
 }

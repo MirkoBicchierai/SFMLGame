@@ -41,6 +41,7 @@ void ConcreteStateTutorial::draw(MainCharacter &mainCharacter){
 }
 
 void ConcreteStateTutorial::update(MainCharacter &mainCharacter){
+    if(!mainCharacter.die){
     //time shield end
     if (mainCharacter.shield && game->clockShield.getElapsedTime().asSeconds() >= mainCharacter.secShield) {
         mainCharacter.setNormalTexture();
@@ -126,64 +127,75 @@ void ConcreteStateTutorial::update(MainCharacter &mainCharacter){
 
     if(game->enemyAStarMove.getElapsedTime().asMilliseconds()>=15.f) {
         for (auto &i:enemyVec) {
-            i->moveAStar(map.tile);
+            i->moveAStar(map.tile,mainCharacter);
         }
         game->enemyAStarMove.restart();
+    }
+    }
+    if(mainCharacter.die && mainCharacter.AnimationDie  && mainCharacter.checkDie){
+        if (game->diePlayer.getElapsedTime().asMilliseconds() > 45.f) {
+            if(mainCharacter.dieAnimation()==aniDieMax){
+                mainCharacter.AnimationDie=false;
+            }
+            game->diePlayer.restart();
+        }
     }
 }
 
 void ConcreteStateTutorial::handleInput(MainCharacter &mainCharacter){
 
     sf::Event event{};
-
     while (this->game->window.pollEvent(event)){
 
         if (event.type == sf::Event::Closed)
             game->window.close();
-
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
             backToMenu();
 
-        //player movement
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-            mainCharacter.movePlayer('u',game->window,map.tile);
-        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-            mainCharacter.movePlayer('d',game->window,map.tile);
-        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-            mainCharacter.movePlayer('l',game->window,map.tile);
-        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-            mainCharacter.movePlayer('r',game->window,map.tile);
-        }
+        if(!mainCharacter.die){
+            //player movement
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+                mainCharacter.movePlayer('u',game->window,map.tile);
+            } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+                mainCharacter.movePlayer('d',game->window,map.tile);
+            } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+                mainCharacter.movePlayer('l',game->window,map.tile);
+            } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+                mainCharacter.movePlayer('r',game->window,map.tile);
+            }
 
-        //sword attack plaYER
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q) && !mainCharacter.shield) {
-            mainCharacter.sword = 1;
-            game->clockSword.restart();
-        } else {
-            //bow attack player
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) && mainCharacter.arrow > 0 &&
-                !mainCharacter.shield &&
-                !mainCharacter.aniArrow) {
-                mainCharacter.setTextureBow();
-                mainCharacter.bow = 1;
-                mainCharacter.aniArrow = true;
-                mainCharacter.arrowPlayer.clock.restart();
-                game->clockBow.restart();
+            //sword attack plaYER
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q) && !mainCharacter.shield) {
+                mainCharacter.sword = 1;
+                game->clockSword.restart();
             } else {
-                // special attack player
-                if (sf::Keyboard::isKeyPressed(sf::Keyboard::R) && !mainCharacter.shield &&
-                    !mainCharacter.spell) {
-                    mainCharacter.magic = 1;
-                    game->clockSpell.restart();
-                    mainCharacter.spell = true;
+                //bow attack player
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) && mainCharacter.arrow > 0 &&
+                    !mainCharacter.shield &&
+                    !mainCharacter.aniArrow) {
+                    mainCharacter.setTextureBow();
+                    mainCharacter.bow = 1;
+                    mainCharacter.aniArrow = true;
+                    mainCharacter.arrowPlayer.clock.restart();
+                    game->clockBow.restart();
                 } else {
-                    // activate shield player
-                    if (sf::Keyboard::isKeyPressed(sf::Keyboard::E) && !mainCharacter.spell) {
-                        mainCharacter.setTextureShield();
-                        game->clockShield.restart();
+                    // special attack player
+                    if (sf::Keyboard::isKeyPressed(sf::Keyboard::R) && !mainCharacter.shield &&
+                        !mainCharacter.spell) {
+                        mainCharacter.magic = 1;
+                        game->clockSpell.restart();
+                        mainCharacter.spell = true;
+                    } else {
+                        // activate shield player
+                        if (sf::Keyboard::isKeyPressed(sf::Keyboard::E) && !mainCharacter.spell) {
+                            mainCharacter.setTextureShield();
+                            game->clockShield.restart();
+                        }
                     }
                 }
             }
+        } else{
+            mainCharacter.checkDie=true;
         }
     }
 }

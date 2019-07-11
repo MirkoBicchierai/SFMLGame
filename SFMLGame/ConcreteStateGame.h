@@ -15,9 +15,9 @@ public:
 
 private:
     TileMap map{};
-    std::vector <int> vec;
+    std::vector <int> vec; //vector dove vengono letti gli ID da file della mappa e poi passati all'oggetto map
     void backToMenu();
-    void loadFromFile(const std::string &path);
+    void loadFromFile(const std::string &path);  //metodo per leggere gli id da FILE
 };
 
 #endif

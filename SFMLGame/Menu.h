@@ -10,9 +10,9 @@ public:
 
     Menu();
     void draw(sf::RenderWindow &window);
-    void moveUp();
-    void moveDown();
-    int getSelectedItem();
+    void moveUp(); // scroll up the menu
+    void moveDown(); // scroll down the menu
+    int getSelectedItem(); // return the item selected after click return
 
 private:
 

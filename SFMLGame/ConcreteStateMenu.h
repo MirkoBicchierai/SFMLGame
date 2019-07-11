@@ -16,8 +16,8 @@ public:
 
 private:
     Menu menu;
-    void startGame(MainCharacter &mainCharacter);
-    void startTutorial(MainCharacter &mainCharacter);
+    void startGame(MainCharacter &mainCharacter); //switch state to Game
+    void startTutorial(MainCharacter &mainCharacter);  //switch state to Tutorial
 };
 
 #endif

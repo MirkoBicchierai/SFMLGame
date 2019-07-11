@@ -4,14 +4,14 @@
 #include <SFML/Graphics.hpp>
 class Tile {
 public:
-    int i,j;
+    int i,j; // i and j are the indices of line and column of the vector of id tile
+    std::string type; //type of tyle
+    int idTile; // id of tile
     sf::Sprite spriteShow;
     sf::Sprite spriteCollision;
     Tile()= default;
     Tile(int id, std::string ty,int i, int j);
-    std::string type;
-    int idTile;
-    void setTile(sf::Texture &txt, sf::Vector2u tileSize);
+    void setTile(sf::Texture &txt, sf::Vector2u tileSize); //set the texture and the draw position of the tile
     void drawTile(sf::RenderWindow &window);
 
 private:

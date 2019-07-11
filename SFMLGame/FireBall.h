@@ -11,7 +11,7 @@ public:
     FireBall();
     void drawFireBall(sf::RenderWindow &window);
     void setRect(sf::IntRect player,float x, float y);
-    int animation();
+    int animation(); //animation fireball, switch rect of image
 
 private:
     int moveSpeed;

@@ -1,3 +1,4 @@
+//define all constant used on all projects
 #define FONT_ROOT "../font"
 #define IMG_PLAYER_ROOT "../img/Player"
 #define IMG_ENEMY_ROOT "../img/Enemy"
@@ -9,6 +10,7 @@
 #define MAP_ROOT_GAME "../map/game"
 #define AUDIO_ROOT "../audio"
 
+//enum for the player
 enum sourceState{
     upNormal=64*8,
     leftNormal=0,
@@ -18,8 +20,10 @@ enum sourceState{
     topMoveDown=64*10,
     topMoveLeft=64*9,
     topMoveRight=64*11,
+    aniDieMax=64*5,
+    aniDieTop=64*20,
 };
-
+//enum for the enemy
 enum enemyRect{
     leftNormalEnemy=0,
     dimEnemy=64,
@@ -29,7 +33,7 @@ enum enemyRect{
     topMoveLeftEnemy=64*9,
     topMoveRightEnemy=64*11,
 };
-
+//enum for the player attack sword
 enum swordState{
     leftNormalSword=0,
     UpSword=64 * 12,
@@ -38,7 +42,7 @@ enum swordState{
     LeftSword=64 * 13,
     finalSwordAttack=64*5,
 };
-
+//enum for the player attack bow
 enum bowState{
     leftNormalBow=0,
     UpBow=64 * 16,
@@ -47,7 +51,7 @@ enum bowState{
     LeftBow=64 * 17,
     finalBowAttack=64*12,
 };
-
+//enum for the player attack spell
 enum magicState{
     leftNormalMagic=0,
     finalMagicAttack=64*6,
@@ -56,7 +60,7 @@ enum magicState{
     RightMagic=64 * 3,
     LeftMagic=64 * 1,
 };
-
+//enum for the fireBall
 enum fireBallState{
     dimFireBall=64,
     NormalLeft=0,
@@ -66,7 +70,7 @@ enum fireBallState{
     UpFireBall=64*2,
     finalBallAnimation=64*7,
 };
-
+//enum for the arrow
 enum ArrowState{
     dimArrow=32,
     LeftNormalArrow=0,
@@ -77,7 +81,7 @@ enum ArrowState{
     LeftRotation=90,
     UpRotation=180
 };
-
+//enum for Tile, checked from position on the image tile-set
 enum tileSetCollision{
     topMinWall=64*3,
     topMaxWall=64*10,

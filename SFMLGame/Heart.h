@@ -7,8 +7,8 @@ class Heart {
 public:
     Heart();
     void drawHeart(sf::RenderWindow &window);
-    void moveHeart(float x,float y);
-    void setCenter(sf::RenderWindow &window);
+    void moveHeart(float x,float y); //move hearth of the gui
+    void setCenter(sf::RenderWindow &window); //reset position
 private:
     sf::Texture hearthTexture;
     sf::Sprite hearthSprite1;

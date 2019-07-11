@@ -175,7 +175,7 @@ ConcreteStateGame::ConcreteStateGame(Game* game){
     this->game = game;
 }
 
-void ConcreteStateGame::backToMenu(){
+void ConcreteStateGame::backToMenu(){ //switch state to menu
     game->init=false;
     game->pushState(new ConcreteStateMenu(game));
 

@@ -22,35 +22,41 @@ public:
     Arrow arrowPlayer;
     sf::View camera;
 
+    //bool attributes for check the state of the player animation used on the calling method
+    bool AnimationDie;
+    bool die;
+    bool checkDie;
     int arrow;
     bool shield;
     bool spell;
     bool aniArrow;
 
+    //time for ability
     float timeSword;
     float timeBow;
     float timeMagic;
+    float secShield;
 
     int sword;
     int magic;
     int bow;
-    float secShield;
 
     explicit MainCharacter(sf::RenderWindow &window);
-    sf::IntRect getsourceRect();
     void drawPlayer(sf::RenderWindow &window,sf::Clock clockShield);
-    void movePlayer(char direction,sf::RenderWindow &window,std::vector<Tile>tile);
-    int bowAttack();
-    int swordAttack();
-    int magicAttack();
-    void setTextureBow();
-    void setTextureShield();
-    void setNormalTexture();
-    void reset(int pos);
-    void resetPlayer(sf::RenderWindow &window);
+    void movePlayer(char direction,sf::RenderWindow &window,std::vector<Tile>tile); // move the player
+    int bowAttack(); //animation bow
+    int swordAttack(); //animation sword
+    int magicAttack(); // animation spell
+    void setTextureBow(); //change texture to use bow
+    void setTextureShield(); //change texture to use shield
+    void setNormalTexture(); //reset texture
+    void reset(int pos); // reset the player position
+    void resetPlayer(sf::RenderWindow &window); //reset the player state
+    int dieAnimation(); //animation die
+    sf::IntRect getsourceRect();
     sf::Sprite getSprite();
-    bool controlMove(std::vector<Tile> &tile,char direction);
 private:
+    bool controlMove(std::vector<Tile> &tile,char direction); // control if the player can move or not
     sf::SoundBuffer bufferArrow;
     sf::SoundBuffer bufferFireBall;
     sf::Font font;
@@ -64,12 +70,13 @@ private:
     sf::Sprite shieldSprite;
     sf::IntRect sourceRect;
     sf::Texture bowTexture;
+    sf::IntRect dieRect;
     sf::Texture shieldTexture;
     sf::IntRect bowRect;
     sf::IntRect swordRect;
     sf::IntRect magicRect;
 
-    void moveGUI(float x, float y,sf::RenderWindow &window);
+    void moveGUI(float x, float y,sf::RenderWindow &window); // move gui of player
 
 };
 

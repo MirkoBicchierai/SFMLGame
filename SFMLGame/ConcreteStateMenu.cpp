@@ -22,7 +22,7 @@ void ConcreteStateMenu::handleInput(MainCharacter &mainCharacter){
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
             menu.moveDown();
 
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {  //GESTIONE SELEZIONE ITEM DAL MENU
             if (menu.getSelectedItem() == 2)
                 game->window.close();
             if (menu.getSelectedItem() == 1)
@@ -41,7 +41,7 @@ void ConcreteStateMenu::draw(MainCharacter &mainCharacter){
     menu.draw(game->window);
 }
 
-void ConcreteStateMenu::startGame(MainCharacter &mainCharacter){
+void ConcreteStateMenu::startGame(MainCharacter &mainCharacter){ // switch state to Game
     game->init=false;
     mainCharacter.resetPlayer(game->window);
     mainCharacter.camera.setCenter((mainCharacter.getSprite().getPosition().x) + 32,((mainCharacter.getSprite().getPosition().y)) + 32);
@@ -49,7 +49,7 @@ void ConcreteStateMenu::startGame(MainCharacter &mainCharacter){
     game->pushState(new ConcreteStateGame(game));
 }
 
-void ConcreteStateMenu::startTutorial(MainCharacter &mainCharacter) {
+void ConcreteStateMenu::startTutorial(MainCharacter &mainCharacter) { // switch state to tutorial
     game->init=false;
     mainCharacter.resetPlayer(game->window);
     mainCharacter.camera.setCenter((mainCharacter.getSprite().getPosition().x) + 32,((mainCharacter.getSprite().getPosition().y)) + 32);
