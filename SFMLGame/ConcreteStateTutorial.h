@@ -2,8 +2,8 @@
 #define SFMLGAME_CONCRETESTATETUTORIAL_H
 
 #include <SFML/Audio.hpp>
-#include <vector>
 #include <SFML/Graphics.hpp>
+#include <vector>
 #include "ConcreteStateMenu.h"
 #include "GameState.h"
 #include "TileMap.h"

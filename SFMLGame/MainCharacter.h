@@ -7,9 +7,7 @@
 #include "Heart.h"
 #include "FireBall.h"
 #include "BaseStatistic.h"
-#include <iostream>
 #include "Tile.h"
-#include <vector>
 
 class MainCharacter: public BaseStatistic {
 

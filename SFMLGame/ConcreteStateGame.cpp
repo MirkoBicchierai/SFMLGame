@@ -2,9 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "ConcreteStateGame.h"
 #include "ConcreteStateMenu.h"
-#include "GameState.h"
 #include "config.cpp"
-#include <vector>
 #include <fstream>
 #include <regex>
 

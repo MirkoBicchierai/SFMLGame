@@ -1,8 +1,8 @@
-#include "TileMap.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include "Tile.h"
+#include "TileMap.h"
 #include "config.cpp"
+
 void TileMap::load(const std::string& tileSet, sf::Vector2u tileSize, std::vector<int> tiles, unsigned int widthTmp, unsigned int heightTmp, sf::RenderWindow &window){
     texture.loadFromFile(tileSet);
     width=widthTmp;

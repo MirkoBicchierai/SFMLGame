@@ -1,10 +1,10 @@
 #ifndef SFMLGAME_TILEMAP_H
 #define SFMLGAME_TILEMAP_H
 #include <SFML/Graphics.hpp>
-#include <iostream>
 #include <vector>
 #include "Tile.h"
 #include "MainCharacter.h"
+
 class TileMap{
 
 public:

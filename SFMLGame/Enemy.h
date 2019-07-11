@@ -1,14 +1,12 @@
 #ifndef SFMLGAME_ENEMY_H
 #define SFMLGAME_ENEMY_H
 
-#include "BaseStatistic.h"
 #include <iostream>
+#include "BaseStatistic.h"
 #include "MapSearchNode.h"
 #include "stlastar.h"
-#include <stdio.h>
-#include <math.h>
 #include "MainCharacter.h"
-
+#include "TileMap.h"
 typedef struct {
     int x;
     int y;

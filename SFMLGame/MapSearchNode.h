@@ -1,10 +1,7 @@
-
 #ifndef SFMLGAME_MAPSEARCHNODE_H
 #define SFMLGAME_MAPSEARCHNODE_H
 
 #include "stlastar.h"
-#include "TileMap.h"
-
 
 class MapSearchNode {
 

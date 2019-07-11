@@ -1,7 +1,6 @@
-#include <utility>
-
 #include "Enemy.h"
 #include "config.cpp"
+
 void Enemy::drawEnemy(sf::RenderWindow &window) {
     window.draw(entitySprite);
 }
