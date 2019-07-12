@@ -39,6 +39,15 @@ MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     sourceRect.top = upNormal;
     sourceRect.left = leftNormal;
 
+    dieRect.top=topDiePlayer;
+    dieRect.left=0;
+    dieRect.width=dim;
+    dieRect.height=dim;
+
+    dieRect.width=dim;
+    dieRect.height=dim;
+    dieRect.left=leftNormal;
+
     entitySprite.setTextureRect(sourceRect);
     entitySprite.setPosition(((window.getSize().x)/2.f)+200,((window.getSize().y)/2.f)-32);
     camera.setCenter(entitySprite.getPosition().x+32,entitySprite.getPosition().y+32);
@@ -74,6 +83,9 @@ MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     AStarColl.setSize(sf::Vector2f(1,1));
     AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+31);
     life = 3;
+    DMGSword=1;
+    die=false;
+    finalDie=false;
 }
 
 void MainCharacter::reset(int pos) {
@@ -321,6 +333,19 @@ void MainCharacter::resetPlayer(sf::RenderWindow &window) {
     textArrow.setString("x " + std::to_string(arrow));
     arrowGUI.setArrowGUI(camera.getCenter().x + window.getSize().x / 2.f,camera.getCenter().y - (window.getSize().y / 2.f) + 40 + 38, 180.f);
     hearth.setCenter(window);
+
+    life = 3;
+    DMGSword=1;
+    die=false;
+    finalDie=false;
+
+}
+
+int MainCharacter::dieAnimation() {
+    entitySprite.setTextureRect(dieRect);
+    float x=dieRect.left;
+    dieRect.left=dieRect.left+dim;
+    return x;
 }
 
 void MainCharacter::damageSword(std::vector<Enemy*> &enemyVec) {
@@ -345,7 +370,7 @@ void MainCharacter::damageSword(std::vector<Enemy*> &enemyVec) {
     for (int i = 0; i < enemyVec.size(); ++i) {
         if(swordRec.getGlobalBounds().intersects(enemyVec[i]->entitySprite.getGlobalBounds())){
             if(enemyVec[i]->life!=0) {
-                enemyVec[i]->life=enemyVec[i]->life-1;
+                enemyVec[i]->life=enemyVec[i]->life-DMGSword;
             }
         }
     }

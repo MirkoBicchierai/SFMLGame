@@ -21,6 +21,8 @@ public:
     sf::View camera;
 
     //bool attributes for check the state of the player animation used on the calling method
+    bool finalDie;
+    bool die;
     int arrow;
     bool shield;
     bool spell;
@@ -32,6 +34,7 @@ public:
     float timeMagic;
     float secShield;
 
+    int DMGSword;
     int sword;
     int magic;
     int bow;
@@ -48,6 +51,7 @@ public:
     void reset(int pos); // reset the player position
     void resetPlayer(sf::RenderWindow &window); //reset the player state
     void damageSword(std::vector<Enemy*> &enemyVec);
+    int dieAnimation(); //animation die
     sf::IntRect getsourceRect();
     sf::Sprite getSprite();
 private:
@@ -65,6 +69,7 @@ private:
     sf::Sprite shieldSprite;
     sf::IntRect sourceRect;
     sf::Texture bowTexture;
+    sf::IntRect dieRect;
     sf::Texture shieldTexture;
     sf::IntRect bowRect;
     sf::IntRect swordRect;

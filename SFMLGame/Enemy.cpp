@@ -6,7 +6,7 @@ void Enemy::drawEnemy(sf::RenderWindow &window) {
     window.draw(entitySprite);
 }
 
-Enemy::Enemy(float x, float y,std::string &file,int distance) {
+Enemy::Enemy(float x, float y,std::string &file,int distance,int dmg) {
     entityTexture.loadFromFile(IMG_ENEMY_ROOT"/"+file+".png");
     type=file;
     entitySprite.setTexture(entityTexture);
@@ -22,11 +22,15 @@ Enemy::Enemy(float x, float y,std::string &file,int distance) {
     moveSpeed=3;
     aggroDistance=distance;
     life = 3;
-
+    damage=dmg;
     dieRect.left=0;
     dieRect.top=dieTopEnemy;
     dieRect.width=64;
     dieRect.height=64;
+    aniAttack=false;
+    swordRect.height=dim;
+    swordRect.width=dim;
+    swordRect.left=0;
 }
 
 void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Tile> &tile) {
@@ -60,7 +64,7 @@ void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Ti
     }
 }
 void Enemy::moveAStar(std::vector<Tile> &tile,MainCharacter &mainCharacter){
-    if(life > 0 && !path.empty()) {
+    if(life > 0 && !path.empty() && !aniAttack) {
         int i = path[path.size()-1].x;
         int j = path[path.size()-1].y;
         Tile enemy;
@@ -162,32 +166,42 @@ void Enemy::aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int 
 
 void Enemy::moveEnemy(char direction,MainCharacter &mainCharacter) {
 
-    if (sourceRect.left == moveFinalEnemy)
-        sourceRect.left = leftNormalEnemy;
-    else
-        sourceRect.left += leftNormalEnemy+dimEnemy;
+    float x2,x1,y2,y1,quadX,quadY;
+    x2=mainCharacter.getSprite().getPosition().x;
+    y2=mainCharacter.getSprite().getPosition().y;
+    x1=entitySprite.getPosition().x;
+    y1=entitySprite.getPosition().y;
+    quadX=(x2-x1)*(x2-x1);
+    quadY=(y2-y1)*(y2-y1);
+    if(sqrt(quadX+quadY)>64){
+        if (sourceRect.left == moveFinalEnemy)
+            sourceRect.left = leftNormalEnemy;
+        else
+            sourceRect.left += leftNormalEnemy+dimEnemy;
 
-    if (direction=='u') {
-        entitySprite.move(0,-moveSpeed);
-        sourceRect.top =topMoveUpEnemy;
-        AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+61);
-    }
-    if (direction=='d') {
-        entitySprite.move(0,moveSpeed);
-        sourceRect.top =topMoveDownEnemy;
-        AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y);
-    }
-    if (direction=='l') {
-        entitySprite.move(-moveSpeed,0);
-        sourceRect.top =topMoveLeftEnemy;
-        AStarColl.setPosition(entitySprite.getPosition().x+61,entitySprite.getPosition().y+31);
-    }
-    if (direction=='r') {
-        entitySprite.move(moveSpeed,0);
-        sourceRect.top =topMoveRightEnemy;
-        AStarColl.setPosition(entitySprite.getPosition().x,entitySprite.getPosition().y+31);
-    }
-    entitySprite.setTextureRect(sourceRect);
+        if (direction=='u') {
+            entitySprite.move(0,-moveSpeed);
+            sourceRect.top =topMoveUpEnemy;
+            AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+61);
+        }
+        if (direction=='d') {
+            entitySprite.move(0,moveSpeed);
+            sourceRect.top =topMoveDownEnemy;
+            AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y);
+        }
+        if (direction=='l') {
+            entitySprite.move(-moveSpeed,0);
+            sourceRect.top =topMoveLeftEnemy;
+            AStarColl.setPosition(entitySprite.getPosition().x+61,entitySprite.getPosition().y+31);
+        }
+        if (direction=='r') {
+            entitySprite.move(moveSpeed,0);
+            sourceRect.top =topMoveRightEnemy;
+            AStarColl.setPosition(entitySprite.getPosition().x,entitySprite.getPosition().y+31);
+        }
+        entitySprite.setTextureRect(sourceRect);
+    } else
+        aniAttack=true;
 }
 
 float Enemy::animationDie(){
@@ -195,4 +209,55 @@ float Enemy::animationDie(){
     float x=dieRect.left;
     dieRect.left=dieRect.left+dim;
     return x;
+}
+
+void Enemy::attackPlayer(MainCharacter &mainCharacter){
+
+    sf::RectangleShape swordRec;
+    swordRec.setPosition(entitySprite.getPosition());
+
+    if (sourceRect.top == topMoveUp) {
+        swordRec.setSize(sf::Vector2f(48,10));
+        swordRec.setPosition(swordRec.getPosition().x+8,swordRec.getPosition().y-10);
+    }
+    if (sourceRect.top == topMoveDown) {
+        swordRec.setSize(sf::Vector2f(48,10));
+        swordRec.setPosition(swordRec.getPosition().x+8,swordRec.getPosition().y+64);
+    }
+    if (sourceRect.top == topMoveLeft) {
+        swordRec.setSize(sf::Vector2f(10,48));
+        swordRec.setPosition(swordRec.getPosition().x-10,swordRec.getPosition().y+8);
+    }
+    if (sourceRect.top == topMoveRight) {
+        swordRec.setSize(sf::Vector2f(10,48));
+        swordRec.setPosition(swordRec.getPosition().x+64,swordRec.getPosition().y+8);
+    }
+
+    if(mainCharacter.entitySprite.getGlobalBounds().intersects(swordRec.getGlobalBounds()))
+        mainCharacter.life=mainCharacter.life-damage;
+}
+
+int Enemy::animationAttack(int x) {
+    if (swordRect.left == x)
+        swordRect.left = leftNormalSword;
+    else
+        swordRect.left += dim;
+
+    if (sourceRect.top == topMoveRight) {
+        swordRect.top = rightSwordEnemy;
+    }
+    if (sourceRect.top == topMoveDown) {
+        swordRect.top = downSwordEnemy;
+    }
+    if (sourceRect.top == topMoveLeft) {
+        swordRect.top = leftSwordEnemy;
+    }
+    if (sourceRect.top == topMoveUp) {
+        swordRect.top = upSwordEnemy;
+    }
+    if(type!="normal")
+        swordRect.top = swordRect.top+offset;
+
+    entitySprite.setTextureRect(swordRect);
+    return swordRect.left;
 }

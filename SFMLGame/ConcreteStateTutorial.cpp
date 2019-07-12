@@ -63,19 +63,19 @@ void ConcreteStateTutorial::Init() {
         x=rand()%1200 + 1200;
         y=rand()%1200 + 1200;
         file="normal";
-        enemyVec.push_back(new Enemy(x,y,file,600));
+        enemyVec.push_back(new Enemy(x,y,file,600,1));
     }
     for (int i = 0; i < 2; ++i) {
         x=rand()%1200 + 1200;
         y=rand()%1200 + 1200;
         file="reptiles";
-        enemyVec.push_back(new Enemy(x,y,file,500));
+        enemyVec.push_back(new Enemy(x,y,file,500,1));
     }
     for (int i = 0; i < 2; ++i) {
         x=rand()%1200 + 1200;
         y=rand()%1200 + 1200;
         file="skeleton";
-        enemyVec.push_back(new Enemy(x,y,file,400));
+        enemyVec.push_back(new Enemy(x,y,file,400,1));
     }
     game->init=true;
 }

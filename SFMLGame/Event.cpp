@@ -71,7 +71,6 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
             mainCharacter.arrowPlayer.animationArrow = false;
             mainCharacter.aniArrow = false;
         }
-
     }
     //take arrow by floor
     if (mainCharacter.getSprite().getGlobalBounds().intersects(mainCharacter.arrowPlayer.arrowSprite.getGlobalBounds()) &&
@@ -80,7 +79,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
         mainCharacter.arrowPlayer.stay = false;
         mainCharacter.arrow = 1;
     }
-    //animation die Enemy
+    //animation die Enemy and remove if is die to the enemy vector
     for (int i = 0; i < enemyVec.size(); ++i) {
         if(enemyVec[i]->life<=0){
             if(enemyVec[i]->dieClock.getElapsedTime().asMilliseconds()>=45.f){
@@ -91,52 +90,82 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
             }
         }
     }
+    //attack enemy
+    int x;
+    for (int i = 0; i < enemyVec.size(); ++i) {
+        x=maxAttackEnemyExtra;
+        if(enemyVec[i]->aniAttack){
+            if(enemyVec[i]->dieClock.getElapsedTime().asMilliseconds()>=40.f){
+                if(enemyVec[i]->type!="normal")
+                    x=64*5;
+                if(enemyVec[i]->animationAttack(x)==x){
+                    enemyVec[i]->attackPlayer(mainCharacter);
+                    enemyVec[i]->aniAttack=false;
+                }
+                enemyVec[i]->dieClock.restart();
+            }
+        }
+    }
+    //die player
+    if(mainCharacter.life<=0){
+        mainCharacter.die=true;
+        if(game->dieClock.getElapsedTime().asMilliseconds()>=40.f && !mainCharacter.finalDie){
+            if(mainCharacter.dieAnimation()==maxLeftDiePlayer){
+                mainCharacter.finalDie=true;
+            }
+            game->dieClock.restart();
+        }
+    }
 }
 
 void Event::inputEvent(MainCharacter &mainCharacter, Game* game,TileMap &map) {
     if (game->event.type == sf::Event::Closed)
         game->window.close();
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
         backToMenu(game);
+        mainCharacter.die=false;
+        mainCharacter.finalDie=false;
+        mainCharacter.resetPlayer(game->window);
+    }
     //player movement
-    if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
+    if(!mainCharacter.die){
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
+            mainCharacter.movePlayer('u', game->window, map.tile);
+        }else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
             mainCharacter.movePlayer('d', game->window, map.tile);
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
             mainCharacter.movePlayer('l', game->window, map.tile);
         } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
             mainCharacter.movePlayer('r', game->window, map.tile);
         }
-    } else {
-        mainCharacter.movePlayer('u', game->window, map.tile);
-    }
 
-    //sword attack plaYER
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q) && !mainCharacter.shield) {
-        mainCharacter.sword = 1;
-        game->clockSword.restart();
-    } else {
-        //bow attack player
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) && mainCharacter.arrow > 0 &&
-            !mainCharacter.shield &&
-            !mainCharacter.aniArrow) {
-            mainCharacter.setTextureBow();
-            mainCharacter.bow = 1;
-            mainCharacter.aniArrow = true;
-            mainCharacter.arrowPlayer.clock.restart();
-            game->clockBow.restart();
+        //sword attack plaYER
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q) && !mainCharacter.shield) {
+            mainCharacter.sword = 1;
+            game->clockSword.restart();
         } else {
-            // special attack player
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::R) && !mainCharacter.shield &&
-                !mainCharacter.spell) {
-                mainCharacter.magic = 1;
-                game->clockSpell.restart();
-                mainCharacter.spell = true;
+            //bow attack player
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) && mainCharacter.arrow > 0 &&
+                !mainCharacter.shield &&
+                !mainCharacter.aniArrow) {
+                mainCharacter.setTextureBow();
+                mainCharacter.bow = 1;
+                mainCharacter.aniArrow = true;
+                mainCharacter.arrowPlayer.clock.restart();
+                game->clockBow.restart();
             } else {
-                // activate shield player
-                if (sf::Keyboard::isKeyPressed(sf::Keyboard::E) && !mainCharacter.spell) {
-                    mainCharacter.setTextureShield();
-                    game->clockShield.restart();
+                // special attack player
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::R) && !mainCharacter.shield &&
+                    !mainCharacter.spell) {
+                    mainCharacter.magic = 1;
+                    game->clockSpell.restart();
+                    mainCharacter.spell = true;
+                } else {
+                    // activate shield player
+                    if (sf::Keyboard::isKeyPressed(sf::Keyboard::E) && !mainCharacter.spell) {
+                        mainCharacter.setTextureShield();
+                        game->clockShield.restart();
+                    }
                 }
             }
         }
@@ -146,7 +175,6 @@ void Event::inputEvent(MainCharacter &mainCharacter, Game* game,TileMap &map) {
 void Event::backToMenu(Game* game){ //switch state to menu
     game->init=false;
     game->pushState(new ConcreteStateMenu(game));
-
 }
 
 void Event::AStarEnemy(Game* game,TileMap &map,MainCharacter &mainCharacter, std::vector<Enemy*> enemyVec){

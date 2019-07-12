@@ -19,7 +19,9 @@ enum sourceState{
     topMoveUp=64*8,
     topMoveDown=64*10,
     topMoveLeft=64*9,
-    topMoveRight=64*11
+    topMoveRight=64*11,
+    topDiePlayer=64*20,
+    maxLeftDiePlayer=64*5
 };
 //enum for the enemy
 enum enemyRect{
@@ -32,6 +34,15 @@ enum enemyRect{
     topMoveRightEnemy=64*11,
     dieMaxEnemy=64*5,
     dieTopEnemy=64*20,
+    maxAttackEnemyNormal=64*7,
+    maxAttackEnemyExtra=64*5,
+
+    offset=64*8,
+    rightSwordEnemy=64*7,
+    leftSwordEnemy=64*5,
+    upSwordEnemy=64*4,
+    downSwordEnemy=64*6,
+
 };
 //enum for the player attack sword
 enum swordState{
