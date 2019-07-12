@@ -284,6 +284,33 @@ Enemy.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Enemy.cpp.s
 .PHONY : Enemy.cpp.s
 
+Event.obj: Event.cpp.obj
+
+.PHONY : Event.obj
+
+# target to build an object file
+Event.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Event.cpp.obj
+.PHONY : Event.cpp.obj
+
+Event.i: Event.cpp.i
+
+.PHONY : Event.i
+
+# target to preprocess a source file
+Event.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Event.cpp.i
+.PHONY : Event.cpp.i
+
+Event.s: Event.cpp.s
+
+.PHONY : Event.s
+
+# target to generate assembly for a file
+Event.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Event.cpp.s
+.PHONY : Event.cpp.s
+
 FireBall.obj: FireBall.cpp.obj
 
 .PHONY : FireBall.obj
@@ -608,6 +635,9 @@ help:
 	@echo ... Enemy.obj
 	@echo ... Enemy.i
 	@echo ... Enemy.s
+	@echo ... Event.obj
+	@echo ... Event.i
+	@echo ... Event.s
 	@echo ... FireBall.obj
 	@echo ... FireBall.i
 	@echo ... FireBall.s

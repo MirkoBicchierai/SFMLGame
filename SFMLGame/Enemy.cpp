@@ -1,12 +1,14 @@
 #include "Enemy.h"
 #include "config.cpp"
+#include <math.h>
 
 void Enemy::drawEnemy(sf::RenderWindow &window) {
     window.draw(entitySprite);
 }
 
-Enemy::Enemy(float x, float y) {
-    entityTexture.loadFromFile(IMG_ENEMY_ROOT"/normal.png");
+Enemy::Enemy(float x, float y,std::string &file,int distance) {
+    entityTexture.loadFromFile(IMG_ENEMY_ROOT"/"+file+".png");
+    type=file;
     entitySprite.setTexture(entityTexture);
     sourceRect.left=0;
     sourceRect.top=0;
@@ -18,25 +20,36 @@ Enemy::Enemy(float x, float y) {
     AStarColl.setSize(sf::Vector2f(1,1));
     AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+31);
     moveSpeed=5;
+    aggroDistance=distance;
 }
 
 void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Tile> &tile) {
-    Tile player;
-    Tile enemy;
-    mainCharacter.AStarColl.setPosition(mainCharacter.entitySprite.getPosition().x+31,mainCharacter.entitySprite.getPosition().y+60);
-    for(auto& j:map.tile) {
-        if(mainCharacter.AStarColl.getGlobalBounds().intersects(j.spriteCollision.getGlobalBounds()) && (j.type=="floor" || j.type=="obj")) {
-            player=j;
-            break;
+    //distance by two point
+    float x2,x1,y2,y1,quadX,quadY;
+    x2=mainCharacter.getSprite().getPosition().x;
+    y2=mainCharacter.getSprite().getPosition().y;
+    x1=entitySprite.getPosition().x;
+    y1=entitySprite.getPosition().y;
+    quadX=(x2-x1)*(x2-x1);
+    quadY=(y2-y1)*(y2-y1);
+    if(sqrt(quadX+quadY)<aggroDistance){
+        Tile player;
+        Tile enemy;
+        mainCharacter.AStarColl.setPosition(mainCharacter.entitySprite.getPosition().x+31,mainCharacter.entitySprite.getPosition().y+60);
+        for(auto& j:map.tile) {
+            if(mainCharacter.AStarColl.getGlobalBounds().intersects(j.spriteCollision.getGlobalBounds()) && (j.type=="floor" || j.type=="obj")) {
+                player=j;
+                break;
+            }
         }
-    }
-    for(auto& k:map.tile) {
-        if(AStarColl.getGlobalBounds().intersects(k.spriteCollision.getGlobalBounds()) && (k.type=="floor" || k.type=="obj")) {
-            enemy=k;
-            break;
+        for(auto& k:map.tile) {
+            if(AStarColl.getGlobalBounds().intersects(k.spriteCollision.getGlobalBounds()) && (k.type=="floor" || k.type=="obj")) {
+                enemy=k;
+                break;
+            }
         }
+        aStarSearch(player,enemy,map.world_map,map.width,map.height);
     }
-    aStarSearch(player,enemy,map.world_map,map.width,map.height);
 }
 void Enemy::moveAStar(std::vector<Tile> &tile,MainCharacter &mainCharacter){
     if(!path.empty()) {
@@ -134,10 +147,8 @@ void Enemy::aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int 
             cout << "Search terminated. Did not find goal state\n";
 
         }
-
         SearchCount ++;
         aStarSearch.EnsureMemoryFreed();
-
     }
 }
 
@@ -169,9 +180,4 @@ void Enemy::moveEnemy(char direction,MainCharacter &mainCharacter) {
         AStarColl.setPosition(entitySprite.getPosition().x,entitySprite.getPosition().y+31);
     }
     entitySprite.setTextureRect(sourceRect);
-
-    if(AStarColl.getGlobalBounds().intersects(mainCharacter.entitySprite.getGlobalBounds())){
-        mainCharacter.die=true;
-        mainCharacter.AnimationDie=true;
-    }
 }

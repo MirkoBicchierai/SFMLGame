@@ -13,6 +13,7 @@ public:
     void pushState(GameState* state); //for change state
     GameState* CurrentState(); // return the current concrete state
     void gameLoop(); //general method for call all virtual method of GameState
+    sf::Event event{};
 
     // global variable for all concrete state
     sf::RenderWindow window;

@@ -1,4 +1,5 @@
 #include "SFML/Graphics.hpp"
+#include "ConcreteStateMenu.h"
 #include "GameState.h"
 #include "Game.h"
 #include "config.cpp"
@@ -39,3 +40,4 @@ void Game::gameLoop(){
         window.display();
     }
 }
+

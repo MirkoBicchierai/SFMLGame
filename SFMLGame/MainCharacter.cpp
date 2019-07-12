@@ -77,9 +77,6 @@ MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     AStarColl.setFillColor(sf::Color::Red);
     AStarColl.setSize(sf::Vector2f(1,1));
     AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+31);
-    die=false;
-    checkDie=false;
-    AnimationDie=false;
 }
 
 void MainCharacter::reset(int pos) {
@@ -327,8 +324,6 @@ void MainCharacter::resetPlayer(sf::RenderWindow &window) {
     textArrow.setString("x " + std::to_string(arrow));
     arrowGUI.setArrowGUI(camera.getCenter().x + window.getSize().x / 2.f,camera.getCenter().y - (window.getSize().y / 2.f) + 40 + 38, 180.f);
     hearth.setCenter(window);
-    die= false;
-    checkDie=false;
 }
 
 int MainCharacter::dieAnimation() {

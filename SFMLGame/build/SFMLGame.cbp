@@ -122,6 +122,12 @@
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.h">
 			<Option target="SFMLGame"/>
 		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Event.cpp">
+			<Option target="SFMLGame"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Event.h">
+			<Option target="SFMLGame"/>
+		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.cpp">
 			<Option target="SFMLGame"/>
 		</Unit>

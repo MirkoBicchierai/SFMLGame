@@ -6,9 +6,6 @@
 class MapSearchNode {
 
 public:
-    int MAP_WIDTH; // width of map
-    int MAP_HEIGHT; // height of map
-    int *world_map; //vector of int for the map (9 can't pass, 0-5 is the cost for pass)
     int x;	 // the (x,y) positions of the node
     int y;
     MapSearchNode();
@@ -24,6 +21,9 @@ public:
     void PrintNodeInfo(); // print the info of node
 private:
     void setNode(MapSearchNode &NewNode); // set the node in GetSuccessors
+    int MAP_WIDTH; // width of map
+    int MAP_HEIGHT; // height of map
+    int *world_map; //vector of int for the map (9 can't pass, 0-5 is the cost for pass)
 };
 
 #endif

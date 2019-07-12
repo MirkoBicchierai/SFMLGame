@@ -21,9 +21,6 @@ public:
     sf::View camera;
 
     //bool attributes for check the state of the player animation used on the calling method
-    bool AnimationDie;
-    bool die;
-    bool checkDie;
     int arrow;
     bool shield;
     bool spell;

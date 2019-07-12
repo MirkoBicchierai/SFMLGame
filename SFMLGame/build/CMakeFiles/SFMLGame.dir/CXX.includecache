@@ -860,6 +860,22 @@ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.h
 SFML/Graphics.hpp
 -
 
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame.cpp
+iostream
+-
+SFML/Graphics.hpp
+-
+ConcreteStateGame.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame.h
+ConcreteStateMenu.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
+config.cpp
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
+fstream
+-
+regex
+-
+
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame.h
 SFML/Audio.hpp
 -
@@ -869,6 +885,8 @@ GameState.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
 TileMap.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.h
+Event.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Event.h
 
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.cpp
 SFML/Graphics.hpp
@@ -923,12 +941,8 @@ TileMap.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.h
 Enemy.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.h
-
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.cpp
-Enemy.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.h
-config.cpp
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
+Event.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Event.h
 
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.h
 iostream
@@ -943,6 +957,26 @@ MainCharacter.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
 TileMap.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.h
+
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Event.cpp
+Event.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Event.h
+config.cpp
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
+ConcreteStateMenu.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
+
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Event.h
+MainCharacter.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
+Game.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.h
+TileMap.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.h
+vector
+-
+Enemy.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.h
 
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.h
 SFML/Graphics.hpp

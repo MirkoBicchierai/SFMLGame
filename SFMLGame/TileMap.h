@@ -14,7 +14,6 @@ public:
     std::vector<Tile> tile; // vector of all tile in the current map
     void load(const std::string& tileSet, sf::Vector2u tileSize,std::vector<int> tiles, unsigned int width, unsigned int height, sf::RenderWindow &window); // load all object Tile of the map by a vector
 private:
-
     sf::Texture texture;
 
 };

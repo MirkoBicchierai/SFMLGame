@@ -83,10 +83,10 @@ float MapSearchNode::GetCost( MapSearchNode &successor ) {
 }
 
 int MapSearchNode::GetMap( int xx, int yy ){
-    if( xx < 0 || xx >= const_cast<const int&>(MAP_WIDTH) || yy < 0 || yy >= const_cast<const int&>(MAP_HEIGHT)){
+    if( xx < 0 || xx >= (MAP_WIDTH) || yy < 0 || yy >=(MAP_HEIGHT)){
         return 9;
     }
-    return world_map[(yy*const_cast<const int&>(MAP_WIDTH))+xx];
+    return world_map[(yy*(MAP_WIDTH))+xx];
 }
 
 void MapSearchNode::setNode(MapSearchNode &NewNode){
