@@ -1485,6 +1485,20 @@ CMakeFiles/SFMLGame.dir/TileMap.cpp.obj: ../TileMap.cpp
 CMakeFiles/SFMLGame.dir/TileMap.cpp.obj: ../TileMap.h
 CMakeFiles/SFMLGame.dir/TileMap.cpp.obj: ../config.cpp
 
+CMakeFiles/SFMLGame.dir/config.cpp.obj: ../SFML/include/SFML/Config.hpp
+CMakeFiles/SFMLGame.dir/config.cpp.obj: ../SFML/include/SFML/Graphics/BlendMode.hpp
+CMakeFiles/SFMLGame.dir/config.cpp.obj: ../SFML/include/SFML/Graphics/Color.hpp
+CMakeFiles/SFMLGame.dir/config.cpp.obj: ../SFML/include/SFML/Graphics/Drawable.hpp
+CMakeFiles/SFMLGame.dir/config.cpp.obj: ../SFML/include/SFML/Graphics/Export.hpp
+CMakeFiles/SFMLGame.dir/config.cpp.obj: ../SFML/include/SFML/Graphics/Rect.hpp
+CMakeFiles/SFMLGame.dir/config.cpp.obj: ../SFML/include/SFML/Graphics/Rect.inl
+CMakeFiles/SFMLGame.dir/config.cpp.obj: ../SFML/include/SFML/Graphics/RenderStates.hpp
+CMakeFiles/SFMLGame.dir/config.cpp.obj: ../SFML/include/SFML/Graphics/Sprite.hpp
+CMakeFiles/SFMLGame.dir/config.cpp.obj: ../SFML/include/SFML/Graphics/Transform.hpp
+CMakeFiles/SFMLGame.dir/config.cpp.obj: ../SFML/include/SFML/Graphics/Transformable.hpp
+CMakeFiles/SFMLGame.dir/config.cpp.obj: ../SFML/include/SFML/Graphics/Vertex.hpp
+CMakeFiles/SFMLGame.dir/config.cpp.obj: ../SFML/include/SFML/System/Vector2.hpp
+CMakeFiles/SFMLGame.dir/config.cpp.obj: ../SFML/include/SFML/System/Vector2.inl
 CMakeFiles/SFMLGame.dir/config.cpp.obj: ../config.cpp
 
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../SFML/include/SFML/Audio.hpp

@@ -1,7 +1,5 @@
 #include "Enemy.h"
 #include "config.cpp"
-#include <math.h>
-
 void Enemy::drawEnemy(sf::RenderWindow &window) {
     window.draw(entitySprite);
 }
@@ -19,7 +17,7 @@ Enemy::Enemy(float x, float y,std::string &file,int distance,int dmg) {
     AStarColl.setFillColor(sf::Color::Red);
     AStarColl.setSize(sf::Vector2f(1,1));
     AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+31);
-    moveSpeed=3;
+    moveSpeed=4;
     aggroDistance=distance;
     life = 3;
     damage=dmg;
@@ -36,14 +34,7 @@ Enemy::Enemy(float x, float y,std::string &file,int distance,int dmg) {
 void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Tile> &tile) {
     if(life>0) {
         //distance by two point
-        float x2,x1,y2,y1,quadX,quadY;
-        x2=mainCharacter.getSprite().getPosition().x;
-        y2=mainCharacter.getSprite().getPosition().y;
-        x1=entitySprite.getPosition().x;
-        y1=entitySprite.getPosition().y;
-        quadX=(x2-x1)*(x2-x1);
-        quadY=(y2-y1)*(y2-y1);
-        if(sqrt(quadX+quadY)<aggroDistance){
+        if(distanceBetweenTwoSprite(mainCharacter.getSprite(),entitySprite)<aggroDistance){
             Tile player;
             Tile enemy;
             mainCharacter.AStarColl.setPosition(mainCharacter.entitySprite.getPosition().x+31,mainCharacter.entitySprite.getPosition().y+60);
@@ -166,14 +157,7 @@ void Enemy::aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int 
 
 void Enemy::moveEnemy(char direction,MainCharacter &mainCharacter) {
 
-    float x2,x1,y2,y1,quadX,quadY;
-    x2=mainCharacter.getSprite().getPosition().x;
-    y2=mainCharacter.getSprite().getPosition().y;
-    x1=entitySprite.getPosition().x;
-    y1=entitySprite.getPosition().y;
-    quadX=(x2-x1)*(x2-x1);
-    quadY=(y2-y1)*(y2-y1);
-    if(sqrt(quadX+quadY)>64){
+    if(distanceBetweenTwoSprite(mainCharacter.getSprite(),entitySprite)>48){
         if (sourceRect.left == moveFinalEnemy)
             sourceRect.left = leftNormalEnemy;
         else

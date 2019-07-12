@@ -1,4 +1,6 @@
 //define all constant used on all projects
+#include <SFML/Graphics/Sprite.hpp>
+#include <math.h>
 #define FONT_ROOT "../font"
 #define IMG_PLAYER_ROOT "../img/Player"
 #define IMG_ENEMY_ROOT "../img/Enemy"
@@ -141,3 +143,13 @@ enum tileSetCollision{
 
 };
 
+static float distanceBetweenTwoSprite(sf::Sprite sprite1, sf::Sprite sprite2){
+    float x2,x1,y2,y1,quadX,quadY;
+    x2=sprite1.getPosition().x;
+    y2=sprite1.getPosition().y;
+    x1=sprite2.getPosition().x;
+    y1=sprite2.getPosition().y;
+    quadX=(x2-x1)*(x2-x1);
+    quadY=(y2-y1)*(y2-y1);
+    return sqrt(quadX+quadY);
+}

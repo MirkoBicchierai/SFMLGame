@@ -95,7 +95,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
     for (int i = 0; i < enemyVec.size(); ++i) {
         x=maxAttackEnemyExtra;
         if(enemyVec[i]->aniAttack){
-            if(enemyVec[i]->dieClock.getElapsedTime().asMilliseconds()>=40.f){
+            if(enemyVec[i]->dieClock.getElapsedTime().asMilliseconds()>=50.f){
                 if(enemyVec[i]->type!="normal")
                     x=64*5;
                 if(enemyVec[i]->animationAttack(x)==x){
