@@ -14,7 +14,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
     if (mainCharacter.sword == 1) {
         if (game->clockSword.getElapsedTime().asMilliseconds()>=mainCharacter.timeSword ) {
             if (mainCharacter.swordAttack() == finalSwordAttack) {
-                mainCharacter.damageSwrod(enemyVec);
+                mainCharacter.damageSword(enemyVec); // final damage sword
                 mainCharacter.sword = 0;
                 mainCharacter.reset(mainCharacter.getsourceRect().top);
             }
@@ -84,7 +84,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
     for (int i = 0; i < enemyVec.size(); ++i) {
         if(enemyVec[i]->life<=0){
             if(enemyVec[i]->dieClock.getElapsedTime().asMilliseconds()>=45.f){
-                if(enemyVec[i]->animationDie()==dieTopEnemy){
+                if(enemyVec[i]->animationDie()==dieMaxEnemy){
                     enemyVec.erase(enemyVec.begin()+i);
                 }
                 enemyVec[i]->dieClock.restart();

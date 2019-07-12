@@ -19,9 +19,7 @@ enum sourceState{
     topMoveUp=64*8,
     topMoveDown=64*10,
     topMoveLeft=64*9,
-    topMoveRight=64*11,
-    aniDieMax=64*5,
-    aniDieTop=64*20,
+    topMoveRight=64*11
 };
 //enum for the enemy
 enum enemyRect{

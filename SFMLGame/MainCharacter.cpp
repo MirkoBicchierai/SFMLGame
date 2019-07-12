@@ -39,11 +39,6 @@ MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     sourceRect.top = upNormal;
     sourceRect.left = leftNormal;
 
-    dieRect.top=aniDieTop;
-    dieRect.width=dim;
-    dieRect.height=dim;
-    dieRect.left=leftNormal;
-
     entitySprite.setTextureRect(sourceRect);
     entitySprite.setPosition(((window.getSize().x)/2.f)+200,((window.getSize().y)/2.f)-32);
     camera.setCenter(entitySprite.getPosition().x+32,entitySprite.getPosition().y+32);
@@ -328,14 +323,7 @@ void MainCharacter::resetPlayer(sf::RenderWindow &window) {
     hearth.setCenter(window);
 }
 
-int MainCharacter::dieAnimation() {
-    entitySprite.setTextureRect(dieRect);
-    float x=dieRect.left;
-    dieRect.left=dieRect.left+dim;
-    return x;
-}
-
-void MainCharacter::damageSwrod(std::vector<Enemy*> &enemyVec) {
+void MainCharacter::damageSword(std::vector<Enemy*> &enemyVec) {
     sf::RectangleShape swordRec;
     swordRec.setPosition(entitySprite.getPosition());
     if (sourceRect.top == topMoveRight) {

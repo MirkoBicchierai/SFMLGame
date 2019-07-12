@@ -20,7 +20,7 @@ public:
     void drawEnemy(sf::RenderWindow &window);
     void checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Tile> &tile);
     void moveAStar(std::vector<Tile> &tile,MainCharacter &mainCharacter);
-    int animationDie();
+    float animationDie();
 private:
     sf::IntRect dieRect;
     int aggroDistance;

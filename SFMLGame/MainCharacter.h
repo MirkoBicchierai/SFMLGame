@@ -47,8 +47,7 @@ public:
     void setNormalTexture(); //reset texture
     void reset(int pos); // reset the player position
     void resetPlayer(sf::RenderWindow &window); //reset the player state
-    void damageSwrod(std::vector<Enemy*> &enemyVec);
-    int dieAnimation(); //animation die
+    void damageSword(std::vector<Enemy*> &enemyVec);
     sf::IntRect getsourceRect();
     sf::Sprite getSprite();
 private:
@@ -66,7 +65,6 @@ private:
     sf::Sprite shieldSprite;
     sf::IntRect sourceRect;
     sf::Texture bowTexture;
-    sf::IntRect dieRect;
     sf::Texture shieldTexture;
     sf::IntRect bowRect;
     sf::IntRect swordRect;

@@ -190,7 +190,7 @@ void Enemy::moveEnemy(char direction,MainCharacter &mainCharacter) {
     entitySprite.setTextureRect(sourceRect);
 }
 
-int Enemy::animationDie(){
+float Enemy::animationDie(){
     entitySprite.setTextureRect(dieRect);
     float x=dieRect.left;
     dieRect.left=dieRect.left+dim;
