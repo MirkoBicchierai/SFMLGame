@@ -2,6 +2,7 @@
 #define SFMLGAME_ARROW_H
 #include <SFML/Graphics.hpp>
 #include "Tile.h"
+class Enemy;
 class Arrow {
 public:
     sf::Sprite arrowSprite;
@@ -14,8 +15,9 @@ public:
     void setArrowGUI(float X, float Y, float rotation);  //lock a arrow for the GUI
     void drawArrow(sf::RenderWindow &window);
     void setRect(sf::IntRect player,float x, float y);
-    void animation(std::vector<Tile> &tile);  //arrow animation , and collision with wall
+    void animation(std::vector<Tile> &tile,std::vector<Enemy*> &enemyVec);  //arrow animation , and collision with wall
 private:
+    int damage;
     bool controlMove(std::vector<Tile> &tile); //control move of arrow
     int moveSpeed; //arrow speed
     sf::Color colorSprite;

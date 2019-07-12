@@ -6,6 +6,10 @@
 #include <fstream>
 #include <regex>
 
+ConcreteStateGame::ConcreteStateGame(Game* game){
+    this->game = game;
+}
+
 void ConcreteStateGame::loadFromFile(const std::string &path) {
     std::string s;
     std::ifstream infile(path);
@@ -37,15 +41,12 @@ void ConcreteStateGame::draw(MainCharacter &mainCharacter){
 }
 
 void ConcreteStateGame::update(MainCharacter &mainCharacter){
-    loopEvent.updateEvent(mainCharacter,game,map);
+    loopEvent.updateEvent(mainCharacter,game,map,enemyVec);
 }
 void ConcreteStateGame::handleInput(MainCharacter &mainCharacter){
     while (game->window.pollEvent(game->event)){
         loopEvent.inputEvent(mainCharacter,game,map);
     }
-}
-ConcreteStateGame::ConcreteStateGame(Game* game){
-    this->game = game;
 }
 
 void ConcreteStateGame::Init() {

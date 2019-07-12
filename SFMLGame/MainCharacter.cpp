@@ -2,6 +2,7 @@
 #include <iostream>
 #include "MainCharacter.h"
 #include "config.cpp"
+#include "Enemy.h"
 
 MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     entityTexture.loadFromFile(IMG_PLAYER_ROOT"/Normal_Player.png");
@@ -77,6 +78,7 @@ MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     AStarColl.setFillColor(sf::Color::Red);
     AStarColl.setSize(sf::Vector2f(1,1));
     AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+31);
+    life = 3;
 }
 
 void MainCharacter::reset(int pos) {
@@ -331,5 +333,33 @@ int MainCharacter::dieAnimation() {
     float x=dieRect.left;
     dieRect.left=dieRect.left+dim;
     return x;
+}
+
+void MainCharacter::damageSwrod(std::vector<Enemy*> &enemyVec) {
+    sf::RectangleShape swordRec;
+    swordRec.setPosition(entitySprite.getPosition());
+    if (sourceRect.top == topMoveRight) {
+        swordRec.setSize(sf::Vector2f(10,48));
+        swordRec.setPosition(swordRec.getPosition().x+64,swordRec.getPosition().y+8);
+    }
+    if (sourceRect.top == topMoveDown) {
+        swordRec.setSize(sf::Vector2f(48,10));
+        swordRec.setPosition(swordRec.getPosition().x+8,swordRec.getPosition().y+64);
+    }
+    if (sourceRect.top == topMoveLeft) {
+        swordRec.setSize(sf::Vector2f(10,48));
+        swordRec.setPosition(swordRec.getPosition().x-10,swordRec.getPosition().y+8);
+    }
+    if (sourceRect.top == topMoveUp) {
+        swordRec.setSize(sf::Vector2f(48,10));
+        swordRec.setPosition(swordRec.getPosition().x+8,swordRec.getPosition().y-10);
+    }
+    for (int i = 0; i < enemyVec.size(); ++i) {
+        if(swordRec.getGlobalBounds().intersects(enemyVec[i]->entitySprite.getGlobalBounds())){
+            if(enemyVec[i]->life!=0) {
+                enemyVec[i]->life=enemyVec[i]->life-1;
+            }
+        }
+    }
 }
 

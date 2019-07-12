@@ -2,7 +2,8 @@
 #define SFMLGAME_FIREBALL_H
 
 #include <SFML/Graphics.hpp>
-
+class MainCharacter;
+class Enemy;
 class FireBall {
 public:
     bool animationBall;
@@ -10,7 +11,7 @@ public:
     FireBall();
     void drawFireBall(sf::RenderWindow &window);
     void setRect(sf::IntRect player,float x, float y);
-    int animation(); //animation fireball, switch rect of image
+    int animation(std::vector<Enemy*> &enemyVec,MainCharacter &mainCharacter); //animation fireball, switch rect of image
 
 private:
     int moveSpeed;

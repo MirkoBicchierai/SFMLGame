@@ -5,6 +5,7 @@
 
 class BaseStatistic { //dad class for Enemy and MainCharacter
 public:
+    int life;
     float moveSpeed;
     sf::Texture entityTexture;
     sf::Sprite entitySprite;

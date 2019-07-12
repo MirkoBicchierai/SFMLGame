@@ -9,7 +9,7 @@
 
 class Event{
 public:
-    void updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map);
+    void updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, std::vector<Enemy*> &enemyVec);
     void inputEvent(MainCharacter &mainCharacter,Game* game,TileMap &map);
     void AStarEnemy(Game* game,TileMap &map,MainCharacter &mainCharacter, std::vector<Enemy*> enemyVec);
 private:

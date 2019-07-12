@@ -15,11 +15,14 @@ typedef struct {
 class Enemy : public BaseStatistic {
 
 public:
+    sf::Clock dieClock;
     Enemy(float x, float y,std::string &file,int distance);
     void drawEnemy(sf::RenderWindow &window);
     void checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Tile> &tile);
     void moveAStar(std::vector<Tile> &tile,MainCharacter &mainCharacter);
+    int animationDie();
 private:
+    sf::IntRect dieRect;
     int aggroDistance;
     std:: string type;
     void aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int height);

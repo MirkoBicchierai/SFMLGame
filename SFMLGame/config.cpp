@@ -32,6 +32,8 @@ enum enemyRect{
     topMoveDownEnemy=64*10,
     topMoveLeftEnemy=64*9,
     topMoveRightEnemy=64*11,
+    dieMaxEnemy=64*5,
+    dieTopEnemy=64*20,
 };
 //enum for the player attack sword
 enum swordState{

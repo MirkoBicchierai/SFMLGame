@@ -8,6 +8,10 @@
 #include <fstream>
 #include <regex>
 
+ConcreteStateTutorial::ConcreteStateTutorial(Game* game){
+    this->game = game;
+}
+
 void ConcreteStateTutorial::loadFromFile(const std::string &path) {
     std::string s;
     std::ifstream infile(path);
@@ -41,7 +45,7 @@ void ConcreteStateTutorial::draw(MainCharacter &mainCharacter){
 }
 
 void ConcreteStateTutorial::update(MainCharacter &mainCharacter){
-    loopEvent.updateEvent(mainCharacter,game,map);
+    loopEvent.updateEvent(mainCharacter,game,map,enemyVec);
     loopEvent.AStarEnemy(game,map,mainCharacter,enemyVec);
 }
 
@@ -49,10 +53,6 @@ void ConcreteStateTutorial::handleInput(MainCharacter &mainCharacter){
     while (game->window.pollEvent(game->event)){
         loopEvent.inputEvent(mainCharacter,game,map);
     }
-}
-
-ConcreteStateTutorial::ConcreteStateTutorial(Game* game){
-    this->game = game;
 }
 
 void ConcreteStateTutorial::Init() {

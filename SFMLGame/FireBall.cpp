@@ -1,7 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include "FireBall.h"
 #include "config.cpp"
-
+#include "Enemy.h"
+#include "MainCharacter.h"
 FireBall::FireBall() {
     ballTexture.loadFromFile(IMG_PLAYER_OBJ_ROOT"/FireBall.png");
     ballSprite.setTexture(ballTexture);
@@ -9,7 +10,7 @@ FireBall::FireBall() {
     ballRect.width = dimFireBall;
     ballRect.left = NormalLeft;
     ballSprite.setTextureRect(ballRect);
-    moveSpeed=20;
+    moveSpeed=45;
     animationBall=false;
 }
 
@@ -36,7 +37,7 @@ void FireBall::setRect(sf::IntRect player,float x, float y) {
     ballSprite.setPosition(x,y);
 }
 
-int FireBall::animation() {
+int FireBall::animation(std::vector<Enemy*> &enemyVec,MainCharacter &mainCharacter) {
     if (ballRect.top == RightFireBall) {
         ballSprite.move(moveSpeed,0);
     }
@@ -51,6 +52,15 @@ int FireBall::animation() {
     }
 
     ballRect.left=ballRect.left+dim;
-
+    for (int i = 0; i < enemyVec.size(); ++i) {
+       if(ballSprite.getGlobalBounds().intersects(enemyVec[i]->entitySprite.getGlobalBounds())){
+           if(enemyVec[i]->life!=0) {
+               enemyVec[i]->life--;
+               animationBall=false;
+               mainCharacter.spell=false;
+               break;
+           }
+       }
+    }
     return ballRect.left;
 }

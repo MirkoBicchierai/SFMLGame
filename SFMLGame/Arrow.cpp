@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "Arrow.h"
 #include "config.cpp"
-
+#include "Enemy.h"
 Arrow::Arrow() {
     arrowTexture.loadFromFile(IMG_PLAYER_OBJ_ROOT"/Arrow.png");
     arrowSprite.setTexture(arrowTexture);
@@ -9,12 +9,13 @@ Arrow::Arrow() {
     arrowRect.width = dimArrow;
     arrowRect.left = LeftNormalArrow;
     arrowSprite.setTextureRect(arrowRect);
-    moveSpeed=40;
+    moveSpeed=45;
     animationArrow=false;
     stay=false;
     arrowFor=0;
     pick=false;
     colorSprite=arrowSprite.getColor();
+    damage=2;
 }
 
 void Arrow::drawArrow(sf::RenderWindow &window) {
@@ -52,7 +53,7 @@ void Arrow::setRect(sf::IntRect player,float x, float y) {
     arrowSprite.setPosition(x,y);
 }
 
-void Arrow::animation(std::vector<Tile> &tile) {
+void Arrow::animation(std::vector<Tile> &tile,std::vector<Enemy*> &enemyVec) {
     float x=0,y=0;
     if (arrowSprite.getRotation() == RightRotation) {
         x=moveSpeed;
@@ -76,6 +77,19 @@ void Arrow::animation(std::vector<Tile> &tile) {
         arrowRect.top = TopNormalArrow;
     }else{
         arrowSprite.move(x,y);
+
+        for (int i = 0; i < enemyVec.size(); ++i) {
+            if(arrowSprite.getGlobalBounds().intersects(enemyVec[i]->entitySprite.getGlobalBounds())){
+                if(enemyVec[i]->life!=0) {
+                    enemyVec[i]->life=enemyVec[i]->life-damage;
+                    arrowFor=8;
+                    arrowRect.left = LeftNormalArrow;
+                    arrowRect.top = TopNormalArrow;
+                    return;
+                }
+            }
+        }
+
         if(arrowRect.left==dimArrow && arrowRect.top==dimArrow) {
             arrowRect.left = LeftNormalArrow;
             arrowRect.top = TopNormalArrow;

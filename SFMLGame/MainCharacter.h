@@ -47,6 +47,7 @@ public:
     void setNormalTexture(); //reset texture
     void reset(int pos); // reset the player position
     void resetPlayer(sf::RenderWindow &window); //reset the player state
+    void damageSwrod(std::vector<Enemy*> &enemyVec);
     int dieAnimation(); //animation die
     sf::IntRect getsourceRect();
     sf::Sprite getSprite();

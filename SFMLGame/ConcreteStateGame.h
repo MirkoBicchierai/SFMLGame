@@ -1,12 +1,13 @@
 #ifndef SFMLGAME_CONCRETESTATEGAME_H
 #define SFMLGAME_CONCRETESTATEGAME_H
-#include <SFML/Audio.hpp>
+
 #include <SFML/Graphics.hpp>
 #include "GameState.h"
 #include "TileMap.h"
 #include "Event.h"
 
 class ConcreteStateGame : public GameState{
+
 public:
 
      void draw(MainCharacter &mainCharacter) override ;
@@ -16,10 +17,12 @@ public:
      explicit ConcreteStateGame(Game* game);
 
 private:
+    std::vector <Enemy*> enemyVec;
     Event loopEvent;
     TileMap map{};
     std::vector <int> vec; //vector dove vengono letti gli ID da file della mappa e poi passati all'oggetto map
     void loadFromFile(const std::string &path);  //metodo per leggere gli id da FILE
+
 };
 
 #endif

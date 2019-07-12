@@ -1,8 +1,10 @@
+#include <utility>
+
 #include "Event.h"
 #include "config.cpp"
 #include "ConcreteStateMenu.h"
 
-void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map) {
+void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, std::vector<Enemy*> &enemyVec) {
     //time shield end
     if (mainCharacter.shield && game->clockShield.getElapsedTime().asSeconds() >= mainCharacter.secShield) {
         mainCharacter.setNormalTexture();
@@ -12,6 +14,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map) {
     if (mainCharacter.sword == 1) {
         if (game->clockSword.getElapsedTime().asMilliseconds()>=mainCharacter.timeSword ) {
             if (mainCharacter.swordAttack() == finalSwordAttack) {
+                mainCharacter.damageSwrod(enemyVec);
                 mainCharacter.sword = 0;
                 mainCharacter.reset(mainCharacter.getsourceRect().top);
             }
@@ -49,7 +52,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map) {
     }
     //animation fireball
     if (mainCharacter.ball.animationBall && mainCharacter.ball.clock.getElapsedTime().asMilliseconds() >= 55.f) {
-        if (mainCharacter.ball.animation() == finalBallAnimation) {
+        if (mainCharacter.ball.animation(enemyVec,mainCharacter) == finalBallAnimation) {
             mainCharacter.ball.animationBall = false;
             mainCharacter.spell = false;
         }
@@ -59,7 +62,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map) {
     if (mainCharacter.arrowPlayer.animationArrow) {
         if (mainCharacter.arrowPlayer.arrowFor < 8) {
             if (mainCharacter.arrowPlayer.clock.getElapsedTime().asMilliseconds() > 45.f) {
-                mainCharacter.arrowPlayer.animation(map.tile);
+                mainCharacter.arrowPlayer.animation(map.tile,enemyVec);
                 mainCharacter.arrowPlayer.clock.restart();
                 mainCharacter.arrowPlayer.arrowFor++;
             }
@@ -76,6 +79,17 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map) {
         mainCharacter.arrowPlayer.pick = false;
         mainCharacter.arrowPlayer.stay = false;
         mainCharacter.arrow = 1;
+    }
+    //animation die Enemy
+    for (int i = 0; i < enemyVec.size(); ++i) {
+        if(enemyVec[i]->life<=0){
+            if(enemyVec[i]->dieClock.getElapsedTime().asMilliseconds()>=45.f){
+                if(enemyVec[i]->animationDie()==dieTopEnemy){
+                    enemyVec.erase(enemyVec.begin()+i);
+                }
+                enemyVec[i]->dieClock.restart();
+            }
+        }
     }
 }
 

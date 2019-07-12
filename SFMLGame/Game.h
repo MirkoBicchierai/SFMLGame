@@ -23,7 +23,6 @@ public:
     sf::Clock clockSpell;
     sf::Clock enemyAStar;
     sf::Clock enemyAStarMove;
-    sf::Clock diePlayer;
     bool init;
 private:
     std::vector<GameState*> states;
