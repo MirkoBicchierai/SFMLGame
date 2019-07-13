@@ -195,7 +195,7 @@ void Event::AStarEnemy(Game* game,TileMap &map,MainCharacter &mainCharacter, std
         game->enemyAStar.restart();
     }
 
-    if(game->enemyAStarMove.getElapsedTime().asMilliseconds()>=25.f) {
+    if(game->enemyAStarMove.getElapsedTime().asMilliseconds()>=18.f) {
         for (auto &i:enemyVec) {
             i->moveAStar(map.tile,mainCharacter);
         }
