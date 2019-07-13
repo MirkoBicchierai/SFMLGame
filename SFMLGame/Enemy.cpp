@@ -10,14 +10,14 @@ Enemy::Enemy(float x, float y,std::string &file,int distance,int dmg) {
     entitySprite.setTexture(entityTexture);
     sourceRect.left=0;
     sourceRect.top=0;
-    sourceRect.width=64;
-    sourceRect.height=64;
+    sourceRect.width=dim;
+    sourceRect.height=dim;
     entitySprite.setTextureRect(sourceRect);
     entitySprite.setPosition(x,y);
     AStarColl.setFillColor(sf::Color::Red);
     AStarColl.setSize(sf::Vector2f(1,1));
     AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+31);
-    moveSpeed=4;
+    moveSpeed=5;
     aggroDistance=distance;
     life = 3;
     damage=dmg;
@@ -29,12 +29,19 @@ Enemy::Enemy(float x, float y,std::string &file,int distance,int dmg) {
     swordRect.height=dim;
     swordRect.width=dim;
     swordRect.left=0;
+    idle=true;
+    IdleRect.width=dim;
+    IdleRect.height=dim;
+    IdleRect.top=0;
+    IdleRect.left=0;
 }
 
 void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Tile> &tile) {
     if(life>0) {
         //distance by two point
         if(distanceBetweenTwoSprite(mainCharacter.getSprite(),entitySprite)<aggroDistance){
+            entitySprite.setTextureRect(sourceRect);
+            idle=false;
             Tile player;
             Tile enemy;
             mainCharacter.AStarColl.setPosition(mainCharacter.entitySprite.getPosition().x+31,mainCharacter.entitySprite.getPosition().y+60);
@@ -52,6 +59,8 @@ void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Ti
             }
             aStarSearch(player,enemy,map.world_map,map.width,map.height);
         }
+        else
+            idle=true;
     }
 }
 void Enemy::moveAStar(std::vector<Tile> &tile,MainCharacter &mainCharacter){
@@ -157,7 +166,7 @@ void Enemy::aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int 
 
 void Enemy::moveEnemy(char direction,MainCharacter &mainCharacter) {
 
-    if(distanceBetweenTwoSprite(mainCharacter.getSprite(),entitySprite)>48){
+    if(distanceBetweenTwoSprite(mainCharacter.getSprite(),entitySprite)>64){
         if (sourceRect.left == moveFinalEnemy)
             sourceRect.left = leftNormalEnemy;
         else
@@ -217,8 +226,9 @@ void Enemy::attackPlayer(MainCharacter &mainCharacter){
         swordRec.setPosition(swordRec.getPosition().x+64,swordRec.getPosition().y+8);
     }
 
-    if(mainCharacter.entitySprite.getGlobalBounds().intersects(swordRec.getGlobalBounds()))
-        mainCharacter.life=mainCharacter.life-damage;
+    if(!mainCharacter.shield)
+        if(mainCharacter.entitySprite.getGlobalBounds().intersects(swordRec.getGlobalBounds()))
+            mainCharacter.life=mainCharacter.life-damage;
 }
 
 int Enemy::animationAttack(int x) {
@@ -241,6 +251,29 @@ int Enemy::animationAttack(int x) {
     }
     if(type!="normal")
         swordRect.top = swordRect.top+offset;
+
+    entitySprite.setTextureRect(swordRect);
+    return swordRect.left;
+}
+
+int Enemy::animationIdle() {
+    if (swordRect.left == MaxLeftIdle)
+        swordRect.left = 0;
+    else
+        swordRect.left += dim;
+
+    if (sourceRect.top == topMoveRight) {
+        swordRect.top = IdleRightTop;
+    }
+    if (sourceRect.top == topMoveDown) {
+        swordRect.top = IdleDownTop;
+    }
+    if (sourceRect.top == topMoveLeft) {
+        swordRect.top = IdleLeftTop;
+    }
+    if (sourceRect.top == topMoveUp) {
+        swordRect.top = IdleTopUp;
+    }
 
     entitySprite.setTextureRect(swordRect);
     return swordRect.left;

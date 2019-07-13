@@ -16,7 +16,9 @@ class Enemy : public BaseStatistic {
 
 public:
     sf::Clock dieClock;
+    sf::Clock idleClock;
     bool aniAttack;
+    bool idle;
     int damage;
     Enemy(float x, float y,std::string &file,int distance,int dmg);
     void drawEnemy(sf::RenderWindow &window);
@@ -25,8 +27,10 @@ public:
     float animationDie();
     void attackPlayer(MainCharacter &mainCharacter);
     int animationAttack(int x);
+    int animationIdle();
     std:: string type;
 private:
+    sf::IntRect IdleRect;
     sf::IntRect dieRect;
     sf::IntRect swordRect;
     int aggroDistance;

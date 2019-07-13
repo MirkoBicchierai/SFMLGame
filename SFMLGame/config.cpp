@@ -45,6 +45,11 @@ enum enemyRect{
     upSwordEnemy=64*4,
     downSwordEnemy=64*6,
 
+    MaxLeftIdle=64*6,
+    IdleTopUp=0,
+    IdleLeftTop=64,
+    IdleDownTop=64*2,
+    IdleRightTop=64*3
 };
 //enum for the player attack sword
 enum swordState{

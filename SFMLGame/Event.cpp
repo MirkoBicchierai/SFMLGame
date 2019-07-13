@@ -79,6 +79,16 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
         mainCharacter.arrowPlayer.stay = false;
         mainCharacter.arrow = 1;
     }
+
+    //idle enemy
+    for (int i = 0; i < enemyVec.size(); ++i) {
+        if(enemyVec[i]->idle){
+            if(enemyVec[i]->idleClock.getElapsedTime().asMilliseconds()>=100.f){
+                enemyVec[i]->animationIdle();
+                enemyVec[i]->idleClock.restart();
+            }
+        }
+    }
     //animation die Enemy and remove if is die to the enemy vector
     for (int i = 0; i < enemyVec.size(); ++i) {
         if(enemyVec[i]->life<=0){
@@ -93,11 +103,11 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
     //attack enemy
     int x;
     for (int i = 0; i < enemyVec.size(); ++i) {
-        x=maxAttackEnemyExtra;
+        x=maxAttackEnemyNormal;
         if(enemyVec[i]->aniAttack){
             if(enemyVec[i]->dieClock.getElapsedTime().asMilliseconds()>=50.f){
                 if(enemyVec[i]->type!="normal")
-                    x=64*5;
+                    x=maxAttackEnemyExtra;
                 if(enemyVec[i]->animationAttack(x)==x){
                     enemyVec[i]->attackPlayer(mainCharacter);
                     enemyVec[i]->aniAttack=false;
@@ -185,7 +195,7 @@ void Event::AStarEnemy(Game* game,TileMap &map,MainCharacter &mainCharacter, std
         game->enemyAStar.restart();
     }
 
-    if(game->enemyAStarMove.getElapsedTime().asMilliseconds()>=15.f) {
+    if(game->enemyAStarMove.getElapsedTime().asMilliseconds()>=25.f) {
         for (auto &i:enemyVec) {
             i->moveAStar(map.tile,mainCharacter);
         }
