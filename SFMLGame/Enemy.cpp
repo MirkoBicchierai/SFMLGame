@@ -5,6 +5,14 @@ void Enemy::drawEnemy(sf::RenderWindow &window) {
 }
 
 Enemy::Enemy(float x, float y,std::string &file,int distance,int dmg) {
+    attackBufferSound.loadFromFile(AUDIO_ROOT"/AttackEnemy.wav");
+    soundAttack.setBuffer(attackBufferSound);
+    soundAttack.setVolume(3);
+
+    bufferStep.loadFromFile(AUDIO_ROOT"/Step.wav");
+    soundStep.setBuffer(bufferStep);
+    soundStep.setVolume(0.2);
+
     entityTexture.loadFromFile(IMG_ENEMY_ROOT"/"+file+".png");
     type=file;
     entitySprite.setTexture(entityTexture);
@@ -193,6 +201,7 @@ void Enemy::moveEnemy(char direction,MainCharacter &mainCharacter) {
             AStarColl.setPosition(entitySprite.getPosition().x,entitySprite.getPosition().y+31);
         }
         entitySprite.setTextureRect(sourceRect);
+        soundStepControl();
     } else
         aniAttack=true;
 }
@@ -228,7 +237,7 @@ void Enemy::attackPlayer(MainCharacter &mainCharacter){
 
     if(!mainCharacter.shield)
         if(mainCharacter.entitySprite.getGlobalBounds().intersects(swordRec.getGlobalBounds()))
-            mainCharacter.life=mainCharacter.life-damage;
+            mainCharacter.takeDamage(damage);
 }
 
 int Enemy::animationAttack(int x) {
@@ -277,4 +286,11 @@ int Enemy::animationIdle() {
 
     entitySprite.setTextureRect(swordRect);
     return swordRect.left;
+}
+
+void Enemy::soundStepControl() {
+    if(soundStepClock.getElapsedTime().asMilliseconds()>=180.f){
+        soundStep.play();
+        soundStepClock.restart();
+    }
 }

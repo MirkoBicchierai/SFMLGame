@@ -15,6 +15,7 @@ public:
 
     sf::Sound soundArrow;
     sf::Sound soundFireBall;
+    sf::Sound soundSword;
 
     FireBall ball;
     Arrow arrowPlayer;
@@ -54,10 +55,16 @@ public:
     int dieAnimation(); //animation die
     sf::IntRect getsourceRect();
     sf::Sprite getSprite();
+    void takeDamage(int damage);
+
 private:
-    bool controlMove(std::vector<Tile> &tile,char direction); // control if the player can move or not
+
+    sf::Clock soundStepClock;
+    sf::Sound soundStep;
+    sf::SoundBuffer bufferSword;
     sf::SoundBuffer bufferArrow;
     sf::SoundBuffer bufferFireBall;
+    sf::SoundBuffer bufferStep;
     sf::Font font;
     sf::Text textTimeShield;
 
@@ -76,6 +83,9 @@ private:
     sf::IntRect magicRect;
 
     void moveGUI(float x, float y,sf::RenderWindow &window); // move gui of player
+    bool controlMove(std::vector<Tile> &tile,char direction); // control if the player can move or not
+    void soundStepControl(); // control timing for play the step track
+
 
 };
 

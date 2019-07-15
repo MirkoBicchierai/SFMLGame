@@ -13,9 +13,17 @@ MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     soundArrow.setBuffer(bufferArrow);
     soundArrow.setVolume(3);
 
+    bufferStep.loadFromFile(AUDIO_ROOT"/Step.wav");
+    soundStep.setBuffer(bufferStep);
+    soundStep.setVolume(0.5);
+
     bufferFireBall.loadFromFile(AUDIO_ROOT"/FireBall.wav");
     soundFireBall.setBuffer(bufferFireBall);
     soundFireBall.setVolume(3);
+
+    bufferSword.loadFromFile(AUDIO_ROOT"/AttackPlayer.wav");
+    soundSword.setBuffer(bufferSword);
+    soundSword.setVolume(3);
 
     moveSpeed=6;
 
@@ -260,6 +268,7 @@ void MainCharacter::movePlayer(char direction, sf::RenderWindow &window,std::vec
         entitySprite.move(x,y);
         AStarColl.move(x,y);
         moveGUI(x,y,window);
+        soundStepControl();
     }
 }
 
@@ -339,6 +348,8 @@ void MainCharacter::resetPlayer(sf::RenderWindow &window) {
     die=false;
     finalDie=false;
 
+    hearth.reset();
+
 }
 
 int MainCharacter::dieAnimation() {
@@ -376,3 +387,14 @@ void MainCharacter::damageSword(std::vector<Enemy*> &enemyVec) {
     }
 }
 
+void MainCharacter::takeDamage(int damage) {
+    life=life-damage;
+    hearth.damageControl(life);
+}
+
+void MainCharacter::soundStepControl() {
+    if(soundStepClock.getElapsedTime().asMilliseconds()>=180.f){
+        soundStep.play();
+        soundStepClock.restart();
+    }
+}

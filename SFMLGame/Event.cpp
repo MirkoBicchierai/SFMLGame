@@ -14,6 +14,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
     if (mainCharacter.sword == 1) {
         if (game->clockSword.getElapsedTime().asMilliseconds()>=mainCharacter.timeSword ) {
             if (mainCharacter.swordAttack() == finalSwordAttack) {
+                mainCharacter.soundSword.play();
                 mainCharacter.damageSword(enemyVec); // final damage sword
                 mainCharacter.sword = 0;
                 mainCharacter.reset(mainCharacter.getsourceRect().top);
@@ -109,6 +110,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
                 if(enemyVec[i]->type!="normal")
                     x=maxAttackEnemyExtra;
                 if(enemyVec[i]->animationAttack(x)==x){
+                    enemyVec[i]->soundAttack.play();
                     enemyVec[i]->attackPlayer(mainCharacter);
                     enemyVec[i]->aniAttack=false;
                 }
