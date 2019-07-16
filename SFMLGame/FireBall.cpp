@@ -12,6 +12,7 @@ FireBall::FireBall() {
     ballSprite.setTextureRect(ballRect);
     moveSpeed=45;
     animationBall=false;
+    damage=1;
 }
 
 void FireBall::drawFireBall(sf::RenderWindow &window) {
@@ -55,7 +56,7 @@ int FireBall::animation(std::vector<Enemy*> &enemyVec,MainCharacter &mainCharact
     for (int i = 0; i < enemyVec.size(); ++i) {
        if(ballSprite.getGlobalBounds().intersects(enemyVec[i]->entitySprite.getGlobalBounds())){
            if(enemyVec[i]->life!=0) {
-               enemyVec[i]->life--;
+               enemyVec[i]->takeDamage(damage);
                animationBall=false;
                mainCharacter.spell=false;
                break;

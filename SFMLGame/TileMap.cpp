@@ -42,7 +42,7 @@ void TileMap::load(const std::string& tileSet, sf::Vector2u tileSize, std::vecto
             if(left==silverKeyLeft && top==silverKeyTop)
                 type="silver_key";
 
-            if(type=="wall"||type=="water" || type=="closed_door_silver" || type=="closed_door_gold" || type=="gate")
+            if(type=="wall"||type=="water" || type=="closed_door_silver" || type=="closed_door_gold" || type=="gate" || type=="lever")
                 world_map[i + j * width]=9;
             else
                 world_map[i + j * width]=0;

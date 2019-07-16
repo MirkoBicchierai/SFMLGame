@@ -381,7 +381,7 @@ void MainCharacter::damageSword(std::vector<Enemy*> &enemyVec) {
     for (int i = 0; i < enemyVec.size(); ++i) {
         if(swordRec.getGlobalBounds().intersects(enemyVec[i]->entitySprite.getGlobalBounds())){
             if(enemyVec[i]->life!=0) {
-                enemyVec[i]->life=enemyVec[i]->life-DMGSword;
+                enemyVec[i]->takeDamage(DMGSword);
             }
         }
     }

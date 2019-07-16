@@ -11,6 +11,7 @@ public:
     void setCenter(sf::RenderWindow &window); //reset position
     void damageControl(int life);
     void reset();
+    void setHearthEnemy(sf::Vector2f enemy);
 private:
     sf::Texture brokenHeart;
     sf::Texture hearthTexture;

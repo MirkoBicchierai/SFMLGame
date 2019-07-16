@@ -14,6 +14,7 @@ public:
     int animation(std::vector<Enemy*> &enemyVec,MainCharacter &mainCharacter); //animation fireball, switch rect of image
 
 private:
+    int damage;
     int moveSpeed;
     sf::IntRect ballRect;
     sf::Texture ballTexture;

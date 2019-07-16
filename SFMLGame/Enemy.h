@@ -7,6 +7,7 @@
 #include "stlastar.h"
 #include "MainCharacter.h"
 #include "TileMap.h"
+#include "Heart.h"
 typedef struct {
     int x;
     int y;
@@ -29,8 +30,10 @@ public:
     void attackPlayer(MainCharacter &mainCharacter);
     int animationAttack(int x);
     int animationIdle();
+    void takeDamage(int dmg);
     std:: string type;
 private:
+    Heart lifeHearth;
     sf::SoundBuffer attackBufferSound;
     sf::IntRect IdleRect;
     sf::IntRect dieRect;

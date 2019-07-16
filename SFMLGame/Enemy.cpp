@@ -2,6 +2,7 @@
 #include "config.cpp"
 void Enemy::drawEnemy(sf::RenderWindow &window) {
     window.draw(entitySprite);
+    lifeHearth.drawHeart(window);
 }
 
 Enemy::Enemy(float x, float y,std::string &file,int distance,int dmg) {
@@ -42,6 +43,8 @@ Enemy::Enemy(float x, float y,std::string &file,int distance,int dmg) {
     IdleRect.height=dim;
     IdleRect.top=0;
     IdleRect.left=0;
+
+    lifeHearth.setHearthEnemy(entitySprite.getPosition());
 }
 
 void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Tile> &tile) {
@@ -71,6 +74,7 @@ void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Ti
             idle=true;
     }
 }
+
 void Enemy::moveAStar(std::vector<Tile> &tile,MainCharacter &mainCharacter){
     if(life > 0 && !path.empty() && !aniAttack) {
         int i = path[path.size()-1].x;
@@ -182,21 +186,25 @@ void Enemy::moveEnemy(char direction,MainCharacter &mainCharacter) {
 
         if (direction=='u') {
             entitySprite.move(0,-moveSpeed);
+            lifeHearth.moveHeart(0,-moveSpeed);
             sourceRect.top =topMoveUpEnemy;
             AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+61);
         }
         if (direction=='d') {
             entitySprite.move(0,moveSpeed);
+            lifeHearth.moveHeart(0,moveSpeed);
             sourceRect.top =topMoveDownEnemy;
             AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y);
         }
         if (direction=='l') {
             entitySprite.move(-moveSpeed,0);
+            lifeHearth.moveHeart(-moveSpeed,0);
             sourceRect.top =topMoveLeftEnemy;
             AStarColl.setPosition(entitySprite.getPosition().x+61,entitySprite.getPosition().y+31);
         }
         if (direction=='r') {
             entitySprite.move(moveSpeed,0);
+            lifeHearth.moveHeart(moveSpeed,0);
             sourceRect.top =topMoveRightEnemy;
             AStarColl.setPosition(entitySprite.getPosition().x,entitySprite.getPosition().y+31);
         }
@@ -293,4 +301,9 @@ void Enemy::soundStepControl() {
         soundStep.play();
         soundStepClock.restart();
     }
+}
+
+void Enemy::takeDamage(int dmg) {
+    life=life-dmg;
+    lifeHearth.damageControl(life);
 }

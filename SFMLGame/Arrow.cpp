@@ -81,7 +81,7 @@ void Arrow::animation(std::vector<Tile> &tile,std::vector<Enemy*> &enemyVec) {
         for (int i = 0; i < enemyVec.size(); ++i) {
             if(arrowSprite.getGlobalBounds().intersects(enemyVec[i]->entitySprite.getGlobalBounds())){
                 if(enemyVec[i]->life!=0) {
-                    enemyVec[i]->life=enemyVec[i]->life-damage;
+                    enemyVec[i]->takeDamage(damage);
                     arrowFor=8;
                     arrowRect.left = LeftNormalArrow;
                     arrowRect.top = TopNormalArrow;
