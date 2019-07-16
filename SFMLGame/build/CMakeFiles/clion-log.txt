@@ -1,6 +1,6 @@
 "C:\Program Files\JetBrains\CLion 2019.1.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame
--- Found SFML 2.5.1 in C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/SFML/lib/cmake/SFML
--- SFML_INCLUDE_DIR: SFML/include
+-- Found SFML 2.5.1 in C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/lib/SFML/lib/cmake/SFML
+-- SFML_INCLUDE_DIR: lib/SFML/include
 -- SFML_LIBRARIES: 
 -- SFML_VERSION: 2.5.1
 -- Configuring done

@@ -351,10 +351,11 @@ SFMLGame.exe: CMakeFiles/SFMLGame.dir/Enemy.cpp.obj
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/MapSearchNode.cpp.obj
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/Event.cpp.obj
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/build.make
-SFMLGame.exe: ../SFML/lib/libsfml-graphics-d.a
-SFMLGame.exe: ../SFML/lib/libsfml-window-d.a
-SFMLGame.exe: ../SFML/lib/libsfml-audio-d.a
-SFMLGame.exe: ../SFML/lib/libsfml-system-d.a
+SFMLGame.exe: ../lib/SFML/lib/libsfml-graphics-d.a
+SFMLGame.exe: ../lib/SFML/lib/libsfml-window-d.a
+SFMLGame.exe: ../lib/SFML/lib/libsfml-audio-d.a
+SFMLGame.exe: libcore.a
+SFMLGame.exe: ../lib/SFML/lib/libsfml-system-d.a
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/linklibs.rsp
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/objects1.rsp
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/link.txt

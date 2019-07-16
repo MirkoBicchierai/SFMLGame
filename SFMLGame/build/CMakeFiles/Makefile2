@@ -67,10 +67,10 @@ CMAKE_BINARY_DIR = C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build
 # Target rules for target CMakeFiles/SFMLGame.dir
 
 # All Build rule for target.
-CMakeFiles/SFMLGame.dir/all:
+CMakeFiles/SFMLGame.dir/all: CMakeFiles/core.dir/all
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/depend
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19 "Built target SFMLGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21 "Built target SFMLGame"
 .PHONY : CMakeFiles/SFMLGame.dir/all
 
 # Include target in all.
@@ -80,7 +80,7 @@ all: CMakeFiles/SFMLGame.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SFMLGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles 38
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/SFMLGame.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles 0
 .PHONY : CMakeFiles/SFMLGame.dir/rule
@@ -97,6 +97,196 @@ CMakeFiles/SFMLGame.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/SFMLGame.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/core.dir
+
+# All Build rule for target.
+CMakeFiles/core.dir/all:
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/depend
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40 "Built target core"
+.PHONY : CMakeFiles/core.dir/all
+
+# Include target in all.
+all: CMakeFiles/core.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/core.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles 19
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/core.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles 0
+.PHONY : CMakeFiles/core.dir/rule
+
+# Convenience name for target.
+core: CMakeFiles/core.dir/rule
+
+.PHONY : core
+
+# clean rule for target.
+CMakeFiles/core.dir/clean:
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/clean
+.PHONY : CMakeFiles/core.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/core.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory googleTest
+
+# Convenience name for "all" pass in the directory.
+googleTest/all: googleTest/CMakeFiles/GoogleTests.dir/all
+googleTest/all: googleTest/lib/googletest/all
+
+.PHONY : googleTest/all
+
+# Convenience name for "clean" pass in the directory.
+googleTest/clean: googleTest/CMakeFiles/GoogleTests.dir/clean
+googleTest/clean: googleTest/lib/googletest/clean
+
+.PHONY : googleTest/clean
+
+# Convenience name for "preinstall" pass in the directory.
+googleTest/preinstall: googleTest/lib/googletest/preinstall
+
+.PHONY : googleTest/preinstall
+
+#=============================================================================
+# Target rules for target googleTest/CMakeFiles/GoogleTests.dir
+
+# All Build rule for target.
+googleTest/CMakeFiles/GoogleTests.dir/all: CMakeFiles/core.dir/all
+googleTest/CMakeFiles/GoogleTests.dir/all: googleTest/lib/googletest/CMakeFiles/gtest.dir/all
+googleTest/CMakeFiles/GoogleTests.dir/all: googleTest/lib/googletest/CMakeFiles/gtest_main.dir/all
+	$(MAKE) -f googleTest\CMakeFiles\GoogleTests.dir\build.make googleTest/CMakeFiles/GoogleTests.dir/depend
+	$(MAKE) -f googleTest\CMakeFiles\GoogleTests.dir\build.make googleTest/CMakeFiles/GoogleTests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=1,2 "Built target GoogleTests"
+.PHONY : googleTest/CMakeFiles/GoogleTests.dir/all
+
+# Include target in all.
+all: googleTest/CMakeFiles/GoogleTests.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+googleTest/CMakeFiles/GoogleTests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles 25
+	$(MAKE) -f CMakeFiles\Makefile2 googleTest/CMakeFiles/GoogleTests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles 0
+.PHONY : googleTest/CMakeFiles/GoogleTests.dir/rule
+
+# Convenience name for target.
+GoogleTests: googleTest/CMakeFiles/GoogleTests.dir/rule
+
+.PHONY : GoogleTests
+
+# clean rule for target.
+googleTest/CMakeFiles/GoogleTests.dir/clean:
+	$(MAKE) -f googleTest\CMakeFiles\GoogleTests.dir\build.make googleTest/CMakeFiles/GoogleTests.dir/clean
+.PHONY : googleTest/CMakeFiles/GoogleTests.dir/clean
+
+# clean rule for target.
+clean: googleTest/CMakeFiles/GoogleTests.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory googleTest/lib/googletest
+
+# Convenience name for "all" pass in the directory.
+googleTest/lib/googletest/all: googleTest/lib/googletest/CMakeFiles/gtest.dir/all
+googleTest/lib/googletest/all: googleTest/lib/googletest/CMakeFiles/gtest_main.dir/all
+
+.PHONY : googleTest/lib/googletest/all
+
+# Convenience name for "clean" pass in the directory.
+googleTest/lib/googletest/clean: googleTest/lib/googletest/CMakeFiles/gtest.dir/clean
+googleTest/lib/googletest/clean: googleTest/lib/googletest/CMakeFiles/gtest_main.dir/clean
+
+.PHONY : googleTest/lib/googletest/clean
+
+# Convenience name for "preinstall" pass in the directory.
+googleTest/lib/googletest/preinstall:
+
+.PHONY : googleTest/lib/googletest/preinstall
+
+#=============================================================================
+# Target rules for target googleTest/lib/googletest/CMakeFiles/gtest.dir
+
+# All Build rule for target.
+googleTest/lib/googletest/CMakeFiles/gtest.dir/all:
+	$(MAKE) -f googleTest\lib\googletest\CMakeFiles\gtest.dir\build.make googleTest/lib/googletest/CMakeFiles/gtest.dir/depend
+	$(MAKE) -f googleTest\lib\googletest\CMakeFiles\gtest.dir\build.make googleTest/lib/googletest/CMakeFiles/gtest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=41,42 "Built target gtest"
+.PHONY : googleTest/lib/googletest/CMakeFiles/gtest.dir/all
+
+# Include target in all.
+all: googleTest/lib/googletest/CMakeFiles/gtest.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+googleTest/lib/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles 2
+	$(MAKE) -f CMakeFiles\Makefile2 googleTest/lib/googletest/CMakeFiles/gtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles 0
+.PHONY : googleTest/lib/googletest/CMakeFiles/gtest.dir/rule
+
+# Convenience name for target.
+gtest: googleTest/lib/googletest/CMakeFiles/gtest.dir/rule
+
+.PHONY : gtest
+
+# clean rule for target.
+googleTest/lib/googletest/CMakeFiles/gtest.dir/clean:
+	$(MAKE) -f googleTest\lib\googletest\CMakeFiles\gtest.dir\build.make googleTest/lib/googletest/CMakeFiles/gtest.dir/clean
+.PHONY : googleTest/lib/googletest/CMakeFiles/gtest.dir/clean
+
+# clean rule for target.
+clean: googleTest/lib/googletest/CMakeFiles/gtest.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target googleTest/lib/googletest/CMakeFiles/gtest_main.dir
+
+# All Build rule for target.
+googleTest/lib/googletest/CMakeFiles/gtest_main.dir/all: googleTest/lib/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f googleTest\lib\googletest\CMakeFiles\gtest_main.dir\build.make googleTest/lib/googletest/CMakeFiles/gtest_main.dir/depend
+	$(MAKE) -f googleTest\lib\googletest\CMakeFiles\gtest_main.dir\build.make googleTest/lib/googletest/CMakeFiles/gtest_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=43,44 "Built target gtest_main"
+.PHONY : googleTest/lib/googletest/CMakeFiles/gtest_main.dir/all
+
+# Include target in all.
+all: googleTest/lib/googletest/CMakeFiles/gtest_main.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+googleTest/lib/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles 4
+	$(MAKE) -f CMakeFiles\Makefile2 googleTest/lib/googletest/CMakeFiles/gtest_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles 0
+.PHONY : googleTest/lib/googletest/CMakeFiles/gtest_main.dir/rule
+
+# Convenience name for target.
+gtest_main: googleTest/lib/googletest/CMakeFiles/gtest_main.dir/rule
+
+.PHONY : gtest_main
+
+# clean rule for target.
+googleTest/lib/googletest/CMakeFiles/gtest_main.dir/clean:
+	$(MAKE) -f googleTest\lib\googletest\CMakeFiles\gtest_main.dir\build.make googleTest/lib/googletest/CMakeFiles/gtest_main.dir/clean
+.PHONY : googleTest/lib/googletest/CMakeFiles/gtest_main.dir/clean
+
+# clean rule for target.
+clean: googleTest/lib/googletest/CMakeFiles/gtest_main.dir/clean
 
 .PHONY : clean
 

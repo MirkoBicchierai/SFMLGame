@@ -1,1 +1,1 @@
--IC:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/SFML_INCLUDE_DIR -isystem C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/SFML/include 
+-IC:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/SFML_INCLUDE_DIR -isystem C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/lib/SFML/include 

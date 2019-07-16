@@ -55,6 +55,40 @@ CMAKE_BINARY_DIR = C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files\JetBrains\CLion 2019.1.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files\JetBrains\CLion 2019.1.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files\JetBrains\CLion 2019.1.4\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files\JetBrains\CLion 2019.1.4\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -76,6 +110,18 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\JetBrains\CLion 2019.1.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\JetBrains\CLion 2019.1.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -122,6 +168,58 @@ SFMLGame/fast:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/build
 .PHONY : SFMLGame/fast
 
+#=============================================================================
+# Target rules for targets named core
+
+# Build rule for target.
+core: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 core
+.PHONY : core
+
+# fast build rule for target.
+core/fast:
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/build
+.PHONY : core/fast
+
+#=============================================================================
+# Target rules for targets named GoogleTests
+
+# Build rule for target.
+GoogleTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 GoogleTests
+.PHONY : GoogleTests
+
+# fast build rule for target.
+GoogleTests/fast:
+	$(MAKE) -f googleTest\CMakeFiles\GoogleTests.dir\build.make googleTest/CMakeFiles/GoogleTests.dir/build
+.PHONY : GoogleTests/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f googleTest\lib\googletest\CMakeFiles\gtest.dir\build.make googleTest/lib/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f googleTest\lib\googletest\CMakeFiles\gtest_main.dir\build.make googleTest/lib/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
 Arrow.obj: Arrow.cpp.obj
 
 .PHONY : Arrow.obj
@@ -129,6 +227,7 @@ Arrow.obj: Arrow.cpp.obj
 # target to build an object file
 Arrow.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Arrow.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Arrow.cpp.obj
 .PHONY : Arrow.cpp.obj
 
 Arrow.i: Arrow.cpp.i
@@ -138,6 +237,7 @@ Arrow.i: Arrow.cpp.i
 # target to preprocess a source file
 Arrow.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Arrow.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Arrow.cpp.i
 .PHONY : Arrow.cpp.i
 
 Arrow.s: Arrow.cpp.s
@@ -147,6 +247,7 @@ Arrow.s: Arrow.cpp.s
 # target to generate assembly for a file
 Arrow.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Arrow.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Arrow.cpp.s
 .PHONY : Arrow.cpp.s
 
 BaseStatistic.obj: BaseStatistic.cpp.obj
@@ -156,6 +257,7 @@ BaseStatistic.obj: BaseStatistic.cpp.obj
 # target to build an object file
 BaseStatistic.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/BaseStatistic.cpp.obj
 .PHONY : BaseStatistic.cpp.obj
 
 BaseStatistic.i: BaseStatistic.cpp.i
@@ -165,6 +267,7 @@ BaseStatistic.i: BaseStatistic.cpp.i
 # target to preprocess a source file
 BaseStatistic.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/BaseStatistic.cpp.i
 .PHONY : BaseStatistic.cpp.i
 
 BaseStatistic.s: BaseStatistic.cpp.s
@@ -174,6 +277,7 @@ BaseStatistic.s: BaseStatistic.cpp.s
 # target to generate assembly for a file
 BaseStatistic.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/BaseStatistic.cpp.s
 .PHONY : BaseStatistic.cpp.s
 
 ConcreteStateGame.obj: ConcreteStateGame.cpp.obj
@@ -183,6 +287,7 @@ ConcreteStateGame.obj: ConcreteStateGame.cpp.obj
 # target to build an object file
 ConcreteStateGame.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame.cpp.obj
 .PHONY : ConcreteStateGame.cpp.obj
 
 ConcreteStateGame.i: ConcreteStateGame.cpp.i
@@ -192,6 +297,7 @@ ConcreteStateGame.i: ConcreteStateGame.cpp.i
 # target to preprocess a source file
 ConcreteStateGame.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame.cpp.i
 .PHONY : ConcreteStateGame.cpp.i
 
 ConcreteStateGame.s: ConcreteStateGame.cpp.s
@@ -201,6 +307,7 @@ ConcreteStateGame.s: ConcreteStateGame.cpp.s
 # target to generate assembly for a file
 ConcreteStateGame.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame.cpp.s
 .PHONY : ConcreteStateGame.cpp.s
 
 ConcreteStateMenu.obj: ConcreteStateMenu.cpp.obj
@@ -210,6 +317,7 @@ ConcreteStateMenu.obj: ConcreteStateMenu.cpp.obj
 # target to build an object file
 ConcreteStateMenu.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateMenu.cpp.obj
 .PHONY : ConcreteStateMenu.cpp.obj
 
 ConcreteStateMenu.i: ConcreteStateMenu.cpp.i
@@ -219,6 +327,7 @@ ConcreteStateMenu.i: ConcreteStateMenu.cpp.i
 # target to preprocess a source file
 ConcreteStateMenu.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateMenu.cpp.i
 .PHONY : ConcreteStateMenu.cpp.i
 
 ConcreteStateMenu.s: ConcreteStateMenu.cpp.s
@@ -228,6 +337,7 @@ ConcreteStateMenu.s: ConcreteStateMenu.cpp.s
 # target to generate assembly for a file
 ConcreteStateMenu.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateMenu.cpp.s
 .PHONY : ConcreteStateMenu.cpp.s
 
 ConcreteStateTutorial.obj: ConcreteStateTutorial.cpp.obj
@@ -237,6 +347,7 @@ ConcreteStateTutorial.obj: ConcreteStateTutorial.cpp.obj
 # target to build an object file
 ConcreteStateTutorial.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateTutorial.cpp.obj
 .PHONY : ConcreteStateTutorial.cpp.obj
 
 ConcreteStateTutorial.i: ConcreteStateTutorial.cpp.i
@@ -246,6 +357,7 @@ ConcreteStateTutorial.i: ConcreteStateTutorial.cpp.i
 # target to preprocess a source file
 ConcreteStateTutorial.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateTutorial.cpp.i
 .PHONY : ConcreteStateTutorial.cpp.i
 
 ConcreteStateTutorial.s: ConcreteStateTutorial.cpp.s
@@ -255,6 +367,7 @@ ConcreteStateTutorial.s: ConcreteStateTutorial.cpp.s
 # target to generate assembly for a file
 ConcreteStateTutorial.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateTutorial.cpp.s
 .PHONY : ConcreteStateTutorial.cpp.s
 
 Enemy.obj: Enemy.cpp.obj
@@ -264,6 +377,7 @@ Enemy.obj: Enemy.cpp.obj
 # target to build an object file
 Enemy.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Enemy.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Enemy.cpp.obj
 .PHONY : Enemy.cpp.obj
 
 Enemy.i: Enemy.cpp.i
@@ -273,6 +387,7 @@ Enemy.i: Enemy.cpp.i
 # target to preprocess a source file
 Enemy.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Enemy.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Enemy.cpp.i
 .PHONY : Enemy.cpp.i
 
 Enemy.s: Enemy.cpp.s
@@ -282,6 +397,7 @@ Enemy.s: Enemy.cpp.s
 # target to generate assembly for a file
 Enemy.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Enemy.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Enemy.cpp.s
 .PHONY : Enemy.cpp.s
 
 Event.obj: Event.cpp.obj
@@ -291,6 +407,7 @@ Event.obj: Event.cpp.obj
 # target to build an object file
 Event.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Event.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Event.cpp.obj
 .PHONY : Event.cpp.obj
 
 Event.i: Event.cpp.i
@@ -300,6 +417,7 @@ Event.i: Event.cpp.i
 # target to preprocess a source file
 Event.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Event.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Event.cpp.i
 .PHONY : Event.cpp.i
 
 Event.s: Event.cpp.s
@@ -309,6 +427,7 @@ Event.s: Event.cpp.s
 # target to generate assembly for a file
 Event.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Event.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Event.cpp.s
 .PHONY : Event.cpp.s
 
 FireBall.obj: FireBall.cpp.obj
@@ -318,6 +437,7 @@ FireBall.obj: FireBall.cpp.obj
 # target to build an object file
 FireBall.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/FireBall.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/FireBall.cpp.obj
 .PHONY : FireBall.cpp.obj
 
 FireBall.i: FireBall.cpp.i
@@ -327,6 +447,7 @@ FireBall.i: FireBall.cpp.i
 # target to preprocess a source file
 FireBall.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/FireBall.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/FireBall.cpp.i
 .PHONY : FireBall.cpp.i
 
 FireBall.s: FireBall.cpp.s
@@ -336,6 +457,7 @@ FireBall.s: FireBall.cpp.s
 # target to generate assembly for a file
 FireBall.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/FireBall.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/FireBall.cpp.s
 .PHONY : FireBall.cpp.s
 
 Game.obj: Game.cpp.obj
@@ -345,6 +467,7 @@ Game.obj: Game.cpp.obj
 # target to build an object file
 Game.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Game.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Game.cpp.obj
 .PHONY : Game.cpp.obj
 
 Game.i: Game.cpp.i
@@ -354,6 +477,7 @@ Game.i: Game.cpp.i
 # target to preprocess a source file
 Game.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Game.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Game.cpp.i
 .PHONY : Game.cpp.i
 
 Game.s: Game.cpp.s
@@ -363,6 +487,7 @@ Game.s: Game.cpp.s
 # target to generate assembly for a file
 Game.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Game.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
 GameState.obj: GameState.cpp.obj
@@ -372,6 +497,7 @@ GameState.obj: GameState.cpp.obj
 # target to build an object file
 GameState.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/GameState.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/GameState.cpp.obj
 .PHONY : GameState.cpp.obj
 
 GameState.i: GameState.cpp.i
@@ -381,6 +507,7 @@ GameState.i: GameState.cpp.i
 # target to preprocess a source file
 GameState.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/GameState.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/GameState.cpp.i
 .PHONY : GameState.cpp.i
 
 GameState.s: GameState.cpp.s
@@ -390,6 +517,7 @@ GameState.s: GameState.cpp.s
 # target to generate assembly for a file
 GameState.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/GameState.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/GameState.cpp.s
 .PHONY : GameState.cpp.s
 
 Heart.obj: Heart.cpp.obj
@@ -399,6 +527,7 @@ Heart.obj: Heart.cpp.obj
 # target to build an object file
 Heart.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Heart.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Heart.cpp.obj
 .PHONY : Heart.cpp.obj
 
 Heart.i: Heart.cpp.i
@@ -408,6 +537,7 @@ Heart.i: Heart.cpp.i
 # target to preprocess a source file
 Heart.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Heart.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Heart.cpp.i
 .PHONY : Heart.cpp.i
 
 Heart.s: Heart.cpp.s
@@ -417,6 +547,7 @@ Heart.s: Heart.cpp.s
 # target to generate assembly for a file
 Heart.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Heart.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Heart.cpp.s
 .PHONY : Heart.cpp.s
 
 MainCharacter.obj: MainCharacter.cpp.obj
@@ -426,6 +557,7 @@ MainCharacter.obj: MainCharacter.cpp.obj
 # target to build an object file
 MainCharacter.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/MainCharacter.cpp.obj
 .PHONY : MainCharacter.cpp.obj
 
 MainCharacter.i: MainCharacter.cpp.i
@@ -435,6 +567,7 @@ MainCharacter.i: MainCharacter.cpp.i
 # target to preprocess a source file
 MainCharacter.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/MainCharacter.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/MainCharacter.cpp.i
 .PHONY : MainCharacter.cpp.i
 
 MainCharacter.s: MainCharacter.cpp.s
@@ -444,6 +577,7 @@ MainCharacter.s: MainCharacter.cpp.s
 # target to generate assembly for a file
 MainCharacter.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/MainCharacter.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/MainCharacter.cpp.s
 .PHONY : MainCharacter.cpp.s
 
 MapSearchNode.obj: MapSearchNode.cpp.obj
@@ -453,6 +587,7 @@ MapSearchNode.obj: MapSearchNode.cpp.obj
 # target to build an object file
 MapSearchNode.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/MapSearchNode.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/MapSearchNode.cpp.obj
 .PHONY : MapSearchNode.cpp.obj
 
 MapSearchNode.i: MapSearchNode.cpp.i
@@ -462,6 +597,7 @@ MapSearchNode.i: MapSearchNode.cpp.i
 # target to preprocess a source file
 MapSearchNode.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/MapSearchNode.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/MapSearchNode.cpp.i
 .PHONY : MapSearchNode.cpp.i
 
 MapSearchNode.s: MapSearchNode.cpp.s
@@ -471,6 +607,7 @@ MapSearchNode.s: MapSearchNode.cpp.s
 # target to generate assembly for a file
 MapSearchNode.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/MapSearchNode.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/MapSearchNode.cpp.s
 .PHONY : MapSearchNode.cpp.s
 
 Menu.obj: Menu.cpp.obj
@@ -480,6 +617,7 @@ Menu.obj: Menu.cpp.obj
 # target to build an object file
 Menu.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Menu.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Menu.cpp.obj
 .PHONY : Menu.cpp.obj
 
 Menu.i: Menu.cpp.i
@@ -489,6 +627,7 @@ Menu.i: Menu.cpp.i
 # target to preprocess a source file
 Menu.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Menu.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Menu.cpp.i
 .PHONY : Menu.cpp.i
 
 Menu.s: Menu.cpp.s
@@ -498,6 +637,7 @@ Menu.s: Menu.cpp.s
 # target to generate assembly for a file
 Menu.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Menu.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Menu.cpp.s
 .PHONY : Menu.cpp.s
 
 Tile.obj: Tile.cpp.obj
@@ -507,6 +647,7 @@ Tile.obj: Tile.cpp.obj
 # target to build an object file
 Tile.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Tile.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Tile.cpp.obj
 .PHONY : Tile.cpp.obj
 
 Tile.i: Tile.cpp.i
@@ -516,6 +657,7 @@ Tile.i: Tile.cpp.i
 # target to preprocess a source file
 Tile.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Tile.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Tile.cpp.i
 .PHONY : Tile.cpp.i
 
 Tile.s: Tile.cpp.s
@@ -525,6 +667,7 @@ Tile.s: Tile.cpp.s
 # target to generate assembly for a file
 Tile.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Tile.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Tile.cpp.s
 .PHONY : Tile.cpp.s
 
 TileMap.obj: TileMap.cpp.obj
@@ -534,6 +677,7 @@ TileMap.obj: TileMap.cpp.obj
 # target to build an object file
 TileMap.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/TileMap.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/TileMap.cpp.obj
 .PHONY : TileMap.cpp.obj
 
 TileMap.i: TileMap.cpp.i
@@ -543,6 +687,7 @@ TileMap.i: TileMap.cpp.i
 # target to preprocess a source file
 TileMap.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/TileMap.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/TileMap.cpp.i
 .PHONY : TileMap.cpp.i
 
 TileMap.s: TileMap.cpp.s
@@ -552,6 +697,7 @@ TileMap.s: TileMap.cpp.s
 # target to generate assembly for a file
 TileMap.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/TileMap.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/TileMap.cpp.s
 .PHONY : TileMap.cpp.s
 
 config.obj: config.cpp.obj
@@ -561,6 +707,7 @@ config.obj: config.cpp.obj
 # target to build an object file
 config.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/config.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/config.cpp.obj
 .PHONY : config.cpp.obj
 
 config.i: config.cpp.i
@@ -570,6 +717,7 @@ config.i: config.cpp.i
 # target to preprocess a source file
 config.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/config.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/config.cpp.i
 .PHONY : config.cpp.i
 
 config.s: config.cpp.s
@@ -579,6 +727,7 @@ config.s: config.cpp.s
 # target to generate assembly for a file
 config.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/config.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/config.cpp.s
 .PHONY : config.cpp.s
 
 main.obj: main.cpp.obj
@@ -588,6 +737,7 @@ main.obj: main.cpp.obj
 # target to build an object file
 main.cpp.obj:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/main.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -597,6 +747,7 @@ main.i: main.cpp.i
 # target to preprocess a source file
 main.cpp.i:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -606,6 +757,7 @@ main.s: main.cpp.s
 # target to generate assembly for a file
 main.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -615,8 +767,16 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... SFMLGame
+	@echo ... list_install_components
+	@echo ... core
+	@echo ... install/local
+	@echo ... install
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... install/strip
+	@echo ... GoogleTests
+	@echo ... gtest
+	@echo ... gtest_main
 	@echo ... Arrow.obj
 	@echo ... Arrow.i
 	@echo ... Arrow.s

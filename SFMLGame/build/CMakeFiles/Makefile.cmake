@@ -23,6 +23,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/JetBrains/CLion 2019.1.4/bin/cmake/win/share/cmake-3.14/Modules/Compiler/GNU-C.cmake"
   "C:/Program Files/JetBrains/CLion 2019.1.4/bin/cmake/win/share/cmake-3.14/Modules/Compiler/GNU-CXX.cmake"
   "C:/Program Files/JetBrains/CLion 2019.1.4/bin/cmake/win/share/cmake-3.14/Modules/Compiler/GNU.cmake"
+  "C:/Program Files/JetBrains/CLion 2019.1.4/bin/cmake/win/share/cmake-3.14/Modules/FindPackageHandleStandardArgs.cmake"
+  "C:/Program Files/JetBrains/CLion 2019.1.4/bin/cmake/win/share/cmake-3.14/Modules/FindPackageMessage.cmake"
+  "C:/Program Files/JetBrains/CLion 2019.1.4/bin/cmake/win/share/cmake-3.14/Modules/FindPythonInterp.cmake"
   "C:/Program Files/JetBrains/CLion 2019.1.4/bin/cmake/win/share/cmake-3.14/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "C:/Program Files/JetBrains/CLion 2019.1.4/bin/cmake/win/share/cmake-3.14/Modules/Platform/Windows-GNU-C-ABI.cmake"
   "C:/Program Files/JetBrains/CLion 2019.1.4/bin/cmake/win/share/cmake-3.14/Modules/Platform/Windows-GNU-C.cmake"
@@ -34,16 +37,21 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/JetBrains/CLion 2019.1.4/bin/cmake/win/share/cmake-3.14/Modules/Platform/WindowsPaths.cmake"
   "C:/Program Files/JetBrains/CLion 2019.1.4/bin/cmake/win/share/cmake-3.14/Modules/ProcessorCount.cmake"
   "../CMakeLists.txt"
-  "../SFML/lib/cmake/SFML/SFMLConfig.cmake"
-  "../SFML/lib/cmake/SFML/SFMLConfigDependencies.cmake"
-  "../SFML/lib/cmake/SFML/SFMLConfigVersion.cmake"
-  "../SFML/lib/cmake/SFML/SFMLSharedTargets-debug.cmake"
-  "../SFML/lib/cmake/SFML/SFMLSharedTargets-release.cmake"
-  "../SFML/lib/cmake/SFML/SFMLSharedTargets.cmake"
   "CMakeFiles/3.14.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.14.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.14.3/CMakeRCCompiler.cmake"
   "CMakeFiles/3.14.3/CMakeSystem.cmake"
+  "../googleTest/CMakeLists.txt"
+  "../googleTest/lib/googletest/CMakeLists.txt"
+  "../googleTest/lib/googletest/cmake/gtest.pc.in"
+  "../googleTest/lib/googletest/cmake/gtest_main.pc.in"
+  "../googleTest/lib/googletest/cmake/internal_utils.cmake"
+  "../lib/SFML/lib/cmake/SFML/SFMLConfig.cmake"
+  "../lib/SFML/lib/cmake/SFML/SFMLConfigDependencies.cmake"
+  "../lib/SFML/lib/cmake/SFML/SFMLConfigVersion.cmake"
+  "../lib/SFML/lib/cmake/SFML/SFMLSharedTargets-debug.cmake"
+  "../lib/SFML/lib/cmake/SFML/SFMLSharedTargets-release.cmake"
+  "../lib/SFML/lib/cmake/SFML/SFMLSharedTargets.cmake"
   )
 
 # The corresponding makefile is:
@@ -55,9 +63,15 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "googleTest/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "googleTest/lib/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/SFMLGame.dir/DependInfo.cmake"
+  "CMakeFiles/core.dir/DependInfo.cmake"
+  "googleTest/CMakeFiles/GoogleTests.dir/DependInfo.cmake"
+  "googleTest/lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "googleTest/lib/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )
