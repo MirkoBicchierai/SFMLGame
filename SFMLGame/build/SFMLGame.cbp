@@ -181,7 +181,9 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/lib/googletest"/>
+					<Add directory="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/SFML_INCLUDE_DIR"/>
 					<Add directory="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/lib/googletest/include"/>
+					<Add directory="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/lib/SFML/include"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
@@ -205,7 +207,9 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/lib/googletest"/>
+					<Add directory="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/SFML_INCLUDE_DIR"/>
 					<Add directory="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/lib/googletest/include"/>
+					<Add directory="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/lib/SFML/include"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
@@ -453,6 +457,9 @@
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/fsa.h">
 			<Option target="SFMLGame"/>
 			<Option target="core"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/GameCharacterTest.cpp">
+			<Option target="GoogleTests"/>
 		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/lib/googletest/src/gtest-all.cc">
 			<Option target="gtest"/>
