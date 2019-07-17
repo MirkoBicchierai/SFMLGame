@@ -8,8 +8,10 @@ void GameText::drawGameText(sf::RenderWindow &window) {
 GameText::GameText(std::string text,MainCharacter &mainCharacter) {
     font.loadFromFile(FONT_ROOT"/Handwritingg.ttf");
     drawText.setFont(font);
+    drawText.setString(text);
+    dimension = drawText.getGlobalBounds().left+drawText.getGlobalBounds().width;
     drawText.setString(text[0]);
-    drawText.setPosition(mainCharacter.getSprite().getPosition().x-172,mainCharacter.getSprite().getPosition().y-64);
+    drawText.setPosition(mainCharacter.getSprite().getPosition().x- (dimension/2) +64,mainCharacter.getSprite().getPosition().y-64);
     drawText.setScale(0.8,0.8);
     this->text=std::move(text);
 }
@@ -26,5 +28,5 @@ void GameText::checkString() {
 }
 
 void GameText::moveText(MainCharacter &mainCharacter) {
-    drawText.setPosition(mainCharacter.getSprite().getPosition().x-172,mainCharacter.getSprite().getPosition().y-64);
+    drawText.setPosition(mainCharacter.getSprite().getPosition().x- (dimension/2) +64,mainCharacter.getSprite().getPosition().y-64);
 }

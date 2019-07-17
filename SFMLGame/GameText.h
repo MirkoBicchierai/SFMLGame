@@ -11,6 +11,7 @@ public:
     void drawGameText(sf::RenderWindow &window);
     void checkString();
 private:
+    float dimension;
     sf::Clock advanceText;
     std::string text;
     sf::Text drawText;
