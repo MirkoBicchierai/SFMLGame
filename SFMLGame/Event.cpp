@@ -128,8 +128,19 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
             game->dieClock.restart();
         }
     }
-
-
+    for(auto i:map.tile){
+        if(i.checkInteract()){
+            if(distanceBetweenTwoSprite(i.spriteShow,mainCharacter.getSprite())<=64){
+                game->interactText.setGameText("Press X",i.spriteShow);
+                game->interact=true;
+                game->actualInteractI=i.i;
+                game->actualInteractJ = i.j;
+            }
+        }
+        if(game->actualInteractI==i.i && game->actualInteractJ == i.j &&distanceBetweenTwoSprite(i.spriteShow,mainCharacter.getSprite())>=64){
+            game->interact=false;
+        }
+    }
 
 }
 

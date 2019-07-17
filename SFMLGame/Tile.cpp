@@ -33,3 +33,10 @@ void Tile::setTile(sf::Texture &txt, sf::Vector2u tileSize) {
 void Tile::drawTile(sf::RenderWindow &window) {
     window.draw(spriteShow);
 }
+
+bool Tile::checkInteract() {
+    if(type=="lever"||type=="gold_key" || type=="silver_key")
+        return true;
+    else
+        return false;
+}

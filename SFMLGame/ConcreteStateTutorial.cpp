@@ -51,6 +51,8 @@ void ConcreteStateTutorial::draw(MainCharacter &mainCharacter){
         }
         break;
     }
+    if(game->interact)
+        game->interactText.drawGameText(game->window);
 }
 
 void ConcreteStateTutorial::update(MainCharacter &mainCharacter){

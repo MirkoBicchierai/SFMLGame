@@ -6,6 +6,8 @@
 #include "MainCharacter.h"
 class GameText {
 public:
+    void setGameText(std::string text,sf::Sprite &sprite);
+    GameText()= default;
     GameText(std::string text,MainCharacter &mainCharacter);
     void moveText(MainCharacter &mainCharacter);
     void drawGameText(sf::RenderWindow &window);

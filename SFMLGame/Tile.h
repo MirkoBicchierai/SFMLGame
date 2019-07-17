@@ -13,6 +13,7 @@ public:
     Tile(int id, std::string ty,int i, int j);
     void setTile(sf::Texture &txt, sf::Vector2u tileSize); //set the texture and the draw position of the tile
     void drawTile(sf::RenderWindow &window);
+    bool checkInteract();
 
 private:
     sf::IntRect sourceRect;

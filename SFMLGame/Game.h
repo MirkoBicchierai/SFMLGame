@@ -4,11 +4,14 @@
 #include <vector>
 #include "SFML/Graphics.hpp"
 #include "MainCharacter.h"
-
+#include "GameText.h"
 class GameState;
 
 class Game{
 public:
+    bool interact;
+    int actualInteractI, actualInteractJ;
+    GameText interactText;
     Game();
     void pushState(GameState* state); //for change state
     GameState* CurrentState(); // return the current concrete state

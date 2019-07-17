@@ -12,6 +12,7 @@ Game::Game(){
     icon.loadFromFile(IMG_ROOT"/GUI/Sword.png");
     window.setIcon(32,32,icon.getPixelsPtr());
     window.setFramerateLimit(60);
+    interact=false;
 }
 void Game::pushState(GameState* state){
     states.push_back(state);
@@ -40,4 +41,5 @@ void Game::gameLoop(){
         window.display();
     }
 }
+
 
