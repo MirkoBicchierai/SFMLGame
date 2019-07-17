@@ -33,15 +33,18 @@ void ConcreteStateGame::loadFromFile(const std::string &path) {
 
 void ConcreteStateGame::draw(MainCharacter &mainCharacter){
 
-  for(auto i:map.tile){
+    for(auto i:map.tile){
         i.drawTile(game->window);
     }
-
+    for(auto i:enemyVec){
+        i->drawEnemy(game->window);
+    }
     mainCharacter.drawPlayer(game->window,game->clockShield);
 }
 
 void ConcreteStateGame::update(MainCharacter &mainCharacter){
     loopEvent.updateEvent(mainCharacter,game,map,enemyVec);
+    loopEvent.AStarEnemy(game,map,mainCharacter,enemyVec);
 }
 void ConcreteStateGame::handleInput(MainCharacter &mainCharacter){
     while (game->window.pollEvent(game->event)){

@@ -6,11 +6,12 @@ void Enemy::drawEnemy(sf::RenderWindow &window) {
 }
 
 Enemy::Enemy(float x, float y,std::string &file,int distance,int dmg) {
+    bufferStep.loadFromFile(AUDIO_ROOT"/Step.wav");
     attackBufferSound.loadFromFile(AUDIO_ROOT"/AttackEnemy.wav");
+
     soundAttack.setBuffer(attackBufferSound);
     soundAttack.setVolume(3);
 
-    bufferStep.loadFromFile(AUDIO_ROOT"/Step.wav");
     soundStep.setBuffer(bufferStep);
     soundStep.setVolume(0.2);
 
@@ -57,13 +58,13 @@ void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Ti
             Tile enemy;
             mainCharacter.AStarColl.setPosition(mainCharacter.entitySprite.getPosition().x+31,mainCharacter.entitySprite.getPosition().y+60);
             for(auto& j:map.tile) {
-                if(mainCharacter.AStarColl.getGlobalBounds().intersects(j.spriteCollision.getGlobalBounds()) && (j.type=="floor" || j.type=="obj")) {
+                if(mainCharacter.AStarColl.getGlobalBounds().intersects(j.spriteCollision.getGlobalBounds()) && (j.type=="floor" || j.type=="obj"|| j.type=="lever")) {
                     player=j;
                     break;
                 }
             }
             for(auto& k:map.tile) {
-                if(AStarColl.getGlobalBounds().intersects(k.spriteCollision.getGlobalBounds()) && (k.type=="floor" || k.type=="obj")) {
+                if(AStarColl.getGlobalBounds().intersects(k.spriteCollision.getGlobalBounds()) && (k.type=="floor" || k.type=="obj"|| k.type=="lever")) {
                     enemy=k;
                     break;
                 }
@@ -76,6 +77,10 @@ void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Ti
 }
 
 void Enemy::moveAStar(std::vector<Tile> &tile,MainCharacter &mainCharacter){
+    if(distanceBetweenTwoSprite(mainCharacter.getSprite(),entitySprite)<64){
+        aniAttack=true;
+        return;
+    }
     if(life > 0 && !path.empty() && !aniAttack) {
         int i = path[path.size()-1].x;
         int j = path[path.size()-1].y;
@@ -243,7 +248,7 @@ void Enemy::attackPlayer(MainCharacter &mainCharacter){
         swordRec.setPosition(swordRec.getPosition().x+64,swordRec.getPosition().y+8);
     }
 
-    if(!mainCharacter.shield)
+    if(mainCharacter.shield)
         if(mainCharacter.entitySprite.getGlobalBounds().intersects(swordRec.getGlobalBounds()))
             mainCharacter.takeDamage(damage);
 }
@@ -298,7 +303,6 @@ int Enemy::animationIdle() {
 
 void Enemy::soundStepControl() {
     if(soundStepClock.getElapsedTime().asMilliseconds()>=180.f){
-        soundStep.play();
         soundStepClock.restart();
     }
 }

@@ -25,9 +25,9 @@ void TileMap::load(const std::string& tileSet, sf::Vector2u tileSize, std::vecto
                 type = "wall";
             if(top==topFloor)
                 type="floor";
-            if( (top>=topChestMin && top<=topChestMax && left>=leftChestMin) || (top==topSingleChest && left==leftSingleChest) )
+            if( (top>=topChestMin && top<=topChestMax && left>=leftChestMin) || (top==topSingleChest && left==leftSingleChest))
                 type="chest";
-            if((top==topLeverSingle && left==leftLeverSingle) || (top==topLever && left>=leftMinLever &&left<=leftMaxLever) )
+            if((top==topLeverSingle && left==leftLeverSingle) || (top==topLever && (left>=leftMinLever && left<=leftMaxLever)))
                 type="lever";
             if(top>=topMinDoorClosed_silver && top<=topMaxDoorClosed_silver && left>=leftMinDoorClosed_silver && left<=leftMaxDoorClosed_silver)
                 type = "closed_door_silver";
@@ -42,10 +42,10 @@ void TileMap::load(const std::string& tileSet, sf::Vector2u tileSize, std::vecto
             if(left==silverKeyLeft && top==silverKeyTop)
                 type="silver_key";
 
-            if(type=="wall"||type=="water" || type=="closed_door_silver" || type=="closed_door_gold" || type=="gate" || type=="lever")
+            world_map[i + j * width]=0;
+
+            if(type=="wall"||type=="water" || type=="closed_door_silver" || type=="closed_door_gold" || type=="gate")
                 world_map[i + j * width]=9;
-            else
-                world_map[i + j * width]=0;
 
             tile.emplace_back(Tile(tileNumber, type, i, j));
             n=tile.size();

@@ -22,15 +22,10 @@ void Tile::setTile(sf::Texture &txt, sf::Vector2u tileSize) {
 
     collisionRect.top=tv * tileSize.y;
     collisionRect.left=tu * tileSize.x;
-    if(type=="gate" || type=="closed_door_gold" || type=="closed_door_silver" ) {
-        collisionRect.width = tileSize.x;
-        collisionRect.height = tileSize.y-32;
-        spriteCollision.setPosition(i*tileSize.x, j*tileSize.y+32);
-    }else{
-        collisionRect.width = tileSize.x;
-        collisionRect.height = tileSize.y;
-        spriteCollision.setPosition(i*tileSize.x, j*tileSize.y);
-    }
+
+    collisionRect.width = tileSize.x;
+    collisionRect.height = tileSize.y;
+    spriteCollision.setPosition(i*tileSize.x, j*tileSize.y);
     spriteCollision.setTextureRect(collisionRect);
     spriteCollision.setTexture(txt);
 }
