@@ -44,7 +44,6 @@ Enemy::Enemy(float x, float y,std::string &file,int distance,int dmg) {
     IdleRect.height=dim;
     IdleRect.top=0;
     IdleRect.left=0;
-
     lifeHearth.setHearthEnemy(entitySprite.getPosition());
 }
 
@@ -248,7 +247,7 @@ void Enemy::attackPlayer(MainCharacter &mainCharacter){
         swordRec.setPosition(swordRec.getPosition().x+64,swordRec.getPosition().y+8);
     }
 
-    if(mainCharacter.shield)
+    if(!mainCharacter.shield)
         if(mainCharacter.entitySprite.getGlobalBounds().intersects(swordRec.getGlobalBounds()))
             mainCharacter.takeDamage(damage);
 }

@@ -128,6 +128,9 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
             game->dieClock.restart();
         }
     }
+
+
+
 }
 
 void Event::inputEvent(MainCharacter &mainCharacter, Game* game,TileMap &map) {

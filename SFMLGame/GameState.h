@@ -13,7 +13,7 @@ public:
     virtual void draw(MainCharacter &mainCharacter) = 0;
     virtual void update(MainCharacter &mainCharacter) = 0;
     virtual void handleInput(MainCharacter &mainCharacter) = 0;
-    virtual void Init() = 0;
+    virtual void Init(MainCharacter &mainCharacter) = 0;
 };
 
 #endif

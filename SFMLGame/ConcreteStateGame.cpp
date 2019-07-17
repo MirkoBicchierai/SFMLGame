@@ -52,7 +52,7 @@ void ConcreteStateGame::handleInput(MainCharacter &mainCharacter){
     }
 }
 
-void ConcreteStateGame::Init() {
+void ConcreteStateGame::Init(MainCharacter &mainCharacter) {
     loadFromFile(MAP_ROOT_GAME"/level1.txt");
     game->init=true;
 }

@@ -402,6 +402,14 @@
 			<Option target="SFMLGame"/>
 			<Option target="core"/>
 		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameText.cpp">
+			<Option target="SFMLGame"/>
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameText.h">
+			<Option target="SFMLGame"/>
+			<Option target="core"/>
+		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Heart.cpp">
 			<Option target="SFMLGame"/>
 			<Option target="core"/>

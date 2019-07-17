@@ -13,7 +13,7 @@ public:
      void draw(MainCharacter &mainCharacter) override ;
      void update(MainCharacter &mainCharacter) override;
      void handleInput(MainCharacter &mainCharacter) override;
-     void Init() override;
+     void Init(MainCharacter &mainCharacter) override;
      explicit ConcreteStateGame(Game* game);
 
 private:

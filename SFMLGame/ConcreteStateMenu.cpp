@@ -56,6 +56,6 @@ void ConcreteStateMenu::startTutorial(MainCharacter &mainCharacter) { // switch 
     game->pushState(new ConcreteStateTutorial(game));
 }
 
-void ConcreteStateMenu::Init() {
+void ConcreteStateMenu::Init(MainCharacter &mainCharacter) {
 
 }

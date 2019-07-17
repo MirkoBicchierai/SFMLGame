@@ -42,11 +42,28 @@ void ConcreteStateTutorial::draw(MainCharacter &mainCharacter){
         i->drawEnemy(game->window);
     }
     mainCharacter.drawPlayer(game->window,game->clockShield);
+
+    for(int i=0; i<tutorialTextVec.size();++i){
+        tutorialTextVec[i]->drawGameText(game->window);
+        if(textClock.getElapsedTime().asSeconds()>=6){
+            tutorialTextVec.erase(tutorialTextVec.begin());
+            textClock.restart();
+        }
+        break;
+    }
 }
 
 void ConcreteStateTutorial::update(MainCharacter &mainCharacter){
     loopEvent.updateEvent(mainCharacter,game,map,enemyVec);
     loopEvent.AStarEnemy(game,map,mainCharacter,enemyVec);
+    for(auto i:tutorialTextVec){
+        i->moveText(mainCharacter);
+    }
+    for(auto i:tutorialTextVec){
+        i->checkString();
+        break;
+    }
+
 }
 
 void ConcreteStateTutorial::handleInput(MainCharacter &mainCharacter){
@@ -55,7 +72,7 @@ void ConcreteStateTutorial::handleInput(MainCharacter &mainCharacter){
     }
 }
 
-void ConcreteStateTutorial::Init() {
+void ConcreteStateTutorial::Init(MainCharacter &mainCharacter) {
     loadFromFile(MAP_ROOT_TUTORIAL"/Tutorial.txt");
     float x=0,y=0;
     std::string file;
@@ -77,6 +94,26 @@ void ConcreteStateTutorial::Init() {
         file="skeleton";
         enemyVec.push_back(new Enemy(x,y,file,400,1));
     }
+
+    std::string text;
+    text="use the arrow keys to move the character";
+    tutorialTextVec.push_back(new GameText(text,mainCharacter));
+    text="use Q,W,E,R for use the ability";
+    tutorialTextVec.push_back(new GameText(text,mainCharacter));
+    text="use Q for attack the enemy with a sword";
+    tutorialTextVec.push_back(new GameText(text,mainCharacter));
+    text="use W for use your bow, you have only a arrow remember that!";
+    tutorialTextVec.push_back(new GameText(text,mainCharacter));
+    text="use E for pick a shield and become immortal for a few seconds";
+    tutorialTextVec.push_back(new GameText(text,mainCharacter));
+    text="use R to launch a special fireball";
+    tutorialTextVec.push_back(new GameText(text,mainCharacter));
+    text="use X interact with the map (lever,door...)";
+    tutorialTextVec.push_back(new GameText(text,mainCharacter));
+    text="Press 'esc' to return to menu";
+    tutorialTextVec.push_back(new GameText(text,mainCharacter));
+    text="and now explore the map and complete the tutorial!!!";
+    tutorialTextVec.push_back(new GameText(text,mainCharacter));
     game->init=true;
 }
 

@@ -29,7 +29,7 @@ void Game::gameLoop(){
 
     while (window.isOpen()){
         if(!init)
-           CurrentState()->Init();
+           CurrentState()->Init(mainCharacter);
         if (CurrentState() == nullptr)
             break;
 

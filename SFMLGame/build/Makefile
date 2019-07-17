@@ -520,6 +520,36 @@ GameState.cpp.s:
 	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/GameState.cpp.s
 .PHONY : GameState.cpp.s
 
+GameText.obj: GameText.cpp.obj
+
+.PHONY : GameText.obj
+
+# target to build an object file
+GameText.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/GameText.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/GameText.cpp.obj
+.PHONY : GameText.cpp.obj
+
+GameText.i: GameText.cpp.i
+
+.PHONY : GameText.i
+
+# target to preprocess a source file
+GameText.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/GameText.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/GameText.cpp.i
+.PHONY : GameText.cpp.i
+
+GameText.s: GameText.cpp.s
+
+.PHONY : GameText.s
+
+# target to generate assembly for a file
+GameText.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/GameText.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/GameText.cpp.s
+.PHONY : GameText.cpp.s
+
 Heart.obj: Heart.cpp.obj
 
 .PHONY : Heart.obj
@@ -807,6 +837,9 @@ help:
 	@echo ... GameState.obj
 	@echo ... GameState.i
 	@echo ... GameState.s
+	@echo ... GameText.obj
+	@echo ... GameText.i
+	@echo ... GameText.s
 	@echo ... Heart.obj
 	@echo ... Heart.i
 	@echo ... Heart.s
