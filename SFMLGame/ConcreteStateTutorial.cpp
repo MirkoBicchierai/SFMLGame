@@ -47,14 +47,14 @@ void ConcreteStateTutorial::draw(MainCharacter &mainCharacter){
         i->drawCoin(game->window);
     }
 
-    for(int i=0; i<tutorialTextVec.size();++i){
-        tutorialTextVec[i]->drawGameText(game->window);
+    if(tutorialTextVec.size()>0){
+        tutorialTextVec[0]->drawGameText(game->window);
         if(textClock.getElapsedTime().asSeconds()>=6){
             tutorialTextVec.erase(tutorialTextVec.begin());
             textClock.restart();
         }
-        break;
     }
+
     if(game->interact)
         game->interactText.drawGameText(game->window);
 }
