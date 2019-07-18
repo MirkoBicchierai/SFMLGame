@@ -14,6 +14,8 @@ public:
     void AStarEnemy(Game* game,TileMap &map,MainCharacter &mainCharacter, std::vector<Enemy*> enemyVec);
 private:
     void backToMenu(Game* game);
+    void mapInteraction(MainCharacter &mainCharacter,Game* game,TileMap &map);
+    void deleteCreateNewTile(int i, int j,TileMap &map,int iter,int idTile);
 };
 
 #endif

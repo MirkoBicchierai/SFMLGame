@@ -177,87 +177,8 @@ void Event::inputEvent(MainCharacter &mainCharacter, Game* game,TileMap &map) {
         }
         //interact with map
         if(game->interact){
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::X)) {
-                int ii,jj,n;
-                sf::Vector2u tileSize(64,64);
-                bool leverActivate=false;
-                for (int j = 0; j < map.tile.size(); ++j) {
-                    if(game->typeInteract=="lever"){
-                        if(game->actualInteractI== map.tile[j].i && game->actualInteractJ == map.tile[j].j){
-                            ii=map.tile[j].i;
-                            jj= map.tile[j].j;
-                            map.tile.erase(map.tile.begin()+j);
-                            map.tile.emplace_back(Tile(207,"obj",ii,jj));
-                            n=map.tile.size();
-                            map.tile[n-1].setTile(map.texture, tileSize);
-                            game->interact=false;
-                            leverActivate=true;
-                        }
-                        if(game->actualInteractI== map.tile[j].i && game->actualInteractJ -1 == map.tile[j].j){
-                            ii=map.tile[j].i;
-                            jj= map.tile[j].j;
-                            map.tile.erase(map.tile.begin()+j);
-                            map.tile.emplace_back(Tile(1,"floor",ii,jj));
-                            n=map.tile.size();
-                            map.tile[n-1].setTile(map.texture, tileSize);
-                        }
-                        if(game->actualInteractI +1 == map.tile[j].i && game->actualInteractJ == map.tile[j].j){
-                            ii=map.tile[j].i;
-                            jj= map.tile[j].j;
-                            map.tile.erase(map.tile.begin()+j);
-                            map.tile.emplace_back(Tile(208,"obj",ii,jj));
-                            n=map.tile.size();
-                            map.tile[n-1].setTile(map.texture, tileSize);
-                        }
-                    }
-                    if(game->typeInteract=="silver_key" || game->typeInteract=="gold_key"){
-                        if(game->actualInteractI== map.tile[j].i && game->actualInteractJ == map.tile[j].j){
-                            ii=map.tile[j].i;
-                            jj= map.tile[j].j;
-                            map.tile.erase(map.tile.begin()+j);
-                            map.tile.emplace_back(Tile(1,"floor",ii,jj));
-                            n=map.tile.size();
-                            map.tile[n-1].setTile(map.texture, tileSize);
-                            game->interact=false;
-                            if(game->typeInteract=="gold_key")
-                                mainCharacter.inventory.NumberGoldKey++;
-                            else
-                                mainCharacter.inventory.NumberSilverKey++;
-                            break;
-                        }
-                    }
-                }
-
-                if(leverActivate){
-                    struct coordinate{
-                        int i;
-                        int j;
-                    };
-                    std::vector<coordinate> Add;
-                    std::vector<int> Remove;
-                    struct coordinate x;
-                    for (int j = 0; j < map.tile.size(); ++j) {
-                        if(map.tile[j].type=="gate"){
-                            ii=map.tile[j].i;
-                            jj= map.tile[j].j;
-                            x.i=ii;
-                            x.j=jj;
-                            Add.push_back(x);
-                            int k=j;
-                            Remove.push_back(k);
-                        }
-                    }
-                    for (int k = 0; k <Remove.size() ; ++k) {
-                        map.tile.erase(map.tile.begin()+Remove[k]-k);
-                    }
-                    for (int l = 0; l < Add.size(); ++l) {
-                        map.tile.emplace_back(Tile(169,"floor",Add[l].i,Add[l].j));
-                        n=map.tile.size();
-                        map.tile[n-1].setTile(map.texture, tileSize);
-                    }
-                    map.updateMapAStar();
-                }
-            }
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::X))
+                mapInteraction(mainCharacter,game,map);
         }
 
         //sword attack plaYER
@@ -312,4 +233,126 @@ void Event::AStarEnemy(Game* game,TileMap &map,MainCharacter &mainCharacter, std
         }
         game->enemyAStarMove.restart();
     }
+}
+
+void Event::mapInteraction(MainCharacter &mainCharacter, Game *game, TileMap &map) {
+        int ii, jj, n;
+        sf::Vector2u tileSize(64, 64);
+        bool leverActivate = false;
+        if(game->typeInteract == "closed_door_silver" && mainCharacter.inventory.NumberSilverKey==0)
+            return;
+        if(game->typeInteract == "closed_door_silver" && mainCharacter.inventory.NumberSilverKey>0)
+            mainCharacter.inventory.NumberSilverKey--;
+        if(game->typeInteract == "closed_door_gold" && mainCharacter.inventory.NumberGoldKey>0)
+            mainCharacter.inventory.NumberGoldKey--;
+        if(game->typeInteract == "closed_door_gold" && mainCharacter.inventory.NumberGoldKey==0)
+            return;
+        for (int j = 0; j < map.tile.size(); ++j) {
+            if (game->typeInteract == "lever") {
+                if (game->actualInteractI == map.tile[j].i && game->actualInteractJ == map.tile[j].j) {
+                    deleteCreateNewTile(map.tile[j].i,map.tile[j].j,map,j,207);
+                    game->interact = false;
+                    leverActivate = true;
+                }
+                if (game->actualInteractI == map.tile[j].i && game->actualInteractJ - 1 == map.tile[j].j)
+                    deleteCreateNewTile(map.tile[j].i,map.tile[j].j,map,j,1);
+                if (game->actualInteractI + 1 == map.tile[j].i && game->actualInteractJ == map.tile[j].j)
+                    deleteCreateNewTile(map.tile[j].i,map.tile[j].j,map,j,208);
+            }
+            if (game->typeInteract == "silver_key" || game->typeInteract == "gold_key") {
+                if (game->actualInteractI == map.tile[j].i && game->actualInteractJ == map.tile[j].j) {
+                    deleteCreateNewTile(map.tile[j].i,map.tile[j].j,map,j,1);
+                    game->interact=false;
+                    if (game->typeInteract == "gold_key")
+                        mainCharacter.inventory.NumberGoldKey++;
+                    else
+                        mainCharacter.inventory.NumberSilverKey++;
+                    break;
+                }
+            }
+            if (game->typeInteract == "closed_door_silver" || game->typeInteract == "closed_door_gold") {
+                if (game->actualInteractI == map.tile[j].i && game->actualInteractJ - 1 == map.tile[j].j) {
+                    deleteCreateNewTile(map.tile[j].i,map.tile[j].j,map,j,1);
+                    game->interact = false;
+                }
+                if (game->actualInteractI - 1 == map.tile[j].i && game->actualInteractJ == map.tile[j].j &&
+                    map.tile[j].type != "wall") { //left delete
+                    for (int i = 0; i < map.tile.size(); ++i) {
+                        if (game->actualInteractI - 1 == map.tile[i].i && game->actualInteractJ == map.tile[i].j) {
+                            deleteCreateNewTile(map.tile[i].i,map.tile[i].j,map,i,1);
+                            game->interact = false;
+                            break;
+                        }
+                    }
+                    for (int i = 0; i < map.tile.size(); ++i) {
+                        if (game->actualInteractI - 1 == map.tile[i].i && game->actualInteractJ - 1 == map.tile[i].j) {
+                            deleteCreateNewTile(map.tile[i].i,map.tile[i].j,map,i,1);
+                            game->interact = false;
+                            break;
+                        }
+                    }
+                }
+                if (game->actualInteractI + 1 == map.tile[j].i && game->actualInteractJ == map.tile[j].j &&
+                    map.tile[j].type != "wall") { //right delete
+                    for (int i = 0; i < map.tile.size(); ++i) {
+                        if (game->actualInteractI + 1 == map.tile[i].i && game->actualInteractJ - 1 == map.tile[i].j) {
+                            deleteCreateNewTile(map.tile[i].i,map.tile[i].j,map,i,1);
+                            game->interact = false;
+                            break;
+                        }
+                    }
+                    for (int i = 0; i < map.tile.size(); ++i) {
+                        if (game->actualInteractI + 1 == map.tile[i].i && game->actualInteractJ == map.tile[i].j) {
+                            deleteCreateNewTile(map.tile[i].i,map.tile[i].j,map,i,1);
+                            game->interact = false;
+                            break;
+                        }
+                    }
+                }
+                if (game->actualInteractI == map.tile[j].i && game->actualInteractJ == map.tile[j].j) {
+                    deleteCreateNewTile(map.tile[j].i,map.tile[j].j,map,j,1);
+                    game->interact = false;
+                }
+            }
+        }
+
+        if (leverActivate) {
+            struct coordinate {
+                int i;
+                int j;
+            };
+            std::vector<coordinate> Add;
+            std::vector<int> Remove;
+            struct coordinate x;
+            for (int j = 0; j < map.tile.size(); ++j) {
+                if (map.tile[j].type == "gate") {
+                    ii = map.tile[j].i;
+                    jj = map.tile[j].j;
+                    x.i = ii;
+                    x.j = jj;
+                    Add.push_back(x);
+                    int k = j;
+                    Remove.push_back(k);
+                }
+            }
+            for (int k = 0; k < Remove.size(); ++k) {
+                map.tile.erase(map.tile.begin() + Remove[k] - k);
+            }
+            for (int l = 0; l < Add.size(); ++l) {
+                map.tile.emplace_back(Tile(169, "floor", Add[l].i, Add[l].j));
+                n = map.tile.size();
+                map.tile[n - 1].setTile(map.texture, tileSize);
+            }
+            map.updateMapAStar();
+        }
+}
+
+void Event::deleteCreateNewTile(int iii, int jjj, TileMap &map, int iter,int idTile) {
+    sf::Vector2u tileSize(64, 64);
+    int ii = iii;
+    int jj = jjj;
+    map.tile.erase(map.tile.begin() + iter);
+    map.tile.emplace_back(Tile(idTile, "obj", ii, jj));
+    int n = map.tile.size();
+    map.tile[n - 1].setTile(map.texture, tileSize);
 }

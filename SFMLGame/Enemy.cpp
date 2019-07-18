@@ -57,13 +57,13 @@ void Enemy::checkAStar(TileMap &map, MainCharacter &mainCharacter,std::vector<Ti
             Tile enemy;
             mainCharacter.AStarColl.setPosition(mainCharacter.entitySprite.getPosition().x+31,mainCharacter.entitySprite.getPosition().y+60);
             for(auto& j:map.tile) {
-                if(mainCharacter.AStarColl.getGlobalBounds().intersects(j.spriteCollision.getGlobalBounds()) && (j.type=="floor" || j.type=="obj"|| j.type=="lever")) {
+                if(mainCharacter.AStarColl.getGlobalBounds().intersects(j.spriteCollision.getGlobalBounds())) {
                     player=j;
                     break;
                 }
             }
             for(auto& k:map.tile) {
-                if(AStarColl.getGlobalBounds().intersects(k.spriteCollision.getGlobalBounds()) && (k.type=="floor" || k.type=="obj"|| k.type=="lever")) {
+                if(AStarColl.getGlobalBounds().intersects(k.spriteCollision.getGlobalBounds())) {
                     enemy=k;
                     break;
                 }

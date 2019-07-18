@@ -36,7 +36,7 @@ void Tile::drawTile(sf::RenderWindow &window) {
 }
 
 bool Tile::checkInteract() {
-    if(type=="lever"||type=="gold_key" || type=="silver_key")
+    if(type=="lever"||type=="gold_key" || type=="silver_key"|| type=="closed_door_silver" || type=="closed_door_gold")
         return true;
     else
         return false;
