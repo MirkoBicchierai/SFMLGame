@@ -55,3 +55,12 @@ void TileMap::load(const std::string& tileSet, sf::Vector2u tileSize, std::vecto
     }
 }
 
+void TileMap::updateMapAStar() {
+    for (int k = 0; k < tile.size(); ++k) {
+        world_map[tile[k].i + tile[k].j * width]=0;
+        if(tile[k].type=="wall" || tile[k].type=="water" || tile[k].type=="closed_door_silver" || tile[k].type=="closed_door_gold"){
+            world_map[tile[k].i + tile[k].j * width]=9;
+        }
+    }
+}
+

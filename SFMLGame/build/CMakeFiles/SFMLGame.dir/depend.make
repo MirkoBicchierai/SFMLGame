@@ -284,6 +284,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../Event.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../Game.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../GameState.h
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../GameText.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../Heart.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../MainCharacter.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../MapSearchNode.h
@@ -723,6 +724,7 @@ CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../Event.h
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../Game.h
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../GameState.h
+CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../GameText.h
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../Heart.h
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../MainCharacter.h
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../MapSearchNode.h
@@ -936,6 +938,7 @@ CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../Game.cpp
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../Game.h
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../GameState.h
+CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../GameText.h
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../Heart.h
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../MainCharacter.h
 CMakeFiles/SFMLGame.dir/Game.cpp.obj: ../Menu.h
@@ -1039,6 +1042,7 @@ CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../Game.h
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../GameState.cpp
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../GameState.h
+CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../GameText.h
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../Heart.h
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../MainCharacter.h
 CMakeFiles/SFMLGame.dir/GameState.cpp.obj: ../Tile.h
@@ -1486,6 +1490,7 @@ CMakeFiles/SFMLGame.dir/Tile.cpp.obj: ../lib/SFML/include/SFML/Window/WindowHand
 CMakeFiles/SFMLGame.dir/Tile.cpp.obj: ../lib/SFML/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/SFMLGame.dir/Tile.cpp.obj: ../Tile.cpp
 CMakeFiles/SFMLGame.dir/Tile.cpp.obj: ../Tile.h
+CMakeFiles/SFMLGame.dir/Tile.cpp.obj: ../config.cpp
 
 CMakeFiles/SFMLGame.dir/TileMap.cpp.obj: ../lib/SFML/include/SFML/Audio.hpp
 CMakeFiles/SFMLGame.dir/TileMap.cpp.obj: ../lib/SFML/include/SFML/Audio/AlResource.hpp
@@ -1701,6 +1706,7 @@ CMakeFiles/SFMLGame.dir/main.cpp.obj: ../ConcreteStateMenu.h
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../Game.h
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../GameState.h
+CMakeFiles/SFMLGame.dir/main.cpp.obj: ../GameText.h
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../Heart.h
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../MainCharacter.h
 CMakeFiles/SFMLGame.dir/main.cpp.obj: ../Menu.h

@@ -285,6 +285,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
+ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameText.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Heart.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MapSearchNode.h
@@ -724,6 +725,7 @@ CMakeFiles/SFMLGame.dir/Event.cpp.obj
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
+ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameText.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Heart.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MapSearchNode.h
@@ -937,6 +939,7 @@ CMakeFiles/SFMLGame.dir/Game.cpp.obj
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.cpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
+ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameText.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Heart.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Menu.h
@@ -1040,6 +1043,7 @@ CMakeFiles/SFMLGame.dir/GameState.cpp.obj
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.cpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
+ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameText.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Heart.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Tile.h
@@ -1487,6 +1491,7 @@ CMakeFiles/SFMLGame.dir/Tile.cpp.obj
  ../lib/SFML/include/SFML/Window/WindowStyle.hpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Tile.cpp
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Tile.h
+ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
 CMakeFiles/SFMLGame.dir/TileMap.cpp.obj
  ../lib/SFML/include/SFML/Audio.hpp
  ../lib/SFML/include/SFML/Audio/AlResource.hpp
@@ -1702,6 +1707,7 @@ CMakeFiles/SFMLGame.dir/main.cpp.obj
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Game.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
+ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameText.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Heart.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
  C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Menu.h

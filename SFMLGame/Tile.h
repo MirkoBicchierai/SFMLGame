@@ -9,6 +9,7 @@ public:
     int idTile; // id of tile
     sf::Sprite spriteShow;
     sf::Sprite spriteCollision;
+
     Tile()= default;
     Tile(int id, std::string ty,int i, int j);
     void setTile(sf::Texture &txt, sf::Vector2u tileSize); //set the texture and the draw position of the tile
@@ -16,6 +17,7 @@ public:
     bool checkInteract();
 
 private:
+    float factor;
     sf::IntRect sourceRect;
     sf::IntRect collisionRect;
 };

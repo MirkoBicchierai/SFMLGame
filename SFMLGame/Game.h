@@ -10,6 +10,7 @@ class GameState;
 class Game{
 public:
     bool interact;
+    std::string typeInteract;
     int actualInteractI, actualInteractJ;
     GameText interactText;
     Game();

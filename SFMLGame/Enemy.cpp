@@ -27,14 +27,14 @@ Enemy::Enemy(float x, float y,std::string &file,int distance,int dmg) {
     AStarColl.setFillColor(sf::Color::Red);
     AStarColl.setSize(sf::Vector2f(1,1));
     AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+31);
-    moveSpeed=5;
+    moveSpeed=4;
     aggroDistance=distance;
     life = 3;
     damage=dmg;
     dieRect.left=0;
     dieRect.top=dieTopEnemy;
-    dieRect.width=64;
-    dieRect.height=64;
+    dieRect.width=dim;
+    dieRect.height=dim;
     aniAttack=false;
     swordRect.height=dim;
     swordRect.width=dim;
@@ -105,7 +105,7 @@ void Enemy::moveAStar(std::vector<Tile> &tile,MainCharacter &mainCharacter){
             }
         }
         for(auto& k:tile) {
-            if(AStarColl.getGlobalBounds().intersects(k.spriteCollision.getGlobalBounds()) && (k.type=="floor" || k.type=="obj")) {
+            if(AStarColl.getGlobalBounds().intersects(k.spriteCollision.getGlobalBounds()) && (k.type=="floor" || k.type=="obj" || k.type=="gold_key" || k.type=="silver_key")) {
                 enemy=k;
                 break;
             }

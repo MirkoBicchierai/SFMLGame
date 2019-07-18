@@ -1,5 +1,6 @@
 #include "Tile.h"
-
+#include <iostream>
+#include "config.cpp"
 Tile::Tile(int id, std::string ty,int i, int j) {
     idTile=id;
     type=std::move(ty);
@@ -8,9 +9,9 @@ Tile::Tile(int id, std::string ty,int i, int j) {
 }
 
 void Tile::setTile(sf::Texture &txt, sf::Vector2u tileSize) {
-
-    int tu = idTile % (txt.getSize().x / tileSize.x);
-    int tv = idTile / (txt.getSize().x / tileSize.x);
+    factor=(txt.getSize().x / tileSize.x);
+    int tu = idTile % (int)factor;
+    int tv = idTile / (int)factor;
     spriteShow.setPosition(i*tileSize.x, j*tileSize.y);
     sourceRect.top=tv * tileSize.y;
     sourceRect.left=tu * tileSize.x;
@@ -40,3 +41,4 @@ bool Tile::checkInteract() {
     else
         return false;
 }
+

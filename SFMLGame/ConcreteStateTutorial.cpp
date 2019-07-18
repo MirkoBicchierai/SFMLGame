@@ -79,22 +79,22 @@ void ConcreteStateTutorial::Init(MainCharacter &mainCharacter) {
     float x=0,y=0;
     std::string file;
     for (int i = 0; i < 2; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
-        file="normal";
-        enemyVec.push_back(new Enemy(x,y,file,600,1));
+         x=rand()%1200 + 1200;
+         y=rand()%1200 + 1200;
+         file="normal";
+         enemyVec.push_back(new Enemy(x,y,file,600,1));
     }
     for (int i = 0; i < 2; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
-        file="reptiles";
-        enemyVec.push_back(new Enemy(x,y,file,500,1));
+         x=rand()%1200 + 1200;
+         y=rand()%1200 + 1200;
+         file="reptiles";
+         enemyVec.push_back(new Enemy(x,y,file,500,1));
     }
     for (int i = 0; i < 2; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
-        file="skeleton";
-        enemyVec.push_back(new Enemy(x,y,file,400,1));
+         x=rand()%1200 + 1200;
+         y=rand()%1200 + 1200;
+         file="skeleton";
+         enemyVec.push_back(new Enemy(x,y,file,400,1));
     }
 
     std::string text;
@@ -113,6 +113,10 @@ void ConcreteStateTutorial::Init(MainCharacter &mainCharacter) {
     text="use X interact with the map (lever,door...)";
     tutorialTextVec.push_back(new GameText(text,mainCharacter));
     text="Press 'esc' to return to menu";
+    tutorialTextVec.push_back(new GameText(text,mainCharacter));
+    text="Remember the lever open all Gate";
+    tutorialTextVec.push_back(new GameText(text,mainCharacter));
+    text="and the key open only a relative door";
     tutorialTextVec.push_back(new GameText(text,mainCharacter));
     text="and now explore the map and complete the tutorial!!!";
     tutorialTextVec.push_back(new GameText(text,mainCharacter));
