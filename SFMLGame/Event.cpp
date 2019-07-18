@@ -131,6 +131,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
             game->dieClock.restart();
         }
     }
+    //interact with tile-map
     for(auto i:map.tile){
         if(i.checkInteract()){
             if(distanceBetweenTwoSprite(i.spriteShow,mainCharacter.getSprite())<=64){
@@ -145,7 +146,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
             game->interact=false;
         }
     }
-
+    //take coin on floor
     for (int j = 0; j < coinVec.size(); ++j) {
         if(mainCharacter.getSprite().getGlobalBounds().intersects(coinVec[j]->getSprite().getGlobalBounds())){
             mainCharacter.inventory.NumberGold+=coinVec[j]->getValue();
