@@ -241,12 +241,12 @@ void Event::mapInteraction(MainCharacter &mainCharacter, Game *game, TileMap &ma
         bool leverActivate = false;
         if(game->typeInteract == "closed_door_silver" && mainCharacter.inventory.NumberSilverKey==0)
             return;
+        if(game->typeInteract == "closed_door_gold" && mainCharacter.inventory.NumberGoldKey==0)
+            return;
         if(game->typeInteract == "closed_door_silver" && mainCharacter.inventory.NumberSilverKey>0)
             mainCharacter.inventory.NumberSilverKey--;
         if(game->typeInteract == "closed_door_gold" && mainCharacter.inventory.NumberGoldKey>0)
             mainCharacter.inventory.NumberGoldKey--;
-        if(game->typeInteract == "closed_door_gold" && mainCharacter.inventory.NumberGoldKey==0)
-            return;
         for (int j = 0; j < map.tile.size(); ++j) {
             if (game->typeInteract == "lever") {
                 if (game->actualInteractI == map.tile[j].i && game->actualInteractJ == map.tile[j].j) {
