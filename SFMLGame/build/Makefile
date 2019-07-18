@@ -580,6 +580,36 @@ Heart.cpp.s:
 	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Heart.cpp.s
 .PHONY : Heart.cpp.s
 
+Inventory.obj: Inventory.cpp.obj
+
+.PHONY : Inventory.obj
+
+# target to build an object file
+Inventory.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Inventory.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Inventory.cpp.obj
+.PHONY : Inventory.cpp.obj
+
+Inventory.i: Inventory.cpp.i
+
+.PHONY : Inventory.i
+
+# target to preprocess a source file
+Inventory.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Inventory.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Inventory.cpp.i
+.PHONY : Inventory.cpp.i
+
+Inventory.s: Inventory.cpp.s
+
+.PHONY : Inventory.s
+
+# target to generate assembly for a file
+Inventory.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Inventory.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Inventory.cpp.s
+.PHONY : Inventory.cpp.s
+
 MainCharacter.obj: MainCharacter.cpp.obj
 
 .PHONY : MainCharacter.obj
@@ -843,6 +873,9 @@ help:
 	@echo ... Heart.obj
 	@echo ... Heart.i
 	@echo ... Heart.s
+	@echo ... Inventory.obj
+	@echo ... Inventory.i
+	@echo ... Inventory.s
 	@echo ... MainCharacter.obj
 	@echo ... MainCharacter.i
 	@echo ... MainCharacter.s

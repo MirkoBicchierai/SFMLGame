@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/GameState.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameText.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/GameText.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Heart.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Heart.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Inventory.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Inventory.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MapSearchNode.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/MapSearchNode.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Menu.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Menu.cpp.obj"

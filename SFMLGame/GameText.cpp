@@ -31,7 +31,6 @@ void GameText::moveText(MainCharacter &mainCharacter) {
     drawText.setPosition(mainCharacter.getSprite().getPosition().x- (dimension/2) +64,mainCharacter.getSprite().getPosition().y-64);
 }
 
-
 void GameText::setGameText(std::string textCopy, sf::Sprite &sprite) {
     font.loadFromFile(FONT_ROOT"/Handwritingg.ttf");
     drawText.setFont(font);

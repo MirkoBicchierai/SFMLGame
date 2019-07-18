@@ -5,6 +5,7 @@
 #include "Enemy.h"
 
 MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
+
     entityTexture.loadFromFile(IMG_PLAYER_ROOT"/Normal_Player.png");
     bowTexture.loadFromFile(IMG_PLAYER_ROOT"/Bow_Player.png");
     shieldTexture.loadFromFile(IMG_PLAYER_ROOT"/Shield_Player.png");
@@ -147,17 +148,19 @@ void MainCharacter::drawPlayer(sf::RenderWindow &window,sf::Clock clockShield) {
         window.draw(textTimeShield);
     }
 
-    // draw GUI
-    arrowGUI.drawArrow(window);
-    hearth.drawHeart(window);
-    window.draw(textArrow);
-
     //draw della fireball o della freccia in caso sia partita l'animazione dal main
     if (ball.animationBall)
         ball.drawFireBall(window);
 
     if (arrowPlayer.stay)
         arrowPlayer.drawArrow(window);
+
+
+    // draw GUI
+    arrowGUI.drawArrow(window);
+    hearth.drawHeart(window);
+    window.draw(textArrow);
+    inventory.moveDrawInventory(entitySprite,window);
 }
 
 sf::IntRect MainCharacter::getsourceRect() {
@@ -347,9 +350,11 @@ void MainCharacter::resetPlayer(sf::RenderWindow &window) {
     DMGSword=1;
     die=false;
     finalDie=false;
-
     hearth.reset();
 
+    inventory.NumberGold=0;
+    inventory.NumberSilverKey=0;
+    inventory.NumberGoldKey=0;
 }
 
 int MainCharacter::dieAnimation() {

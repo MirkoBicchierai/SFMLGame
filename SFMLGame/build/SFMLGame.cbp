@@ -418,6 +418,14 @@
 			<Option target="SFMLGame"/>
 			<Option target="core"/>
 		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Inventory.cpp">
+			<Option target="SFMLGame"/>
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Inventory.h">
+			<Option target="SFMLGame"/>
+			<Option target="core"/>
+		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.cpp">
 			<Option target="SFMLGame"/>
 			<Option target="core"/>

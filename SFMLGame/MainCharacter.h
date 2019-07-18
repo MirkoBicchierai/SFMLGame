@@ -8,11 +8,12 @@
 #include "FireBall.h"
 #include "BaseStatistic.h"
 #include "Tile.h"
+#include "Inventory.h"
 
 class MainCharacter: public BaseStatistic {
 
 public:
-
+    Inventory inventory;
     sf::Sound soundArrow;
     sf::Sound soundFireBall;
     sf::Sound soundSword;
