@@ -280,6 +280,36 @@ BaseStatistic.cpp.s:
 	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/BaseStatistic.cpp.s
 .PHONY : BaseStatistic.cpp.s
 
+Coin.obj: Coin.cpp.obj
+
+.PHONY : Coin.obj
+
+# target to build an object file
+Coin.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Coin.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Coin.cpp.obj
+.PHONY : Coin.cpp.obj
+
+Coin.i: Coin.cpp.i
+
+.PHONY : Coin.i
+
+# target to preprocess a source file
+Coin.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Coin.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Coin.cpp.i
+.PHONY : Coin.cpp.i
+
+Coin.s: Coin.cpp.s
+
+.PHONY : Coin.s
+
+# target to generate assembly for a file
+Coin.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Coin.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Coin.cpp.s
+.PHONY : Coin.cpp.s
+
 ConcreteStateGame.obj: ConcreteStateGame.cpp.obj
 
 .PHONY : ConcreteStateGame.obj
@@ -843,6 +873,9 @@ help:
 	@echo ... BaseStatistic.obj
 	@echo ... BaseStatistic.i
 	@echo ... BaseStatistic.s
+	@echo ... Coin.obj
+	@echo ... Coin.i
+	@echo ... Coin.s
 	@echo ... ConcreteStateGame.obj
 	@echo ... ConcreteStateGame.i
 	@echo ... ConcreteStateGame.s

@@ -5,7 +5,7 @@
 #include "GameState.h"
 #include "TileMap.h"
 #include "Event.h"
-
+#include "Coin.h"
 class ConcreteStateGame : public GameState{
 
 public:
@@ -17,6 +17,7 @@ public:
      explicit ConcreteStateGame(Game* game);
 
 private:
+    std::vector<Coin*> coinVec;
     std::vector <Enemy*> enemyVec;
     Event loopEvent;
     TileMap map{};

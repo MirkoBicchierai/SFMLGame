@@ -4,7 +4,7 @@
 #include "config.cpp"
 #include "ConcreteStateMenu.h"
 
-void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, std::vector<Enemy*> &enemyVec) {
+void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, std::vector<Enemy*> &enemyVec, std::vector<Coin*> &coinVec) {
     //time shield end
     if (mainCharacter.shield && game->clockShield.getElapsedTime().asSeconds() >= mainCharacter.secShield) {
         mainCharacter.setNormalTexture();
@@ -95,6 +95,9 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
         if(enemyVec[i]->life<=0){
             if(enemyVec[i]->dieClock.getElapsedTime().asMilliseconds()>=45.f){
                 if(enemyVec[i]->animationDie()==dieMaxEnemy){
+                    coinVec.emplace_back(new Coin());
+                    int n=coinVec.size();
+                    coinVec[n-1]->setPosition(enemyVec[i]->entitySprite);
                     enemyVec.erase(enemyVec.begin()+i);
                 }
                 enemyVec[i]->dieClock.restart();
@@ -140,6 +143,13 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
         }
         if(game->actualInteractI==i.i && game->actualInteractJ == i.j &&distanceBetweenTwoSprite(i.spriteShow,mainCharacter.getSprite())>=64){
             game->interact=false;
+        }
+    }
+
+    for (int j = 0; j < coinVec.size(); ++j) {
+        if(mainCharacter.getSprite().getGlobalBounds().intersects(coinVec[j]->getSprite().getGlobalBounds())){
+            mainCharacter.inventory.NumberGold+=coinVec[j]->getValue();
+            coinVec.erase(coinVec.begin()+j);
         }
     }
 
@@ -198,6 +208,22 @@ void Event::inputEvent(MainCharacter &mainCharacter, Game* game,TileMap &map) {
                             map.tile.emplace_back(Tile(208,"obj",ii,jj));
                             n=map.tile.size();
                             map.tile[n-1].setTile(map.texture, tileSize);
+                        }
+                    }
+                    if(game->typeInteract=="silver_key" || game->typeInteract=="gold_key"){
+                        if(game->actualInteractI== map.tile[j].i && game->actualInteractJ == map.tile[j].j){
+                            ii=map.tile[j].i;
+                            jj= map.tile[j].j;
+                            map.tile.erase(map.tile.begin()+j);
+                            map.tile.emplace_back(Tile(1,"floor",ii,jj));
+                            n=map.tile.size();
+                            map.tile[n-1].setTile(map.texture, tileSize);
+                            game->interact=false;
+                            if(game->typeInteract=="gold_key")
+                                mainCharacter.inventory.NumberGoldKey++;
+                            else
+                                mainCharacter.inventory.NumberSilverKey++;
+                            break;
                         }
                     }
                 }

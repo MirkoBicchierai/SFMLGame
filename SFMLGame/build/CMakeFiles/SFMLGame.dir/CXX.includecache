@@ -860,6 +860,10 @@ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.h
 SFML/Graphics.hpp
 -
 
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Coin.h
+SFML/Graphics.hpp
+-
+
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
 SFML/Audio.hpp
 -
@@ -867,44 +871,6 @@ GameState.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
 Menu.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Menu.h
-
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateTutorial.cpp
-SFML/Graphics.hpp
--
-SFML/Audio.hpp
--
-ConcreteStateTutorial.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateTutorial.h
-ConcreteStateMenu.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
-GameState.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
-Enemy.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.h
-config.cpp
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
-fstream
--
-regex
--
-
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateTutorial.h
-SFML/Graphics.hpp
--
-vector
--
-ConcreteStateMenu.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
-GameState.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameState.h
-TileMap.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.h
-Enemy.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.h
-Event.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Event.h
-GameText.h
-C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/GameText.h
 
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.h
 iostream
@@ -922,6 +888,16 @@ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.h
 Heart.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Heart.h
 
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Event.cpp
+utility
+-
+Event.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Event.h
+config.cpp
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/config.cpp
+ConcreteStateMenu.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.h
+
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Event.h
 MainCharacter.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
@@ -933,6 +909,8 @@ vector
 -
 Enemy.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.h
+Coin.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Coin.h
 
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/FireBall.h
 SFML/Graphics.hpp
@@ -966,6 +944,10 @@ C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Heart.h
 SFML/Graphics.hpp
 -
 
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Inventory.h
+SFML/Graphics.hpp
+-
+
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.h
 SFML/Graphics.hpp
 -
@@ -981,6 +963,8 @@ BaseStatistic.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.h
 Tile.h
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Tile.h
+Inventory.h
+C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Inventory.h
 
 C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MapSearchNode.h
 stlastar.h

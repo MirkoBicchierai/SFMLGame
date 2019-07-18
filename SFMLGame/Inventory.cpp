@@ -35,11 +35,11 @@ void Inventory::moveDrawInventory(sf::Sprite player,sf::RenderWindow &window) {
     coinText.setString("x"+std::to_string(NumberGold));
 
     coinSprite.setPosition(player.getPosition().x+window.getSize().x/2,player.getPosition().y-192);
-    goldKeySprite.setPosition(player.getPosition().x+window.getSize().x/2,player.getPosition().y-192 +32 +5);
-    silverKeySprite.setPosition(player.getPosition().x+window.getSize().x/2,player.getPosition().y -192 +32 +32 +5 +5);
+    goldKeySprite.setPosition(player.getPosition().x+window.getSize().x/2,player.getPosition().y-192 +32 +32 +5 +5);
+    silverKeySprite.setPosition(player.getPosition().x+window.getSize().x/2,player.getPosition().y -192 +32 +5);
 
-    goldKeyText.setPosition(goldKeySprite.getPosition().x-32,goldKeySprite.getPosition().y+5);
-    silverKeyText.setPosition(silverKeySprite.getPosition().x-32,silverKeySprite.getPosition().y+5);
+    goldKeyText.setPosition(goldKeySprite.getPosition().x-32,player.getPosition().y -192 +32 +5+5);
+    silverKeyText.setPosition(silverKeySprite.getPosition().x-32,player.getPosition().y-192 +32 +32 +5 +5 +5);
     coinText.setPosition(coinSprite.getPosition().x-32,coinSprite.getPosition().y+5);
 
     window.draw(coinSprite);

@@ -43,7 +43,7 @@ void ConcreteStateGame::draw(MainCharacter &mainCharacter){
 }
 
 void ConcreteStateGame::update(MainCharacter &mainCharacter){
-    loopEvent.updateEvent(mainCharacter,game,map,enemyVec);
+    loopEvent.updateEvent(mainCharacter,game,map,enemyVec,coinVec);
     loopEvent.AStarEnemy(game,map,mainCharacter,enemyVec);
 }
 void ConcreteStateGame::handleInput(MainCharacter &mainCharacter){

@@ -43,6 +43,10 @@ void ConcreteStateTutorial::draw(MainCharacter &mainCharacter){
     }
     mainCharacter.drawPlayer(game->window,game->clockShield);
 
+    for(auto i:coinVec){
+        i->drawCoin(game->window);
+    }
+
     for(int i=0; i<tutorialTextVec.size();++i){
         tutorialTextVec[i]->drawGameText(game->window);
         if(textClock.getElapsedTime().asSeconds()>=6){
@@ -56,7 +60,7 @@ void ConcreteStateTutorial::draw(MainCharacter &mainCharacter){
 }
 
 void ConcreteStateTutorial::update(MainCharacter &mainCharacter){
-    loopEvent.updateEvent(mainCharacter,game,map,enemyVec);
+    loopEvent.updateEvent(mainCharacter,game,map,enemyVec,coinVec);
     loopEvent.AStarEnemy(game,map,mainCharacter,enemyVec);
     for(auto i:tutorialTextVec){
         i->moveText(mainCharacter);

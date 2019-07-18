@@ -9,6 +9,7 @@
 #include "Enemy.h"
 #include "Event.h"
 #include "GameText.h"
+#include "Coin.h"
 class ConcreteStateTutorial: public GameState {
 
 public:
@@ -20,6 +21,7 @@ public:
 
 private:
     Event loopEvent;
+    std::vector<Coin*> coinVec;
     std::vector <Enemy*> enemyVec;  //vector dei nemici presenti nel Tutorial
     TileMap map{};  // object map connected to a object Tile for draw the map
     std::vector <int> vec; //vector dove vengono letti gli ID da file della mappa e poi passati all'oggetto map
