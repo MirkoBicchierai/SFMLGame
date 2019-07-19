@@ -344,8 +344,8 @@ void Event::mapInteraction(MainCharacter &mainCharacter, Game *game, TileMap &ma
                 n = map.tile.size();
                 map.tile[n - 1].setTile(map.texture, tileSize);
             }
-            map.updateMapAStar();
         }
+    map.updateMapAStar();
 }
 
 void Event::deleteCreateNewTile(int iii, int jjj, TileMap &map, int iter,int idTile) {
