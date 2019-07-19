@@ -299,12 +299,6 @@ int Enemy::animationIdle() {
     return swordRect.left;
 }
 
-void Enemy::soundStepControl() {
-    if(soundStepClock.getElapsedTime().asMilliseconds()>=180.f){
-        soundStepClock.restart();
-    }
-}
-
 void Enemy::takeDamage(int dmg) {
     life=life-dmg;
     lifeHearth.damageControl(life);

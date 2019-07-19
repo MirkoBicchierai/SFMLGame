@@ -43,10 +43,6 @@ private:
     void moveEnemy(char direction,MainCharacter &mainCharacter);
     std::vector<structList> path;
     sf::IntRect sourceRect;
-    void soundStepControl(); // control timing for play the step track
-    sf::Clock soundStepClock;
-    sf::Sound soundStep;
-    sf::SoundBuffer bufferStep;
 };
 
 #endif

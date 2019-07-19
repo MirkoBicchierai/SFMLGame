@@ -60,12 +60,10 @@ public:
 
 private:
 
-    sf::Clock soundStepClock;
-    sf::Sound soundStep;
     sf::SoundBuffer bufferSword;
     sf::SoundBuffer bufferArrow;
     sf::SoundBuffer bufferFireBall;
-    sf::SoundBuffer bufferStep;
+
     sf::Font font;
     sf::Text textTimeShield;
 
@@ -85,8 +83,6 @@ private:
 
     void moveGUI(float x, float y,sf::RenderWindow &window); // move gui of player
     bool controlMove(std::vector<Tile> &tile,char direction); // control if the player can move or not
-    void soundStepControl(); // control timing for play the step track
-
 
 };
 

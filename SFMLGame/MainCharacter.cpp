@@ -396,10 +396,3 @@ void MainCharacter::takeDamage(int damage) {
     life=life-damage;
     hearth.damageControl(life);
 }
-
-void MainCharacter::soundStepControl() {
-    if(soundStepClock.getElapsedTime().asMilliseconds()>=180.f){
-        soundStep.play();
-        soundStepClock.restart();
-    }
-}
