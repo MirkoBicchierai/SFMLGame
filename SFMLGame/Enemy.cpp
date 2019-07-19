@@ -19,7 +19,7 @@ Enemy::Enemy(float x, float y,std::string &file,int distance,int dmg) {
     type=file;
     entitySprite.setTexture(entityTexture);
     sourceRect.left=0;
-    sourceRect.top=0;
+    sourceRect.top=topMoveUpEnemy;
     sourceRect.width=dim;
     sourceRect.height=dim;
     entitySprite.setTextureRect(sourceRect);
@@ -246,7 +246,6 @@ void Enemy::attackPlayer(MainCharacter &mainCharacter){
         swordRec.setSize(sf::Vector2f(10,48));
         swordRec.setPosition(swordRec.getPosition().x+64,swordRec.getPosition().y+8);
     }
-
     if(!mainCharacter.shield)
         if(mainCharacter.entitySprite.getGlobalBounds().intersects(swordRec.getGlobalBounds()))
             mainCharacter.takeDamage(damage);

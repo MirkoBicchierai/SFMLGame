@@ -482,6 +482,15 @@
 			<Option target="SFMLGame"/>
 			<Option target="core"/>
 		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/ArrowTest.cpp">
+			<Option target="GoogleTests"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/EnemyTest.cpp">
+			<Option target="GoogleTests"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/FireBallTest.cpp">
+			<Option target="GoogleTests"/>
+		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/GameCharacterTest.cpp">
 			<Option target="GoogleTests"/>
 		</Unit>
