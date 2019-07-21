@@ -1,17 +1,17 @@
+#include "ConcreteStateGame5.h"
+
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "ConcreteStateGame.h"
 #include "ConcreteStateMenu.h"
 #include "config.cpp"
 #include <fstream>
 #include <regex>
-#include "ConcreteStateGame2.h"
 
-ConcreteStateGame::ConcreteStateGame(Game* game){
+ConcreteStateGame5::ConcreteStateGame5(Game* game){
     this->game = game;
 }
 
-void ConcreteStateGame::loadFromFile(const std::string &path) {
+void ConcreteStateGame5::loadFromFile(const std::string &path) {
     std::string s;
     std::ifstream infile(path);
     int c=0;
@@ -32,7 +32,7 @@ void ConcreteStateGame::loadFromFile(const std::string &path) {
     map.load(MAP_ROOT"/tile-set.png", sf::Vector2u(64, 64), vec, c, r,game->window);
 }
 
-void ConcreteStateGame::draw(MainCharacter &mainCharacter){
+void ConcreteStateGame5::draw(MainCharacter &mainCharacter){
 
     for(auto i:map.tile){
         i.drawTile(game->window);
@@ -50,26 +50,26 @@ void ConcreteStateGame::draw(MainCharacter &mainCharacter){
         game->interactText.drawGameText(game->window);
 }
 
-void ConcreteStateGame::update(MainCharacter &mainCharacter){
+void ConcreteStateGame5::update(MainCharacter &mainCharacter){
     loopEvent.updateEvent(mainCharacter,game,map,enemyVec,coinVec);
     loopEvent.AStarEnemy(game,map,mainCharacter,enemyVec);
 
     for (int j = 0; j < map.tile.size() ; ++j) {
         if(mainCharacter.entitySprite.getGlobalBounds().intersects(map.tile[j].spriteShow.getGlobalBounds()) && map.tile[j].end ){
             game->init=false;
-            game->pushState(new ConcreteStateGame2(game));
+            loopEvent.backToMenu(game);
             break;
         }
     }
 
 }
-void ConcreteStateGame::handleInput(MainCharacter &mainCharacter){
+void ConcreteStateGame5::handleInput(MainCharacter &mainCharacter){
     while (game->window.pollEvent(game->event)){
         loopEvent.inputEvent(mainCharacter,game,map);
     }
 }
 
-void ConcreteStateGame::Init(MainCharacter &mainCharacter) {
+void ConcreteStateGame5::Init(MainCharacter &mainCharacter) {
     loadFromFile(MAP_ROOT_GAME"/level1.txt");
     int x,y;
     std::string file;
@@ -101,3 +101,4 @@ void ConcreteStateGame::Init(MainCharacter &mainCharacter) {
     game->window.setView(mainCharacter.camera);
     game->init=true;
 }
+
