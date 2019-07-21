@@ -127,6 +127,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
         if(game->dieClock.getElapsedTime().asMilliseconds()>=40.f && !mainCharacter.finalDie){
             if(mainCharacter.dieAnimation()==maxLeftDiePlayer){
                 mainCharacter.finalDie=true;
+                mainCharacter.resetInventory();
             }
             game->dieClock.restart();
         }
@@ -163,7 +164,6 @@ void Event::inputEvent(MainCharacter &mainCharacter, Game* game,TileMap &map) {
         backToMenu(game);
         mainCharacter.die=false;
         mainCharacter.finalDie=false;
-        mainCharacter.resetPlayer(game->window);
     }
     //player movement
     if(!mainCharacter.die){

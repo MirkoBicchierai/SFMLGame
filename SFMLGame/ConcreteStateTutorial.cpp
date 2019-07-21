@@ -69,7 +69,12 @@ void ConcreteStateTutorial::update(MainCharacter &mainCharacter){
         i->checkString();
         break;
     }
-
+    for (int j = 0; j < map.tile.size() ; ++j) {
+        if(mainCharacter.entitySprite.getGlobalBounds().intersects(map.tile[j].spriteShow.getGlobalBounds()) && map.tile[j].end ){
+            loopEvent.backToMenu(game);
+            break;
+        }
+    }
 }
 
 void ConcreteStateTutorial::handleInput(MainCharacter &mainCharacter){
@@ -124,6 +129,14 @@ void ConcreteStateTutorial::Init(MainCharacter &mainCharacter) {
     tutorialTextVec.push_back(new GameText(text,mainCharacter));
     text="and now explore the map and complete the tutorial!!!";
     tutorialTextVec.push_back(new GameText(text,mainCharacter));
+
+    for (int j = 0; j <map.tile.size() ; ++j) {
+        if((map.tile[j].i==26 || map.tile[j].i==27) && map.tile[j].j==0)
+            map.tile[j].setEnd();
+        if(map.tile[j].i==26 && map.tile[j].j==5)
+            mainCharacter.resetPlayer(game->window,map.tile[j].spriteShow);
+    }
+    game->window.setView(mainCharacter.camera);
     game->init=true;
 }
 

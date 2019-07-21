@@ -6,6 +6,7 @@ Tile::Tile(int id, std::string ty,int i, int j) {
     type=std::move(ty);
     this->i=i;
     this->j=j;
+    end=false;
 }
 
 void Tile::setTile(sf::Texture &txt, sf::Vector2u tileSize) {
@@ -40,5 +41,9 @@ bool Tile::checkInteract() {
         return true;
     else
         return false;
+}
+
+void Tile::setEnd() {
+    end =true;
 }
 

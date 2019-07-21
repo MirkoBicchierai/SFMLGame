@@ -30,10 +30,10 @@ void Heart::moveHeart(float x,float y){
     hearthSprite3.move(x,y);
 }
 
-void Heart::setCenter(sf::RenderWindow &window) {
-    hearthSprite1.setPosition(window.getSize().x-35,5);
-    hearthSprite2.setPosition(window.getSize().x-35-32-5,5);
-    hearthSprite3.setPosition(window.getSize().x-35-(32*2)-(5*2),5);
+void Heart::setCenter(sf::RenderWindow &window,sf::View camera) {
+    hearthSprite1.setPosition(camera.getCenter().x + window.getSize().x / 2.f-35,5);
+    hearthSprite2.setPosition(camera.getCenter().x + window.getSize().x / 2.f-35-32-5,5);
+    hearthSprite3.setPosition(camera.getCenter().x + window.getSize().x / 2.f-35-(32*2)-(5*2),5);
 }
 
 void Heart::damageControl(int life) {

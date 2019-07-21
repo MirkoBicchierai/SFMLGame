@@ -321,14 +321,14 @@ sf::Sprite MainCharacter::getSprite() {
     return entitySprite;
 }
 
-void MainCharacter::resetPlayer(sf::RenderWindow &window) {
+void MainCharacter::resetPlayer(sf::RenderWindow &window,sf::Sprite tile) {
     moveSpeed=6;
     arrow = 1;
 
     sourceRect.top = upNormal;
     sourceRect.left = leftNormal;
     entitySprite.setTextureRect(sourceRect);
-    entitySprite.setPosition(((window.getSize().x)/2.f)-32,((window.getSize().y)/2.f)-32);
+    entitySprite.setPosition(tile.getPosition());
     AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+31);
     camera.setCenter(entitySprite.getPosition().x+32,entitySprite.getPosition().y+32);
 
@@ -344,17 +344,13 @@ void MainCharacter::resetPlayer(sf::RenderWindow &window) {
     textArrow.setPosition((camera.getCenter().x + window.getSize().x / 2.f) - 56,camera.getCenter().y - (window.getSize().y / 2.f) + 45);
     textArrow.setString("x " + std::to_string(arrow));
     arrowGUI.setArrowGUI(camera.getCenter().x + window.getSize().x / 2.f,camera.getCenter().y - (window.getSize().y / 2.f) + 40 + 38, 180.f);
-    hearth.setCenter(window);
+    hearth.setCenter(window,camera);
 
     life = 3;
     DMGSword=1;
     die=false;
     finalDie=false;
     hearth.reset();
-
-    inventory.NumberGold=0;
-    inventory.NumberSilverKey=0;
-    inventory.NumberGoldKey=0;
 }
 
 int MainCharacter::dieAnimation() {
@@ -395,4 +391,10 @@ void MainCharacter::damageSword(std::vector<Enemy*> &enemyVec) {
 void MainCharacter::takeDamage(int damage) {
     life=life-damage;
     hearth.damageControl(life);
+}
+
+void MainCharacter::resetInventory() {
+    inventory.NumberGold=0;
+    inventory.NumberSilverKey=0;
+    inventory.NumberGoldKey=0;
 }

@@ -43,8 +43,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.14.3/CMakeSystem.cmake"
   "../googleTest/CMakeLists.txt"
   "../googleTest/lib/googletest/CMakeLists.txt"
-  "../googleTest/lib/googletest/cmake/gtest.pc.in"
-  "../googleTest/lib/googletest/cmake/gtest_main.pc.in"
   "../googleTest/lib/googletest/cmake/internal_utils.cmake"
   "../lib/SFML/lib/cmake/SFML/SFMLConfig.cmake"
   "../lib/SFML/lib/cmake/SFML/SFMLConfigDependencies.cmake"

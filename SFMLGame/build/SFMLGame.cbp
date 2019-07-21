@@ -65,16 +65,6 @@
 					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="list_install_components">
-				<Option working_dir="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="core">
 				<Option output="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/libcore.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build"/>
@@ -123,26 +113,6 @@
 					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="install/local">
-				<Option working_dir="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install">
-				<Option working_dir="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build"/>
 				<Option type="4"/>
@@ -158,16 +128,6 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install/strip">
-				<Option working_dir="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 install/strip"/>
 					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/Makefile&quot;  VERBOSE=1 clean"/>
@@ -494,6 +454,9 @@
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/GameCharacterTest.cpp">
 			<Option target="GoogleTests"/>
 		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/ItemTest.cpp">
+			<Option target="GoogleTests"/>
+		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/lib/googletest/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
@@ -537,12 +500,6 @@
 		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/lib/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\googleTest\lib\googletest\"/>
-		</Unit>
-		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/lib/googletest/cmake/gtest.pc.in">
-			<Option virtualFolder="CMake Files\googleTest\lib\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/lib/googletest/cmake/gtest_main.pc.in">
-			<Option virtualFolder="CMake Files\googleTest\lib\googletest\cmake\"/>
 		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/googleTest/lib/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\googleTest\lib\googletest\cmake\"/>

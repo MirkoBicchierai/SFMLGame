@@ -107,6 +107,23 @@ CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../config.cpp
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../fsa.h
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../stlastar.h
 
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio.hpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/AlResource.hpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/Export.hpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/InputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/Listener.hpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/Music.hpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/OutputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/Sound.hpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundBuffer.hpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundBufferRecorder.hpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundFileFactory.hpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundFileFactory.inl
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundFileReader.hpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundFileWriter.hpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundRecorder.hpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundSource.hpp
+CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundStream.hpp
 CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Config.hpp
 CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Graphics.hpp
 CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj: ../lib/SFML/include/SFML/Graphics/BlendMode.hpp

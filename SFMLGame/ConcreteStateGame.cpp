@@ -40,11 +40,17 @@ void ConcreteStateGame::draw(MainCharacter &mainCharacter){
         i->drawEnemy(game->window);
     }
     mainCharacter.drawPlayer(game->window,game->clockShield);
+
+    if(game->interact)
+        game->interactText.drawGameText(game->window);
 }
 
 void ConcreteStateGame::update(MainCharacter &mainCharacter){
     loopEvent.updateEvent(mainCharacter,game,map,enemyVec,coinVec);
     loopEvent.AStarEnemy(game,map,mainCharacter,enemyVec);
+
+
+
 }
 void ConcreteStateGame::handleInput(MainCharacter &mainCharacter){
     while (game->window.pollEvent(game->event)){
@@ -54,5 +60,14 @@ void ConcreteStateGame::handleInput(MainCharacter &mainCharacter){
 
 void ConcreteStateGame::Init(MainCharacter &mainCharacter) {
     loadFromFile(MAP_ROOT_GAME"/level1.txt");
+
+    for (int j = 0; j <map.tile.size() ; ++j) {
+        if((map.tile[j].i==26 || map.tile[j].i==27) && map.tile[j].j==0)
+            map.tile[j].setEnd();
+        if(map.tile[j].i==26 && map.tile[j].j==5)
+            mainCharacter.resetPlayer(game->window,map.tile[j].spriteShow);
+    }
+    game->window.setView(mainCharacter.camera);
+
     game->init=true;
 }

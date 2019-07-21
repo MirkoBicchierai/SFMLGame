@@ -51,13 +51,13 @@ public:
     void setTextureShield(); //change texture to use shield
     void setNormalTexture(); //reset texture
     void reset(int pos); // reset the player position
-    void resetPlayer(sf::RenderWindow &window); //reset the player state
+    void resetPlayer(sf::RenderWindow &window,sf::Sprite tile); //reset the player state
     void damageSword(std::vector<Enemy*> &enemyVec);
     int dieAnimation(); //animation die
     sf::IntRect getsourceRect();
     sf::Sprite getSprite();
     void takeDamage(int damage);
-
+    void resetInventory();
 private:
 
     sf::SoundBuffer bufferSword;
