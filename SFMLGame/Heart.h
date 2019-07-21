@@ -8,7 +8,7 @@ public:
     Heart();
     void drawHeart(sf::RenderWindow &window);
     void moveHeart(float x,float y); //move hearth of the gui
-    void setCenter(sf::RenderWindow &window,sf::View camera); //reset position
+    void setCenter(sf::RenderWindow &window,sf::Sprite player); //reset position
     void damageControl(int life);
     void reset();
     void setHearthEnemy(sf::Vector2f enemy);

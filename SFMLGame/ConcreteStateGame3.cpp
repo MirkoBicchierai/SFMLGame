@@ -70,7 +70,7 @@ void ConcreteStateGame3::handleInput(MainCharacter &mainCharacter){
 }
 
 void ConcreteStateGame3::Init(MainCharacter &mainCharacter) {
-    loadFromFile(MAP_ROOT_GAME"/level2.txt");
+    loadFromFile(MAP_ROOT_GAME"/level3.txt");
     int x,y;
     std::string file;
     for (int i = 0; i < 3; ++i) {
@@ -93,9 +93,9 @@ void ConcreteStateGame3::Init(MainCharacter &mainCharacter) {
     }
 
     for (int j = 0; j <map.tile.size() ; ++j) {
-        if((map.tile[j].i==8 || map.tile[j].i==9) && map.tile[j].j==1)
+        if((map.tile[j].i==0) && (map.tile[j].j==16 || map.tile[j].j==17))
             map.tile[j].setEnd();
-        if(map.tile[j].i==5 && map.tile[j].j==5)
+        if(map.tile[j].i==23 && map.tile[j].j==42)
             mainCharacter.resetPlayer(game->window,map.tile[j].spriteShow);
     }
     game->window.setView(mainCharacter.camera);

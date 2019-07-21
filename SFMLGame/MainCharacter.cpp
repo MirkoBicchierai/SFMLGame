@@ -344,7 +344,7 @@ void MainCharacter::resetPlayer(sf::RenderWindow &window,sf::Sprite tile) {
     textArrow.setPosition((camera.getCenter().x + window.getSize().x / 2.f) - 56,camera.getCenter().y - (window.getSize().y / 2.f) + 45);
     textArrow.setString("x " + std::to_string(arrow));
     arrowGUI.setArrowGUI(camera.getCenter().x + window.getSize().x / 2.f,camera.getCenter().y - (window.getSize().y / 2.f) + 40 + 38, 180.f);
-    hearth.setCenter(window,camera);
+    hearth.setCenter(window,entitySprite);
 
     life = 3;
     DMGSword=1;
@@ -398,3 +398,4 @@ void MainCharacter::resetInventory() {
     inventory.NumberSilverKey=0;
     inventory.NumberGoldKey=0;
 }
+

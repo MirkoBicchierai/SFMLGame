@@ -1,6 +1,6 @@
 #include "SFML/Graphics.hpp"
 #include "ConcreteStateMenu.h"
-#include "ConcreteStateGame.h"
+#include "ConcreteStateGame3.h"
 #include "ConcreteStateTutorial.h"
 
 ConcreteStateMenu::ConcreteStateMenu(Game* game){
@@ -42,7 +42,7 @@ void ConcreteStateMenu::draw(MainCharacter &mainCharacter){
 
 void ConcreteStateMenu::startGame(MainCharacter &mainCharacter){ // switch state to Game
     game->init=false;
-    game->pushState(new ConcreteStateGame(game));
+    game->pushState(new ConcreteStateGame3(game));
 }
 
 void ConcreteStateMenu::startTutorial(MainCharacter &mainCharacter) { // switch state to tutorial

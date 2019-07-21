@@ -1,6 +1,7 @@
 #include "Heart.h"
 #include <SFML/Graphics.hpp>
 #include "config.cpp"
+#include <iostream>
 
 Heart::Heart() {
     hearthTexture.loadFromFile(IMG_ROOT"/GUI/Heart.png");
@@ -30,10 +31,10 @@ void Heart::moveHeart(float x,float y){
     hearthSprite3.move(x,y);
 }
 
-void Heart::setCenter(sf::RenderWindow &window,sf::View camera) {
-    hearthSprite1.setPosition(camera.getCenter().x + window.getSize().x / 2.f-35,5);
-    hearthSprite2.setPosition(camera.getCenter().x + window.getSize().x / 2.f-35-32-5,5);
-    hearthSprite3.setPosition(camera.getCenter().x + window.getSize().x / 2.f-35-(32*2)-(5*2),5);
+void Heart::setCenter(sf::RenderWindow &window,sf::Sprite player) {
+    hearthSprite1.setPosition(player.getPosition().x + window.getSize().x / 2.f-35 +32,5 +player.getPosition().y - window.getSize().y / 2.f +32);
+    hearthSprite2.setPosition(player.getPosition().x + window.getSize().x / 2.f-35-32-5 +32,5+player.getPosition().y - window.getSize().y / 2.f +32);
+    hearthSprite3.setPosition(player.getPosition().x + window.getSize().x / 2.f-35-(32*2)-(5*2) +32,5+player.getPosition().y - window.getSize().y / 2.f +32);
 }
 
 void Heart::damageControl(int life) {
