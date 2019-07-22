@@ -277,6 +277,8 @@ void FinalBoss::doDamagePlayer(MainCharacter &mainCharacter) {
         sword.setPosition(entitySprite.getPosition().x+192,entitySprite.getPosition().y+64);
     if(swordRect.top==topSwordUpBoss)
         sword.setPosition(entitySprite.getPosition().x+64,entitySprite.getPosition().y-64);
-    if(sword.getGlobalBounds().intersects(mainCharacter.entitySprite.getGlobalBounds()))
-        mainCharacter.takeDamage(damage);
+    if(sword.getGlobalBounds().intersects(mainCharacter.entitySprite.getGlobalBounds())){
+        if(!mainCharacter.shield)
+            mainCharacter.takeDamage(damage);
+    }
 }
