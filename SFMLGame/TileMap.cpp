@@ -25,8 +25,6 @@ void TileMap::load(const std::string& tileSet, sf::Vector2u tileSize, std::vecto
                 type = "wall";
             if(top==topFloor)
                 type="floor";
-            if( (top>=topChestMin && top<=topChestMax && left>=leftChestMin) || (top==topSingleChest && left==leftSingleChest))
-                type="chest";
             if((top==topLeverSingle && left==leftLeverSingle) || (top==topLever && (left>=leftMinLever && left<=leftMaxLever)))
                 type="lever";
             if(top>=topMinDoorClosed_silver && top<=topMaxDoorClosed_silver && left>=leftMinDoorClosed_silver && left<=leftMaxDoorClosed_silver)

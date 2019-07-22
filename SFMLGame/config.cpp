@@ -109,12 +109,6 @@ enum tileSetCollision{
 
     topFloor=0,
 
-    topChestMin=64*18,
-    topChestMax=64*19,
-    leftChestMin=64*5,
-    topSingleChest=19*64,
-    leftSingleChest=64,
-
     topLeverSingle=20*64,
     leftLeverSingle=7*64,
 
