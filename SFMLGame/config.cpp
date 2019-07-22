@@ -148,6 +148,25 @@ enum tileSetCollision{
 
 };
 
+enum Boss{
+    maxLeftAttack=256*20,
+    maxLeftMove=256*11,
+
+    spawnBossX=19*64,
+    spawnBossY=10*64,
+    dimBos=256,
+
+    topBossDown=256*13,
+    topBossUp=256*10,
+    topBossLeft=256*16,
+    topBossRight=256*9,
+
+    topSwordUpBoss=256*2,
+    topSwordDownBoss=256*5,
+    topSwordLeftBoss=256*8,
+    topSwordRightBoss=256*1,
+};
+
 static float distanceBetweenTwoSprite(sf::Sprite sprite1, sf::Sprite sprite2){
     float x2,x1,y2,y1,quadX,quadY;
     x2=sprite1.getPosition().x;

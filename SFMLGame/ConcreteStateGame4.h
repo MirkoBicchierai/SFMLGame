@@ -6,7 +6,7 @@
 #include "TileMap.h"
 #include "Event.h"
 #include "Coin.h"
-
+#include "FinalBoss.h"
 class ConcreteStateGame4 : public GameState{
 
 public:
@@ -18,6 +18,10 @@ public:
     explicit ConcreteStateGame4(Game* game);
 
 private:
+    sf::Clock bossAStar;
+    sf::Clock bossAStarMove;
+    sf::Clock swordAttackBoss;
+    FinalBoss boss;
     std::vector<Coin*> coinVec;
     std::vector <Enemy*> enemyVec;
     Event loopEvent;

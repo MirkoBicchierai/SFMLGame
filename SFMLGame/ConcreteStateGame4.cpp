@@ -43,6 +43,8 @@ void ConcreteStateGame4::draw(MainCharacter &mainCharacter){
         i->drawCoin(game->window);
     }
 
+    boss.drawBoss(game->window);
+
     mainCharacter.drawPlayer(game->window,game->clockShield);
 
     if(game->interact)
@@ -61,6 +63,24 @@ void ConcreteStateGame4::update(MainCharacter &mainCharacter){
         }
     }
 
+    if(bossAStar.getElapsedTime().asMilliseconds()>=500.f) {
+        boss.checkAStarBoss(map, mainCharacter, map.tile);
+        bossAStar.restart();
+    }
+
+    if(bossAStarMove.getElapsedTime().asMilliseconds()>=18.f) {
+        boss.moveAStarBoss(map.tile,mainCharacter);
+        bossAStarMove.restart();
+    }
+    if(boss.aniAttack) {
+        if(swordAttackBoss.getElapsedTime().asMilliseconds()>=40.f){
+            if(boss.animationAttackBoss()==maxLeftAttack){
+                boss.soundAttack.play();
+                boss.aniAttack=false;
+            }
+            swordAttackBoss.restart();
+        }
+    }
 }
 void ConcreteStateGame4::handleInput(MainCharacter &mainCharacter){
     while (game->window.pollEvent(game->event)){

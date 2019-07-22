@@ -23,6 +23,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj"
   "CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj"
   "CMakeFiles/SFMLGame.dir/ConcreteStateGame4.cpp.obj"
+  "CMakeFiles/SFMLGame.dir/FinalBoss.cpp.obj"
   "SFMLGame.pdb"
   "SFMLGame.exe"
   "SFMLGame.exe.manifest"

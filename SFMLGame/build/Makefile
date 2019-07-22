@@ -504,6 +504,36 @@ Event.cpp.s:
 	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Event.cpp.s
 .PHONY : Event.cpp.s
 
+FinalBoss.obj: FinalBoss.cpp.obj
+
+.PHONY : FinalBoss.obj
+
+# target to build an object file
+FinalBoss.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/FinalBoss.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/FinalBoss.cpp.obj
+.PHONY : FinalBoss.cpp.obj
+
+FinalBoss.i: FinalBoss.cpp.i
+
+.PHONY : FinalBoss.i
+
+# target to preprocess a source file
+FinalBoss.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/FinalBoss.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/FinalBoss.cpp.i
+.PHONY : FinalBoss.cpp.i
+
+FinalBoss.s: FinalBoss.cpp.s
+
+.PHONY : FinalBoss.s
+
+# target to generate assembly for a file
+FinalBoss.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/FinalBoss.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/FinalBoss.cpp.s
+.PHONY : FinalBoss.cpp.s
+
 FireBall.obj: FireBall.cpp.obj
 
 .PHONY : FireBall.obj
@@ -940,6 +970,9 @@ help:
 	@echo ... Event.obj
 	@echo ... Event.i
 	@echo ... Event.s
+	@echo ... FinalBoss.obj
+	@echo ... FinalBoss.i
+	@echo ... FinalBoss.s
 	@echo ... FireBall.obj
 	@echo ... FireBall.i
 	@echo ... FireBall.s

@@ -24,7 +24,6 @@ Enemy::Enemy(float x, float y,std::string &file,int distance,int dmg) {
     sourceRect.height=dim;
     entitySprite.setTextureRect(sourceRect);
     entitySprite.setPosition(x,y);
-    AStarColl.setFillColor(sf::Color::Red);
     AStarColl.setSize(sf::Vector2f(1,1));
     AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+31);
     moveSpeed=4;

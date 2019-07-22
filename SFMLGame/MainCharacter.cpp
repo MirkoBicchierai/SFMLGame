@@ -88,7 +88,6 @@ MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
     textArrow.setString("x " + std::to_string(arrow));
     arrowGUI.setArrowGUI(camera.getCenter().x + window.getSize().x / 2.f,camera.getCenter().y - (window.getSize().y / 2.f) + 40 + 38, 180.f);
 
-    AStarColl.setFillColor(sf::Color::Red);
     AStarColl.setSize(sf::Vector2f(1,1));
     AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+31);
     life = 3;

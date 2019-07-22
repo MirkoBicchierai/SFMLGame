@@ -19,6 +19,7 @@ public:
     sf::Sound soundAttack;
     sf::Clock dieClock;
     sf::Clock idleClock;
+    sf::Clock AttackClock;
     bool aniAttack;
     bool idle;
     int damage;
