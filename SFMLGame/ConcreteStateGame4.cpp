@@ -78,6 +78,7 @@ void ConcreteStateGame4::update(MainCharacter &mainCharacter){
             if(boss.animationAttackBoss()==maxLeftAttack){
                 boss.soundAttack.play();
                 boss.aniAttack=false;
+                boss.doDamagePlayer(mainCharacter);
             }
             swordAttackBoss.restart();
         }

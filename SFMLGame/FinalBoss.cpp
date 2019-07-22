@@ -145,7 +145,7 @@ void FinalBoss::checkAStarBoss(TileMap &map, MainCharacter &mainCharacter, std::
 }
 
 void FinalBoss::moveAStarBoss(std::vector<Tile> &tile, MainCharacter &mainCharacter) {
-    if(distanceBetweenTwoSprite(mainCharacter.getSprite(),entitySprite)<80){
+    if(distanceBetweenTwoSprite(mainCharacter.getSprite(),entitySprite)<92){
         aniAttack=true;
         return;
     }
@@ -190,7 +190,7 @@ void FinalBoss::moveBoss(char direction, MainCharacter &mainCharacter) {
     test.setPosition(AStarColl.getPosition());
     test.setTextureRect(sf::IntRect(AStarColl.getSize().x,AStarColl.getSize().y,0,0));
 
-    if(distanceBetweenTwoSprite(mainCharacter.getSprite(),test)>80){
+    if(distanceBetweenTwoSprite(mainCharacter.getSprite(),test)>92){
         if (sourceRect.left == maxLeftMove)
             sourceRect.left = 0;
         else
@@ -264,4 +264,19 @@ int FinalBoss::animationDie() {
     entitySprite.setTextureRect(dieRect);
     dieRect.left+=dimBos;
     return dieRect.left;
+}
+
+void FinalBoss::doDamagePlayer(MainCharacter &mainCharacter) {
+    sf::RectangleShape sword;
+    sword.setSize(sf::Vector2f(128,128));
+    if(swordRect.top==topSwordDownBoss)
+        sword.setPosition(entitySprite.getPosition().x+64,entitySprite.getPosition().y+192);
+    if(swordRect.top==topSwordLeftBoss)
+        sword.setPosition(entitySprite.getPosition().x-64,entitySprite.getPosition().y+64);
+    if(swordRect.top==topSwordRightBoss)
+        sword.setPosition(entitySprite.getPosition().x+192,entitySprite.getPosition().y+64);
+    if(swordRect.top==topSwordUpBoss)
+        sword.setPosition(entitySprite.getPosition().x+64,entitySprite.getPosition().y-64);
+    if(sword.getGlobalBounds().intersects(mainCharacter.entitySprite.getGlobalBounds()))
+        mainCharacter.takeDamage(damage);
 }

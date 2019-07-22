@@ -28,6 +28,7 @@ public:
     int animationAttackBoss();
     void takeDamage(int dmg);
     int animationDie();
+    void doDamagePlayer(MainCharacter &mainCharacter);
 private:
     int armorPoint;
     Heart heart;
