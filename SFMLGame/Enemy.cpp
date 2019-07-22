@@ -26,7 +26,7 @@ Enemy::Enemy(float x, float y,std::string &file,int distance,int dmg) {
     entitySprite.setPosition(x,y);
     AStarColl.setSize(sf::Vector2f(1,1));
     AStarColl.setPosition(entitySprite.getPosition().x+31,entitySprite.getPosition().y+31);
-    moveSpeed=4;
+    moveSpeed=3.5;
     aggroDistance=distance;
     life = 3;
     damage=dmg;
