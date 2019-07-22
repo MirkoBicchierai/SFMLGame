@@ -170,10 +170,12 @@ CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../lib/SFML/include/SFML/Window/VideoMode
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../lib/SFML/include/SFML/Window/Window.hpp
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../lib/SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../lib/SFML/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../Armor.h
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../Arrow.cpp
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../Arrow.h
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../BaseStatistic.h
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../Enemy.h
+CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../FinalBoss.h
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../Heart.h
 CMakeFiles/SFMLGame.dir/Arrow.cpp.obj: ../Inventory.h
@@ -448,6 +450,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../lib/SFML/include/SFML/Wind
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../lib/SFML/include/SFML/Window/Window.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../lib/SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../lib/SFML/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../Armor.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../Arrow.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../BaseStatistic.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../Coin.h
@@ -457,6 +460,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../ConcreteStateGame2.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../ConcreteStateMenu.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../Enemy.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../Event.h
+CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../FinalBoss.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../Game.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj: ../GameState.h
@@ -563,6 +567,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../lib/SFML/include/SFML/Win
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../lib/SFML/include/SFML/Window/Window.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../lib/SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../lib/SFML/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../Armor.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../Arrow.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../BaseStatistic.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../Coin.h
@@ -572,6 +577,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../ConcreteStateGame3.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../ConcreteStateMenu.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../Enemy.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../Event.h
+CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../FinalBoss.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../Game.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../GameState.h
@@ -1027,6 +1033,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../lib/SFML/include/SFML/
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../lib/SFML/include/SFML/Window/Window.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../lib/SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../lib/SFML/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../Armor.h
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../Arrow.h
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../BaseStatistic.h
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../Coin.h
@@ -1035,6 +1042,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../ConcreteStateTutorial.
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../ConcreteStateTutorial.h
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../Enemy.h
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../Event.h
+CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../FinalBoss.h
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../Game.h
 CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj: ../GameState.h
@@ -1247,6 +1255,7 @@ CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../lib/SFML/include/SFML/Window/VideoMode
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../lib/SFML/include/SFML/Window/Window.hpp
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../lib/SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../lib/SFML/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../Armor.h
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../Arrow.h
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../BaseStatistic.h
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../Coin.h
@@ -1254,6 +1263,7 @@ CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../ConcreteStateMenu.h
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../Enemy.h
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../Event.cpp
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../Event.h
+CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../FinalBoss.h
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../Game.h
 CMakeFiles/SFMLGame.dir/Event.cpp.obj: ../GameState.h
@@ -1467,9 +1477,11 @@ CMakeFiles/SFMLGame.dir/FireBall.cpp.obj: ../lib/SFML/include/SFML/Window/VideoM
 CMakeFiles/SFMLGame.dir/FireBall.cpp.obj: ../lib/SFML/include/SFML/Window/Window.hpp
 CMakeFiles/SFMLGame.dir/FireBall.cpp.obj: ../lib/SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLGame.dir/FireBall.cpp.obj: ../lib/SFML/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/SFMLGame.dir/FireBall.cpp.obj: ../Armor.h
 CMakeFiles/SFMLGame.dir/FireBall.cpp.obj: ../Arrow.h
 CMakeFiles/SFMLGame.dir/FireBall.cpp.obj: ../BaseStatistic.h
 CMakeFiles/SFMLGame.dir/FireBall.cpp.obj: ../Enemy.h
+CMakeFiles/SFMLGame.dir/FireBall.cpp.obj: ../FinalBoss.h
 CMakeFiles/SFMLGame.dir/FireBall.cpp.obj: ../FireBall.cpp
 CMakeFiles/SFMLGame.dir/FireBall.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/FireBall.cpp.obj: ../Heart.h
@@ -2040,9 +2052,11 @@ CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../lib/SFML/include/SFML/Window/V
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../lib/SFML/include/SFML/Window/Window.hpp
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../lib/SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../lib/SFML/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../Armor.h
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../Arrow.h
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../BaseStatistic.h
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../Enemy.h
+CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../FinalBoss.h
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../FireBall.h
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../Heart.h
 CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj: ../Inventory.h

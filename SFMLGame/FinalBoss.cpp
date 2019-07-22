@@ -10,6 +10,11 @@ FinalBoss::FinalBoss() {
     swordRect.height=dimBos;
     swordRect.width=dimBos;
 
+    dieRect.width=dimBos;
+    dieRect.height=dimBos;
+    dieRect.left=0;
+    dieRect.top=0;
+
     sourceRect.width=dimBos;
     sourceRect.height=dimBos;
     sourceRect.left=0;
@@ -27,8 +32,8 @@ FinalBoss::FinalBoss() {
     soundStep.setBuffer(bufferStep);
     soundStep.setVolume(0.5);
 
-    life=10;
-    moveSpeed=5;
+    life=3;
+    moveSpeed=5.1;
 
     damage=2;
     AStarColl.setSize(sf::Vector2f(1,1));
@@ -38,12 +43,18 @@ FinalBoss::FinalBoss() {
 
     armor.setPosition(entitySprite);
     armorPoint=3;
+    die=false;
+    finish=false;
 }
 
 void FinalBoss::drawBoss(sf::RenderWindow &window) {
-    armor.drawArmor(window);
-    heart.drawHeart(window);
-    window.draw(entitySprite);
+    if(!die){
+        armor.drawArmor(window);
+        heart.drawHeart(window);
+    }
+    if(!finish)
+        window.draw(entitySprite);
+
 }
 
 void FinalBoss::aStarSearch(Tile &tilePlayer, Tile &tileEnemy, int *map, int width, int height) {
@@ -247,4 +258,10 @@ void FinalBoss::takeDamage(int dmg) {
         armorPoint=armorPoint-dmg;
         armor.damageControl(armorPoint);
     }
+}
+
+int FinalBoss::animationDie() {
+    entitySprite.setTextureRect(dieRect);
+    dieRect.left+=dimBos;
+    return dieRect.left;
 }

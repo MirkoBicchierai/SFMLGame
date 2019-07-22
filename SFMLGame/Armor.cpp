@@ -2,6 +2,7 @@
 #include "config.cpp"
 Armor::Armor() {
     textureArmor.loadFromFile(IMG_ROOT"/GUI/Armor.png");
+    textureArmorBroke.loadFromFile(IMG_ROOT"/GUI/ArmorBroke.png");
     ArmorSprite1.setTexture(textureArmor);
     ArmorSprite2.setTexture(textureArmor);
     ArmorSprite3.setTexture(textureArmor);
@@ -27,12 +28,18 @@ void Armor::setPosition(sf::Sprite boss) {
 
 void Armor::damageControl(int armor) {
     if(armor==2){
-
+        ArmorSprite1.setTexture(textureArmor);
+        ArmorSprite2.setTexture(textureArmor);
+        ArmorSprite3.setTexture(textureArmorBroke);
     }
     if(armor==1){
-
+        ArmorSprite1.setTexture(textureArmor);
+        ArmorSprite2.setTexture(textureArmorBroke);
+        ArmorSprite3.setTexture(textureArmorBroke);
     }
     if(armor<=0){
-
+        ArmorSprite1.setTexture(textureArmorBroke);
+        ArmorSprite2.setTexture(textureArmorBroke);
+        ArmorSprite3.setTexture(textureArmorBroke);
     }
 }

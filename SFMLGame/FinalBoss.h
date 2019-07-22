@@ -16,6 +16,9 @@ typedef struct {
 
 class FinalBoss : public BaseStatistic{
 public:
+    bool die;
+    bool finish;
+    sf::Clock dieClock;
     sf::Sound soundAttack;
     bool aniAttack;
     FinalBoss();
@@ -24,6 +27,7 @@ public:
     void moveAStarBoss(std::vector<Tile> &tile,MainCharacter &mainCharacter);
     int animationAttackBoss();
     void takeDamage(int dmg);
+    int animationDie();
 private:
     int armorPoint;
     Heart heart;
@@ -32,6 +36,7 @@ private:
     void moveBoss(char direction,MainCharacter &mainCharacter);
     std::vector<structListBoss> path;
     int damage;
+    sf::IntRect dieRect;
     sf::IntRect swordRect;
     sf::SoundBuffer attackBufferSound;
     sf::IntRect sourceRect;

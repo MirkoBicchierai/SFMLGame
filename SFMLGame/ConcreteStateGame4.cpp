@@ -63,12 +63,12 @@ void ConcreteStateGame4::update(MainCharacter &mainCharacter){
         }
     }
 
-    if(bossAStar.getElapsedTime().asMilliseconds()>=500.f) {
+    if(bossAStar.getElapsedTime().asMilliseconds()>=500.f && !boss.die) {
         boss.checkAStarBoss(map, mainCharacter, map.tile);
         bossAStar.restart();
     }
 
-    if(bossAStarMove.getElapsedTime().asMilliseconds()>=18.f) {
+    if(bossAStarMove.getElapsedTime().asMilliseconds()>=18.f && !boss.die) {
         boss.moveAStarBoss(map.tile,mainCharacter);
         bossAStarMove.restart();
     }
@@ -82,6 +82,19 @@ void ConcreteStateGame4::update(MainCharacter &mainCharacter){
             swordAttackBoss.restart();
         }
     }
+
+    if(boss.life<=0){
+        boss.die=true;
+        boss.aniAttack=false;
+        if(boss.dieClock.getElapsedTime().asMilliseconds()>=45.f){
+            if(boss.animationDie()==maxLeftAttack){
+                boss.finish=true;
+                mainCharacter.inventory.NumberGoldKey++;
+            }
+            boss.dieClock.restart();
+        }
+    }
+
 }
 void ConcreteStateGame4::handleInput(MainCharacter &mainCharacter){
     while (game->window.pollEvent(game->event)){

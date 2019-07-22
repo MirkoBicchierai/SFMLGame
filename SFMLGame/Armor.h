@@ -11,6 +11,7 @@ public:
     void damageControl(int armor);
 private:
     sf::Texture textureArmor;
+    sf::Texture textureArmorBroke;
     sf::Sprite ArmorSprite1;
     sf::Sprite ArmorSprite2;
     sf::Sprite ArmorSprite3;
