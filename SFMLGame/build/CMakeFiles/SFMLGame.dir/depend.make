@@ -921,7 +921,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../Armor.h
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../Arrow.h
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../BaseStatistic.h
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../Coin.h
-CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../ConcreteStateGame4.h
+CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../ConcreteStateGame.h
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../ConcreteStateMenu.cpp
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../ConcreteStateMenu.h
 CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj: ../ConcreteStateTutorial.h

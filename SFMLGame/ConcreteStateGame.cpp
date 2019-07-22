@@ -57,6 +57,7 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
     for (int j = 0; j < map.tile.size() ; ++j) {
         if(mainCharacter.entitySprite.getGlobalBounds().intersects(map.tile[j].spriteShow.getGlobalBounds()) && map.tile[j].end ){
             game->init=false;
+            mainCharacter.resetInventory();
             game->pushState(new ConcreteStateGame2(game));
             break;
         }

@@ -393,8 +393,11 @@ void MainCharacter::damageSword(std::vector<Enemy*> &enemyVec,FinalBoss* boss) {
 }
 
 void MainCharacter::takeDamage(int damage) {
-    life=life-damage;
+    if(!shield)
+        life=life-damage;
     hearth.damageControl(life);
+    if(life<=0)
+        die=true;
 }
 
 void MainCharacter::resetInventory() {
