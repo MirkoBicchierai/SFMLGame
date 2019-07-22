@@ -8,6 +8,7 @@ public:
     void drawArmor(sf::RenderWindow &window);
     void moveArmor(float x, float y);
     void setPosition(sf::Sprite boss);
+    void damageControl(int armor);
 private:
     sf::Texture textureArmor;
     sf::Sprite ArmorSprite1;

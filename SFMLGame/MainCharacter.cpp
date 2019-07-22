@@ -3,7 +3,7 @@
 #include "MainCharacter.h"
 #include "config.cpp"
 #include "Enemy.h"
-
+#include "FinalBoss.h"
 MainCharacter::MainCharacter(sf::RenderWindow &window) : BaseStatistic() {
 
     entityTexture.loadFromFile(IMG_PLAYER_ROOT"/Normal_Player.png");
@@ -359,7 +359,7 @@ int MainCharacter::dieAnimation() {
     return x;
 }
 
-void MainCharacter::damageSword(std::vector<Enemy*> &enemyVec) {
+void MainCharacter::damageSword(std::vector<Enemy*> &enemyVec,FinalBoss* boss) {
     sf::RectangleShape swordRec;
     swordRec.setPosition(entitySprite.getPosition());
     if (sourceRect.top == topMoveRight) {
@@ -383,6 +383,11 @@ void MainCharacter::damageSword(std::vector<Enemy*> &enemyVec) {
             if(enemyVec[i]->life!=0) {
                 enemyVec[i]->takeDamage(DMGSword);
             }
+        }
+    }
+    if(boss != NULL){
+        if(swordRec.getGlobalBounds().intersects(boss->entitySprite.getGlobalBounds())){
+            boss->takeDamage(DMGSword);
         }
     }
 }

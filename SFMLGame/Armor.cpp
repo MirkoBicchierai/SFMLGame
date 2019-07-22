@@ -24,3 +24,15 @@ void Armor::setPosition(sf::Sprite boss) {
     ArmorSprite2.setPosition(boss.getPosition().x+32+8+8+64,boss.getPosition().y-10 +5 +32);
     ArmorSprite3.setPosition(boss.getPosition().x+32+32+4+16+64,boss.getPosition().y-10 + 5 +32);
 }
+
+void Armor::damageControl(int armor) {
+    if(armor==2){
+
+    }
+    if(armor==1){
+
+    }
+    if(armor<=0){
+
+    }
+}

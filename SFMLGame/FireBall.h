@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 class MainCharacter;
 class Enemy;
+class FinalBoss;
 class FireBall {
 public:
     bool animationBall;
@@ -11,7 +12,7 @@ public:
     FireBall();
     void drawFireBall(sf::RenderWindow &window);
     void setRect(sf::IntRect player,float x, float y);
-    int animation(std::vector<Enemy*> &enemyVec,MainCharacter &mainCharacter); //animation fireball, switch rect of image
+    int animation(std::vector<Enemy*> &enemyVec,MainCharacter &mainCharacter,FinalBoss* boss); //animation fireball, switch rect of image
 
 private:
     int damage;

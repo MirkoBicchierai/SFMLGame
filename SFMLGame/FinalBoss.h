@@ -23,7 +23,9 @@ public:
     void checkAStarBoss(TileMap &map, MainCharacter &mainCharacter,std::vector<Tile> &tile);
     void moveAStarBoss(std::vector<Tile> &tile,MainCharacter &mainCharacter);
     int animationAttackBoss();
+    void takeDamage(int dmg);
 private:
+    int armorPoint;
     Heart heart;
     Armor armor;
     void aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int height);

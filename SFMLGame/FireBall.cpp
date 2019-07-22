@@ -3,6 +3,7 @@
 #include "config.cpp"
 #include "Enemy.h"
 #include "MainCharacter.h"
+#include "FinalBoss.h"
 FireBall::FireBall() {
     ballTexture.loadFromFile(IMG_PLAYER_OBJ_ROOT"/FireBall.png");
     ballSprite.setTexture(ballTexture);
@@ -38,7 +39,7 @@ void FireBall::setRect(sf::IntRect player,float x, float y) {
     ballSprite.setPosition(x,y);
 }
 
-int FireBall::animation(std::vector<Enemy*> &enemyVec,MainCharacter &mainCharacter) {
+int FireBall::animation(std::vector<Enemy*> &enemyVec,MainCharacter &mainCharacter,FinalBoss* boss) {
     if (ballRect.top == RightFireBall) {
         ballSprite.move(moveSpeed,0);
     }
@@ -62,6 +63,15 @@ int FireBall::animation(std::vector<Enemy*> &enemyVec,MainCharacter &mainCharact
                break;
            }
        }
+    }
+    if(boss!=NULL){
+        if(ballSprite.getGlobalBounds().intersects(boss->entitySprite.getGlobalBounds())){
+            if(boss->life!=0) {
+                boss->takeDamage(damage);
+                animationBall=false;
+                mainCharacter.spell=false;
+            }
+        }
     }
     return ballRect.left;
 }

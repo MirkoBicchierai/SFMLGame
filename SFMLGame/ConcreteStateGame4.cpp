@@ -52,7 +52,7 @@ void ConcreteStateGame4::draw(MainCharacter &mainCharacter){
 }
 
 void ConcreteStateGame4::update(MainCharacter &mainCharacter){
-    loopEvent.updateEvent(mainCharacter,game,map,enemyVec,coinVec);
+    loopEvent.updateEvent(mainCharacter,game,map,enemyVec,coinVec,&boss);
     loopEvent.AStarEnemy(game,map,mainCharacter,enemyVec);
 
     for (int j = 0; j < map.tile.size() ; ++j) {
@@ -72,6 +72,7 @@ void ConcreteStateGame4::update(MainCharacter &mainCharacter){
         boss.moveAStarBoss(map.tile,mainCharacter);
         bossAStarMove.restart();
     }
+
     if(boss.aniAttack) {
         if(swordAttackBoss.getElapsedTime().asMilliseconds()>=40.f){
             if(boss.animationAttackBoss()==maxLeftAttack){

@@ -7,9 +7,10 @@
 #include <vector>
 #include "Enemy.h"
 #include "Coin.h"
+#include "FinalBoss.h"
 class Event{
 public:
-    void updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, std::vector<Enemy*> &enemyVec, std::vector<Coin*> &coinVec);
+    void updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, std::vector<Enemy*> &enemyVec, std::vector<Coin*> &coinVec,FinalBoss* boss = NULL);
     void inputEvent(MainCharacter &mainCharacter,Game* game,TileMap &map);
     void AStarEnemy(Game* game,TileMap &map,MainCharacter &mainCharacter, std::vector<Enemy*> enemyVec);
     void backToMenu(Game* game);

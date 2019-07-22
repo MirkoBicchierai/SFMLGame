@@ -9,7 +9,7 @@
 #include "BaseStatistic.h"
 #include "Tile.h"
 #include "Inventory.h"
-
+class FinalBoss;
 class MainCharacter: public BaseStatistic {
 
 public:
@@ -52,7 +52,7 @@ public:
     void setNormalTexture(); //reset texture
     void reset(int pos); // reset the player position
     void resetPlayer(sf::RenderWindow &window,sf::Sprite tile); //reset the player state
-    void damageSword(std::vector<Enemy*> &enemyVec);
+    void damageSword(std::vector<Enemy*> &enemyVec,FinalBoss* boss);
     int dieAnimation(); //animation die
     sf::IntRect getsourceRect();
     sf::Sprite getSprite();

@@ -2,6 +2,7 @@
 #include "Arrow.h"
 #include "config.cpp"
 #include "Enemy.h"
+#include "FinalBoss.h"
 Arrow::Arrow() {
     arrowTexture.loadFromFile(IMG_PLAYER_OBJ_ROOT"/Arrow.png");
     arrowSprite.setTexture(arrowTexture);
@@ -53,7 +54,7 @@ void Arrow::setRect(sf::IntRect player,float x, float y) {
     arrowSprite.setPosition(x,y);
 }
 
-void Arrow::animation(std::vector<Tile> &tile,std::vector<Enemy*> &enemyVec) {
+void Arrow::animation(std::vector<Tile> &tile,std::vector<Enemy*> &enemyVec,FinalBoss* boss) {
     float x=0,y=0;
     if (arrowSprite.getRotation() == RightRotation) {
         x=moveSpeed;
@@ -89,7 +90,17 @@ void Arrow::animation(std::vector<Tile> &tile,std::vector<Enemy*> &enemyVec) {
                 }
             }
         }
-
+        if(boss!=NULL){
+            if(arrowSprite.getGlobalBounds().intersects(boss->entitySprite.getGlobalBounds())){
+                if(boss->life!=0) {
+                    boss->takeDamage(damage);
+                    arrowFor=8;
+                    arrowRect.left = LeftNormalArrow;
+                    arrowRect.top = TopNormalArrow;
+                    return;
+                }
+            }
+        }
         if(arrowRect.left==dimArrow && arrowRect.top==dimArrow) {
             arrowRect.left = LeftNormalArrow;
             arrowRect.top = TopNormalArrow;

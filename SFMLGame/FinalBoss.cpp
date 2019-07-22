@@ -37,6 +37,7 @@ FinalBoss::FinalBoss() {
     aniAttack=false;
 
     armor.setPosition(entitySprite);
+    armorPoint=3;
 }
 
 void FinalBoss::drawBoss(sf::RenderWindow &window) {
@@ -236,4 +237,14 @@ int FinalBoss::animationAttackBoss() {
 
     entitySprite.setTextureRect(swordRect);
     return swordRect.left;
+}
+
+void FinalBoss::takeDamage(int dmg) {
+    if(armorPoint<=0){
+        life=life-dmg;
+        heart.damageControl(life);
+    }else{
+        armorPoint=armorPoint-dmg;
+        armor.damageControl(armorPoint);
+    }
 }

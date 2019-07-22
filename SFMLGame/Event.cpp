@@ -4,7 +4,7 @@
 #include "config.cpp"
 #include "ConcreteStateMenu.h"
 
-void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, std::vector<Enemy*> &enemyVec, std::vector<Coin*> &coinVec) {
+void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, std::vector<Enemy*> &enemyVec, std::vector<Coin*> &coinVec,FinalBoss* boss) {
     //time shield end
     if (mainCharacter.shield && game->clockShield.getElapsedTime().asSeconds() >= mainCharacter.secShield) {
         mainCharacter.setNormalTexture();
@@ -15,7 +15,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
         if (game->clockSword.getElapsedTime().asMilliseconds()>=mainCharacter.timeSword ) {
             if (mainCharacter.swordAttack() == finalSwordAttack) {
                 mainCharacter.soundSword.play();
-                mainCharacter.damageSword(enemyVec); // final damage sword
+                mainCharacter.damageSword(enemyVec,boss); // final damage sword
                 mainCharacter.sword = 0;
                 mainCharacter.reset(mainCharacter.getsourceRect().top);
             }
@@ -53,7 +53,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
     }
     //animation fireball
     if (mainCharacter.ball.animationBall && mainCharacter.ball.clock.getElapsedTime().asMilliseconds() >= 55.f) {
-        if (mainCharacter.ball.animation(enemyVec,mainCharacter) == finalBallAnimation) {
+        if (mainCharacter.ball.animation(enemyVec,mainCharacter,boss) == finalBallAnimation) {
             mainCharacter.ball.animationBall = false;
             mainCharacter.spell = false;
         }
@@ -63,7 +63,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
     if (mainCharacter.arrowPlayer.animationArrow) {
         if (mainCharacter.arrowPlayer.arrowFor < 8) {
             if (mainCharacter.arrowPlayer.clock.getElapsedTime().asMilliseconds() > 45.f) {
-                mainCharacter.arrowPlayer.animation(map.tile,enemyVec);
+                mainCharacter.arrowPlayer.animation(map.tile,enemyVec,boss);
                 mainCharacter.arrowPlayer.clock.restart();
                 mainCharacter.arrowPlayer.arrowFor++;
             }
