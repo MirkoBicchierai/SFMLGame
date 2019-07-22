@@ -160,6 +160,8 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
 void Event::inputEvent(MainCharacter &mainCharacter, Game* game,TileMap &map) {
     if (game->event.type == sf::Event::Closed)
         game->window.close();
+    if( game->event.type ==sf::Event::MouseMoved )
+        return;
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
         backToMenu(game);
         mainCharacter.die=false;
