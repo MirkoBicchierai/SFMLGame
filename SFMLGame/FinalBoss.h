@@ -18,9 +18,10 @@ class FinalBoss : public BaseStatistic{
 public:
     bool die;
     bool finish;
+    bool aniAttack;
     sf::Clock dieClock;
     sf::Sound soundAttack;
-    bool aniAttack;
+
     FinalBoss();
     void drawBoss(sf::RenderWindow &window);
     void checkAStarBoss(TileMap &map, MainCharacter &mainCharacter,std::vector<Tile> &tile);
@@ -29,18 +30,19 @@ public:
     void takeDamage(int dmg);
     int animationDie();
     void doDamagePlayer(MainCharacter &mainCharacter);
+
 private:
     int armorPoint;
+    int damage;
+    std::vector<structListBoss> path;
     Heart heart;
     Armor armor;
-    void aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int height);
-    void moveBoss(char direction,MainCharacter &mainCharacter);
-    std::vector<structListBoss> path;
-    int damage;
     sf::IntRect dieRect;
     sf::IntRect swordRect;
-    sf::SoundBuffer attackBufferSound;
     sf::IntRect sourceRect;
+    sf::SoundBuffer attackBufferSound;
+    void aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int height);
+    void moveBoss(char direction,MainCharacter &mainCharacter);
 };
 
 #endif
