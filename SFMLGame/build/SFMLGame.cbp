@@ -282,6 +282,14 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Armor.cpp">
+			<Option target="SFMLGame"/>
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Armor.h">
+			<Option target="SFMLGame"/>
+			<Option target="core"/>
+		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.cpp">
 			<Option target="SFMLGame"/>
 			<Option target="core"/>

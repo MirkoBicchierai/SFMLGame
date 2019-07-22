@@ -8,6 +8,7 @@
 #include "TileMap.h"
 #include "MapSearchNode.h"
 #include "stlastar.h"
+#include "Armor.h"
 typedef struct {
     int x;
     int y;
@@ -23,6 +24,8 @@ public:
     void moveAStarBoss(std::vector<Tile> &tile,MainCharacter &mainCharacter);
     int animationAttackBoss();
 private:
+    Heart heart;
+    Armor armor;
     void aStarSearch(Tile &tilePlayer,Tile &tileEnemy,int *map,int width,int height);
     void moveBoss(char direction,MainCharacter &mainCharacter);
     std::vector<structListBoss> path;

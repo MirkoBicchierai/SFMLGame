@@ -85,3 +85,9 @@ void Heart::setHearthEnemy(sf::Vector2f enemy) {
     hearthSprite3.setScale(sf::Vector2f(0.5, 0.5));
     hearthSprite3.setPosition(enemy.x+16+16+8,enemy.y-10);
 }
+
+void Heart::setHearthBoss(sf::Vector2f boss) {
+    hearthSprite1.setPosition(boss.x+12+64,boss.y-10);
+    hearthSprite2.setPosition(boss.x+32+8+8+64,boss.y-10);
+    hearthSprite3.setPosition(boss.x+32+32+4+16+64,boss.y-10);
+}

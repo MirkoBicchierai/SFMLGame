@@ -12,6 +12,7 @@ public:
     void damageControl(int life);
     void reset();
     void setHearthEnemy(sf::Vector2f enemy);
+    void setHearthBoss(sf::Vector2f boss);
 private:
     sf::Texture brokenHeart;
     sf::Texture hearthTexture;

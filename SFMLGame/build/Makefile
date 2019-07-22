@@ -174,6 +174,36 @@ gtest_main/fast:
 	$(MAKE) -f googleTest\lib\googletest\CMakeFiles\gtest_main.dir\build.make googleTest/lib/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+Armor.obj: Armor.cpp.obj
+
+.PHONY : Armor.obj
+
+# target to build an object file
+Armor.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Armor.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Armor.cpp.obj
+.PHONY : Armor.cpp.obj
+
+Armor.i: Armor.cpp.i
+
+.PHONY : Armor.i
+
+# target to preprocess a source file
+Armor.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Armor.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Armor.cpp.i
+.PHONY : Armor.cpp.i
+
+Armor.s: Armor.cpp.s
+
+.PHONY : Armor.s
+
+# target to generate assembly for a file
+Armor.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Armor.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Armor.cpp.s
+.PHONY : Armor.cpp.s
+
 Arrow.obj: Arrow.cpp.obj
 
 .PHONY : Arrow.obj
@@ -937,6 +967,9 @@ help:
 	@echo ... GoogleTests
 	@echo ... gtest
 	@echo ... gtest_main
+	@echo ... Armor.obj
+	@echo ... Armor.i
+	@echo ... Armor.s
 	@echo ... Arrow.obj
 	@echo ... Arrow.i
 	@echo ... Arrow.s

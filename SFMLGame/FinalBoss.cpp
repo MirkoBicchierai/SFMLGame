@@ -5,6 +5,8 @@ FinalBoss::FinalBoss() {
 
     entityTexture.loadFromFile(IMG_ENEMY_ROOT"/FinalBoss.png");
 
+    heart.setHearthBoss(sf::Vector2f(spawnBossX,spawnBossY));
+
     swordRect.height=dimBos;
     swordRect.width=dimBos;
 
@@ -33,10 +35,13 @@ FinalBoss::FinalBoss() {
     AStarColl.setPosition(entitySprite.getPosition().x+127,entitySprite.getPosition().y+127);
     AStarColl.setFillColor(sf::Color::Red);
     aniAttack=false;
+
+    armor.setPosition(entitySprite);
 }
 
 void FinalBoss::drawBoss(sf::RenderWindow &window) {
-    window.draw(AStarColl);
+    armor.drawArmor(window);
+    heart.drawHeart(window);
     window.draw(entitySprite);
 }
 
@@ -169,11 +174,9 @@ void FinalBoss::moveAStarBoss(std::vector<Tile> &tile, MainCharacter &mainCharac
 
 void FinalBoss::moveBoss(char direction, MainCharacter &mainCharacter) {
 
-
     sf::Sprite test;
     test.setPosition(AStarColl.getPosition());
     test.setTextureRect(sf::IntRect(AStarColl.getSize().x,AStarColl.getSize().y,0,0));
-    std::cout<<distanceBetweenTwoSprite(mainCharacter.getSprite(),test)<<std::endl;
 
     if(distanceBetweenTwoSprite(mainCharacter.getSprite(),test)>80){
         if (sourceRect.left == maxLeftMove)
@@ -183,18 +186,26 @@ void FinalBoss::moveBoss(char direction, MainCharacter &mainCharacter) {
 
         if (direction=='u') {
             entitySprite.move(0,-moveSpeed);
+            heart.moveHeart(0,-moveSpeed);
+            armor.moveArmor(0,-moveSpeed);
             sourceRect.top =topBossUp;
         }
         if (direction=='d') {
             entitySprite.move(0,moveSpeed);
+            heart.moveHeart(0,moveSpeed);
+            armor.moveArmor(0,moveSpeed);
             sourceRect.top =topBossDown;
         }
         if (direction=='l') {
             entitySprite.move(-moveSpeed,0);
+            heart.moveHeart(-moveSpeed,0);
+            armor.moveArmor(-moveSpeed,0);
             sourceRect.top =topBossLeft;
         }
         if (direction=='r') {
             entitySprite.move(moveSpeed,0);
+            heart.moveHeart(moveSpeed,0);
+            armor.moveArmor(moveSpeed,0);
             sourceRect.top =topBossRight;
         }
         entitySprite.setTextureRect(sourceRect);
