@@ -73,19 +73,19 @@ void ConcreteStateGame::Init(MainCharacter &mainCharacter) {
     loadFromFile(MAP_ROOT_GAME"/level1.txt");
     int x,y;
     std::string file;
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < 2; ++i) {
         x=rand()%1200 + 1200;
         y=rand()%1200 + 1200;
         file="normal";
         enemyVec.push_back(new Enemy(x,y,file,600,1));
     }
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < 2; ++i) {
         x=rand()%1200 + 1200;
         y=rand()%1200 + 1200;
         file="reptiles";
         enemyVec.push_back(new Enemy(x,y,file,500,1));
     }
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < 2; ++i) {
         x=rand()%1200 + 1200;
         y=rand()%1200 + 1200;
         file="skeleton";

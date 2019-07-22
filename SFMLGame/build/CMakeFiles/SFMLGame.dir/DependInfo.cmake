@@ -11,7 +11,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame2.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame3.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame4.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/ConcreteStateGame4.cpp.obj"
-  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame5.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/ConcreteStateGame5.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/ConcreteStateMenu.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateTutorial.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/ConcreteStateTutorial.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Enemy.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Enemy.cpp.obj"

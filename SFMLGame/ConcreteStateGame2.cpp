@@ -71,32 +71,24 @@ void ConcreteStateGame2::handleInput(MainCharacter &mainCharacter){
 
 void ConcreteStateGame2::Init(MainCharacter &mainCharacter) {
     loadFromFile(MAP_ROOT_GAME"/level2.txt");
-    int x,y;
     std::string file;
-    for (int i = 0; i < 3; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
-        file="normal";
-        enemyVec.push_back(new Enemy(x,y,file,600,1));
-    }
-    for (int i = 0; i < 3; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
-        file="reptiles";
-        enemyVec.push_back(new Enemy(x,y,file,500,1));
-    }
-    for (int i = 0; i < 3; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
-        file="skeleton";
-        enemyVec.push_back(new Enemy(x,y,file,400,1));
-    }
-
     for (int j = 0; j <map.tile.size() ; ++j) {
         if(map.tile[j].i==10 && map.tile[j].j==16)
             map.tile[j].setEnd();
         if(map.tile[j].i==6 && map.tile[j].j==6)
             mainCharacter.resetPlayer(game->window,map.tile[j].spriteShow);
+        if((map.tile[j].i==1 && map.tile[j].j==2) || (map.tile[j].i==20 && map.tile[j].j==41) || (map.tile[j].i==28 && map.tile[j].j==44) || (map.tile[j].i==3 && map.tile[j].j==29) || (map.tile[j].i==5 && map.tile[j].j==23) ){
+            file="normal";
+            enemyVec.push_back(new Enemy(map.tile[j].spriteShow.getPosition().x,map.tile[j].spriteShow.getPosition().y,file,600,1));
+        }
+        if((map.tile[j].i==4 && map.tile[j].j==45) || (map.tile[j].i==44 && map.tile[j].j==45) || (map.tile[j].i==22 && map.tile[j].j==29)){
+            file="reptiles";
+            enemyVec.push_back(new Enemy(map.tile[j].spriteShow.getPosition().x,map.tile[j].spriteShow.getPosition().y,file,500,1));
+        }
+        if((map.tile[j].i==39 && map.tile[j].j==19) || (map.tile[j].i==46 && map.tile[j].j==23) || (map.tile[j].i==46 && map.tile[j].j==15)){
+            file="skeleton";
+            enemyVec.push_back(new Enemy(map.tile[j].spriteShow.getPosition().x,map.tile[j].spriteShow.getPosition().y,file,400,1));
+        }
     }
     game->window.setView(mainCharacter.camera);
     game->init=true;

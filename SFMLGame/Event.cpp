@@ -205,7 +205,7 @@ void Event::inputEvent(MainCharacter &mainCharacter, Game* game,TileMap &map) {
                     mainCharacter.spell = true;
                 } else {
                     // activate shield player
-                    if (sf::Keyboard::isKeyPressed(sf::Keyboard::E) && !mainCharacter.spell) {
+                    if (sf::Keyboard::isKeyPressed(sf::Keyboard::E) && !mainCharacter.spell && !mainCharacter.aniArrow) {
                         mainCharacter.setTextureShield();
                         game->clockShield.restart();
                     }

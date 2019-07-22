@@ -384,36 +384,6 @@ ConcreteStateGame4.cpp.s:
 	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame4.cpp.s
 .PHONY : ConcreteStateGame4.cpp.s
 
-ConcreteStateGame5.obj: ConcreteStateGame5.cpp.obj
-
-.PHONY : ConcreteStateGame5.obj
-
-# target to build an object file
-ConcreteStateGame5.cpp.obj:
-	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame5.cpp.obj
-	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame5.cpp.obj
-.PHONY : ConcreteStateGame5.cpp.obj
-
-ConcreteStateGame5.i: ConcreteStateGame5.cpp.i
-
-.PHONY : ConcreteStateGame5.i
-
-# target to preprocess a source file
-ConcreteStateGame5.cpp.i:
-	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame5.cpp.i
-	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame5.cpp.i
-.PHONY : ConcreteStateGame5.cpp.i
-
-ConcreteStateGame5.s: ConcreteStateGame5.cpp.s
-
-.PHONY : ConcreteStateGame5.s
-
-# target to generate assembly for a file
-ConcreteStateGame5.cpp.s:
-	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame5.cpp.s
-	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame5.cpp.s
-.PHONY : ConcreteStateGame5.cpp.s
-
 ConcreteStateMenu.obj: ConcreteStateMenu.cpp.obj
 
 .PHONY : ConcreteStateMenu.obj
@@ -958,9 +928,6 @@ help:
 	@echo ... ConcreteStateGame4.obj
 	@echo ... ConcreteStateGame4.i
 	@echo ... ConcreteStateGame4.s
-	@echo ... ConcreteStateGame5.obj
-	@echo ... ConcreteStateGame5.i
-	@echo ... ConcreteStateGame5.s
 	@echo ... ConcreteStateMenu.obj
 	@echo ... ConcreteStateMenu.i
 	@echo ... ConcreteStateMenu.s

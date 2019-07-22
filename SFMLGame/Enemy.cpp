@@ -303,3 +303,4 @@ void Enemy::takeDamage(int dmg) {
     life=life-dmg;
     lifeHearth.damageControl(life);
 }
+

@@ -1,5 +1,4 @@
 #include "ConcreteStateGame4.h"
-#include "ConcreteStateGame5.h"
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "ConcreteStateMenu.h"
@@ -57,7 +56,7 @@ void ConcreteStateGame4::update(MainCharacter &mainCharacter){
     for (int j = 0; j < map.tile.size() ; ++j) {
         if(mainCharacter.entitySprite.getGlobalBounds().intersects(map.tile[j].spriteShow.getGlobalBounds()) && map.tile[j].end ){
             game->init=false;
-            game->pushState(new ConcreteStateGame5(game));
+            loopEvent.backToMenu(game);
             break;
         }
     }
@@ -70,32 +69,20 @@ void ConcreteStateGame4::handleInput(MainCharacter &mainCharacter){
 }
 
 void ConcreteStateGame4::Init(MainCharacter &mainCharacter) {
-    loadFromFile(MAP_ROOT_GAME"/level1.txt");
+    loadFromFile(MAP_ROOT_GAME"/level4.txt");
     int x,y;
     std::string file;
-    for (int i = 0; i < 3; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
+    for (int i = 0; i < 2; ++i) {
+        x=rand()%1200 + 600;
+        y=rand()%1200 + 600;
         file="normal";
         enemyVec.push_back(new Enemy(x,y,file,600,1));
     }
-    for (int i = 0; i < 3; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
-        file="reptiles";
-        enemyVec.push_back(new Enemy(x,y,file,500,1));
-    }
-    for (int i = 0; i < 3; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
-        file="skeleton";
-        enemyVec.push_back(new Enemy(x,y,file,400,1));
-    }
 
     for (int j = 0; j <map.tile.size() ; ++j) {
-        if((map.tile[j].i==8 || map.tile[j].i==9) && map.tile[j].j==1)
+        if((map.tile[j].i==19 || map.tile[j].i==20) && map.tile[j].j==3)
             map.tile[j].setEnd();
-        if(map.tile[j].i==5 && map.tile[j].j==5)
+        if(map.tile[j].i==20 && map.tile[j].j==20)
             mainCharacter.resetPlayer(game->window,map.tile[j].spriteShow);
     }
     game->window.setView(mainCharacter.camera);

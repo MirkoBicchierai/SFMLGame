@@ -71,28 +71,22 @@ void ConcreteStateGame3::handleInput(MainCharacter &mainCharacter){
 
 void ConcreteStateGame3::Init(MainCharacter &mainCharacter) {
     loadFromFile(MAP_ROOT_GAME"/level3.txt");
-    int x,y;
     std::string file;
-    for (int i = 0; i < 3; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
-        file="normal";
-        enemyVec.push_back(new Enemy(x,y,file,600,1));
-    }
-    for (int i = 0; i < 3; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
-        file="reptiles";
-        enemyVec.push_back(new Enemy(x,y,file,500,1));
-    }
-    for (int i = 0; i < 3; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
-        file="skeleton";
-        enemyVec.push_back(new Enemy(x,y,file,400,1));
-    }
-
     for (int j = 0; j <map.tile.size() ; ++j) {
+
+        if((map.tile[j].i==4 && map.tile[j].j==46) || (map.tile[j].i==44 && map.tile[j].j==46) || (map.tile[j].i==22 && map.tile[j].j==37) || (map.tile[j].i==23 && map.tile[j].j==37) || (map.tile[j].i==20 && map.tile[j].j==7) ){
+            file="normal";
+            enemyVec.push_back(new Enemy(map.tile[j].spriteShow.getPosition().x,map.tile[j].spriteShow.getPosition().y,file,600,1));
+        }
+        if((map.tile[j].i==2 && map.tile[j].j==30) || (map.tile[j].i==42 && map.tile[j].j==29) || (map.tile[j].i==22 && map.tile[j].j==23)){
+            file="reptiles";
+            enemyVec.push_back(new Enemy(map.tile[j].spriteShow.getPosition().x,map.tile[j].spriteShow.getPosition().y,file,500,1));
+        }
+        if((map.tile[j].i==2 && map.tile[j].j==8) || (map.tile[j].i==2 && map.tile[j].j==4) || (map.tile[j].i==42 && map.tile[j].j==20)|| (map.tile[j].i==38 && map.tile[j].j==14)){
+            file="skeleton";
+            enemyVec.push_back(new Enemy(map.tile[j].spriteShow.getPosition().x,map.tile[j].spriteShow.getPosition().y,file,400,1));
+        }
+
         if((map.tile[j].i==0) && (map.tile[j].j==16 || map.tile[j].j==17))
             map.tile[j].setEnd();
         if(map.tile[j].i==23 && map.tile[j].j==42)
