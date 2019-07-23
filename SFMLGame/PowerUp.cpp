@@ -169,7 +169,7 @@ void PowerUp::draw(sf::RenderWindow &window, MainCharacter &player) {
         window.draw(CoinText[j]);
     }
     window.draw(title);
-    playerCoin.setString("Your coin: "+std::to_string(player.inventory.NumberGold));
+    playerCoin.setString("Your coins: "+std::to_string(player.inventory.NumberGold));
     window.draw(playerCoin);
 }
 
