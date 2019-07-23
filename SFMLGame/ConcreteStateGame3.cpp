@@ -3,6 +3,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "ConcreteStateMenu.h"
+#include "ConcreteStateMenuPowerUp.h"
 #include "config.cpp"
 #include <fstream>
 #include <regex>
@@ -56,9 +57,9 @@ void ConcreteStateGame3::update(MainCharacter &mainCharacter){
 
     for (int j = 0; j < map.tile.size() ; ++j) {
         if(mainCharacter.entitySprite.getGlobalBounds().intersects(map.tile[j].spriteShow.getGlobalBounds()) && map.tile[j].end ){
-            mainCharacter.resetInventory();
+            mainCharacter.resetKey();
             game->init=false;
-            game->pushState(new ConcreteStateGame4(game));
+            game->pushState(new ConcreteStateMenuPowerUp(game,new ConcreteStateGame4(game)));
             break;
         }
     }

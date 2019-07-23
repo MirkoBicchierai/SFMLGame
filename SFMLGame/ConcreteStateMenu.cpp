@@ -9,8 +9,6 @@ ConcreteStateMenu::ConcreteStateMenu(Game* game){
 
 void ConcreteStateMenu::handleInput(MainCharacter &mainCharacter){
     sf::Event event{};
-    mainCharacter.camera.setCenter(game->window.getSize().x / 2.f, game->window.getSize().y / 2.f);
-    game->window.setView(mainCharacter.camera);
     while (game->window.pollEvent(event)) {
 
         if (event.type == sf::Event::Closed)
@@ -51,5 +49,7 @@ void ConcreteStateMenu::startTutorial(MainCharacter &mainCharacter) { // switch 
 }
 
 void ConcreteStateMenu::Init(MainCharacter &mainCharacter) {
-
+    game->init=false;
+    mainCharacter.camera.setCenter(game->window.getSize().x / 2.f, game->window.getSize().y / 2.f);
+    game->window.setView(mainCharacter.camera);
 }

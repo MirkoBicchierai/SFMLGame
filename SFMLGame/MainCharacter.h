@@ -58,6 +58,7 @@ public:
     sf::Sprite getSprite();
     void takeDamage(int damage);
     void resetInventory();
+    void resetKey();
 private:
 
     sf::SoundBuffer bufferSword;

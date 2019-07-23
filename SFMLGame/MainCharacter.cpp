@@ -411,3 +411,8 @@ void MainCharacter::resetInventory() {
     inventory.NumberGoldKey=0;
 }
 
+void MainCharacter::resetKey() {
+    inventory.NumberSilverKey=0;
+    inventory.NumberGoldKey=0;
+}
+

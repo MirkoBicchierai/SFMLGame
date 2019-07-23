@@ -6,7 +6,7 @@
 #include <fstream>
 #include <regex>
 #include "ConcreteStateGame2.h"
-
+#include "ConcreteStateMenuPowerUp.h"
 ConcreteStateGame::ConcreteStateGame(Game* game){
     this->game = game;
 }
@@ -57,12 +57,11 @@ void ConcreteStateGame::update(MainCharacter &mainCharacter){
     for (int j = 0; j < map.tile.size() ; ++j) {
         if(mainCharacter.entitySprite.getGlobalBounds().intersects(map.tile[j].spriteShow.getGlobalBounds()) && map.tile[j].end ){
             game->init=false;
-            mainCharacter.resetInventory();
-            game->pushState(new ConcreteStateGame2(game));
+            mainCharacter.resetKey();
+            game->pushState(new ConcreteStateMenuPowerUp(game,new ConcreteStateGame2(game)));
             break;
         }
     }
-
 }
 void ConcreteStateGame::handleInput(MainCharacter &mainCharacter){
     while (game->window.pollEvent(game->event)){

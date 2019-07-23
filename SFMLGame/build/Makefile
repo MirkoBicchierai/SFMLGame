@@ -444,6 +444,36 @@ ConcreteStateMenu.cpp.s:
 	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateMenu.cpp.s
 .PHONY : ConcreteStateMenu.cpp.s
 
+ConcreteStateMenuPowerUp.obj: ConcreteStateMenuPowerUp.cpp.obj
+
+.PHONY : ConcreteStateMenuPowerUp.obj
+
+# target to build an object file
+ConcreteStateMenuPowerUp.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateMenuPowerUp.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateMenuPowerUp.cpp.obj
+.PHONY : ConcreteStateMenuPowerUp.cpp.obj
+
+ConcreteStateMenuPowerUp.i: ConcreteStateMenuPowerUp.cpp.i
+
+.PHONY : ConcreteStateMenuPowerUp.i
+
+# target to preprocess a source file
+ConcreteStateMenuPowerUp.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateMenuPowerUp.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateMenuPowerUp.cpp.i
+.PHONY : ConcreteStateMenuPowerUp.cpp.i
+
+ConcreteStateMenuPowerUp.s: ConcreteStateMenuPowerUp.cpp.s
+
+.PHONY : ConcreteStateMenuPowerUp.s
+
+# target to generate assembly for a file
+ConcreteStateMenuPowerUp.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateMenuPowerUp.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateMenuPowerUp.cpp.s
+.PHONY : ConcreteStateMenuPowerUp.cpp.s
+
 ConcreteStateTutorial.obj: ConcreteStateTutorial.cpp.obj
 
 .PHONY : ConcreteStateTutorial.obj
@@ -1024,6 +1054,9 @@ help:
 	@echo ... ConcreteStateMenu.obj
 	@echo ... ConcreteStateMenu.i
 	@echo ... ConcreteStateMenu.s
+	@echo ... ConcreteStateMenuPowerUp.obj
+	@echo ... ConcreteStateMenuPowerUp.i
+	@echo ... ConcreteStateMenuPowerUp.s
 	@echo ... ConcreteStateTutorial.obj
 	@echo ... ConcreteStateTutorial.i
 	@echo ... ConcreteStateTutorial.s

@@ -354,6 +354,14 @@
 			<Option target="SFMLGame"/>
 			<Option target="core"/>
 		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenuPowerUp.cpp">
+			<Option target="SFMLGame"/>
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenuPowerUp.h">
+			<Option target="SFMLGame"/>
+			<Option target="core"/>
+		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateTutorial.cpp">
 			<Option target="SFMLGame"/>
 			<Option target="core"/>
