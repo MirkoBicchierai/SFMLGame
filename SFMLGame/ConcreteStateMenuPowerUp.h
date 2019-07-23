@@ -15,7 +15,6 @@ public:
     void Init(MainCharacter &mainCharacter) override;
 private:
     PowerUp menu;
-    void startGame(MainCharacter &mainCharacter); //switch state to Game
 };
 
 #endif

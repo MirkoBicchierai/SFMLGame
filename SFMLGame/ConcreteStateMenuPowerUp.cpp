@@ -38,10 +38,6 @@ void ConcreteStateMenuPowerUp::draw(MainCharacter &mainCharacter){
     menu.draw(game->window);
 }
 
-void ConcreteStateMenuPowerUp::startGame(MainCharacter &mainCharacter){ // switch state to Game
-    game->init=false;
-}
-
 void ConcreteStateMenuPowerUp::Init(MainCharacter &mainCharacter) {
     mainCharacter.camera.setCenter(game->window.getSize().x / 2.f, game->window.getSize().y / 2.f);
     game->window.setView(mainCharacter.camera);
