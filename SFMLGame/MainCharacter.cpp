@@ -334,6 +334,7 @@ void MainCharacter::resetPlayer(sf::RenderWindow &window,sf::Sprite tile) {
     sword=0;
     magic=0;
     bow=0;
+    arrow=1;
 
     aniArrow=false;
     shield = false;
@@ -350,6 +351,10 @@ void MainCharacter::resetPlayer(sf::RenderWindow &window,sf::Sprite tile) {
     die=false;
     finalDie=false;
     hearth.reset();
+    arrowPlayer.stay=false;
+    arrowPlayer.pick=false;
+    arrowPlayer.animationArrow=false;
+    arrowPlayer.arrowFor=0;
 }
 
 int MainCharacter::dieAnimation() {

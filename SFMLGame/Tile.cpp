@@ -25,8 +25,8 @@ void Tile::setTile(sf::Texture &txt, sf::Vector2u tileSize) {
     collisionRect.top=tv * tileSize.y;
     collisionRect.left=tu * tileSize.x;
 
-    collisionRect.width = tileSize.x;
-    collisionRect.height = tileSize.y;
+    collisionRect.width = tileSize.x +1;
+    collisionRect.height = tileSize.y +1;
     spriteCollision.setPosition(i*tileSize.x, j*tileSize.y);
     spriteCollision.setTextureRect(collisionRect);
     spriteCollision.setTexture(txt);
