@@ -1,5 +1,6 @@
 #include "PowerUp.h"
 #include "config.cpp"
+
 #define MAX_NUMBER_POWER_UP 3
 
 PowerUp::PowerUp() {

@@ -11,6 +11,8 @@ void ConcreteStateMenuPowerUp::handleInput(MainCharacter &mainCharacter){
     while (game->window.pollEvent(event)) {
         if (event.type == sf::Event::Closed)
             game->window.close();
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
+            game->pushState(newState);
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
             menu.moveLeft();
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))

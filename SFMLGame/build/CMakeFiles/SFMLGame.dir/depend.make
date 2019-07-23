@@ -577,6 +577,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../ConcreteStateGame2.cpp
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../ConcreteStateGame2.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../ConcreteStateGame3.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../ConcreteStateMenu.h
+CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../ConcreteStateMenuPowerUp.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../Enemy.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../Event.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../FinalBoss.h
@@ -589,6 +590,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../Inventory.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../MainCharacter.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../MapSearchNode.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../Menu.h
+CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../PowerUp.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../Tile.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../TileMap.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../config.cpp
@@ -694,6 +696,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../ConcreteStateGame3.cpp
 CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../ConcreteStateGame3.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../ConcreteStateGame4.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../ConcreteStateMenu.h
+CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../ConcreteStateMenuPowerUp.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../Enemy.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../Event.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../FinalBoss.h
@@ -706,6 +709,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../Inventory.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../MainCharacter.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../MapSearchNode.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../Menu.h
+CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../PowerUp.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../Tile.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../TileMap.h
 CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../config.cpp
