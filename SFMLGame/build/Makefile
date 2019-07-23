@@ -834,6 +834,36 @@ Menu.cpp.s:
 	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Menu.cpp.s
 .PHONY : Menu.cpp.s
 
+PowerUp.obj: PowerUp.cpp.obj
+
+.PHONY : PowerUp.obj
+
+# target to build an object file
+PowerUp.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/PowerUp.cpp.obj
+.PHONY : PowerUp.cpp.obj
+
+PowerUp.i: PowerUp.cpp.i
+
+.PHONY : PowerUp.i
+
+# target to preprocess a source file
+PowerUp.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/PowerUp.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/PowerUp.cpp.i
+.PHONY : PowerUp.cpp.i
+
+PowerUp.s: PowerUp.cpp.s
+
+.PHONY : PowerUp.s
+
+# target to generate assembly for a file
+PowerUp.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/PowerUp.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/PowerUp.cpp.s
+.PHONY : PowerUp.cpp.s
+
 Tile.obj: Tile.cpp.obj
 
 .PHONY : Tile.obj
@@ -1033,6 +1063,9 @@ help:
 	@echo ... Menu.obj
 	@echo ... Menu.i
 	@echo ... Menu.s
+	@echo ... PowerUp.obj
+	@echo ... PowerUp.i
+	@echo ... PowerUp.s
 	@echo ... Tile.obj
 	@echo ... Tile.i
 	@echo ... Tile.s
