@@ -40,7 +40,9 @@ void ConcreteStateMenu::draw(MainCharacter &mainCharacter){
 
 void ConcreteStateMenu::startGame(MainCharacter &mainCharacter){ // switch state to Game
     game->init=false;
+    mainCharacter.resetStatistic();
     game->pushState(new ConcreteStateGame(game));
+    //game->pushState(new ConcreteStateMenuPowerUp(game,new ConcreteStateGame(game)));
 }
 
 void ConcreteStateMenu::startTutorial(MainCharacter &mainCharacter) { // switch state to tutorial

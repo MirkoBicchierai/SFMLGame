@@ -321,8 +321,6 @@ sf::Sprite MainCharacter::getSprite() {
 }
 
 void MainCharacter::resetPlayer(sf::RenderWindow &window,sf::Sprite tile) {
-    moveSpeed=6;
-    arrow = 1;
 
     sourceRect.top = upNormal;
     sourceRect.left = leftNormal;
@@ -414,5 +412,12 @@ void MainCharacter::resetInventory() {
 void MainCharacter::resetKey() {
     inventory.NumberSilverKey=0;
     inventory.NumberGoldKey=0;
+}
+
+void MainCharacter::resetStatistic() {
+    DMGSword=1;
+    moveSpeed=6;
+    arrowPlayer.damage=2;
+    ball.damage=1;
 }
 

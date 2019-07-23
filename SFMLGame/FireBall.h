@@ -13,9 +13,10 @@ public:
     void drawFireBall(sf::RenderWindow &window);
     void setRect(sf::IntRect player,float x, float y);
     int animation(std::vector<Enemy*> &enemyVec,MainCharacter &mainCharacter,FinalBoss* boss); //animation fireball, switch rect of image
+    int damage;
 
 private:
-    int damage;
+
     int moveSpeed;
     sf::IntRect ballRect;
     sf::Texture ballTexture;

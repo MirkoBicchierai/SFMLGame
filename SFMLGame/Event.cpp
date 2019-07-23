@@ -128,6 +128,8 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
             if(mainCharacter.dieAnimation()==maxLeftDiePlayer){
                 mainCharacter.finalDie=true;
                 mainCharacter.resetInventory();
+                mainCharacter.resetStatistic();
+                mainCharacter.dieRect.left=0;
             }
             game->dieClock.restart();
         }

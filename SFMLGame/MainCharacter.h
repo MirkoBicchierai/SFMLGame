@@ -59,6 +59,8 @@ public:
     void takeDamage(int damage);
     void resetInventory();
     void resetKey();
+    void resetStatistic();
+    sf::IntRect dieRect;
 private:
 
     sf::SoundBuffer bufferSword;
@@ -76,7 +78,6 @@ private:
     sf::Sprite shieldSprite;
     sf::IntRect sourceRect;
     sf::Texture bowTexture;
-    sf::IntRect dieRect;
     sf::Texture shieldTexture;
     sf::IntRect bowRect;
     sf::IntRect swordRect;

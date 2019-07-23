@@ -8,6 +8,7 @@ class Arrow {
 public:
     sf::Sprite arrowSprite;
     sf::Clock clock;
+    int damage;
     bool pick;   //used for pick the arrow by player
     bool stay;  //arrow on floor
     int arrowFor;  //number of for the animation bow
@@ -18,7 +19,6 @@ public:
     void setRect(sf::IntRect player,float x, float y);
     void animation(std::vector<Tile> &tile,std::vector<Enemy*> &enemyVec,FinalBoss* boss);  //arrow animation , and collision with wall
 private:
-    int damage;
     bool controlMove(std::vector<Tile> &tile); //control move of arrow
     int moveSpeed; //arrow speed
     sf::Color colorSprite;
