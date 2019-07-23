@@ -29,10 +29,12 @@ public:
     void moveAStar(std::vector<Tile> &tile,MainCharacter &mainCharacter);
     float animationDie();
     void attackPlayer(MainCharacter &mainCharacter);
-    int animationAttack(int x);
+    int animationAttack();
     int animationIdle();
     void takeDamage(int dmg);
     std:: string type;
+    int offsetTop;
+    int offsetLeft;
 private:
     Heart lifeHearth;
     sf::SoundBuffer attackBufferSound;

@@ -15,6 +15,15 @@ Enemy::Enemy(float x, float y,std::string &file,int distance,int dmg) {
     soundStep.setBuffer(bufferStep);
     soundStep.setVolume(0.2);
 
+    if(file=="normal"){
+        offsetLeft=0;
+        offsetTop=0;
+    }
+    else{
+        offsetLeft= -64*2;
+        offsetTop=64*8;
+    }
+
     entityTexture.loadFromFile(IMG_ENEMY_ROOT"/"+file+".png");
     type=file;
     entitySprite.setTexture(entityTexture);
@@ -250,8 +259,8 @@ void Enemy::attackPlayer(MainCharacter &mainCharacter){
             mainCharacter.takeDamage(damage);
 }
 
-int Enemy::animationAttack(int x) {
-    if (swordRect.left == x)
+int Enemy::animationAttack() {
+    if (swordRect.left == MaxLeftSwordEnemy+offsetLeft)
         swordRect.left = leftNormalSword;
     else
         swordRect.left += dim;
@@ -268,8 +277,7 @@ int Enemy::animationAttack(int x) {
     if (sourceRect.top == topMoveUp) {
         swordRect.top = upSwordEnemy;
     }
-    if(type!="normal")
-        swordRect.top = swordRect.top+offset;
+    swordRect.top = swordRect.top+offsetTop;
 
     entitySprite.setTextureRect(swordRect);
     return swordRect.left;

@@ -36,15 +36,12 @@ enum enemyRect{
     topMoveRightEnemy=64*11,
     dieMaxEnemy=64*5,
     dieTopEnemy=64*20,
-    maxAttackEnemyNormal=64*7,
-    maxAttackEnemyExtra=64*5,
 
-    offset=64*8,
     rightSwordEnemy=64*7,
     leftSwordEnemy=64*5,
     upSwordEnemy=64*4,
     downSwordEnemy=64*6,
-
+    MaxLeftSwordEnemy=64*7,
     MaxLeftIdle=64*6,
     IdleTopUp=0,
     IdleLeftTop=64,

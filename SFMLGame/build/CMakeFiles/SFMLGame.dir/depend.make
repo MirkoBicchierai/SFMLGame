@@ -2263,6 +2263,23 @@ CMakeFiles/SFMLGame.dir/Menu.cpp.obj: ../Menu.cpp
 CMakeFiles/SFMLGame.dir/Menu.cpp.obj: ../Menu.h
 CMakeFiles/SFMLGame.dir/Menu.cpp.obj: ../config.cpp
 
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/AlResource.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/Export.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/InputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/Listener.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/Music.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/OutputSoundFile.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/Sound.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundBuffer.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundBufferRecorder.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundFileFactory.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundFileFactory.inl
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundFileReader.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundFileWriter.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundRecorder.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundSource.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Audio/SoundStream.hpp
 CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Config.hpp
 CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Graphics.hpp
 CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Graphics/BlendMode.hpp
@@ -2337,8 +2354,15 @@ CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Window/VideoMo
 CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Window/Window.hpp
 CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../lib/SFML/include/SFML/Window/WindowStyle.hpp
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../Arrow.h
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../BaseStatistic.h
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../FireBall.h
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../Heart.h
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../Inventory.h
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../MainCharacter.h
 CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../PowerUp.cpp
 CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../PowerUp.h
+CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../Tile.h
 CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../config.cpp
 
 CMakeFiles/SFMLGame.dir/Tile.cpp.obj: ../lib/SFML/include/SFML/Config.hpp

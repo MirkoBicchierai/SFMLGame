@@ -105,14 +105,10 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
         }
     }
     //attack enemy
-    int x;
     for (int i = 0; i < enemyVec.size(); ++i) {
-        x=maxAttackEnemyNormal;
         if(enemyVec[i]->aniAttack){
             if(enemyVec[i]->AttackClock.getElapsedTime().asMilliseconds()>=50.f){
-                if(enemyVec[i]->type!="normal")
-                    x=maxAttackEnemyExtra;
-                if(enemyVec[i]->animationAttack(x)==x){
+                if(enemyVec[i]->animationAttack()==MaxLeftSwordEnemy+enemyVec[i]->offsetLeft){
                     enemyVec[i]->soundAttack.play();
                     enemyVec[i]->attackPlayer(mainCharacter);
                     enemyVec[i]->aniAttack=false;
@@ -121,6 +117,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
             }
         }
     }
+
     //die player
     if(mainCharacter.life<=0){
         mainCharacter.die=true;
@@ -228,14 +225,16 @@ void Event::backToMenu(Game* game){ //switch state to menu
 void Event::AStarEnemy(Game* game,TileMap &map,MainCharacter &mainCharacter, std::vector<Enemy*> enemyVec){
     if(game->enemyAStar.getElapsedTime().asMilliseconds()>=500.f) {
         for (auto &i:enemyVec) {
-            i->checkAStar(map, mainCharacter, map.tile);
+            if(!i->aniAttack)
+                i->checkAStar(map, mainCharacter, map.tile);
         }
         game->enemyAStar.restart();
     }
 
     if(game->enemyAStarMove.getElapsedTime().asMilliseconds()>=18.f) {
         for (auto &i:enemyVec) {
-            i->moveAStar(map.tile,mainCharacter);
+            if(!i->aniAttack)
+                i->moveAStar(map.tile,mainCharacter);
         }
         game->enemyAStarMove.restart();
     }
