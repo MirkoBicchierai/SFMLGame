@@ -5,10 +5,14 @@
 #include "SFML/Graphics.hpp"
 #include "MainCharacter.h"
 #include "GameText.h"
+#include "ObserverAchievement.h"
+#include "ConcreteAchievement.h"
 class GameState;
 
 class Game{
+
 public:
+    ObserverAchievement* Achievement = new ConcreteAchievement;
     bool interact;
     std::string typeInteract;
     int actualInteractI, actualInteractJ;

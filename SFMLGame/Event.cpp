@@ -223,7 +223,7 @@ void Event::backToMenu(Game* game){ //switch state to menu
 }
 
 void Event::AStarEnemy(Game* game,TileMap &map,MainCharacter &mainCharacter, std::vector<Enemy*> enemyVec){
-    if(game->enemyAStar.getElapsedTime().asMilliseconds()>=500.f) {
+    if(game->enemyAStar.getElapsedTime().asMilliseconds()>=250.f) {
         for (auto &i:enemyVec) {
             if(!i->aniAttack)
                 i->checkAStar(map, mainCharacter, map.tile);
