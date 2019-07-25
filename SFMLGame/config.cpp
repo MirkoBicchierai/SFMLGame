@@ -11,6 +11,7 @@
 #define MAP_ROOT_TUTORIAL "../map/tutorial"
 #define MAP_ROOT_GAME "../map/game"
 #define AUDIO_ROOT "../audio"
+#define IMG_ROOT_ACHIEVEMENT "../img/Achievement"
 
 //enum for the player
 enum sourceState{
