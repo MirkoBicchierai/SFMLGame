@@ -27,7 +27,6 @@ GameState* Game::CurrentState(){
 
 void Game::gameLoop(){
     MainCharacter mainCharacter(window);
-
     while (window.isOpen()){
         if(!init)
            CurrentState()->Init(mainCharacter);
@@ -35,9 +34,11 @@ void Game::gameLoop(){
             break;
 
         CurrentState()->handleInput(mainCharacter);
+        Achievement->updateAchievement();
         CurrentState()->update(mainCharacter);
         window.clear();
         CurrentState()->draw(mainCharacter);
+        Achievement->drawVectorAchievement(window,mainCharacter);
         window.display();
     }
 }

@@ -59,6 +59,7 @@ void ConcreteStateGame4::update(MainCharacter &mainCharacter){
         if(mainCharacter.entitySprite.getGlobalBounds().intersects(map.tile[j].spriteShow.getGlobalBounds()) && map.tile[j].end ){
             game->init=false;
             loopEvent.backToMenu(game);
+            game->Achievement->addAchievement("Kill Boss","KillBoss.png");
             break;
         }
     }
