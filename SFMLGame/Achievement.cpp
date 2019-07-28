@@ -9,9 +9,9 @@ Achievement::Achievement(std::string text, std::string file) {
     font.loadFromFile(FONT_ROOT"/Handwritingg.ttf");
     textDraw.setFont(font);
     textDraw.setString(text);
-    textDraw.setFillColor(sf::Color::Blue);
-    textDraw.setPosition(sprite.getPosition().x+sprite.getGlobalBounds().width+5,sprite.getPosition().y);
-    textDraw.scale(0.8,0.8);
+    textDraw.setFillColor(sf::Color::Green);
+    textDraw.setPosition(sprite.getPosition().x+sprite.getGlobalBounds().width+5,sprite.getPosition().y+15);
+    textDraw.setCharacterSize(20);
 }
 
 void Achievement::drawAchievement(sf::RenderWindow &window) {
@@ -21,7 +21,7 @@ void Achievement::drawAchievement(sf::RenderWindow &window) {
 
 void Achievement::changePosition(int i,sf::RenderWindow &window ,MainCharacter &player) {
     sprite.setPosition(sprite.getPosition().x,i*(sprite.getGlobalBounds().height+5));
-    textDraw.setPosition(textDraw.getPosition().x,+i*(textDraw.getGlobalBounds().height+5));
-    sprite.setPosition(player.entitySprite.getPosition().x - window.getSize().x / 2.f +40,5 +player.entitySprite.getPosition().y - window.getSize().y / 2.f +5 + sprite.getPosition().y +25);
-    textDraw.setPosition(sprite.getPosition().x+sprite.getGlobalBounds().width+5,sprite.getPosition().y);
+    textDraw.setPosition(textDraw.getPosition().x,+i*(textDraw.getGlobalBounds().height+15));
+    sprite.setPosition(player.camera.getCenter().x - window.getSize().x / 2.f +40,5 +player.camera.getCenter().y - window.getSize().y / 2.f +5 + sprite.getPosition().y +25);
+    textDraw.setPosition(sprite.getPosition().x+sprite.getGlobalBounds().width+5,sprite.getPosition().y+15);
 }

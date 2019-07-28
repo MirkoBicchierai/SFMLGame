@@ -27,7 +27,9 @@ GameState* Game::CurrentState(){
 
 void Game::gameLoop(){
     MainCharacter mainCharacter(window);
+
     while (window.isOpen()){
+
         if(!init)
            CurrentState()->Init(mainCharacter);
         if (CurrentState() == nullptr)
@@ -41,6 +43,7 @@ void Game::gameLoop(){
         Achievement->drawVectorAchievement(window,mainCharacter);
         window.display();
     }
+
 }
 
 
