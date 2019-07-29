@@ -4,10 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Achievement.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Achievement.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Armor.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Armor.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Arrow.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Arrow.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/BaseStatistic.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/BaseStatistic.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Coin.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Coin.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteAchievement.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/ConcreteAchievement.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/ConcreteStateGame.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame2.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame3.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj"
@@ -27,6 +29,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MainCharacter.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/MainCharacter.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/MapSearchNode.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/MapSearchNode.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Menu.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Menu.cpp.obj"
+  "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ObserverAchievement.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/ObserverAchievement.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/PowerUp.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Tile.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/Tile.cpp.obj"
   "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/TileMap.cpp" "C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/build/CMakeFiles/SFMLGame.dir/TileMap.cpp.obj"

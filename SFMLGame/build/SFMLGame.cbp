@@ -282,6 +282,14 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Achievement.cpp">
+			<Option target="SFMLGame"/>
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Achievement.h">
+			<Option target="SFMLGame"/>
+			<Option target="core"/>
+		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Armor.cpp">
 			<Option target="SFMLGame"/>
 			<Option target="core"/>
@@ -311,6 +319,14 @@
 			<Option target="core"/>
 		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Coin.h">
+			<Option target="SFMLGame"/>
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteAchievement.cpp">
+			<Option target="SFMLGame"/>
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteAchievement.h">
 			<Option target="SFMLGame"/>
 			<Option target="core"/>
 		</Unit>
@@ -463,6 +479,14 @@
 			<Option target="core"/>
 		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/Menu.h">
+			<Option target="SFMLGame"/>
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ObserverAchievement.cpp">
+			<Option target="SFMLGame"/>
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ObserverAchievement.h">
 			<Option target="SFMLGame"/>
 			<Option target="core"/>
 		</Unit>

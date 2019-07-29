@@ -174,6 +174,36 @@ gtest_main/fast:
 	$(MAKE) -f googleTest\lib\googletest\CMakeFiles\gtest_main.dir\build.make googleTest/lib/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+Achievement.obj: Achievement.cpp.obj
+
+.PHONY : Achievement.obj
+
+# target to build an object file
+Achievement.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Achievement.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Achievement.cpp.obj
+.PHONY : Achievement.cpp.obj
+
+Achievement.i: Achievement.cpp.i
+
+.PHONY : Achievement.i
+
+# target to preprocess a source file
+Achievement.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Achievement.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Achievement.cpp.i
+.PHONY : Achievement.cpp.i
+
+Achievement.s: Achievement.cpp.s
+
+.PHONY : Achievement.s
+
+# target to generate assembly for a file
+Achievement.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Achievement.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Achievement.cpp.s
+.PHONY : Achievement.cpp.s
+
 Armor.obj: Armor.cpp.obj
 
 .PHONY : Armor.obj
@@ -293,6 +323,36 @@ Coin.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/Coin.cpp.s
 	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Coin.cpp.s
 .PHONY : Coin.cpp.s
+
+ConcreteAchievement.obj: ConcreteAchievement.cpp.obj
+
+.PHONY : ConcreteAchievement.obj
+
+# target to build an object file
+ConcreteAchievement.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteAchievement.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteAchievement.cpp.obj
+.PHONY : ConcreteAchievement.cpp.obj
+
+ConcreteAchievement.i: ConcreteAchievement.cpp.i
+
+.PHONY : ConcreteAchievement.i
+
+# target to preprocess a source file
+ConcreteAchievement.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteAchievement.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteAchievement.cpp.i
+.PHONY : ConcreteAchievement.cpp.i
+
+ConcreteAchievement.s: ConcreteAchievement.cpp.s
+
+.PHONY : ConcreteAchievement.s
+
+# target to generate assembly for a file
+ConcreteAchievement.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteAchievement.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteAchievement.cpp.s
+.PHONY : ConcreteAchievement.cpp.s
 
 ConcreteStateGame.obj: ConcreteStateGame.cpp.obj
 
@@ -864,6 +924,36 @@ Menu.cpp.s:
 	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/Menu.cpp.s
 .PHONY : Menu.cpp.s
 
+ObserverAchievement.obj: ObserverAchievement.cpp.obj
+
+.PHONY : ObserverAchievement.obj
+
+# target to build an object file
+ObserverAchievement.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ObserverAchievement.cpp.obj
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ObserverAchievement.cpp.obj
+.PHONY : ObserverAchievement.cpp.obj
+
+ObserverAchievement.i: ObserverAchievement.cpp.i
+
+.PHONY : ObserverAchievement.i
+
+# target to preprocess a source file
+ObserverAchievement.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ObserverAchievement.cpp.i
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ObserverAchievement.cpp.i
+.PHONY : ObserverAchievement.cpp.i
+
+ObserverAchievement.s: ObserverAchievement.cpp.s
+
+.PHONY : ObserverAchievement.s
+
+# target to generate assembly for a file
+ObserverAchievement.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ObserverAchievement.cpp.s
+	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ObserverAchievement.cpp.s
+.PHONY : ObserverAchievement.cpp.s
+
 PowerUp.obj: PowerUp.cpp.obj
 
 .PHONY : PowerUp.obj
@@ -1027,6 +1117,9 @@ help:
 	@echo ... GoogleTests
 	@echo ... gtest
 	@echo ... gtest_main
+	@echo ... Achievement.obj
+	@echo ... Achievement.i
+	@echo ... Achievement.s
 	@echo ... Armor.obj
 	@echo ... Armor.i
 	@echo ... Armor.s
@@ -1039,6 +1132,9 @@ help:
 	@echo ... Coin.obj
 	@echo ... Coin.i
 	@echo ... Coin.s
+	@echo ... ConcreteAchievement.obj
+	@echo ... ConcreteAchievement.i
+	@echo ... ConcreteAchievement.s
 	@echo ... ConcreteStateGame.obj
 	@echo ... ConcreteStateGame.i
 	@echo ... ConcreteStateGame.s
@@ -1096,6 +1192,9 @@ help:
 	@echo ... Menu.obj
 	@echo ... Menu.i
 	@echo ... Menu.s
+	@echo ... ObserverAchievement.obj
+	@echo ... ObserverAchievement.i
+	@echo ... ObserverAchievement.s
 	@echo ... PowerUp.obj
 	@echo ... PowerUp.i
 	@echo ... PowerUp.s
