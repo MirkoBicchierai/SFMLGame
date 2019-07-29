@@ -60,6 +60,8 @@ void ConcreteStateGame2::update(MainCharacter &mainCharacter){
             game->init=false;
             mainCharacter.resetKey();
             game->pushState(new ConcreteStateMenuPowerUp(game,new ConcreteStateGame3(game)));
+            if(mainCharacter.life==3)
+                game->Achievement->addAchievement("Perfect level","FlawLess.png");
             break;
         }
     }

@@ -60,6 +60,8 @@ void ConcreteStateGame4::update(MainCharacter &mainCharacter){
             game->init=false;
             loopEvent.backToMenu(game);
             game->Achievement->addAchievement("Kill Boss","KillBoss.png");
+            if(mainCharacter.life==3)
+                game->Achievement->addAchievement("Perfect level","FlawLess.png");
             break;
         }
     }

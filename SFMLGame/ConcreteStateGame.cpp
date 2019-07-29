@@ -53,12 +53,13 @@ void ConcreteStateGame::draw(MainCharacter &mainCharacter){
 void ConcreteStateGame::update(MainCharacter &mainCharacter){
     loopEvent.updateEvent(mainCharacter,game,map,enemyVec,coinVec);
     loopEvent.AStarEnemy(game,map,mainCharacter,enemyVec);
-
     for (int j = 0; j < map.tile.size() ; ++j) {
         if(mainCharacter.entitySprite.getGlobalBounds().intersects(map.tile[j].spriteShow.getGlobalBounds()) && map.tile[j].end ){
             game->init=false;
             mainCharacter.resetKey();
             game->pushState(new ConcreteStateMenuPowerUp(game,new ConcreteStateGame2(game)));
+            if(mainCharacter.life==3)
+                game->Achievement->addAchievement("Perfect level","FlawLess.png");
             break;
         }
     }

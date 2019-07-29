@@ -5,6 +5,11 @@
 #include "ConcreteStateMenu.h"
 
 void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, std::vector<Enemy*> &enemyVec, std::vector<Coin*> &coinVec,FinalBoss* boss) {
+
+    if(game->Achievement->map.size()==totAch) {
+        game->Achievement->addAchievement("Platinum","Plat.png");
+    }
+
     //time shield end
     if (mainCharacter.shield && game->clockShield.getElapsedTime().asSeconds() >= mainCharacter.secShield) {
         mainCharacter.setNormalTexture();
@@ -68,6 +73,7 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
                 mainCharacter.arrowPlayer.arrowFor++;
             }
         } else {
+            game->Achievement->addAchievement("First shot","FirstArrow.png");
             mainCharacter.arrowPlayer.pick = true;
             mainCharacter.arrowPlayer.animationArrow = false;
             mainCharacter.aniArrow = false;
@@ -99,6 +105,8 @@ void Event::updateEvent(MainCharacter &mainCharacter,Game* game,TileMap &map, st
                     int n=coinVec.size();
                     coinVec[n-1]->setPosition(enemyVec[i]->entitySprite);
                     enemyVec.erase(enemyVec.begin()+i);
+                    if(enemyVec.size()==0)
+                        game->Achievement->addAchievement("Kill All Enemy","KillAllEnemy.png");
                 }
                 enemyVec[i]->dieClock.restart();
             }
@@ -250,8 +258,10 @@ void Event::mapInteraction(MainCharacter &mainCharacter, Game *game, TileMap &ma
             return;
         if(game->typeInteract == "closed_door_silver" && mainCharacter.inventory.NumberSilverKey>0)
             mainCharacter.inventory.NumberSilverKey--;
-        if(game->typeInteract == "closed_door_gold" && mainCharacter.inventory.NumberGoldKey>0)
+        if(game->typeInteract == "closed_door_gold" && mainCharacter.inventory.NumberGoldKey>0){
             mainCharacter.inventory.NumberGoldKey--;
+            game->Achievement->addAchievement("First gold key used","GoldKeyUsed.png");
+        }
         for (int j = 0; j < map.tile.size(); ++j) {
             if (game->typeInteract == "lever") {
                 if (game->actualInteractI == map.tile[j].i && game->actualInteractJ == map.tile[j].j) {

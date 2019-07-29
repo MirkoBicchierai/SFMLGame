@@ -2,7 +2,7 @@
 #include "ConcreteStateMenu.h"
 #include "ConcreteStateGame.h"
 #include "ConcreteStateTutorial.h"
-
+#include "config.cpp"
 ConcreteStateMenu::ConcreteStateMenu(Game* game){
     this->game = game;
 }
@@ -31,7 +31,9 @@ void ConcreteStateMenu::handleInput(MainCharacter &mainCharacter){
 }
 
 void ConcreteStateMenu::update(MainCharacter &mainCharacter){
-
+    if(game->Achievement->map.size()==totAch) {
+        game->Achievement->addAchievement("Platinum","Plat.png");
+    }
 }
 
 void ConcreteStateMenu::draw(MainCharacter &mainCharacter){

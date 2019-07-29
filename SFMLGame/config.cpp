@@ -159,6 +159,10 @@ enum Boss{
     topSwordRightBoss=256*1,
 };
 
+enum achievementTot{
+    totAch=7
+};
+
 static float distanceBetweenTwoSprite(sf::Sprite sprite1, sf::Sprite sprite2){
     float x2,x1,y2,y1,quadX,quadY;
     x2=sprite1.getPosition().x;
