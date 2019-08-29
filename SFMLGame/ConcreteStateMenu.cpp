@@ -3,6 +3,7 @@
 #include "ConcreteStateGame.h"
 #include "ConcreteStateTutorial.h"
 #include "config.cpp"
+
 ConcreteStateMenu::ConcreteStateMenu(Game* game){
     this->game = game;
 }

@@ -140,85 +140,154 @@ void ConcreteStateGame::Init(MainCharacter &mainCharacter) {
 void ConcreteStateGame::spawnEnemy() {
     int x,y;
     std::string file;
-    if(actualLevel==1) {
-        for (int i = 0; i < 2; ++i) {
-            x=rand()%1200 + 1200;
-            y=rand()%1200 + 1200;
-            file="normal";
-            enemyVec.push_back(new Enemy(x,y,file,600,1));
-        }
-        for (int i = 0; i < 2; ++i) {
-            x=rand()%1200 + 1200;
-            y=rand()%1200 + 1200;
-            file="reptiles";
-            enemyVec.push_back(new Enemy(x,y,file,500,1));
-        }
-        for (int i = 0; i < 2; ++i) {
-            x=rand()%1200 + 1200;
-            y=rand()%1200 + 1200;
-            file="skeleton";
-            enemyVec.push_back(new Enemy(x,y,file,400,1));
-        }
-    }
-    if(actualLevel==2) {
-        for (int j = 0; j <map.tile.size() ; ++j) {
-            if((map.tile[j].i==1 && map.tile[j].j==2) || (map.tile[j].i==20 && map.tile[j].j==41) || (map.tile[j].i==28 && map.tile[j].j==44) || (map.tile[j].i==3 && map.tile[j].j==29) || (map.tile[j].i==5 && map.tile[j].j==23) ){
-                file="normal";
-                enemyVec.push_back(new Enemy(map.tile[j].spriteShow.getPosition().x,map.tile[j].spriteShow.getPosition().y,file,600,1));
+    int randN=0;
+    bool randNN=false;
+    int randR=0;
+    bool randRR=false;
+    int randS=0;
+    bool randSS=false;
+    std::string s;
+    std::ifstream infile(MAP_ROOT_GAME"/configLevel"+to_string(actualLevel)+".txt");
+    int fin=0;
+
+    while (std::getline(infile, s)){
+        std::regex ws_re(",");
+        std::vector<std::string> result{ std::sregex_token_iterator(s.begin(), s.end(), ws_re, -1), {}};
+        for (const auto & i : result) {
+            std::stringstream geek(i);
+            x = 0;
+            geek >> x;
+            if(fin==2){
+                if(randNN){
+                    randN=x;
+                    randNN=false;
+                }
+                if(x==-2){
+                    randNN=true;
+                }
+                if(randRR){
+                    randR=x;
+                    randRR=false;
+                }
+                if(x==-3){
+                    randRR=true;
+                }
+                if(randSS){
+                    randS=x;
+                    randSS=false;
+                }
+                if(x==-4){
+                    randSS=true;
+                }
             }
-            if((map.tile[j].i==4 && map.tile[j].j==45) || (map.tile[j].i==44 && map.tile[j].j==45) || (map.tile[j].i==22 && map.tile[j].j==29)){
-                file="reptiles";
-                enemyVec.push_back(new Enemy(map.tile[j].spriteShow.getPosition().x,map.tile[j].spriteShow.getPosition().y,file,500,1));
-            }
-            if((map.tile[j].i==39 && map.tile[j].j==19) || (map.tile[j].i==46 && map.tile[j].j==23) || (map.tile[j].i==46 && map.tile[j].j==15)){
-                file="skeleton";
-                enemyVec.push_back(new Enemy(map.tile[j].spriteShow.getPosition().x,map.tile[j].spriteShow.getPosition().y,file,400,1));
-            }
-        }
-    }
-    if(actualLevel==3) {
-        for (int j = 0; j <map.tile.size() ; ++j) {
-            if((map.tile[j].i==4 && map.tile[j].j==46) || (map.tile[j].i==44 && map.tile[j].j==46) || (map.tile[j].i==22 && map.tile[j].j==37) || (map.tile[j].i==23 && map.tile[j].j==37) || (map.tile[j].i==20 && map.tile[j].j==7) ){
-                file="normal";
-                enemyVec.push_back(new Enemy(map.tile[j].spriteShow.getPosition().x,map.tile[j].spriteShow.getPosition().y,file,600,1));
-            }
-            if((map.tile[j].i==2 && map.tile[j].j==30) || (map.tile[j].i==42 && map.tile[j].j==29) || (map.tile[j].i==22 && map.tile[j].j==23)){
-                file="reptiles";
-                enemyVec.push_back(new Enemy(map.tile[j].spriteShow.getPosition().x,map.tile[j].spriteShow.getPosition().y,file,500,1));
-            }
-            if((map.tile[j].i==2 && map.tile[j].j==8) || (map.tile[j].i==2 && map.tile[j].j==4) || (map.tile[j].i==42 && map.tile[j].j==20)|| (map.tile[j].i==38 && map.tile[j].j==14)){
-                file="skeleton";
-                enemyVec.push_back(new Enemy(map.tile[j].spriteShow.getPosition().x,map.tile[j].spriteShow.getPosition().y,file,400,1));
-            }
+            if(x==-1)
+                fin++;
         }
     }
-    if(actualLevel==4) {
-        for (int i = 0; i < 2; ++i) {
-            x=rand()%1200 + 600;
-            y=rand()%1200 + 600;
-            file="normal";
-            enemyVec.push_back(new Enemy(x,y,file,600,1));
+    for (int i = 0; i < randN; ++i) {
+        x=rand()%1200 + 1200;
+        y=rand()%1200 + 1200;
+        file="normal";
+        enemyVec.push_back(new Enemy(x,y,file,600,1));
+    }
+    for (int i = 0; i < randR; ++i) {
+        x=rand()%1200 + 1200;
+        y=rand()%1200 + 1200;
+        file="reptiles";
+        enemyVec.push_back(new Enemy(x,y,file,500,1));
+    }
+    for (int i = 0; i < randS; ++i) {
+        x=rand()%1200 + 1200;
+        y=rand()%1200 + 1200;
+        file="skeleton";
+        enemyVec.push_back(new Enemy(x,y,file,400,1));
+    }
+    struct cord{
+        int x;
+        int y;
+        std::string file;
+        int range;
+    };
+    struct cord tmp;
+    tmp.x=0;
+    tmp.y=0;
+    tmp.file="normal";
+    tmp.range=0;
+    std::vector<struct cord> cord;
+    fin=0;
+    bool next;
+    bool stat;
+    std::ifstream infile2(MAP_ROOT_GAME"/configLevel"+to_string(actualLevel)+".txt");
+    while (std::getline(infile2, s)){
+        std::regex ws_re(",");
+        std::vector<std::string> result{ std::sregex_token_iterator(s.begin(), s.end(), ws_re, -1), {}};
+        next=false;
+        stat=false;
+        for (const auto & i : result) {
+            std::stringstream geek(i);
+            x = 0;
+            geek >> x;
+            if(fin==2){
+                if(stat){
+                    if(x==2) {
+                        tmp.file = "normal";
+                        tmp.range=600;
+                    }
+                    if(x==3){
+                        tmp.file="reptiles";
+                        tmp.range=500;
+                    }
+                    if(x==4){
+                        tmp.file="skeleton";
+                        tmp.range=400;
+                    }
+                    cord.push_back(tmp);
+                    stat=false;
+                }
+                if(!next)
+                    tmp.x=x;
+                else {
+                    tmp.y = x;
+                    stat=true;
+                }
+                next=true;
+            }
+            if(x==-1)
+                fin++;
         }
-        boss.reset();
+    }
+    int c=0;
+    std::cout<<enemyVec.size()<<std::endl;
+    for (int j = 0; j < cord.size(); ++j) {
+        std::cout<<"X:"<<cord[j].x<<" Y:"<<cord[j].y<<std::endl;
+        for (int k = 0; k <map.tile.size() ; ++k) {
+            if(map.tile[k].i==cord[j].x && map.tile[k].j==cord[j].y){
+                c++;
+                std::cout<<c<<std::endl;
+                enemyVec.push_back(new Enemy(map.tile[k].spriteShow.getPosition().x,map.tile[k].spriteShow.getPosition().y,cord[j].file,cord[j].range,1));
+            }
+        }
     }
 }
 
 void ConcreteStateGame::setSpawnPoint(MainCharacter &mainCharacter) {
-    int x=1, y=1;
-    if(actualLevel==1)
-        x=y=5;
-    if(actualLevel==2)
-        x=y=6;
-    if(actualLevel==3) {
-        x =23;
-        y = 42;
-    }
-    if(actualLevel==4) {
-        x =20;
-        y = 20;
+
+    std::string s;
+    std::ifstream infile(MAP_ROOT_GAME"/configLevel"+to_string(actualLevel)+".txt");
+    std::vector<int> cord;
+    while (std::getline(infile, s)){
+        std::regex ws_re(",");
+        std::vector<std::string> result{ std::sregex_token_iterator(s.begin(), s.end(), ws_re, -1), {}};
+        for (const auto & i : result) {
+            std::stringstream geek(i);
+            int x = 0;
+            geek >> x;
+            cord.push_back(x);
+        }
+        break;
     }
     for (int j = 0; j <map.tile.size() ; ++j) {
-        if(map.tile[j].i==x && map.tile[j].j==y) {
+        if(map.tile[j].i==cord[0] && map.tile[j].j==cord[1]) {
             mainCharacter.resetPlayer(game->window, map.tile[j].spriteShow);
             return;
         }
@@ -226,27 +295,43 @@ void ConcreteStateGame::setSpawnPoint(MainCharacter &mainCharacter) {
 }
 
 void ConcreteStateGame::setEndPoint() {
-    if(actualLevel==1) {
-        for (int j = 0; j <map.tile.size() ; ++j) {
-            if((map.tile[j].i==8 || map.tile[j].i==9) && map.tile[j].j==1)
-                map.tile[j].setEnd();
+
+    std::string s;
+    std::ifstream infile(MAP_ROOT_GAME"/configLevel"+to_string(actualLevel)+".txt");
+    struct cord{
+        int x;
+        int y;
+    };
+    struct cord tmp;
+    tmp.x=0;
+    tmp.y=0;
+    std::vector<struct cord> cord;
+    int fin=0;
+    bool next;
+    while (std::getline(infile, s)){
+        std::regex ws_re(",");
+        std::vector<std::string> result{ std::sregex_token_iterator(s.begin(), s.end(), ws_re, -1), {}};
+        next=false;
+        for (const auto & i : result) {
+            std::stringstream geek(i);
+            int x = 0;
+            geek >> x;
+            if(x==-1)
+                fin++;
+            if(fin==1){
+                if(!next)
+                    tmp.x=x;
+                else {
+                    tmp.y = x;
+                    cord.push_back(tmp);
+                }
+                next=true;
+            }
         }
     }
-    if(actualLevel==2) {
+    for (int k = 0; k < cord.size(); ++k) {
         for (int j = 0; j <map.tile.size() ; ++j) {
-            if(map.tile[j].i==10 && map.tile[j].j==16)
-                map.tile[j].setEnd();
-        }
-    }
-    if(actualLevel==3) {
-        for (int j = 0; j <map.tile.size() ; ++j) {
-            if((map.tile[j].i==0) && (map.tile[j].j==16 || map.tile[j].j==17))
-                map.tile[j].setEnd();
-        }
-    }
-    if(actualLevel==4) {
-        for (int j = 0; j <map.tile.size() ; ++j) {
-            if((map.tile[j].i==19 || map.tile[j].i==20) && map.tile[j].j==3)
+            if((map.tile[j].i==cord[k].x && map.tile[j].j==cord[k].y))
                 map.tile[j].setEnd();
         }
     }
