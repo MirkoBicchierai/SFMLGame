@@ -350,52 +350,10 @@ CMakeFiles/SFMLGame.dir/Coin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SFMLGame.dir/Coin.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\Coin.cpp -o CMakeFiles\SFMLGame.dir\Coin.cpp.s
 
-CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: CMakeFiles/SFMLGame.dir/flags.make
-CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: CMakeFiles/SFMLGame.dir/includes_CXX.rsp
-CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj: ../ConcreteStateGame2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFMLGame.dir\ConcreteStateGame2.cpp.obj -c C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\ConcreteStateGame2.cpp
-
-CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\ConcreteStateGame2.cpp > CMakeFiles\SFMLGame.dir\ConcreteStateGame2.cpp.i
-
-CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\ConcreteStateGame2.cpp -o CMakeFiles\SFMLGame.dir\ConcreteStateGame2.cpp.s
-
-CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: CMakeFiles/SFMLGame.dir/flags.make
-CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: CMakeFiles/SFMLGame.dir/includes_CXX.rsp
-CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj: ../ConcreteStateGame3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFMLGame.dir\ConcreteStateGame3.cpp.obj -c C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\ConcreteStateGame3.cpp
-
-CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\ConcreteStateGame3.cpp > CMakeFiles\SFMLGame.dir\ConcreteStateGame3.cpp.i
-
-CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\ConcreteStateGame3.cpp -o CMakeFiles\SFMLGame.dir\ConcreteStateGame3.cpp.s
-
-CMakeFiles/SFMLGame.dir/ConcreteStateGame4.cpp.obj: CMakeFiles/SFMLGame.dir/flags.make
-CMakeFiles/SFMLGame.dir/ConcreteStateGame4.cpp.obj: CMakeFiles/SFMLGame.dir/includes_CXX.rsp
-CMakeFiles/SFMLGame.dir/ConcreteStateGame4.cpp.obj: ../ConcreteStateGame4.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/SFMLGame.dir/ConcreteStateGame4.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFMLGame.dir\ConcreteStateGame4.cpp.obj -c C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\ConcreteStateGame4.cpp
-
-CMakeFiles/SFMLGame.dir/ConcreteStateGame4.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SFMLGame.dir/ConcreteStateGame4.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\ConcreteStateGame4.cpp > CMakeFiles\SFMLGame.dir\ConcreteStateGame4.cpp.i
-
-CMakeFiles/SFMLGame.dir/ConcreteStateGame4.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SFMLGame.dir/ConcreteStateGame4.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\ConcreteStateGame4.cpp -o CMakeFiles\SFMLGame.dir\ConcreteStateGame4.cpp.s
-
 CMakeFiles/SFMLGame.dir/FinalBoss.cpp.obj: CMakeFiles/SFMLGame.dir/flags.make
 CMakeFiles/SFMLGame.dir/FinalBoss.cpp.obj: CMakeFiles/SFMLGame.dir/includes_CXX.rsp
 CMakeFiles/SFMLGame.dir/FinalBoss.cpp.obj: ../FinalBoss.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/SFMLGame.dir/FinalBoss.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/SFMLGame.dir/FinalBoss.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFMLGame.dir\FinalBoss.cpp.obj -c C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\FinalBoss.cpp
 
 CMakeFiles/SFMLGame.dir/FinalBoss.cpp.i: cmake_force
@@ -409,7 +367,7 @@ CMakeFiles/SFMLGame.dir/FinalBoss.cpp.s: cmake_force
 CMakeFiles/SFMLGame.dir/Armor.cpp.obj: CMakeFiles/SFMLGame.dir/flags.make
 CMakeFiles/SFMLGame.dir/Armor.cpp.obj: CMakeFiles/SFMLGame.dir/includes_CXX.rsp
 CMakeFiles/SFMLGame.dir/Armor.cpp.obj: ../Armor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/SFMLGame.dir/Armor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/SFMLGame.dir/Armor.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFMLGame.dir\Armor.cpp.obj -c C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\Armor.cpp
 
 CMakeFiles/SFMLGame.dir/Armor.cpp.i: cmake_force
@@ -423,7 +381,7 @@ CMakeFiles/SFMLGame.dir/Armor.cpp.s: cmake_force
 CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: CMakeFiles/SFMLGame.dir/flags.make
 CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: CMakeFiles/SFMLGame.dir/includes_CXX.rsp
 CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj: ../PowerUp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFMLGame.dir\PowerUp.cpp.obj -c C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\PowerUp.cpp
 
 CMakeFiles/SFMLGame.dir/PowerUp.cpp.i: cmake_force
@@ -437,7 +395,7 @@ CMakeFiles/SFMLGame.dir/PowerUp.cpp.s: cmake_force
 CMakeFiles/SFMLGame.dir/ConcreteStateMenuPowerUp.cpp.obj: CMakeFiles/SFMLGame.dir/flags.make
 CMakeFiles/SFMLGame.dir/ConcreteStateMenuPowerUp.cpp.obj: CMakeFiles/SFMLGame.dir/includes_CXX.rsp
 CMakeFiles/SFMLGame.dir/ConcreteStateMenuPowerUp.cpp.obj: ../ConcreteStateMenuPowerUp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/SFMLGame.dir/ConcreteStateMenuPowerUp.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/SFMLGame.dir/ConcreteStateMenuPowerUp.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFMLGame.dir\ConcreteStateMenuPowerUp.cpp.obj -c C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\ConcreteStateMenuPowerUp.cpp
 
 CMakeFiles/SFMLGame.dir/ConcreteStateMenuPowerUp.cpp.i: cmake_force
@@ -451,7 +409,7 @@ CMakeFiles/SFMLGame.dir/ConcreteStateMenuPowerUp.cpp.s: cmake_force
 CMakeFiles/SFMLGame.dir/ObserverAchievement.cpp.obj: CMakeFiles/SFMLGame.dir/flags.make
 CMakeFiles/SFMLGame.dir/ObserverAchievement.cpp.obj: CMakeFiles/SFMLGame.dir/includes_CXX.rsp
 CMakeFiles/SFMLGame.dir/ObserverAchievement.cpp.obj: ../ObserverAchievement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/SFMLGame.dir/ObserverAchievement.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/SFMLGame.dir/ObserverAchievement.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFMLGame.dir\ObserverAchievement.cpp.obj -c C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\ObserverAchievement.cpp
 
 CMakeFiles/SFMLGame.dir/ObserverAchievement.cpp.i: cmake_force
@@ -465,7 +423,7 @@ CMakeFiles/SFMLGame.dir/ObserverAchievement.cpp.s: cmake_force
 CMakeFiles/SFMLGame.dir/ConcreteAchievement.cpp.obj: CMakeFiles/SFMLGame.dir/flags.make
 CMakeFiles/SFMLGame.dir/ConcreteAchievement.cpp.obj: CMakeFiles/SFMLGame.dir/includes_CXX.rsp
 CMakeFiles/SFMLGame.dir/ConcreteAchievement.cpp.obj: ../ConcreteAchievement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/SFMLGame.dir/ConcreteAchievement.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/SFMLGame.dir/ConcreteAchievement.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFMLGame.dir\ConcreteAchievement.cpp.obj -c C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\ConcreteAchievement.cpp
 
 CMakeFiles/SFMLGame.dir/ConcreteAchievement.cpp.i: cmake_force
@@ -479,7 +437,7 @@ CMakeFiles/SFMLGame.dir/ConcreteAchievement.cpp.s: cmake_force
 CMakeFiles/SFMLGame.dir/Achievement.cpp.obj: CMakeFiles/SFMLGame.dir/flags.make
 CMakeFiles/SFMLGame.dir/Achievement.cpp.obj: CMakeFiles/SFMLGame.dir/includes_CXX.rsp
 CMakeFiles/SFMLGame.dir/Achievement.cpp.obj: ../Achievement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/SFMLGame.dir/Achievement.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/SFMLGame.dir/Achievement.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SFMLGame.dir\Achievement.cpp.obj -c C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\Achievement.cpp
 
 CMakeFiles/SFMLGame.dir/Achievement.cpp.i: cmake_force
@@ -513,9 +471,6 @@ SFMLGame_OBJECTS = \
 "CMakeFiles/SFMLGame.dir/GameText.cpp.obj" \
 "CMakeFiles/SFMLGame.dir/Inventory.cpp.obj" \
 "CMakeFiles/SFMLGame.dir/Coin.cpp.obj" \
-"CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj" \
-"CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj" \
-"CMakeFiles/SFMLGame.dir/ConcreteStateGame4.cpp.obj" \
 "CMakeFiles/SFMLGame.dir/FinalBoss.cpp.obj" \
 "CMakeFiles/SFMLGame.dir/Armor.cpp.obj" \
 "CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj" \
@@ -548,9 +503,6 @@ SFMLGame.exe: CMakeFiles/SFMLGame.dir/Event.cpp.obj
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/GameText.cpp.obj
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/Inventory.cpp.obj
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/Coin.cpp.obj
-SFMLGame.exe: CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj
-SFMLGame.exe: CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj
-SFMLGame.exe: CMakeFiles/SFMLGame.dir/ConcreteStateGame4.cpp.obj
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/FinalBoss.cpp.obj
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/Armor.cpp.obj
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/PowerUp.cpp.obj
@@ -567,7 +519,7 @@ SFMLGame.exe: ../lib/SFML/lib/libsfml-system-d.a
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/linklibs.rsp
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/objects1.rsp
 SFMLGame.exe: CMakeFiles/SFMLGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking CXX executable SFMLGame.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\MIRKO\Desktop\GiocoClionGIT\SFMLGame\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Linking CXX executable SFMLGame.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\SFMLGame.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

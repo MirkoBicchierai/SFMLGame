@@ -384,96 +384,6 @@ ConcreteStateGame.cpp.s:
 	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame.cpp.s
 .PHONY : ConcreteStateGame.cpp.s
 
-ConcreteStateGame2.obj: ConcreteStateGame2.cpp.obj
-
-.PHONY : ConcreteStateGame2.obj
-
-# target to build an object file
-ConcreteStateGame2.cpp.obj:
-	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.obj
-	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame2.cpp.obj
-.PHONY : ConcreteStateGame2.cpp.obj
-
-ConcreteStateGame2.i: ConcreteStateGame2.cpp.i
-
-.PHONY : ConcreteStateGame2.i
-
-# target to preprocess a source file
-ConcreteStateGame2.cpp.i:
-	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.i
-	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame2.cpp.i
-.PHONY : ConcreteStateGame2.cpp.i
-
-ConcreteStateGame2.s: ConcreteStateGame2.cpp.s
-
-.PHONY : ConcreteStateGame2.s
-
-# target to generate assembly for a file
-ConcreteStateGame2.cpp.s:
-	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame2.cpp.s
-	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame2.cpp.s
-.PHONY : ConcreteStateGame2.cpp.s
-
-ConcreteStateGame3.obj: ConcreteStateGame3.cpp.obj
-
-.PHONY : ConcreteStateGame3.obj
-
-# target to build an object file
-ConcreteStateGame3.cpp.obj:
-	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.obj
-	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame3.cpp.obj
-.PHONY : ConcreteStateGame3.cpp.obj
-
-ConcreteStateGame3.i: ConcreteStateGame3.cpp.i
-
-.PHONY : ConcreteStateGame3.i
-
-# target to preprocess a source file
-ConcreteStateGame3.cpp.i:
-	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.i
-	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame3.cpp.i
-.PHONY : ConcreteStateGame3.cpp.i
-
-ConcreteStateGame3.s: ConcreteStateGame3.cpp.s
-
-.PHONY : ConcreteStateGame3.s
-
-# target to generate assembly for a file
-ConcreteStateGame3.cpp.s:
-	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame3.cpp.s
-	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame3.cpp.s
-.PHONY : ConcreteStateGame3.cpp.s
-
-ConcreteStateGame4.obj: ConcreteStateGame4.cpp.obj
-
-.PHONY : ConcreteStateGame4.obj
-
-# target to build an object file
-ConcreteStateGame4.cpp.obj:
-	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame4.cpp.obj
-	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame4.cpp.obj
-.PHONY : ConcreteStateGame4.cpp.obj
-
-ConcreteStateGame4.i: ConcreteStateGame4.cpp.i
-
-.PHONY : ConcreteStateGame4.i
-
-# target to preprocess a source file
-ConcreteStateGame4.cpp.i:
-	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame4.cpp.i
-	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame4.cpp.i
-.PHONY : ConcreteStateGame4.cpp.i
-
-ConcreteStateGame4.s: ConcreteStateGame4.cpp.s
-
-.PHONY : ConcreteStateGame4.s
-
-# target to generate assembly for a file
-ConcreteStateGame4.cpp.s:
-	$(MAKE) -f CMakeFiles\SFMLGame.dir\build.make CMakeFiles/SFMLGame.dir/ConcreteStateGame4.cpp.s
-	$(MAKE) -f CMakeFiles\core.dir\build.make CMakeFiles/core.dir/ConcreteStateGame4.cpp.s
-.PHONY : ConcreteStateGame4.cpp.s
-
 ConcreteStateMenu.obj: ConcreteStateMenu.cpp.obj
 
 .PHONY : ConcreteStateMenu.obj
@@ -1138,15 +1048,6 @@ help:
 	@echo ... ConcreteStateGame.obj
 	@echo ... ConcreteStateGame.i
 	@echo ... ConcreteStateGame.s
-	@echo ... ConcreteStateGame2.obj
-	@echo ... ConcreteStateGame2.i
-	@echo ... ConcreteStateGame2.s
-	@echo ... ConcreteStateGame3.obj
-	@echo ... ConcreteStateGame3.i
-	@echo ... ConcreteStateGame3.s
-	@echo ... ConcreteStateGame4.obj
-	@echo ... ConcreteStateGame4.i
-	@echo ... ConcreteStateGame4.s
 	@echo ... ConcreteStateMenu.obj
 	@echo ... ConcreteStateMenu.i
 	@echo ... ConcreteStateMenu.s

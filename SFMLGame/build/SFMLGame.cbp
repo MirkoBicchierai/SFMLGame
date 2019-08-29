@@ -338,30 +338,6 @@
 			<Option target="SFMLGame"/>
 			<Option target="core"/>
 		</Unit>
-		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame2.cpp">
-			<Option target="SFMLGame"/>
-			<Option target="core"/>
-		</Unit>
-		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame2.h">
-			<Option target="SFMLGame"/>
-			<Option target="core"/>
-		</Unit>
-		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame3.cpp">
-			<Option target="SFMLGame"/>
-			<Option target="core"/>
-		</Unit>
-		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame3.h">
-			<Option target="SFMLGame"/>
-			<Option target="core"/>
-		</Unit>
-		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame4.cpp">
-			<Option target="SFMLGame"/>
-			<Option target="core"/>
-		</Unit>
-		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateGame4.h">
-			<Option target="SFMLGame"/>
-			<Option target="core"/>
-		</Unit>
 		<Unit filename="C:/Users/MIRKO/Desktop/GiocoClionGIT/SFMLGame/ConcreteStateMenu.cpp">
 			<Option target="SFMLGame"/>
 			<Option target="core"/>

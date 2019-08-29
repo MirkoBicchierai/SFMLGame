@@ -30,7 +30,7 @@ public:
     void takeDamage(int dmg);
     int animationDie();
     void doDamagePlayer(MainCharacter &mainCharacter);
-
+    void reset();
 private:
     int armorPoint;
     int damage;

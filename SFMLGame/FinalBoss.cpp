@@ -282,3 +282,23 @@ void FinalBoss::doDamagePlayer(MainCharacter &mainCharacter) {
             mainCharacter.takeDamage(damage);
     }
 }
+
+void FinalBoss::reset() {
+    path.clear();
+    dieRect.left=0;
+    dieRect.top=0;
+    sourceRect.left=0;
+    sourceRect.top=topBossDown;
+    life=3;
+    moveSpeed=5.1;
+    damage=2;
+    AStarColl.setSize(sf::Vector2f(1,1));
+    AStarColl.setPosition(entitySprite.getPosition().x+127,entitySprite.getPosition().y+127);
+    AStarColl.setFillColor(sf::Color::Red);
+    aniAttack=false;
+    armor.setPosition(entitySprite);
+    armorPoint=3;
+    die=false;
+    finish=false;
+    entitySprite.setPosition(spawnBossX,spawnBossY);
+}
