@@ -18,7 +18,7 @@ TEST(MainCharacter, animationSwordTest) {
             ASSERT_EQ(x,correct);
             if (x == finalSwordAttack) {
                 ASSERT_EQ(finalSwordAttack,x);
-                mainCharacter.damageSword(enemyVec); // final damage sword
+                mainCharacter.damageSword(enemyVec,NULL); // final damage sword
                 mainCharacter.sword = 0;
                 mainCharacter.reset(mainCharacter.getsourceRect().top);
             }
@@ -102,6 +102,6 @@ TEST(MainCharacter, DamageSword){
     enemyVec.emplace_back(new Enemy(x,y,file,600,1));
     mainCharacter.entitySprite.setPosition(64,10);
     ASSERT_EQ(mainCharacter.getSprite().getPosition().x,64);
-    mainCharacter.damageSword(enemyVec);
+    mainCharacter.damageSword(enemyVec,NULL);
     ASSERT_EQ(3-mainCharacter.DMGSword,enemyVec.back()->life);
 }

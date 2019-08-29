@@ -27,6 +27,6 @@ TEST(Arrow, DamageArrow) {
 
     mainCharacter.entitySprite.setPosition(64,64);
     arrow.setRect(mainCharacter.getsourceRect(),mainCharacter.getSprite().getPosition().x,mainCharacter.getSprite().getPosition().y);
-    arrow.animation(tile,enemyVec);
+    arrow.animation(tile,enemyVec,NULL);
     ASSERT_EQ(1,enemyVec.back()->life);
 }

@@ -6,7 +6,8 @@
 TEST(FireBall, DamageFireBall) {
     FireBall fireball;
     sf::RenderWindow window;
-    MainCharacter mainCharacter(window);
+    MainCharacter mainCharacter(window
+    );
     std::vector<Enemy*> enemyVec;
 
     float x=0,y=0;
@@ -25,6 +26,6 @@ TEST(FireBall, DamageFireBall) {
 
     mainCharacter.entitySprite.setPosition(64,64);
     fireball.setRect(mainCharacter.getsourceRect(),mainCharacter.getSprite().getPosition().x,mainCharacter.getSprite().getPosition().y);
-    fireball.animation(enemyVec,mainCharacter);
+    fireball.animation(enemyVec,mainCharacter,NULL);
     ASSERT_EQ(2,enemyVec.back()->life);
 }
