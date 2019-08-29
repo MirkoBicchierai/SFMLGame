@@ -44,7 +44,7 @@ void ConcreteStateMenu::startGame(MainCharacter &mainCharacter){ // switch state
     game->init=false;
     mainCharacter.resetStatistic();
     auto x =new ConcreteStateGame(game);
-    x->actualLevel=4;
+    x->actualLevel=1;
     game->pushState(x);
 }
 
