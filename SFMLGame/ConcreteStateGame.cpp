@@ -205,15 +205,15 @@ void ConcreteStateGame::spawnEnemy() {
                     if(stat){
                         if(x==2) {
                             tmp.file = "normal";
-                            tmp.range=600;
+                            tmp.range=rangeN;
                         }
                         if(x==3){
                             tmp.file="reptiles";
-                            tmp.range=500;
+                            tmp.range=rangeR;
                         }
                         if(x==4){
                             tmp.file="skeleton";
-                            tmp.range=400;
+                            tmp.range=rangeS;
                         }
                         cord.push_back(tmp);
                         stat=false;
@@ -232,22 +232,22 @@ void ConcreteStateGame::spawnEnemy() {
         }
     }
     for (int i = 0; i < randN; ++i) {
-        x=rand()%(64*20) + 64*5;
-        y=rand()%(64*20) + 64*5;
+        x=rand()%(randCC) + randSUM;
+        y=rand()%(randCC) + randSUM;
         file="normal";
-        enemyVec.push_back(new Enemy(x,y,file,600,1));
+        enemyVec.push_back(new Enemy(x,y,file,rangeN,1));
     }
     for (int i = 0; i < randR; ++i) {
-        x=rand()%(64*18) + 64*5;
-        y=rand()%(64*18) + 64*5;
+        x=rand()%(randCC) + randSUM;
+        y=rand()%(randCC) + randSUM;
         file="reptiles";
-        enemyVec.push_back(new Enemy(x,y,file,500,1));
+        enemyVec.push_back(new Enemy(x,y,file,rangeR,1));
     }
     for (int i = 0; i < randS; ++i) {
-        x=rand()%(64*20) + 64*5;
-        y=rand()%(64*20) + 64*5;
+        x=rand()%(randCC) + randSUM;
+        y=rand()%(randCC) + randSUM;
         file="skeleton";
-        enemyVec.push_back(new Enemy(x,y,file,400,1));
+        enemyVec.push_back(new Enemy(x,y,file,rangeS,1));
     }
 
     for (int j = 0; j < cord.size(); ++j) {

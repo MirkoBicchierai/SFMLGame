@@ -159,6 +159,14 @@ enum Boss{
     topSwordRightBoss=256*1,
 };
 
+enum spawnEnemy{
+    rangeN=600,
+    rangeS=400,
+    rangeR=500,
+    randCC=64*18,
+    randSUM=64*5,
+};
+
 enum achievementTot{
     totAch=7
 };
