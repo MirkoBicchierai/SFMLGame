@@ -232,20 +232,20 @@ void ConcreteStateGame::spawnEnemy() {
         }
     }
     for (int i = 0; i < randN; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
+        x=rand()%1200 + 1000;
+        y=rand()%1200 + 1000;
         file="normal";
         enemyVec.push_back(new Enemy(x,y,file,600,1));
     }
     for (int i = 0; i < randR; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
+        x=rand()%1200 + 1000;
+        y=rand()%1200 + 1000;
         file="reptiles";
         enemyVec.push_back(new Enemy(x,y,file,500,1));
     }
     for (int i = 0; i < randS; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
+        x=rand()%1200 + 1000;
+        y=rand()%1200 + 1000;
         file="skeleton";
         enemyVec.push_back(new Enemy(x,y,file,400,1));
     }
