@@ -6,6 +6,7 @@
 #include <fstream>
 #include <regex>
 #include "ConcreteStateMenuPowerUp.h"
+
 ConcreteStateGame::ConcreteStateGame(Game* game){
     this->game = game;
 }
@@ -138,6 +139,8 @@ void ConcreteStateGame::Init(MainCharacter &mainCharacter) {
 }
 
 void ConcreteStateGame::spawnEnemy() {
+    std::string s;
+    std::ifstream infile(MAP_ROOT_GAME"/configLevel"+to_string(actualLevel)+".txt");
     int x,y;
     std::string file;
     int randN=0;
@@ -146,38 +149,82 @@ void ConcreteStateGame::spawnEnemy() {
     bool randRR=false;
     int randS=0;
     bool randSS=false;
-    std::string s;
-    std::ifstream infile(MAP_ROOT_GAME"/configLevel"+to_string(actualLevel)+".txt");
     int fin=0;
-
+    struct cord{
+        int x;
+        int y;
+        std::string file;
+        int range;
+    };
+    struct cord tmp;
+    std::vector<struct cord> cord;
+    tmp.x=0;
+    tmp.y=0;
+    tmp.file="normal";
+    tmp.range=0;
+    bool randC;
+    bool next;
+    bool stat;
     while (std::getline(infile, s)){
         std::regex ws_re(",");
         std::vector<std::string> result{ std::sregex_token_iterator(s.begin(), s.end(), ws_re, -1), {}};
+        randC=false;
+        next=false;
+        stat=false;
         for (const auto & i : result) {
             std::stringstream geek(i);
             x = 0;
             geek >> x;
             if(fin==2){
-                if(randNN){
-                    randN=x;
-                    randNN=false;
+                if(x==-2 || x==-3 || x==-4){
+                    randC=true;
                 }
-                if(x==-2){
-                    randNN=true;
-                }
-                if(randRR){
-                    randR=x;
-                    randRR=false;
-                }
-                if(x==-3){
-                    randRR=true;
-                }
-                if(randSS){
-                    randS=x;
-                    randSS=false;
-                }
-                if(x==-4){
-                    randSS=true;
+                if(randC){
+                    if(randNN){
+                        randN=x;
+                        randNN=false;
+                    }
+                    if(x==-2){
+                        randNN=true;
+                    }
+                    if(randRR){
+                        randR=x;
+                        randRR=false;
+                    }
+                    if(x==-3){
+                        randRR=true;
+                    }
+                    if(randSS){
+                        randS=x;
+                        randSS=false;
+                    }
+                    if(x==-4){
+                        randSS=true;
+                    }
+                }else{
+                    if(stat){
+                        if(x==2) {
+                            tmp.file = "normal";
+                            tmp.range=600;
+                        }
+                        if(x==3){
+                            tmp.file="reptiles";
+                            tmp.range=500;
+                        }
+                        if(x==4){
+                            tmp.file="skeleton";
+                            tmp.range=400;
+                        }
+                        cord.push_back(tmp);
+                        stat=false;
+                    }
+                    if(!next)
+                        tmp.x=x;
+                    else {
+                        tmp.y = x;
+                        stat=true;
+                    }
+                    next=true;
                 }
             }
             if(x==-1)
@@ -202,68 +249,11 @@ void ConcreteStateGame::spawnEnemy() {
         file="skeleton";
         enemyVec.push_back(new Enemy(x,y,file,400,1));
     }
-    struct cord{
-        int x;
-        int y;
-        std::string file;
-        int range;
-    };
-    struct cord tmp;
-    tmp.x=0;
-    tmp.y=0;
-    tmp.file="normal";
-    tmp.range=0;
-    std::vector<struct cord> cord;
-    fin=0;
-    bool next;
-    bool stat;
-    std::ifstream infile2(MAP_ROOT_GAME"/configLevel"+to_string(actualLevel)+".txt");
-    while (std::getline(infile2, s)){
-        std::regex ws_re(",");
-        std::vector<std::string> result{ std::sregex_token_iterator(s.begin(), s.end(), ws_re, -1), {}};
-        next=false;
-        stat=false;
-        for (const auto & i : result) {
-            std::stringstream geek(i);
-            x = 0;
-            geek >> x;
-            if(fin==2){
-                if(stat){
-                    if(x==2) {
-                        tmp.file = "normal";
-                        tmp.range=600;
-                    }
-                    if(x==3){
-                        tmp.file="reptiles";
-                        tmp.range=500;
-                    }
-                    if(x==4){
-                        tmp.file="skeleton";
-                        tmp.range=400;
-                    }
-                    cord.push_back(tmp);
-                    stat=false;
-                }
-                if(!next)
-                    tmp.x=x;
-                else {
-                    tmp.y = x;
-                    stat=true;
-                }
-                next=true;
-            }
-            if(x==-1)
-                fin++;
-        }
-    }
-    int c=0;
-    std::cout<<enemyVec.size()<<std::endl;
+
     for (int j = 0; j < cord.size(); ++j) {
         std::cout<<"X:"<<cord[j].x<<" Y:"<<cord[j].y<<std::endl;
         for (int k = 0; k <map.tile.size() ; ++k) {
             if(map.tile[k].i==cord[j].x && map.tile[k].j==cord[j].y){
-                c++;
-                std::cout<<c<<std::endl;
                 enemyVec.push_back(new Enemy(map.tile[k].spriteShow.getPosition().x,map.tile[k].spriteShow.getPosition().y,cord[j].file,cord[j].range,1));
             }
         }
@@ -336,4 +326,3 @@ void ConcreteStateGame::setEndPoint() {
         }
     }
 }
-
