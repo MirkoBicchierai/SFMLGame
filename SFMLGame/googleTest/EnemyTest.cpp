@@ -7,8 +7,8 @@ TEST(Enemy, EnemyTakeDamge) {
     int x, y;
     std::string file="normal";
     for (int i = 0; i < 10; ++i) {
-        x=rand()%1200 + 1000;
-        y=rand()%1200 + 1000;
+        x=rand()%(64*20) + 64*5;
+        y=rand()%(64*20) + 64*5;
         enemyVec.emplace_back(new Enemy(x,y,file,600,1));
     }
     for (int j = 0; j < enemyVec.size(); ++j) {
@@ -24,8 +24,8 @@ TEST(Enemy, AttackPlayer) {
     int x, y;
     std::string file="normal";
     for (int i = 0; i < 10; ++i) {
-        x=rand()%1200 + 1000;
-        y=rand()%1200 + 1000;
+        x=rand()%(64*20) + 64*5;
+        y=rand()%(64*20) + 64*5;
         enemyVec.emplace_back(new Enemy(x,y,file,600,1));
     }
     x=64;

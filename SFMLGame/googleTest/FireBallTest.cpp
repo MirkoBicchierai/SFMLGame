@@ -14,8 +14,8 @@ TEST(FireBall, DamageFireBall) {
     std::string file;
 
     for (int i = 0; i < 10; ++i) {
-        x=rand()%1200 + 1200;
-        y=rand()%1200 + 1200;
+        x=rand()%(64*20) + 64*5;
+        y=rand()%(64*20) + 64*5;
         file="normal";
         enemyVec.emplace_back(new Enemy(x,y,file,600,1));
     }
