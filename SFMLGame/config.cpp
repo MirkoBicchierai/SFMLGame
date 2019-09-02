@@ -164,7 +164,7 @@ enum spawnEnemy{
     rangeS=400,
     rangeR=500,
     randCC=64*18,
-    randSUM=64*5,
+    randSUM=64*7,
 };
 
 enum achievementTot{

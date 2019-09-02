@@ -251,7 +251,6 @@ void ConcreteStateGame::spawnEnemy() {
     }
 
     for (int j = 0; j < cord.size(); ++j) {
-        std::cout<<"X:"<<cord[j].x<<" Y:"<<cord[j].y<<std::endl;
         for (int k = 0; k <map.tile.size() ; ++k) {
             if(map.tile[k].i==cord[j].x && map.tile[k].j==cord[j].y){
                 enemyVec.push_back(new Enemy(map.tile[k].spriteShow.getPosition().x,map.tile[k].spriteShow.getPosition().y,cord[j].file,cord[j].range,1));
